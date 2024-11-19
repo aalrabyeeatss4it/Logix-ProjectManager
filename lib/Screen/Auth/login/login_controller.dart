@@ -64,8 +64,8 @@ void onInit() {
           print(value.data);
           LoginModel loginModel = LoginModel.fromJson(value.data);
           if(loginModel.success==true){
-            stg.write(token, loginModel.dataLogin!.token);
-            stg.write(userPassword, loginModel.dataLogin!.sysUser!.userPassword.toString());
+            stg.write(token, loginModel.dataUser!.token);
+            stg.write(userPassword, loginModel.dataUser!.sysUser!.userPassword.toString());
             print("userPassword="+stg.read(userPassword).toString());
             Get.offAllNamed(RoutingApp.dashboardRoute);
             stg.write(OpenScreenlogen, true);
@@ -91,48 +91,6 @@ void onInit() {
     }
 
 
-  }
-
-void testDio({required String userName,required String passWard ,required String memberId})async{
-
-    Dio dio = Dio();
-print(userName );
-    try {
-
-      var response = await dio.post(
-        urlBaseMy + urlLogin,
-        data: {"userName": userName, "password": passWard, "memberId": memberId
-        } ,
-        options: Options(contentType: 'application/json'),
-      );
-         print('======= ==');
-         print(response);
-      // Handle the response
-      if (response.statusCode == 200) {
-        // Request was successful
-        print('Request successful');
-        Get.back();
-              change(null,status: RxStatus.success());
-             print(response.data);
-              LoginModel loginModel=LoginModel.fromJson(response.data);
-              stg.write(token, loginModel.dataLogin!.token);
-              stg.write(erpUrl, loginModel.dataLogin!.erpUrl);
-            }
-
-        else{
-          GetSnackMsg(msg: 'No internet connection '.tr,bgClr:kColorsRed ,txClr:kColorsWhite ).showTxt();
-        }
-
-        // Do something with the response data
-       // print('Response data: ${response.data}');
-      // } else {
-      //   // Request failed
-      //   print('Request failed with status code: ${response.statusCode}');
-      // }
-    } catch (e) {
-      // Handle Dio errors
-      print('Error: $e');
-    }
   }
 }
 

@@ -31,17 +31,16 @@ class AppBarEsyDox extends StatelessWidget implements PreferredSizeWidget {
               padding:  EdgeInsets.only(right:   4.r,left: 4.r),
               child: Container(
                 width: double.infinity,
-                height:0.16.sh,
+                height:0.08.sh,
                 decoration: ShapeDecoration(
                   color: Color(0xFF9BB7DA),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(bottomLeft:Radius.circular(20),bottomRight: Radius.circular(20)),),),
               ),
             ),
-
             Container(
               width: double.infinity,
-              height:0.14.sh,
+              height:0.07.sh,
               decoration: ShapeDecoration(
                 color: Color(0xFF3570B7),
                 shape: RoundedRectangleBorder(
@@ -50,7 +49,7 @@ class AppBarEsyDox extends StatelessWidget implements PreferredSizeWidget {
               ),
               child:  Column(
                 children: [
-                  SizedBox(height: 0.05.sh,),
+                  SizedBox(height: 0.02.sh,),
                   Row(
                     children: [
 
@@ -59,37 +58,24 @@ class AppBarEsyDox extends StatelessWidget implements PreferredSizeWidget {
                         onTap: () {
                           zoomDrawerController!.toggle!();
                         },
-                        child: Padding(
-                          padding:  EdgeInsets.only(top:  10.0.r),
-                          child: Container(
+                        child: Container(
 
-                            decoration: BoxDecoration(
-                              color: kColorsWhite.withOpacity(0.1),
-                              borderRadius: BorderRadius.circular(7.0.r),
-                            ),
-                            height: 33,
-                            width: 33,
-                            child: SvgPicture.asset(
-                              "assets/Icons/menu.svg",
-                              width: 24,
-                              height: 24,
-                              color: kColorsWhite,
-                            ),
+                          decoration: BoxDecoration(
+                            color: kColorsWhite.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(7.0.r),
+                          ),
+                          height: 33,
+                          width: 33,
+                          child: SvgPicture.asset(
+                            "assets/Icons/menu.svg",
+                            width: 24,
+                            height: 24,
+                            color: kColorsWhite,
                           ),
                         ),
                       ),
                       SizedBox(width: 0.22.sw,),
-                      Container(
-                        width: 130.0,
-                        height: 60.0,
-                        color: Color(0xFF3570B7),
-                        child: Image.asset(
-                          'assets/LogoColor.png',
-                          width: 130.0,
-                          height: 60.0,
-                          color: kColorsWhite,
-                        ),
-                      ),
+
 
                     ],
                   ),

@@ -118,20 +118,6 @@ class MenuWidgetDachbord extends StatelessWidget {
 
 
 
-            stg.read(OpenScreenlogen)==true?sliderItem("Late transactions".tr, "assets/Icons/LateTransactions.svg", context,(){
-              Get.toNamed(RoutingApp.late_transactions_screen);
-            }, kColorsWhite, kColorsWhite, false, true):Container(),
-            stg.read(OpenScreenlogen)==true?sliderItem(   "Follow up transactions".tr, "assets/Icons/FollowUpTransactions.svg", context,(){
-              Get.toNamed('${RoutingApp.follow_ups_screen}?${AppMapKey.ShowTabBar}=$show_tabB');
-            }, kColorsWhite, kColorsWhite, false, true):Container(),
-            stg.read(OpenScreenlogen)==true?sliderItem("My closed transactions".tr, "assets/Icons/person_cancel.svg", context,(){
-              Get.toNamed(RoutingApp.my_closed_transactions_screen);
-            }, kColorsWhite, kColorsWhite, false, true):Container(),
-            stg.read(OpenScreenlogen)==true?sliderItem(  "Closed transactions".tr, "assets/Icons/contract_delete.svg", context,(){
-              Get.toNamed(RoutingApp.closed_transactions_screen);
-            }, kColorsWhite, kColorsWhite, false, true):Container(),
-
-
 
 
             stg.read(OpenScreenlogen)==true?sliderItem('Profile personly'.tr, "assets/Icons/user.svg", context,(){

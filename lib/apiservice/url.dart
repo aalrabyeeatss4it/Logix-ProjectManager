@@ -1,8 +1,5 @@
-// const urlBaseMy = 'http://localhost:5001/';
- const urlBaseMy = 'https://api.easydocsdms.com/';
+const urlBaseMy = 'http://localhost:5001/';
 
-
-// const urlBaseMy = 'https://demo.easydocsdms.com/';
 const getFacility = 'api/ACC_Facilities/getFacility';
 const urlLogin = 'api/users/authenticate';
 const urlgetPrfile = 'api/users/getUserInfo';

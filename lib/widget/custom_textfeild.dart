@@ -39,7 +39,7 @@ class TextFieldWidget extends StatelessWidget {
         return 'هذا الحقل مطلوب'.tr;
         break;
       case false:
-        // TODO: Handle this case.
+      // TODO: Handle this case.
     }
   }
 
@@ -54,7 +54,7 @@ class TextFieldWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-        edit!=null?  Container(
+          edit!=null?  Container(
               padding: EdgeInsets.only(
                   left:20.r, right:4.r,
                   bottom:5.r),
@@ -65,9 +65,9 @@ class TextFieldWidget extends StatelessWidget {
                   fontSize: 14,
                   color: kColorsBlack,
                 ),)
-              ):SizedBox(),
+          ):SizedBox(),
           TextFormField(
-           readOnly: read==null?false:read,
+            readOnly: read==null?false:read,
             initialValue: initialValue,
             onChanged: onChanged,
             controller: controller,
@@ -113,7 +113,7 @@ class TextFieldWidget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10.r),
                     borderSide: BorderSide(color: kColorsRed)
                 ),
-                    //                 suffixIcon: text=='Password'.tr?Icon(Icons.remove_red_eye_outlined,color:kColorsBackground,size: .03.sh,):SizedBox(),
+                //                 suffixIcon: text=='Password'.tr?Icon(Icons.remove_red_eye_outlined,color:kColorsBackground,size: .03.sh,):SizedBox(),
                 suffixIcon: EndIcon,
                 constraints: NewConstraints,
                 prefixIcon:iconStart==null?null: iconStart

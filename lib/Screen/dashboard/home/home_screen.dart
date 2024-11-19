@@ -75,25 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(height: 0.03.sh),
                 controller.obx(
                       (tranction) =>Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        GrideRow(isRtl: isRtl,text: "Sending a Message".tr,Icone: "assets/Icons/chat_paste_go.svg",onpress:(){
-                          stg.write(OpenScreenMember, true);
-                          Get.toNamed(RoutingApp.sending_messaging_screen);}),
-                        Obx(() {
-                          return GrideRow(isRtl: isRtl,text: "Inbox".tr,Icone: "assets/Icons/move_to_inbox.svg",onpress:(){  Get.toNamed('${RoutingApp.inbox_screen}?${AppMapKey.ShowTabBar}=$show_tabB');},Count: controller!.countStatic, );}),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        GrideRow(isRtl: isRtl,text: "Outgoing mailbox".tr,Icone: "assets/Icons/outbox.svg",onpress:(){  Get.toNamed(RoutingApp.outgoing_mailbox_screen);}),
-                        GrideRow(isRtl: isRtl,text: "Notification box".tr,Icone: "assets/Icons/NotificationBox.svg",onpress:(){  Get.toNamed('${RoutingApp.notifcation_screen}?${AppMapKey.ShowTabBar}=$show_tabB');}),
-
-                      ],
-                    ),
+                        children: [
                   ],
                 ),
                 onLoading: Column(
@@ -118,23 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 onEmpty: Column(
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          GrideRow(isRtl: isRtl,text: "Sending a Message".tr,Icone: "assets/Icons/chat_paste_go.svg",onpress:(){
-                            stg.write(OpenScreenMember, true);
-                            Get.toNamed(RoutingApp.sending_messaging_screen);}),
-                          GrideRow(isRtl: isRtl,text: "Inbox".tr,Icone: "assets/Icons/move_to_inbox.svg",onpress:(){  Get.toNamed('${RoutingApp.inbox_screen}?${AppMapKey.ShowTabBar}=$show_tabB');},),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          GrideRow(isRtl: isRtl,text: "Outgoing mailbox".tr,Icone: "assets/Icons/outbox.svg",onpress:(){  Get.toNamed(RoutingApp.outgoing_mailbox_screen);}),
-                          GrideRow(isRtl: isRtl,text: "Notification box".tr,Icone: "assets/Icons/NotificationBox.svg",onpress:(){  Get.toNamed('${RoutingApp.notifcation_screen}?${AppMapKey.ShowTabBar}=$show_tabB');}),
 
-                        ],
-                      ),
                     ],
                   ),
                 ),

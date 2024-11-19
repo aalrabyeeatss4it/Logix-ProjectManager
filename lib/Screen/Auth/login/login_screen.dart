@@ -62,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               CrossAxisAlignment.center,
                               children: <Widget>[
                                 SizedBox(
-                                  height: 0.09.sh,
+                                  height: 0.02.sh,
                                 ),
                                 Text('Sign in'.tr,
                                   style: TextStyle(fontFamily: 'Cairo',fontSize: 20, color: kColorsBlack,fontWeight: FontWeight.bold),
@@ -93,8 +93,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                 SizedBox(
                                   height: 0.02.sh,
                                 ),
-
-
                                 TextFieldWidget(
                                   hint: 'Enter Password'.tr,
                                   text: 'Password'.tr,
@@ -135,7 +133,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                   keyboardType: TextInputType.visiblePassword,
 
                                 ),
-
                                 Padding(
                                   padding:  EdgeInsets.symmetric(horizontal: 8.r),
                                   child: Row(
@@ -242,6 +239,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                       GetSnackMsg(msg: "No Connection".tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
                                     }
                                   },
+                                ),
+                                SizedBox(
+                                  height: 0.08.sh,
                                 ),
                               ],
                             ),

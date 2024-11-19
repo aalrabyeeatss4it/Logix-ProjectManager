@@ -19,7 +19,14 @@ class InternetBinding extends Bindings {
     );
   }
 }
+class MemberBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut<MemberController>(() => MemberController(),
+    );
 
+  }
+}
 class LoginBinding extends Bindings {
   @override
   void dependencies() {
@@ -27,10 +34,11 @@ class LoginBinding extends Bindings {
     );
   }
 }
-class MemberBinding extends Bindings {
+
+class ProfileBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<MemberController>(() => MemberController(),
+    Get.lazyPut<ProfileController>(() => ProfileController(),
     );
 
   }
@@ -45,130 +53,3 @@ class ChangPasswordBinding extends Bindings {
 }
 
 
-
-
-
-
-// class NewissuedBinding extends Bindings {
-//   @override
-//   void dependencies() {
-//     Get.lazyPut<NewissuedController>(() => NewissuedController(),
-//     );
-//
-//   }
-// }
-// class NewarrivalBinding extends Bindings {
-//   @override
-//   void dependencies() {
-//     Get.lazyPut<NewarrivalController>(() => NewarrivalController(),
-//     );
-//
-//   }
-// }
-// class FastOutgoingBinding extends Bindings {
-//   @override
-//   void dependencies() {
-//     Get.lazyPut<FastOutgoingController>(() => FastOutgoingController(),
-//     );
-//
-//   }
-// }
-// class FastIncomingBinding extends Bindings {
-//   @override
-//   void dependencies() {
-//     Get.lazyPut<FastIncomingController>(() => FastIncomingController(),
-//     );
-//
-//   }
-// }
-// class FilesArchivingBinding extends Bindings {
-//   @override
-//   void dependencies() {
-//     Get.lazyPut<FilesArchivingController>(() => FilesArchivingController(),
-//     );
-//
-//   }
-// }
-
-
-
-
-
-
-
-
-// Inquiries
-// class InquiriesBinding extends Bindings {
-//   @override
-//   void dependencies() {
-//     Get.lazyPut<InquiriesController>(() => InquiriesController(),
-//     );
-//
-//   }
-// }
-// class SearchInTheExportBinding extends Bindings {
-//   @override
-//   void dependencies() {
-//     Get.lazyPut<SearchInTheExportController>(() => SearchInTheExportController(),
-//     );
-//
-//   }
-// }
-// class SearchInTheExportDetailsBinding extends Bindings {
-//   @override
-//   void dependencies() {
-//     Get.lazyPut<SearchInTheExportDetailsController>(() => SearchInTheExportDetailsController(),
-//     );
-//
-//   }
-// }
-//
-//
-// class SearchInWordBinding extends Bindings {
-//   @override
-//   void dependencies() {
-//     Get.lazyPut<SearchInWordController>(() => SearchInWordController(),
-//     );
-//
-//   }
-// }
-// class SearchInWordDetailsBinding extends Bindings {
-//   @override
-//   void dependencies() {
-//     Get.lazyPut<SearchInWordDetailsController>(() => SearchInWordDetailsController(),
-//     );
-//
-//   }
-// }
-//
-//
-// class GeneralInquiryBinding extends Bindings {
-//   @override
-//   void dependencies() {
-//     Get.lazyPut<GeneralInquiryController>(() => GeneralInquiryController(),
-//     );
-//
-//   }
-// }
-// class GeneralInquiryDetailsBinding extends Bindings {
-//   @override
-//   void dependencies() {
-//     Get.lazyPut<GeneralInquiryDetailsController>(() => GeneralInquiryDetailsController(),
-//     );
-//
-//   }
-// }
-// class SearchTheArchiveBinding extends Bindings {
-//   @override
-//   void dependencies() {
-//     Get.lazyPut<SearchTheArchiveController>(() => SearchTheArchiveController(),
-//     );
-//
-//   }
-// }
-// class SearchTheArchiveDetailsBinding extends Bindings {
-//   @override
-//   void dependencies() {
-//     Get.lazyPut<SearchTheArchiveDetailsController>(() => SearchTheArchiveDetailsController(),
-//     );
-//

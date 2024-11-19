@@ -306,7 +306,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
             shadowLayer1Color: kColorsorang,
           ),
         ),
-        bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home,),
       ),
     );
   }

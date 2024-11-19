@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:projectmanagers/Constants/Constants.dart';
+import 'package:projectmanagers/Screen/MenuDrawer/profile/prpfile_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -34,7 +35,7 @@ class DashboardScreenState extends State<DashboardScreen> {
       HomeScreen(),
       HomeScreen(),
       HomeScreen(),
-      HomeScreen(),
+      ProfileScreen(),
 
       // ProfileScreen(show_tabBar: true,),
     ];

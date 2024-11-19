@@ -83,6 +83,7 @@ const String TransacID='TransacID';
 
 const String url='url';
 const String statusId='statusId';
+const String TypeVirsone='TypeVirsone';
 const String token='token';
 const String memberId='memberId';
 //const String userType='userType';

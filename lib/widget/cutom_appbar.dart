@@ -86,7 +86,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                           padding:  EdgeInsets.all(4.0.r),
                           child: InkWell(
                             onTap: (){
-                              Get.toNamed(RoutingApp.notifcation_screen);
+                              // Get.toNamed(RoutingApp.notifcation_screen);
                             },
                             child: SvgPicture.asset(
                               "assets/Icons/notification.svg",
