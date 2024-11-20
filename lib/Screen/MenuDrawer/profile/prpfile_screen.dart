@@ -58,9 +58,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             isRtl: isRtl ? true : false,
             controller: zDProfileController,
             style: DrawerStyle.style1,
-            menuScreen: MenuWidgetDachbord(
-              zoomDrawerController: zDProfileController,
-            ),
+            menuScreen: MenuWidgetDachbord(zoomDrawerController: zDProfileController,),
             mainScreen: Scaffold(
               appBar: MyAppBar(
                   title: 'Profile personly'.tr,

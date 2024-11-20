@@ -169,38 +169,38 @@ class _ChangPasswordScreenState extends State<ChangPasswordScreen> {
                                       style:  TextStyle(fontSize: 14, color: kColorsWhiteButtonTow),
                                       onPress: () async{
                                         print("userPassword="+stg.read(userPassword).toString());
-                                        if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
-                                          if (_formKey.currentState!.validate()) {
-                                            if (stg.read(userPassword).toString() == controller.OldPassowrdController.text.trim()    ){
-                                              if (controller.OldPassowrdController.text.trim() != controller.NewPassowrdController.text.trim()) {
-                                                if (controller.NewPassowrdController.text.trim()  == controller.ConfirmPassowrdController.text.trim() ) {
-                                                  if (stg.read(userPassword).toString() != controller.ConfirmPassowrdController.text.trim() ) {
-                                                    print("هناك انترنت ");
-                                                    await controller.ChangPassword();
-                                                  }
-                                                  else{
-                                                    GetSnackMsg(msg:   "The new password must not be equal to the previous password".tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
-                                                  }
-                                                }
-                                                else {
-                                                  print(  "The new password and its confirmation must be the same".tr);
-                                                  GetSnackMsg(msg:   "The new password and its confirmation must be the same".tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
-                                                }
-                                              }
-                                              else {
-                                                print("The old and new password must not be equal".tr);
-                                                GetSnackMsg(msg: "The old and new password must not be equal".tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
-                                              }
-                                            }
-                                            else {
-                                              print('The old password is not correct'.tr);
-                                              GetSnackMsg(msg: 'The old password is not correct'.tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
-                                            }
-                                          }
-                                        } else {
-                                          print("ليس هناك انترنت ");
-                                          GetSnackMsg(msg: 'No internet connection'.tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
-                                        }
+                                        // if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
+                                        //   if (_formKey.currentState!.validate()) {
+                                        //     if (stg.read(userPassword).toString() == controller.OldPassowrdController.text.trim()    ){
+                                        //       if (controller.OldPassowrdController.text.trim() != controller.NewPassowrdController.text.trim()) {
+                                        //         if (controller.NewPassowrdController.text.trim()  == controller.ConfirmPassowrdController.text.trim() ) {
+                                        //           if (stg.read(userPassword).toString() != controller.ConfirmPassowrdController.text.trim() ) {
+                                        //             print("هناك انترنت ");
+                                        //             await controller.ChangPassword();
+                                        //           }
+                                        //           else{
+                                        //             GetSnackMsg(msg:   "The new password must not be equal to the previous password".tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
+                                        //           }
+                                        //         }
+                                        //         else {
+                                        //           print(  "The new password and its confirmation must be the same".tr);
+                                        //           GetSnackMsg(msg:   "The new password and its confirmation must be the same".tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
+                                        //         }
+                                        //       }
+                                        //       else {
+                                        //         print("The old and new password must not be equal".tr);
+                                        //         GetSnackMsg(msg: "The old and new password must not be equal".tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
+                                        //       }
+                                        //     }
+                                        //     else {
+                                        //       print('The old password is not correct'.tr);
+                                        //       GetSnackMsg(msg: 'The old password is not correct'.tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
+                                        //     }
+                                        //   }
+                                        // } else {
+                                        //   print("ليس هناك انترنت ");
+                                        //   GetSnackMsg(msg: 'No internet connection'.tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
+                                        // }
                                       },
                                     ),
                                   ),
