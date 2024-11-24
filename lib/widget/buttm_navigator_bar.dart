@@ -83,29 +83,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                     Get.offAll(DashboardScreen(pageIndex: 1),transition: Transition.noTransition,);
                   },
                 ),
-                TextButton(
-                  child:SizedBox(
-                    height: 0.10.sh,
-                    child: Column(
-                      children: [
-                        SvgPicture.asset(
-                          "assets/Icons/document-text.svg",
-                          width: 24.r,
-                          height: 24.r,
-                          color: MenuState.Follow == widget.selectedMenu
-                              ? kColorsPrimary :kColorsLightBlack,
-                        ),
-                        Text( 'Follow-ups'.tr,style: MenuState.Follow == widget.selectedMenu?TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsPrimary):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
 
-                      ],
-                    ),
-                  ),
-                  onPressed: () {
-
-                    Get.offAll(DashboardScreen(pageIndex: 2),transition: Transition.noTransition,);
-
-                  },
-                ),
                 TextButton(
                   child:SizedBox(
                     height: 0.10.sh,
@@ -115,10 +93,10 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                           "assets/Icons/direct.svg",
                           width: 24.r,
                           height: 24.r,
-                          color: MenuState.Messages == widget.selectedMenu
+                          color: MenuState.profile == widget.selectedMenu
                               ? kColorsPrimary :kColorsLightBlack,
                         ),
-                        Text( 'Messages'.tr,style: MenuState.Messages == widget.selectedMenu?TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsPrimary):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),)
+                        Text(  'Profile personly'.tr,style: MenuState.profile == widget.selectedMenu?TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsPrimary):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),)
                       ],
                     ),
                   ),
@@ -149,8 +127,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
 enum MenuState {
   home,
   Notifications,
-  Follow,
-  Messages,
+  profile,
 }
 class NoCustomBottomNavBar extends StatefulWidget {
   const NoCustomBottomNavBar({

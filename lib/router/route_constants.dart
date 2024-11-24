@@ -10,6 +10,7 @@ class RoutingApp {
 
   static const String dashboardRoute = "/dashboardRoute";
   static const String home_route = "/home";
+  static const String notfcations_screen = "/notfcations_screen";
 
 
   static const String change_password_screen = "/change_password_screen";

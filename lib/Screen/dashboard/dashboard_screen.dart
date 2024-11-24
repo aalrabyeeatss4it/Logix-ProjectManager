@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:projectmanagers/Constants/Constants.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/profile/prpfile_screen.dart';
+import 'package:projectmanagers/Screen/Notifcation/notifcation_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -33,8 +34,7 @@ class DashboardScreenState extends State<DashboardScreen> {
     _pageController = PageController(initialPage: widget.pageIndex);
     _screens = [
       HomeScreen(),
-      HomeScreen(),
-      HomeScreen(),
+      NotifcationScreen(show_tabBar: true,IsHome: true),
       ProfileScreen(),
 
       // ProfileScreen(show_tabBar: true,),
@@ -134,28 +134,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                           Get.offAll(DashboardScreen(pageIndex: 1),transition: Transition.noTransition,);
                         },
                       ),
-                      TextButton(
-                        child:SizedBox(
-                          height: 0.10.sh,
-                          child: Column(
-                            children: [
-                              SvgPicture.asset(
-                                "assets/Icons/document-text.svg",
-                                width: 24.r,
-                                height: 24.r,
-                                color: _pageIndex==2?kColorsPrimary :kColorsLightBlack,
-                              ),
-                              Text( 'Follow-ups'.tr,style:_pageIndex==2?TextStyle(fontFamily: 'Cairo',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsPrimary):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
 
-                            ],
-                          ),
-                        ),
-                        onPressed: () {
-
-                          Get.offAll(DashboardScreen(pageIndex: 2),transition: Transition.noTransition,);
-
-                        },
-                      ),
                       TextButton(
                         child:SizedBox(
                           height: 0.10.sh,
@@ -167,7 +146,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                                 height: 24.r,
                                 color:_pageIndex==3?kColorsPrimary:kColorsLightBlack,
                               ),
-                              Text( 'Messages'.tr,style:_pageIndex==3?TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsPrimary):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),)
+                              Text(  'Profile personly'.tr,style:_pageIndex==3?TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsPrimary):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),)
                             ],
                           ),
                         ),
@@ -192,76 +171,6 @@ class DashboardScreenState extends State<DashboardScreen> {
               ],
             ),
           )
-          // Container(
-          //   decoration: BoxDecoration(
-          //       border: Border.all(width: 0.11,color:kColorsLightBlack ),
-          //       color: Colors.white),
-          //   width: double.infinity,
-          //   height: 0.10.sh,
-          //
-          //   child: Column(
-          //     children: [
-          //       BottomNavigationBar(
-          //           backgroundColor: kColorsWhite,
-          //           type: BottomNavigationBarType.fixed,
-          //           iconSize: 24.r,
-          //           selectedItemColor:kColorsPrimary ,
-          //           selectedLabelStyle: TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsPrimary),
-          //           unselectedLabelStyle: TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),
-          //           unselectedItemColor:Colors.black54,
-          //           currentIndex: currentIndex,
-          //           onTap: (index){
-          //             setState(() {
-          //               _setPage(index);
-          //               currentIndex=index;
-          //             });
-          //           },
-          //           items: <BottomNavigationBarItem>[
-          //             BottomNavigationBarItem(
-          //               icon: SvgPicture.asset(
-          //                 "assets/Icons/home-2.svg",
-          //                 width: 24.r,
-          //                 height: 24.r,
-          //                 color:_pageIndex==0?kColorsPrimary :kColorsLightBlack,
-          //               ),
-          //               label: "Home".tr,
-          //             ),
-          //             BottomNavigationBarItem(
-          //               icon: SvgPicture.asset(
-          //                 "assets/Icons/notification.svg",
-          //                 width: 24.r,
-          //                 height: 24.r,
-          //                 color:_pageIndex==1?kColorsPrimary :kColorsLightBlack,
-          //               ),
-          //               label: 'Notifications'.tr,
-          //             ),
-          //             BottomNavigationBarItem(
-          //               icon: SvgPicture.asset(
-          //                 "assets/Icons/document-text.svg",
-          //                 width: 24.r,
-          //                 height: 24.r,
-          //                 color:_pageIndex==2?kColorsPrimary :kColorsLightBlack,
-          //               ),
-          //               label: 'Follow-ups'.tr,
-          //             ),
-          //             BottomNavigationBarItem(
-          //               icon: SvgPicture.asset(
-          //                 "assets/Icons/document-text.svg",
-          //                 width: 24.r,
-          //                 height: 24.r,
-          //                 color:_pageIndex==3?kColorsPrimary :kColorsLightBlack,
-          //               ),
-          //               label: 'Messages'.tr,
-          //             ),
-          //           ]),
-          //       Container(
-          //         width: 0.45.sw,
-          //         height: 0.01.sh,
-          //         color: Colors.black,
-          //       ),
-          //     ],
-          //   ),
-          // )
           ,
           body:  PageView.builder(
             controller: _pageController,

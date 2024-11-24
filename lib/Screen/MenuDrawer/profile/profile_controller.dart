@@ -82,8 +82,6 @@ class ProfileController extends GetxController with StateMixin<ProfileModel> {
         }
         else {
           print('لم يتم إرجاع بيانات في شاشة بيانات المستخدم');
-
-
         }
       }
       );

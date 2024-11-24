@@ -4,6 +4,7 @@ import 'package:projectmanagers/Screen/Auth/login/login_screen.dart';
 import 'package:projectmanagers/Screen/Examploe/examole_screen.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/profile/change_password_screen.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/profile/prpfile_screen.dart';
+import 'package:projectmanagers/Screen/Notifcation/notifcation_screen.dart';
 import 'package:projectmanagers/Screen/card_wizard_overlap.dart';
 import 'package:projectmanagers/Screen/dashboard/dashboard_screen.dart';
 import 'package:projectmanagers/Screen/splash_screen.dart';
@@ -71,6 +72,15 @@ class Pages {
           page: () => ChangPasswordScreen(),
           bindings: [
             ChangPasswordBinding(),
+          ]
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.notfcations_screen,
+          page: () => NotifcationScreen(),
+          bindings: [
+            NotifcationBinding(),
           ]
       ),
 

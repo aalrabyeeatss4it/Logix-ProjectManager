@@ -72,18 +72,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
 
-                    children: [
-
-                      Row(
-                        children: [
-                          Container(
-                              padding: EdgeInsets.only(right:isRtl==true? 0.08.sw:0,left: isRtl!=true? 0.08.sw:0),
-                              child: Text(
-                                'Profile personly'.tr,
-                                style:TextStyle(fontFamily: 'Cairo',color: kColorsBlack,fontSize: 14,fontWeight: FontWeight.w500),)
-                          ),
-                        ],
-                      ),
+                    children:[
+                      //
+                      // Row(
+                      //   children: [
+                      //     Container(
+                      //         padding: EdgeInsets.only(right:isRtl==true? 0.08.sw:0,left: isRtl!=true? 0.08.sw:0),
+                      //         child: Text(
+                      //           'Profile personly'.tr,
+                      //           style:TextStyle(fontFamily: 'Cairo',color: kColorsBlack,fontSize: 14,fontWeight: FontWeight.w500),)
+                      //     ),
+                      //   ],
+                      // ),
                       SizedBox(
                         height: 5.h,
                       ),

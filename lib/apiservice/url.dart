@@ -1,5 +1,4 @@
 const urlBaseMy = 'http://localhost:5001/';
-
 const getFacility = 'api/ACC_Facilities/getFacility';
 const urlLogin = 'api/users/authenticate';
 const urlgetPrfile = 'api/users/getUserInfo';

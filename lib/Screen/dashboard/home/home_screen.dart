@@ -27,7 +27,6 @@ class _HomeScreenState extends State<HomeScreen> {
   initState() {
     if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
       print("Connection".tr);
-      controller.Revrech();
     }
     else {
       print("No Connection".tr);
@@ -54,67 +53,6 @@ class _HomeScreenState extends State<HomeScreen> {
             body:Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(width: 0.02.sw),
-                    Container(
-                        padding: EdgeInsets.only(right:isRtl==true? 6.r:0),
-                        child: Text(
-                          'Welcome to'.tr,
-                          style:  TextStyle(fontFamily: 'Cairo',color: kColorsBlack,fontSize: 16,fontWeight: FontWeight.w500),)
-                    ),
-                    Container(
-                        padding: EdgeInsets.only(left:2.r, right:4.r),
-                        child: Text(
-                          'Easy Docs app!'.tr,
-                          style:  TextStyle(fontFamily: 'Cairo',color: kColorsPrimary,fontSize: 16,fontWeight: FontWeight.w500),)
-                    ),
-                  ],
-                ),
-                SizedBox(height: 0.03.sh),
-                controller.obx(
-                      (tranction) =>Column(
-                        children: [
-                  ],
-                ),
-                onLoading: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        GrideRow(isRtl: isRtl,text: "".tr,Icone: "assets/Icons/chat_paste_go.svg",onpress:(){
-                        }),
-                        GrideRow(isRtl: isRtl,text: " ".tr,Icone: "assets/Icons/move_to_inbox.svg",onpress:(){  }),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        GrideRow(isRtl: isRtl,text: "".tr,Icone: "assets/Icons/outbox.svg",onpress:(){ }),
-                        GrideRow(isRtl: isRtl,text: "".tr,Icone: "assets/Icons/NotificationBox.svg",onpress:(){  }),
-
-                      ],
-                    ),
-                  ],
-                ),
-                onEmpty: Column(
-                    children: [
-
-                    ],
-                  ),
-                ),
-                // Row(
-                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //   children: [
-                //     GrideRow(isRtl: isRtl,text: "شاشة للتجربه ".tr,Icone: "assets/Icons/outbox.svg",onpress:(){  Get.toNamed(RoutingApp.Exampole);}),
-                //     GrideRow(isRtl: isRtl,text: "شاشة للتجربه ".tr,Icone: "assets/Icons/NotificationBox.svg",onpress:(){  Get.toNamed(RoutingApp.Exampole);}),
-                //
-                //   ],
-                // ),
-
-
-
 
                 SizedBox(height: 0.03.sh),
 
