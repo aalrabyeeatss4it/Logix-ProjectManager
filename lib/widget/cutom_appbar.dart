@@ -33,23 +33,11 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
             height: 0.10.sh,
             child: Stack(
               children: [
-                Padding(
-                  padding:  EdgeInsets.only(right:   4.r,left: 4.r),
-                  child: Container(
-                    width: 0.98.sw,
-                    height:0.08.sh,
-                    decoration: ShapeDecoration(
-                      color: Color(0xFF9BB7DA),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),),),
-                  ),
-                ),
-
                 Container(
                   width: double.infinity,
                   height:0.07.sh,
                   decoration: ShapeDecoration(
-                    color: Color(0xFF3570B7),
+                    color: kColorsWhite,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -76,7 +64,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                       Expanded(
                         flex: 8,
                         child: Center(
-                          child: Text(title!, style: Theme.of(context).textTheme.titleLarge!.copyWith(color:kColorsWhite,fontWeight: FontWeight.w600,fontSize: 16, )
+                          child: Text(title!, style: Theme.of(context).textTheme.titleLarge!.copyWith(color:kColorsBlack,fontWeight: FontWeight.bold,fontSize: 20, )
                           ),
                         ),
                       ),
@@ -92,7 +80,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                               "assets/Icons/notification.svg",
                               width: 24.r ,
                               height: 24.r ,
-                              color: kColorsWhite,
+                              color: kColorsBlack,
                             ),
                           ),
                         ):InkWell(
@@ -101,16 +89,12 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                           },
                           child: Padding(
                             padding:  EdgeInsets.all(10.0.r),
-                            child:      isRtl?
-                            SvgPicture.asset(
+                            child:      isRtl? SvgPicture.asset(
                               "assets/Icons/arrow-left.svg",
                               width: 24.r ,
                               height: 24.r ,
                               color: kColorsWhite,
-                            )
-
-                                :
-                            SvgPicture.asset(
+                            ) : SvgPicture.asset(
                               "assets/Icons/arrow-leftt.svg",
                               width: 24.r ,
                               height: 24.r ,

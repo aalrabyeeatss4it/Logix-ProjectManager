@@ -50,13 +50,179 @@ class _HomeScreenState extends State<HomeScreen> {
           mainScreen: Scaffold(
             appBar:  MyAppBar(title:'Home'.tr,zoomDrawerController: zoomDrawerController,IsHome: true,),
             backgroundColor: kColorsWhite,
-            body:Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+            body:Padding(
+              padding:  EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(height: 0.03.sh),
+                  Row(
+                    children: [
+                      Container(
+                          padding: EdgeInsets.only(
+                              left:2.r, right:10.r,
+                              bottom:1.r),
+                          child: Text(
+                            "ملخص المشاريع".tr,
+                            style: TextStyle(color:kColorsBlack,fontSize: 20,fontWeight: FontWeight.w600),)
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: .02.sh),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                    Expanded(
+                      flex: 3,
+                      child: Container(
+                        height: .15.sh,
+                        color: kColorsLightBlackLow,
 
-                SizedBox(height: 0.03.sh),
+                        child: Column(
+                            children: [
+                              Padding(
+                                padding:  EdgeInsets.only(right:isRtl==true? 8.0.r:0.0.r,left: isRtl!=true? 8.0.r:0.0.r),
+                                child: Text(
+                                  "84",
+                                  style: TextStyle(
+                                    color:kColorsBlack ,
+                                    fontSize: 17.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                "عدد المشاريع الإجمالي",
+                                style: TextStyle(
+                                  color:kColorsBlack ,
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                      ),
+                    ),
+                      SizedBox(width: 5.0),
+                      Expanded(
+                        flex: 6,
+                      child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                SizedBox(width: 5.0),
+                                Container(
+                                  color: kColorsLightBlackLow,
+                                  padding: EdgeInsets.symmetric(horizontal:  2,vertical: 2,),
+                                  child: Text(
+                                    " عدد المشاريع"+"    84",
+                                    style: TextStyle(
+                                      color:kColorsBlack ,
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
 
-              ],
+
+                                SizedBox(width: 20.0),
+                                Container(
+                                  color: kColorsLightBlackLow,
+                                  padding: EdgeInsets.symmetric(horizontal:  2,vertical: 2,),
+                                  child: Text(
+                                    " عدد المشاريع"+"    84",
+                                    style: TextStyle(
+                                      color:kColorsBlack ,
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+
+                              ],
+                            ),
+                            SizedBox(height: 5.0),
+                            Row(
+                              children: [
+                                SizedBox(width: 5.0),
+                                Container(
+                                  color: kColorsLightBlackLow,
+                                  padding: EdgeInsets.symmetric(horizontal:  2,vertical: 2,),
+                                  child: Text(
+                                    " عدد المشاريع"+"    84",
+                                    style: TextStyle(
+                                      color:kColorsBlack ,
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+
+
+                                SizedBox(width: 20.0),
+                                Container(
+                                  color: kColorsLightBlackLow,
+                                  padding: EdgeInsets.symmetric(horizontal:  2,vertical: 2,),
+                                  child: Text(
+                                    " عدد المشاريع"+"    84",
+                                    style: TextStyle(
+                                      color:kColorsBlack ,
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+
+                              ],
+                            ),
+                            SizedBox(height: 5.0),
+                            Container(
+                              color: kColorsLightBlackLow,
+                              padding: EdgeInsets.symmetric(horizontal:  2,vertical: 2,),
+                              child: Row(
+                                children: [
+                                  Text(
+                                    "عدد المشاريع",
+                                    style: TextStyle(
+                                      color:kColorsBlack ,
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(width: 5.0),
+                                  Text(
+                                    "84",
+                                    style: TextStyle(
+                                      color:kColorsBlack ,
+                                      fontSize: 17.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                          ],
+                        ),
+                    ),
+                    ],
+                  ),
+                  SizedBox(height: .02.sh),
+                  Row(
+                    children: [
+                      Container(
+                          padding: EdgeInsets.only(
+                              left:2.r, right:10.r,
+                              bottom:1.r),
+                          child: Text(
+                            "مشاريعي".tr,
+                            style: TextStyle(color:kColorsBlack,fontSize: 20,fontWeight: FontWeight.w600),)
+                      ),
+                    ],
+                  ),
+
+                ],
+              ),
             ),
           ),
           clipMainScreen: true,
@@ -75,8 +241,57 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
   }
+  Widget _buildInfoCard(String title, String value) {
+    return Card(
+      elevation: 2.0,
+      child: Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              title,
+              style: TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 8.0),
+            Text(
+              value,
+              style: TextStyle(
+                fontSize: 16.0,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 
+  Widget _buildProgressSection(String title, double value) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          title,
+          style: TextStyle(
+            fontSize: 16.0,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 8.0),
+        LinearProgressIndicator(
+          value:value/ 100,
+          backgroundColor: Colors.grey[300],
+          valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+        ),
+      ],
+    );
+  }
 }
+
+
 
 enum ChangeColor {
   ticket,
