@@ -61,7 +61,7 @@ class TextFieldWidget extends StatelessWidget {
               child: Text(
                 text!.tr,
 
-                style: TextStyle(fontFamily: 'Cairo',
+                style: TextStyle(fontFamily: 'Regular',
                   fontSize: 14,
                   color: kColorsBlack,
                 ),)
@@ -71,7 +71,7 @@ class TextFieldWidget extends StatelessWidget {
             initialValue: initialValue,
             onChanged: onChanged,
             controller: controller,
-            style: TextStyle(fontFamily: 'Cairo',color: colorfont!=null ? colorfont : kColorsLightBlack,fontSize: 12.sp),
+            style: TextStyle(fontFamily: 'Regular',color: colorfont!=null ? colorfont : kColorsLightBlack,fontSize: 12.sp),
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return _errorMessage(requirement ?? false); // استخدم قيمة افتراضية لـ requirement
@@ -89,7 +89,7 @@ class TextFieldWidget extends StatelessWidget {
                 filled: true,
                 fillColor:  kColorsWhite,
                 errorMaxLines: 1,
-                hintStyle:hintStyle?? TextStyle(fontFamily: 'Cairo',
+                hintStyle:hintStyle?? TextStyle(fontFamily: 'Regular',
                     fontSize: 11,
                     color: kColorsIcon,
                     fontWeight: FontWeight.w500) ,

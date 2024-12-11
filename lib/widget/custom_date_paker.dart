@@ -54,7 +54,7 @@ class CustomDatePaker extends StatelessWidget {
       padding: EdgeInsets.only(left: 15.r, right: 7.r, bottom: 6.r),
         child: Text(
           text!.tr ,
-          style: TextStyle(
+          style: TextStyle(   fontFamily: 'Regular',
               color: kColorsBlack,
               fontSize: 12,
               fontWeight: FontWeight.bold),
@@ -68,7 +68,7 @@ class CustomDatePaker extends StatelessWidget {
               child: DateTimeField(
                 onChanged: onchange,
                 controller: controller,
-                style:TextStyle(color: kColorsLightBlack,fontSize: 12.sp),
+                style:TextStyle(   fontFamily: 'Regular',color: kColorsLightBlack,fontSize: 12.sp),
                 validator: (value) {
                   if (value == null) {
                     return _errorMessage(reqeurment!);
@@ -96,7 +96,7 @@ class CustomDatePaker extends StatelessWidget {
                   hintText: hint,
                   fillColor: kColorsWhite,
                   errorMaxLines: 1,
-                  hintStyle: TextStyle(color: Colors.black,fontSize: 9.sp),
+                  hintStyle: TextStyle(   fontFamily: 'Regular',color: Colors.black,fontSize: 9.sp),
                   contentPadding:
                   EdgeInsets.symmetric(vertical: 2.h, horizontal: 10.w),
                   border: OutlineInputBorder(
@@ -206,7 +206,7 @@ class _CustomDateHijryPakerState extends State<CustomDateHijryPaker> {
               EdgeInsets.only(left: 15.r, right: 2.r, bottom: 6.r),
               child: Text(
                 widget.text!.tr+":",
-                style: TextStyle(
+                style: TextStyle(   fontFamily: 'Regular',
                     color: kColorsLightBlack,
                     fontSize: 13.sp,
                     fontWeight: FontWeight.bold),
@@ -247,7 +247,7 @@ class _CustomDateHijryPakerState extends State<CustomDateHijryPaker> {
                   hintText: widget.hint,
                   fillColor: kColorsWhite,
                   errorMaxLines: 1,
-                  hintStyle: TextStyle(color: Colors.black,fontSize: 11.sp),
+                  hintStyle: TextStyle(   fontFamily: 'Regular',color: Colors.black,fontSize: 11.sp),
                   contentPadding: EdgeInsets.symmetric(vertical: 2.h,horizontal: 10.w),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5.r),

@@ -21,19 +21,26 @@ class HomeController extends GetxController with StateMixin{
     // TODO: implement onInit
     super.onInit();
   }
+  onSelectCategory({required int? ind,required String? id}) {
 
-  ChangeColor selectColor = ChangeColor.propertyManagement;
-  onChangeColor(ChangeColor changeColor) {
-    selectColor = changeColor;
+      if (ind == 0) {
+        stg.write(AppMapKey.value, id);
+        // Get.toNamed('${RoutingApp.sessionsScreen}?${AppMapKey.value}=$id');
+
+      } else if (ind == 1) {
+        show_tabB=true;
+        // Get.toNamed('${RoutingApp.committee_members_screen}?${AppMapKey.value}=$id & ${AppMapKey.ShowTabBar}=$show_tabB  ');
+        stg.write(AppMapKey.value, id);
+      } else if (ind == 2) {
+        show_tabB=true;
+        stg.write(AppMapKey.value, id);
+        // Get.toNamed('${RoutingApp.regulations_screen}?${AppMapKey.value}=$id & ${AppMapKey.ShowTabBar}=$show_tabB  ');
+
+      }
+
+
+    selectedCategoryIndex = ind;
     update();
   }
-
-
-
-
-
-
-
-
 }
 

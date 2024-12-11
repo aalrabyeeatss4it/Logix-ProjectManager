@@ -2,11 +2,15 @@ import 'dart:async';
 import 'package:projectmanagers/Constants/Constants.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/profile/prpfile_screen.dart';
 import 'package:projectmanagers/Screen/Notifcation/notifcation_screen.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/electronic_services_screen.dart';
+import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/keeper_covenant_screen.dart';
+import 'package:projectmanagers/Screen/dashboard/Reports/reports_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:projectmanagers/binding/binding.dart';
 
 
 class DashboardScreen extends StatefulWidget {
@@ -34,10 +38,9 @@ class DashboardScreenState extends State<DashboardScreen> {
     _pageController = PageController(initialPage: widget.pageIndex);
     _screens = [
       HomeScreen(),
-      NotifcationScreen(show_tabBar: true,IsHome: true),
-      ProfileScreen(),
-
-      // ProfileScreen(show_tabBar: true,),
+      ElectronicServicesScreen(),
+      KeeperCovenantScreen(),
+      ReportsScreen(),
     ];
 
     Future.delayed(const Duration(seconds: 1), () {
@@ -62,7 +65,7 @@ class DashboardScreenState extends State<DashboardScreen> {
               return true;
             }else {
               ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                content: Text('Click again to exit'.tr, style: const TextStyle(fontFamily: 'Cairo',color: Colors.white)),
+                content: Text('Click again to exit'.tr, style: const TextStyle(fontFamily: 'Regular',color: Colors.white)),
                 behavior: SnackBarBehavior.floating,
                 backgroundColor: kColorsRed,
                 duration: const Duration(seconds: 2),
@@ -77,36 +80,46 @@ class DashboardScreenState extends State<DashboardScreen> {
           }
         },
         child: Scaffold(
+          backgroundColor: Colors.white ,
           key: _scaffoldKey,
           bottomNavigationBar: Container(
 
             width: double.infinity,
-            height: 0.12.sh,
+            height: 0.09.sh,
             decoration: BoxDecoration(
-
-                border: Border.all(width:0.5,color:kColorsLightBlack ),
+                borderRadius: BorderRadius.only(
+                    topLeft:Radius.circular(20.r),
+                    topRight: Radius.circular(20.r),
+                    bottomLeft: Radius.circular(10.r),
+                    bottomRight: Radius.circular(10.r),
+                ),
                 color: Colors.white),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  height: 0.10.sh,
-                  width: double.infinity,
+                  height: 0.09.sh,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       TextButton(
                           child: SizedBox(
-                            height: 0.10.sh,
+                            height: 0.09.sh,
                             child: Column(
                               children: [
                                 SvgPicture.asset(
-                                  "assets/Icons/home-2.svg",
-                                  width: 24.r,
-                                  height: 24.r,
-                                  color:_pageIndex==0?kColorsPrimary :kColorsLightBlack,
+                                  "assets/Icon/home-hashtag.svg",
+                                  width: 24,
+                                  height: 24,
+                                  color:_pageIndex==0?kColorsPrimaryFont :kColorsLightBlack,
                                 ),
-                                Text("Home".tr,style:  _pageIndex==0?TextStyle(fontFamily: 'Cairo',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsPrimary):TextStyle(fontFamily: 'Cairo',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),)
+                                SizedBox(
+                                  height: 0.01.sh,
+                                ),
+                                Text("مشاريعي".tr,style:  _pageIndex==0?TextStyle(fontFamily: 'Regular',fontSize: 14,color: kColorsPrimaryFont):TextStyle(fontFamily: 'Regular',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
+                                SizedBox(
+                                  height: 0.010.sh,
+                                ),
                               ],
                             ),
                           ),
@@ -116,17 +129,23 @@ class DashboardScreenState extends State<DashboardScreen> {
                       ),
                       TextButton(
                         child:SizedBox(
-                          height: 0.10.sh,
+                          height: 0.09.sh,
                           child: Column(
                             children: [
                               SvgPicture.asset(
-                                "assets/Icons/notification.svg",
-                                width: 24.r,
-                                height: 24.r,
-                                color: _pageIndex==1?kColorsPrimary :kColorsLightBlack,
+                                "assets/Icon/hashtag.svg",
+                                width: 24,
+                                height: 24,
+                                color: _pageIndex==1?kColorsPrimaryFont :kColorsLightBlack,
                               ),
-                              Text( 'Notifications'.tr,style: _pageIndex==1?TextStyle(fontFamily: 'Cairo',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsPrimary):TextStyle(fontFamily: 'Cairo',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
 
+                              SizedBox(
+                                height: 0.01.sh,
+                              ),
+                              Text( 'الخدمات الإلكترونيه'.tr,style: _pageIndex==1?TextStyle(fontFamily: 'Regular',fontSize: 14,color: kColorsPrimaryFont):TextStyle(fontFamily: 'Regular',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
+                              SizedBox(
+                                height: 0.010.sh,
+                              ),
                             ],
                           ),
                         ),
@@ -134,19 +153,50 @@ class DashboardScreenState extends State<DashboardScreen> {
                           Get.offAll(DashboardScreen(pageIndex: 1),transition: Transition.noTransition,);
                         },
                       ),
-
                       TextButton(
                         child:SizedBox(
-                          height: 0.10.sh,
+                          height: 0.09.sh,
                           child: Column(
                             children: [
                               SvgPicture.asset(
-                                "assets/Icons/direct.svg",
-                                width: 24.r,
-                                height: 24.r,
-                                color:_pageIndex==3?kColorsPrimary:kColorsLightBlack,
+                                "assets/Icon/bookmark.svg",
+                                width: 24,
+                                height: 24,
+                                color: _pageIndex==2?kColorsPrimaryFont :kColorsLightBlack,
                               ),
-                              Text(  'Profile personly'.tr,style:_pageIndex==3?TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsPrimary):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),)
+                              SizedBox(
+                                height: 0.01.sh,
+                              ),
+                              Text( ' حافظة العهده'.tr,style: _pageIndex==2?TextStyle(fontFamily: 'Regular',fontSize: 14,color: kColorsPrimaryFont):TextStyle(fontFamily: 'Regular',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
+                              SizedBox(
+                                height: 0.010.sh,
+                              ),
+                            ],
+                          ),
+                        ),
+                        onPressed: () {
+                          Get.offAll(DashboardScreen(pageIndex: 2),transition: Transition.noTransition,);
+                        },
+                      ),
+
+                      TextButton(
+                        child:SizedBox(
+                          height: 0.09.sh,
+                          child: Column(
+                            children: [
+                              SvgPicture.asset(
+                                "assets/Icon/chart-2.svg",
+                                width: 24,
+                                height: 24,
+                                color:_pageIndex==3?kColorsPrimaryFont:kColorsLightBlack,
+                              ),
+                              SizedBox(
+                                height: 0.01.sh,
+                              ),
+                              Text(  'التقارير'.tr,style:_pageIndex==3?TextStyle(fontFamily: 'Regular',fontSize: 14,color: kColorsPrimaryFont):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
+                              SizedBox(
+                                height: 0.010.sh,
+                              ),
                             ],
                           ),
                         ),
@@ -159,15 +209,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                     ],
                   ),
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(10)
-                  ),
-                  width: 0.45.sw,
-                  height: 0.006.sh,
 
-                ),
               ],
             ),
           )

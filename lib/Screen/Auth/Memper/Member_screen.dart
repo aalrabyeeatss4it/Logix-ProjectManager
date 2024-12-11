@@ -63,7 +63,7 @@ class MemberScreen extends StatelessWidget {
                               children: [
 
                                 Text( 'Membership registration'.tr,
-                                  style: TextStyle(fontFamily: 'Cairo',
+                                  style: TextStyle(fontFamily: 'Regular',
                                       fontSize: 20,
                                       color: kColorsBlack,
                                       fontWeight: FontWeight.bold),
@@ -104,7 +104,7 @@ class MemberScreen extends StatelessWidget {
                               borderRadius: 10.r,
                               sizeHeight: 0.06.sh,
                               sizeWidth: 0.93.sw,
-                              style:TextStyle(fontFamily: 'Cairo',
+                              style:TextStyle(fontFamily: 'Regular',
                                   fontSize: 16,
                                   color: kColorsWhite,
                                   fontWeight: FontWeight.w600),

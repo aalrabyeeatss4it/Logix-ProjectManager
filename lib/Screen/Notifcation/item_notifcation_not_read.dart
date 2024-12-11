@@ -57,11 +57,11 @@ ItemNotifcationNotRead(this.data);
                                     flex:5,
 
 
-                                    child: Text('Registration number'.tr+":",  style: TextStyle(fontFamily: 'Cairo',fontSize: 12, color:kColorsPrimary , fontWeight: FontWeight.w500,))),
+                                    child: Text('Registration number'.tr+":",  style: TextStyle(fontFamily: 'Regular',fontSize: 12, color:kColorsPrimary , fontWeight: FontWeight.w500,))),
 
                                 Expanded(
                                     flex:9,
-                                    child: Text(data.codeFormat.toString(),  style:TextStyle(fontFamily: 'Cairo',fontSize: 10, color: kColorsBlack,))),
+                                    child: Text(data.codeFormat.toString(),  style:TextStyle(fontFamily: 'Regular',fontSize: 10, color: kColorsBlack,))),
                                 Expanded(
                                   flex:3,
                                   child: CustomButton(
@@ -71,7 +71,7 @@ ItemNotifcationNotRead(this.data);
                                     sizeHeight: 0.04.sh,
                                     sizeWidth: 0.15.sw,
                                     text:data.statusName.toString(),
-                                    style: TextStyle(fontFamily: 'Cairo',
+                                    style: TextStyle(fontFamily: 'Regular',
                                         fontSize: 12,
                                         color: kColorsWhite),
                                     onPress: () {
@@ -83,9 +83,9 @@ ItemNotifcationNotRead(this.data);
                           ),
                         ],
                       ),
-                    CustomRowText(text:'The Topic'.tr,textStyle: TextStyle(fontFamily: 'Cairo',fontSize: 12, color:kColorsPrimary , fontWeight: FontWeight.w500,),textValue: data.subject==null?"":data.subject.toString(),textValueStyle: TextStyle(fontFamily: 'Cairo',fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                    CustomRowText(text:"Sender".tr,textStyle: TextStyle(fontFamily: 'Cairo',fontSize: 12, color:kColorsPrimary , fontWeight: FontWeight.w500,),textValue:data.userFullname==null?"":data.userFullname.toString(),textValueStyle: TextStyle(fontFamily: 'Cairo',fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                    CustomRowText(text:'Transaction history'.tr,textStyle: TextStyle(fontFamily: 'Cairo',fontSize: 12, color:kColorsPrimary , fontWeight: FontWeight.w500,),textValue: data.hDate==null?"":data.hDate.toString(),textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                    CustomRowText(text:'The Topic'.tr,textStyle: TextStyle(fontFamily: 'Regular',fontSize: 12, color:kColorsPrimary , fontWeight: FontWeight.w500,),textValue: data.subject==null?"":data.subject.toString(),textValueStyle: TextStyle(fontFamily: 'Regular',fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                    CustomRowText(text:"Sender".tr,textStyle: TextStyle(fontFamily: 'Regular',fontSize: 12, color:kColorsPrimary , fontWeight: FontWeight.w500,),textValue:data.userFullname==null?"":data.userFullname.toString(),textValueStyle: TextStyle(fontFamily: 'Regular',fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                    CustomRowText(text:'Transaction history'.tr,textStyle: TextStyle(fontFamily: 'Regular',fontSize: 12, color:kColorsPrimary , fontWeight: FontWeight.w500,),textValue: data.hDate==null?"":data.hDate.toString(),textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
                     CustomRowText(text:"Sending Date".tr,textStyle: TextStyle(fontSize: 12, color:kColorsPrimary , fontWeight: FontWeight.w500,),textValue: data.createdOn==null?"":data.createdOn.toString(),textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
                           ],
                   ),

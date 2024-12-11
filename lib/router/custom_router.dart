@@ -6,6 +6,9 @@ import 'package:projectmanagers/Screen/MenuDrawer/profile/change_password_screen
 import 'package:projectmanagers/Screen/MenuDrawer/profile/prpfile_screen.dart';
 import 'package:projectmanagers/Screen/Notifcation/notifcation_screen.dart';
 import 'package:projectmanagers/Screen/card_wizard_overlap.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/electronic_services_screen.dart';
+import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/keeper_covenant_screen.dart';
+import 'package:projectmanagers/Screen/dashboard/Reports/reports_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/dashboard_screen.dart';
 import 'package:projectmanagers/Screen/splash_screen.dart';
 import 'package:projectmanagers/binding/binding.dart';
@@ -92,6 +95,47 @@ class Pages {
       ),
 
 
+
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.notfcations_screen,
+          page: () => NotifcationScreen(),
+          bindings: [
+            NotifcationBinding(),
+          ]
+      ),
+
+
+
+
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.electronic_services_screen,
+          page: () => ElectronicServicesScreen(),
+          bindings: [
+            ElectronicServicesBinding(),
+          ]
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.keeper_covenant_screen,
+          page: () => KeeperCovenantScreen(),
+          bindings: [
+            KeeperCovenantBinding(),
+          ]
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.reports_screen,
+          page: () => ReportsScreen(),
+          bindings: [
+            ReportsBinding(),
+          ]
+      ),
 
 
     ];

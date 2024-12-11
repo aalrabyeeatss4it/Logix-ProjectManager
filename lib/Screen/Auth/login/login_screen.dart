@@ -65,7 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   height: 0.02.sh,
                                 ),
                                 Text('Sign in'.tr,
-                                  style: TextStyle(fontFamily: 'Cairo',fontSize: 20, color: kColorsBlack,fontWeight: FontWeight.bold),
+                                  style: TextStyle(fontFamily: 'Regular',fontSize: 20, color: kColorsBlack,fontWeight: FontWeight.bold),
                                 ),
                                 SizedBox(height: 0.05.sh,),
                                 TextFieldWidget(
@@ -187,7 +187,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                           ),
                                           Text(
                                             'Remember me'.tr,
-                                            style:TextStyle(fontFamily: 'Cairo',
+                                            style:TextStyle(fontFamily: 'Regular',
                                                 fontSize: 12,
                                                 color: kColorsIcon,
                                                 fontWeight: FontWeight.w500),
@@ -197,7 +197,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                                       Text(
                                         'Forget Password ?'.tr,
-                                        style: TextStyle(fontFamily: 'Cairo',fontSize: 12, color: kColorsPrimary, fontWeight: FontWeight.w500),
+                                        style: TextStyle(fontFamily: 'Regular',fontSize: 12, color: kColorsPrimary, fontWeight: FontWeight.w500),
                                       ),
                                     ],
                                   ),
@@ -211,7 +211,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   sizeHeight: 0.06.sh,
                                   sizeWidth: 0.93.sw,
                                   text: 'Sign in'.tr,
-                                  style: TextStyle(fontFamily: 'Cairo',
+                                  style: TextStyle(fontFamily: 'Regular',
                                       fontSize: 18,
                                       fontWeight: FontWeight.w500,
                                       color:

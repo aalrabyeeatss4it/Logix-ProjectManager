@@ -29,32 +29,37 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
     return  Container(
 
       width:double.infinity,
-      height: 0.12.sh,
+      height: 0.09.sh,
       decoration: BoxDecoration(
-          border: Border.all(width:0.5,color:kColorsLightBlack ),
+          borderRadius: BorderRadius.only(
+            topLeft:Radius.circular(20.r),
+            topRight: Radius.circular(20.r),
+            bottomLeft: Radius.circular(10.r),
+            bottomRight: Radius.circular(10.r),
+          ),
           color: Colors.white),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            height: 0.10.sh,
-            width: double.infinity,
+            height: 0.09.sh,
+
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 TextButton(
                     child: SizedBox(
-                      height: 0.10.sh,
+                      height: 0.09.sh,
                       child: Column(
                         children: [
                           SvgPicture.asset(
-                            "assets/Icons/home-2.svg",
+                            "assets/Icon/home-hashtag.svg",
                             width: 24.r,
                             height: 24.r,
                             color: MenuState.home == widget.selectedMenu
-                                ? kColorsPrimary :kColorsLightBlack,
+                                ? kColorsPrimaryFont :kColorsLightBlack,
                           ),
-                          Text("Home".tr,style: MenuState.home == widget.selectedMenu?TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsPrimary):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),)
+                          Text("مشاريعي".tr,style: MenuState.home == widget.selectedMenu?TextStyle(   fontFamily: 'Regular',fontSize: 14,color: kColorsPrimaryFont):TextStyle(   fontFamily: 'Regular',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),)
                         ],
                       ),
                     ),
@@ -64,17 +69,38 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                 ),
                 TextButton(
                   child:SizedBox(
-                    height: 0.10.sh,
+                    height: 0.09.sh,
                     child: Column(
                       children: [
                         SvgPicture.asset(
-                          "assets/Icons/notification.svg",
+                          "assets/Icon/hashtag.svg",
                           width: 24.r,
                           height: 24.r,
-                          color: MenuState.Notifications == widget.selectedMenu
-                              ? kColorsPrimary :kColorsLightBlack,
+                          color: MenuState.ElectronicServices == widget.selectedMenu
+                              ? kColorsPrimaryFont :kColorsLightBlack,
                         ),
-                        Text( 'Notifications'.tr,style: MenuState.Notifications == widget.selectedMenu?TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsPrimary):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
+                        Text( 'الخدمات الإلكترونيه'.tr,style: MenuState.ElectronicServices == widget.selectedMenu?TextStyle(   fontFamily: 'Regular',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsPrimaryFont):TextStyle(   fontFamily: 'Regular',fontSize: 14,color: kColorsLightBlack),),
+
+                      ],
+                    ),
+                  ),
+                  onPressed: () {
+                    Get.offAll(DashboardScreen(pageIndex: 1),transition: Transition.noTransition,);
+                  },
+                ),
+                TextButton(
+                  child:SizedBox(
+                    height: 0.09.sh,
+                    child: Column(
+                      children: [
+                        SvgPicture.asset(
+                          "assets/Icon/bookmark.svg",
+                          width: 24.r,
+                          height: 24.r,
+                          color: MenuState.KeeperCovenant == widget.selectedMenu
+                              ? kColorsPrimaryFont :kColorsLightBlack,
+                        ),
+                        Text( ' حافظة العهده'.tr,style: MenuState.KeeperCovenant == widget.selectedMenu?TextStyle(   fontFamily: 'Regular',fontSize: 14,color: kColorsPrimaryFont):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
 
                       ],
                     ),
@@ -90,13 +116,13 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                     child: Column(
                       children: [
                         SvgPicture.asset(
-                          "assets/Icons/direct.svg",
+                          "assets/Icon/chart-2.svg",
                           width: 24.r,
                           height: 24.r,
-                          color: MenuState.profile == widget.selectedMenu
-                              ? kColorsPrimary :kColorsLightBlack,
+                          color: MenuState.Reports == widget.selectedMenu
+                              ? kColorsPrimaryFont :kColorsLightBlack,
                         ),
-                        Text(  'Profile personly'.tr,style: MenuState.profile == widget.selectedMenu?TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsPrimary):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),)
+                        Text(  'التقارير'.tr,style: MenuState.Reports == widget.selectedMenu?TextStyle(fontSize: 14,color: kColorsPrimaryFont):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),)
                       ],
                     ),
                   ),
@@ -109,15 +135,6 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
               ],
             ),
           ),
-          Container(
-            decoration: BoxDecoration(
-                color: Colors.black,
-                borderRadius: BorderRadius.circular(10)
-            ),
-            width: 0.45.sw,
-            height: 0.006.sh,
-
-          ),
         ],
       ),
     );
@@ -126,8 +143,9 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
 
 enum MenuState {
   home,
-  Notifications,
-  profile,
+  ElectronicServices,
+  KeeperCovenant,
+  Reports
 }
 class NoCustomBottomNavBar extends StatefulWidget {
   const NoCustomBottomNavBar({

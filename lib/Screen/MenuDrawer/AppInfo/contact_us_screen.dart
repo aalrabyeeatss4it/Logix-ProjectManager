@@ -139,7 +139,7 @@ class ContactUsScreen extends StatelessWidget {
               child: Text(
                 txt,
                 textAlign: TextAlign.start,
-                style:TextStyle(fontFamily: 'Cairo',
+                style:TextStyle(fontFamily: 'Regular',
                   fontSize: 16,
                   color: kColorsLightBlack,
                   fontWeight: FontWeight.w600,
@@ -190,7 +190,7 @@ class ContactUsScreen extends StatelessWidget {
                 child: Text(
                   text,
                   style:
-                  TextStyle(fontFamily: 'Cairo',color: fontColor, fontSize: 13,fontWeight: FontWeight.w500),
+                  TextStyle(fontFamily: 'Regular',color: fontColor, fontSize: 13,fontWeight: FontWeight.w500),
                 ),
               )
             ],
@@ -226,7 +226,7 @@ class ContactUsScreen extends StatelessWidget {
                           Text(
                             'Contact us'.tr,
                             style:
-                            TextStyle(fontFamily: 'Cairo',color: kColorsPrimary, fontSize: 16,fontWeight: FontWeight.w500),
+                            TextStyle(fontFamily: 'Regular',color: kColorsPrimary, fontSize: 16,fontWeight: FontWeight.w500),
                           ),
                       Padding(
                         padding:

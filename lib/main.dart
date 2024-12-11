@@ -22,7 +22,10 @@ void main() async {
 
    HttpOverrides.global = MyHttpOverrides();
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.white, // اللون الخلفي لشريط الحالة
+    statusBarIconBrightness: Brightness.dark, // لون الأيقونات (فاتح أو داكن)
+  ));
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp],);
   runApp(const MyApp());
 }

@@ -5,6 +5,9 @@ import 'package:projectmanagers/Screen/Auth/Memper/member_controller.dart';
 import 'package:projectmanagers/Screen/Auth/login/login_controller.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/profile/profile_controller.dart';
 import 'package:projectmanagers/Screen/Notifcation/notifcation_controller.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/electronic_services_controller.dart';
+import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/keeper_covenant_controller.dart';
+import 'package:projectmanagers/Screen/dashboard/Reports/reports_controller.dart';
 
 import '/apiservice/checkInterNet.dart';
 import 'package:get/get.dart';
@@ -52,6 +55,8 @@ class ChangPasswordBinding extends Bindings {
 
   }
 }
+
+
 class NotifcationBinding extends Bindings {
   @override
   void dependencies() {
@@ -60,5 +65,34 @@ class NotifcationBinding extends Bindings {
 
   }
 }
+
+
+
+
+class ReportsBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut<ReportsController>(() => ReportsController(),
+    );
+
+  }
+}
+class KeeperCovenantBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut<KeeperCovenantController>(() => KeeperCovenantController(),
+    );
+
+  }
+}
+class ElectronicServicesBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut<ElectronicServicesController>(() => ElectronicServicesController(),
+    );
+
+  }
+}
+
 
 

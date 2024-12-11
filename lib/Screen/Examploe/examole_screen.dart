@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:percent_indicator/percent_indicator.dart';
 import 'package:projectmanagers/Constants/Constants.dart';
 import 'package:projectmanagers/DropDownLIst/user_name_model.dart';
 import 'package:projectmanagers/Screen/Examploe/examole_controller.dart';
@@ -48,102 +49,42 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
   }
   @override
   Widget build(BuildContext context) {
-    final isRtl = Localizations.localeOf(context).languageCode == 'ar';
-    return  Scaffold(
-      backgroundColor: kColorsWhite,
-      body: SafeArea(
-        child: ZoomDrawer(
-          isRtl: isRtl ? true : false,
-          controller: zDExamoleController,
-          style: DrawerStyle.style1,
-          menuScreen: MenuWidgetDachbord(
-            zoomDrawerController: zDExamoleController,
-          ),
-          mainScreen: Scaffold(
-            backgroundColor: kColorsWhite,
-            appBar: MyAppBar(
-              title: 'شاشة للتجربه'.tr,
-              zoomDrawerController: zDExamoleController,
-            ),
-            body: Column(
+    return Scaffold(
+      appBar: AppBar(),
+      body: Center(
+        child: Container(
+          child: SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                GetBuilder<ExamoleController>(
-                    init: ExamoleController(),
-                    builder: (buld) {
-                      return  Expanded(
-                        child: Container(
-                          color: kColorsWhite,
-                          padding: EdgeInsets.only(left:   12.r,right: 12.r),
-                          child: Form(
-                            key: _formKeyDataAdd1,
-                            child: SingleChildScrollView(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  SizedBox(
-                                    height: 0.006.sh,
-                                  ),
 
-                                  GetBuilder<ExamoleController>(
-                                      init: ExamoleController(),
-                                      tag: "yes",
-                                      builder: (co) {
-                                        return InkWell(
-                                            onTap: () async {
-                                              Get.dialog(
-                                                LoadingIndicatorWidget(),
-                                              );
-                                              Get.back();
-                                              // onClickDropDwonRequest(co, context, controller.userNameModel!.dataUserName!,tag: "yes");
-                                            },
-                                            child: CustomTextInput(
-                                              iconEnd: Icon(Icons.keyboard_arrow_down, color: kColorsLightBlack,),
-                                              textAlign: TextAlign.start,
-                                              text:  'Send to'.tr,
-                                              filled: true,
-                                              isEnabled: false,
-                                              isRequired: true,
-                                              labelText: 'Choose'.tr,
-                                              exText: 'Choose'.tr,
-                                              textEditingController: controller.UserFullNameController,
-                                              styleText: TextStyle(fontFamily: 'Cairo',
-                                                fontSize: 13.sp,
-                                                color: kColorsBlack,
-                                              ),
-                                            ));
-                                      }),
-                                  SizedBox(
-                                    height: 0.03.sh,
-                                  ),
-
-
-
-                                  SizedBox(
-                                    height: 0.45.sh,
-                                  ),
-                                ],),
-                            ),
-                          ),
-                        ),
-                      );
-                    }),
-
+                //==================================================================
+                CircularPercentIndicator(
+                  radius: 120.0,
+                  lineWidth: 13.0,
+                  animation: true,
+                  percent: 0.7,
+                  center: Text(
+                    "70.0%",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+                  ),
+                  footer: Text(
+                    "Sales this week",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17.0),
+                  ),
+                  circularStrokeCap: CircularStrokeCap.round,
+                  progressColor: Colors.purple,
+                ),
               ],
             ),
           ),
-          clipMainScreen: true,
-          // slideWidth: MediaQuery.of(context).size.width * (isRtl == true ? .45 : 0.65),
-          openCurve: Curves.slowMiddle,
-          closeCurve: Curves.slowMiddle,
-          borderRadius: 24.0,
-          showShadow: true,
-          angle: 0.0, slideWidth: MediaQuery.of(context).size.width * 0.65.w,
-          shadowLayer1Color: kColorScafoold,
         ),
-      ),
-      bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home,),
+      )
     );
   }
-
-
 }
+
+
+

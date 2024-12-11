@@ -20,8 +20,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         super(key: key);
   @override
   Widget build(BuildContext context) {
-    final isRtl = Localizations.localeOf(context).languageCode == 'ar';
-    return Column(
+     return Column(
       children: [
         SizedBox(
           height: 0.01.sh,
@@ -64,44 +63,39 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                       Expanded(
                         flex: 8,
                         child: Center(
-                          child: Text(title!, style: Theme.of(context).textTheme.titleLarge!.copyWith(color:kColorsBlack,fontWeight: FontWeight.bold,fontSize: 20, )
+                          child: Text(title!, style: TextStyle(fontFamily: 'Regular',color:kColorsBlack,fontWeight: FontWeight.w500,fontSize: 16, )
                           ),
                         ),
                       ),
                       Expanded(
-                        flex: 1,
-                        child:IsHome==true? Padding(
-                          padding:  EdgeInsets.all(4.0.r),
-                          child: InkWell(
-                            onTap: (){
-                              // Get.toNamed(RoutingApp.notifcation_screen);
-                            },
-                            child: SvgPicture.asset(
-                              "assets/Icons/notification.svg",
-                              width: 24.r ,
-                              height: 24.r ,
-                              color: kColorsBlack,
+                        flex: 2,
+                        child:
+                        IsHome==true? Container(
+                          // margin: EdgeInsets.only(top: 6.0.r, bottom: 4.0.r, left: 8.0.r, right:  8.0.r),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(7.r),
+                            color:  Color(0xffF0F8FA),
+                          ),
+                          child: Padding(
+                            padding:  EdgeInsets.all(4.0.r),
+                            child: InkWell(
+                              onTap: (){
+
+                              },
+                              child: Row(
+                                children: [
+                                  Text("العربيه ", style: TextStyle(color:kColorsPrimaryFont,fontWeight: FontWeight.bold,fontSize: 12, )),
+                                  SvgPicture.asset(
+                                    "assets/Icon/GlobeSimple.svg",
+                                    width: 24.r ,
+                                    height: 24.r ,
+                                    color: kColorsPrimaryFont,
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ):InkWell(
-                          onTap: (){
-                            Get.back();
-                          },
-                          child: Padding(
-                            padding:  EdgeInsets.all(10.0.r),
-                            child:      isRtl? SvgPicture.asset(
-                              "assets/Icons/arrow-left.svg",
-                              width: 24.r ,
-                              height: 24.r ,
-                              color: kColorsWhite,
-                            ) : SvgPicture.asset(
-                              "assets/Icons/arrow-leftt.svg",
-                              width: 24.r ,
-                              height: 24.r ,
-                              color: kColorsWhite,
-                            )
-                          ),
-                        ),
+                        ):Container(),
                       ),
                     ],
                   ),

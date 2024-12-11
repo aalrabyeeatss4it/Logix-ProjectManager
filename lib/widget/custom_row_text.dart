@@ -19,7 +19,7 @@ class CustomRowText extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-              color:backColor  ,
+              color:kColorsWhite  ,
               borderRadius: BorderRadius.circular(10.r)
           ),
           padding:  EdgeInsets.only(top:  5.0.r,right: 6.r,bottom: 4.r),

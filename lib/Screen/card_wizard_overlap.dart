@@ -90,7 +90,7 @@ class CardWizardOverlapRouteState extends State<CardWizardOverlapRoute> {
                     borderColor: Color(0xffD0DDED),
                     text: 'back'.tr,
                     color:Color(0xffD0DDED),
-                    style:  TextStyle(fontFamily: 'Cairo',
+                    style:  TextStyle(fontFamily: 'Regular',
                       color: Color(0xFF5C6672),
                       fontSize: 16,
                     ),
@@ -224,7 +224,7 @@ class CardWizardOverlapRouteState extends State<CardWizardOverlapRoute> {
               child:     Text(wz.title,
                 // 'إدارة معاملات الصادر والوارد - Incoming / Export process',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontFamily: 'Cairo',
+                style: TextStyle(fontFamily: 'Regular',
                   color: Color(0xFF242424),
                   fontSize: 24,
 
@@ -240,7 +240,7 @@ class CardWizardOverlapRouteState extends State<CardWizardOverlapRoute> {
             child: Text(
               textAlign: TextAlign.center,
               wz.brief,
-              style: TextStyle(fontFamily: 'Cairo',
+              style: TextStyle(fontFamily: 'Regular',
                 fontSize: 16,
                 color: kColorsLightBlack,),
 
@@ -255,7 +255,7 @@ class CardWizardOverlapRouteState extends State<CardWizardOverlapRoute> {
               text:isLast ? 'Get started now'.tr:'Next'.tr,
               color: Color(0xFF3570B7),
               style:  TextStyle(
-                  fontFamily: 'Cairo',
+                  fontFamily: 'Regular',
                   fontSize: 14.sp,
                   color: kColorsWhite
               ),

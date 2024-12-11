@@ -40,7 +40,7 @@ ThemeData _buildThemeTest1() {
           color: test1_colorSurfaceWhite
       ),
       backgroundColor: test1_color1_100,
-      titleTextStyle: TextStyle(fontFamily: 'Cairo',
+      titleTextStyle: TextStyle(fontFamily: 'Regular',
           fontSize: 16.0.sp,
           // fontWeight: FontWeight.w300,
           color: test1_colorSurfaceWhite
@@ -61,40 +61,33 @@ TextTheme _buildTest1TextTheme(TextTheme base) {
       .copyWith(
 
 
-    titleSmall: TextStyle(fontFamily: 'Cairo',
+    titleSmall: TextStyle(fontFamily: 'Regular',
         fontSize: 16.0.sp,
-        // fontWeight: FontWeight.w300,
         color: kColorsLightBlack
     ),
-
-    titleMedium: TextStyle(fontFamily: 'Cairo',
+    titleMedium: TextStyle(fontFamily: 'Regular',
         fontSize: 14.0.sp,
         fontWeight: FontWeight.w500,
         color: kColorsLightBlack),
-    titleLarge: TextStyle(fontFamily: 'Cairo',
+    titleLarge: TextStyle(fontFamily: 'Regular',
         fontSize: 20.0.sp,
         fontWeight: FontWeight.bold,
         color: kColorsBlack),
-    bodyMedium: TextStyle(fontFamily: 'Cairo',
+    bodyMedium: TextStyle(fontFamily: 'Regular',
         fontSize: 18.0.sp,
         fontWeight: FontWeight.w300,
         color: Colors.black),
-    bodySmall: TextStyle(fontFamily: 'Cairo',
+    bodySmall: TextStyle(fontFamily: 'Regular',
         fontSize: 14.0.sp,
         fontWeight: FontWeight.w500,
         color:Colors.black),
     labelMedium:
-    TextStyle(fontFamily: 'Cairo',fontSize: 14.0.sp, color: kColorsBlack),
-    displaySmall: TextStyle(fontFamily: 'Cairo',fontSize: 12.0.sp, color: kColorsBlack, fontWeight: FontWeight.w300,),
-    bodyLarge: TextStyle(fontSize: 10.0.sp, color: Colors.grey, fontWeight: FontWeight.w300,),
-    // button: base.button?.copyWith(
-    //     fontWeight: FontWeight.w500,
-    //     fontSize: 14,
-    //     letterSpacing: defaultLetterSpacing,
-    //   ),
+    TextStyle(fontFamily: 'Regular',fontSize: 14.0.sp, color: kColorsBlack),
+    displaySmall: TextStyle(fontFamily: 'Regular',fontSize: 12.0.sp, color: kColorsBlack, fontWeight: FontWeight.w300,),
+    bodyLarge: TextStyle(   fontFamily: 'Regular',fontSize: 10.0.sp, color: Colors.grey, fontWeight: FontWeight.w300,),
   )
       .apply(
-    fontFamily: 'Cairo',
+    fontFamily: 'Regular',
     displayColor: test1_color2_900,
     bodyColor: test1_color2_900,
 
@@ -106,9 +99,7 @@ IconThemeData _customIconThemeTest1(IconThemeData original) {
 
 const ColorScheme _test1ColorScheme = ColorScheme(
   primary: test1_color1_100,
-
   secondary: test1_color1_50,
-
   surface: test1_colorSurfaceWhite,
   background: test1_colorBackgroundWhite,
   error: test1_color_ErrorRed,
