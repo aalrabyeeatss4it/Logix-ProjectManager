@@ -63,7 +63,10 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                       Expanded(
                         flex: 8,
                         child: Center(
-                          child: Text(title!, style: TextStyle(fontFamily: 'Regular',color:kColorsBlack,fontWeight: FontWeight.w500,fontSize: 16, )
+                          child: Text(title!, style:    Theme.of(context)
+                              .textTheme
+                              .titleMedium
+                              ?.copyWith(fontFamily: 'Regular',color:kColorsBlack,fontWeight: FontWeight.w500,fontSize: 16, )
                           ),
                         ),
                       ),
@@ -84,7 +87,13 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                               },
                               child: Row(
                                 children: [
-                                  Text("العربيه ", style: TextStyle(color:kColorsPrimaryFont,fontWeight: FontWeight.bold,fontSize: 12, )),
+                                  Text("العربيه ", style:
+                                  // TextStyle(color:kColorsPrimaryFont,fontWeight: FontWeight.bold,fontSize: 12, )
+                                  Theme.of(context)
+                                      .textTheme
+                                      .titleMedium
+                                      ?.copyWith(color: kColorsPrimaryFont,fontWeight: FontWeight.bold,fontSize: 12)
+                                  ),
                                   SvgPicture.asset(
                                     "assets/Icon/GlobeSimple.svg",
                                     width: 24.r ,

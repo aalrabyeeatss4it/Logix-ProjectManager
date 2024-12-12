@@ -28,11 +28,11 @@ class CustomRowText extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                  flex: 3,
+                  flex: 5,
                   child: Text(text.toString()+":",  style: textStyle)),
 
               Expanded(
-                  flex: 6,
+                  flex: 8,
                   child: Text(textValue.toString(),  style:textValueStyle)),
             ],
           ),

@@ -29,7 +29,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
     return  Container(
 
       width:double.infinity,
-      height: 0.09.sh,
+      height: 0.10.sh,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
             topLeft:Radius.circular(20.r),
@@ -42,14 +42,14 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            height: 0.09.sh,
+            height: 0.10.sh,
 
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 TextButton(
                     child: SizedBox(
-                      height: 0.09.sh,
+                      height: 0.10.sh,
                       child: Column(
                         children: [
                           SvgPicture.asset(
@@ -69,7 +69,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                 ),
                 TextButton(
                   child:SizedBox(
-                    height: 0.09.sh,
+                    height: 0.10.sh,
                     child: Column(
                       children: [
                         SvgPicture.asset(
@@ -90,7 +90,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                 ),
                 TextButton(
                   child:SizedBox(
-                    height: 0.09.sh,
+                    height: 0.10.sh,
                     child: Column(
                       children: [
                         SvgPicture.asset(
@@ -101,7 +101,6 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                               ? kColorsPrimaryFont :kColorsLightBlack,
                         ),
                         Text( ' حافظة العهده'.tr,style: MenuState.KeeperCovenant == widget.selectedMenu?TextStyle(   fontFamily: 'Regular',fontSize: 14,color: kColorsPrimaryFont):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
-
                       ],
                     ),
                   ),

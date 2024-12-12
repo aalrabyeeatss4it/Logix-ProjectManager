@@ -1,8 +1,12 @@
 import 'package:flutter/services.dart';
 import 'package:projectmanagers/Constants/kaye.dart';
+import 'package:projectmanagers/Constants/my_text.dart';
 import 'package:projectmanagers/Screen/dashboard/home/categoriesScreen.dart';
 import 'package:projectmanagers/Screen/dashboard/home/home_controller.dart';
+import 'package:projectmanagers/Screen/dashboard/home/item_task_new.dart';
+import 'package:projectmanagers/Screen/dashboard/home/item_task_old.dart';
 import 'package:projectmanagers/Screen/dashboard/home/itemhome.dart';
+import 'package:projectmanagers/Screen/dashboard/home/tabBar_controller.dart';
 import 'package:projectmanagers/widget/cutom_appbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
@@ -21,6 +25,7 @@ class HomeScreen extends StatefulWidget{
 class _HomeScreenState extends State<HomeScreen> {
   final zoomDrawerController = ZoomDrawerController();
    final controller = Get.put(HomeController());
+  final controllerTabBarController = Get.put(TabBarController());
   late bool show_tabB=true;
   @override
   initState() {
@@ -52,125 +57,215 @@ class _HomeScreenState extends State<HomeScreen> {
             backgroundColor: kColorsWhite,
             body:Padding(
               padding:  EdgeInsets.all(10.0),
-              child: Column(
-
-                children: [
-                  // SizedBox(height: 0.03.sh),
-                  Row(
-                    children: [
-                      Container(
-                          padding: EdgeInsets.only(
-                              left:2.r, right:10.r,
-                              bottom:1.r),
-                          child: Text(
-                            "ملخص المشاريع".tr,
-                            style: TextStyle(   fontFamily: 'Regular',color:kColorsBlack,fontSize: 12,fontWeight: FontWeight.w500),)
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: .02.sh),
-                  Container(
-                    decoration: BoxDecoration(
-                        color: kColorsPrimaryFont,
-                        borderRadius: BorderRadius.circular(5.r)),
-                    height: .05.sh,
-                    width: double.infinity,
-
-
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal:  8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-
-                          Text(
-                            "عدد المشاريع الإجمالي",
-                            style: TextStyle(
-                              fontFamily: 'Regular', color:kColorsWhite ,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w300,
-                            ),
-                          ),
-                          Text(
-                        "84"+   "  ",
-                            style: TextStyle(
-                              fontFamily: 'Regular',
-                              color:kColorsWhite ,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w300,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: .005.sh),
-                  Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          buildContainer("لم يبدأ التنفيذ","17",kColorsPrimaryFont,kColorsPrimaryFont),
-                          buildContainer("وفق الخطه","2",Color(0xff28A745),Color(0xff28A745)),
-                          buildContainer("مكتمل","12",Color(0xffF4A261),Color(0xffF4A261)),
-                        ],
-                      ),
-
-                      SizedBox(height: 5.0),
-                      Row(
-
-                        children: [
-                          buildContainer("متعثر","11",Color(0xffEA6652),Color(0xffEA6652)),
-                          SizedBox(width: 8.0),
-                          buildContainer("متأخر بشكل بسيط","16",Color(0xffF0CA00),Color(0xffF0CA00)),
-
-                        ],
-                      ),
-                      SizedBox(height: 8.0),
-                    ],
-                  ),
-                   GetBuilder<HomeController>(
-                      init: HomeController(),
-                      builder: (fileController) =>Padding(
-                        padding: EdgeInsets.only(right: 19.0.r),
-                        child: Categories(),
-                      )),
-                  SizedBox(height: .01.sh),
-                  Container(
-                    color: kColorsWhiteTow,
-                    width: double.infinity,
-                    height: 0.50.sh,
-                    child: Column(
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    // SizedBox(height: 0.03.sh),
+                    Row(
                       children: [
-                        Row(
-                          children: [
-                            Container(
-                                padding: EdgeInsets.only(
-                                    left:2.r, right:10.r,
-                                    bottom:1.r),
-                                child: Text(
-                                  "مشاريعي".tr,
-                                  style: TextStyle(   fontFamily: 'Regular',color:kColorsBlack,fontSize: 14,fontWeight: FontWeight.w500),)
-                            ),
-
-                          ],
-                        ),
-                        SizedBox(height: .01.sh),
-                        Expanded(
-                          child: ListView.builder(
-                              padding: EdgeInsets.symmetric(vertical: 10.r),
-                              shrinkWrap: true,
-                              itemCount: 3,
-                              itemBuilder: (context, index) =>
-                                  ItemHome()),
+                        Container(
+                            padding: EdgeInsets.only(
+                                left:2.r, right:10.r,
+                                bottom:1.r),
+                            child: Text(
+                              "ملخص المشاريع".tr,
+                              style: TextStyle(   fontFamily: 'Regular',color:kColorsBlack,fontSize: 12,fontWeight: FontWeight.w500),)
                         ),
                       ],
                     ),
-                  ),
+                    SizedBox(height: .02.sh),
+                    Container(
+                      decoration: BoxDecoration(
+                          color: kColorsPrimaryFont,
+                          borderRadius: BorderRadius.circular(5.r)),
+                      height: .05.sh,
+                      width: double.infinity,
+                
+                
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal:  8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                
+                            Text(
+                              "عدد المشاريع الإجمالي",
+                              style: TextStyle(
+                                fontFamily: 'Regular', color:kColorsWhite ,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w300,
+                              ),
+                            ),
+                            Text(
+                          "84"+   "  ",
+                              style: TextStyle(
+                                fontFamily: 'Regular',
+                                color:kColorsWhite ,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w300,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: .005.sh),
+                    Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            buildContainer("لم يبدأ التنفيذ","17",kColorsPrimaryFont,kColorsPrimaryFont),
+                            buildContainer("وفق الخطه","2",Color(0xff28A745),Color(0xff28A745)),
+                            buildContainer("مكتمل","12",Color(0xffF4A261),Color(0xffF4A261)),
+                          ],
+                        ),
+                
+                        SizedBox(height: 5.0),
+                        Row(
+                          children: [
+                            buildContainer("متعثر","11",Color(0xffEA6652),Color(0xffEA6652)),
+                            SizedBox(width: 8.0),
+                            buildContainer("متأخر بشكل بسيط","16",Color(0xffF0CA00),Color(0xffF0CA00)),
+                          ],
+                        ),
+                        SizedBox(height: 8.0),
+                      ],
+                    ),
+                     // GetBuilder<HomeController>(
+                     //    init: HomeController(),
+                     //    builder: (fileController) =>Categories()),
+                    Container(
+                      height: 0.25.sh,
+                      color: kColorsWhiteTow,
+                      width: double.infinity,
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 8, bottom: 8),
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 6.0),
+                              child: Container(
+                                padding: EdgeInsets.all(4),
+                                width: 0.91.sw,
+                                decoration: BoxDecoration(
+                                  color: Color(0xffEBEBEB),
+                                  borderRadius: BorderRadius.circular(7.r),
+                                ),
+                                child: DefaultTabController(
+                                  initialIndex: controllerTabBarController.selectedIndexReferral,
+                                  length: 2,
+                                  child: Column(
+                                    children: <Widget>[
+                                      // The AppBar with TabBar at the top
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.all(Radius.circular(15.r)),
+                                        ),
+                                        height: 0.045.sh,
+                                        width: 0.90.sw,
+                                        child: AppBar(
+                                          backgroundColor: kColorBone,
+                                          bottom: TabBar(
+                                            onTap: (index) {
+                                              controllerTabBarController.selectedIndexReferral = index;
+                                            },
+                                            isScrollable: true,
+                                            labelColor: kColorsWhite,
+                                            labelStyle: MyText.TitleTabBarWhiteselected(context),
+                                            unselectedLabelColor: Color(0xff6F6F6F),
+                                            unselectedLabelStyle: MyText.TitleTabBarWhiteunselected(context),
+                                            indicatorSize: TabBarIndicatorSize.label,
+                                            dividerColor: kColorBone,
+                                            indicator: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(5.r),
+                                              color: Color(0xff0692AC),
+                                            ),
+                                            tabs: [
+                                              Container(
+                                                width: 0.22.sw,
+                                                height: 0.04.sh,
+                                                child: Tab(text: 'مهام الشهر الحالي'.tr),
+                                              ),
+                                              Container(
+                                                width: 0.22.sw,
+                                                height: 0.04.sh,
+                                                child: Tab(text: 'المهام المستقبليه'.tr),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
 
+                                      // TabBarView for the tabs
+                                      Expanded(
+                                        child: TabBarView(
+                                          children: [
+                                            ListView.builder(
+                                              physics: BouncingScrollPhysics(),
+                                              scrollDirection: Axis.horizontal,
+                                              padding: EdgeInsets.symmetric(vertical: 10.r),
+                                              itemCount: 3,
+                                              itemBuilder: (context, index) => ItemTaskOld(),
+                                            ),
+                                            ListView.builder(
+                                              physics: BouncingScrollPhysics(),
+                                              scrollDirection: Axis.horizontal,
+                                              padding: EdgeInsets.symmetric(vertical: 10.r),
+                                              itemCount: 3,
+                                              itemBuilder: (context, index) => ItemTaskNew(),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: .01.sh),
+                    Row(
+                      children: [
+                        Container(
+                            padding: EdgeInsets.only(
+                                left:2.r, right:10.r,
+                                bottom:1.r),
+                            child: Text(
+                              "مشاريعي".tr,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleMedium
+                                  ?.copyWith(fontFamily: 'Regular',color:kColorsBlack,fontSize: 14,fontWeight: FontWeight.w500),)
+                        ),
 
-
-                ],
+                      ],
+                    ),
+                    SizedBox(height: .01.sh),
+                    Container(
+                      color: kColorsWhiteTow,
+                      width: double.infinity,
+                      height: 0.48.sh,
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: ListView.builder(
+                                padding: EdgeInsets.symmetric(vertical: 10,horizontal: 4),
+                                shrinkWrap: true,
+                                itemCount: 3,
+                                itemBuilder: (context, index) =>
+                                    ItemHome()),
+                          ),
+                        ],
+                      ),
+                    ),
+                
+                  ],
+                ),
               ),
             ),
           ),
@@ -210,26 +305,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-    );
-  }
-  Widget _buildProgressSection(String title, double value) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          title,
-          style: TextStyle(
-            fontSize: 16.0,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        SizedBox(height: 8.0),
-        LinearProgressIndicator(
-          value:value/ 100,
-          backgroundColor: Colors.grey[300],
-          valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
-        ),
-      ],
     );
   }
 }

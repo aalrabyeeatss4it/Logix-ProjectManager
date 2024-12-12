@@ -1,6 +1,9 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:projectmanagers/Screen/dashboard/home/item_task_new.dart';
+import 'package:projectmanagers/Screen/dashboard/home/item_task_old.dart';
 import 'package:projectmanagers/apiservice/api_service.dart';
 import 'package:projectmanagers/apiservice/url.dart';
 import 'package:flutter/material.dart';
@@ -24,21 +27,26 @@ class HomeController extends GetxController with StateMixin{
   onSelectCategory({required int? ind,required String? id}) {
 
       if (ind == 0) {
-        stg.write(AppMapKey.value, id);
-        // Get.toNamed('${RoutingApp.sessionsScreen}?${AppMapKey.value}=$id');
-
+        Expanded(
+          child: ListView.builder(
+              physics: BouncingScrollPhysics(),
+              scrollDirection: Axis.horizontal,
+              padding: EdgeInsets.symmetric(vertical: 10.r),
+              itemCount: 3,
+              itemBuilder: (context, index) =>
+                  ItemTaskOld()),
+        );
       } else if (ind == 1) {
-        show_tabB=true;
-        // Get.toNamed('${RoutingApp.committee_members_screen}?${AppMapKey.value}=$id & ${AppMapKey.ShowTabBar}=$show_tabB  ');
-        stg.write(AppMapKey.value, id);
-      } else if (ind == 2) {
-        show_tabB=true;
-        stg.write(AppMapKey.value, id);
-        // Get.toNamed('${RoutingApp.regulations_screen}?${AppMapKey.value}=$id & ${AppMapKey.ShowTabBar}=$show_tabB  ');
-
+        Expanded(
+          child: ListView.builder(
+              physics: BouncingScrollPhysics(),
+              scrollDirection: Axis.horizontal,
+              padding: EdgeInsets.symmetric(vertical: 10.r),
+              itemCount: 3,
+              itemBuilder: (context, index) =>
+                  ItemTaskNew()),
+        );
       }
-
-
     selectedCategoryIndex = ind;
     update();
   }

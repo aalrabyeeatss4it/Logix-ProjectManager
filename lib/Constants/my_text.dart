@@ -212,7 +212,7 @@ class MyText{
   static TextStyle TitleTabBarWhiteunselected(BuildContext context) {
     return TextStyle(
         fontSize: 13,
-        color:  Color(0xff6F6F6F),
+        color:  Color(0xff5A86C1),
         fontWeight: FontWeight.bold,
       fontFamily: 'Regular',
     );

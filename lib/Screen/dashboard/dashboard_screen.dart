@@ -85,7 +85,7 @@ class DashboardScreenState extends State<DashboardScreen> {
           bottomNavigationBar: Container(
 
             width: double.infinity,
-            height: 0.09.sh,
+            height: 0.10.sh,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
                     topLeft:Radius.circular(20.r),
@@ -98,13 +98,13 @@ class DashboardScreenState extends State<DashboardScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  height: 0.09.sh,
+                  height: 0.10.sh,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       TextButton(
                           child: SizedBox(
-                            height: 0.09.sh,
+                            height: 0.10.sh,
                             child: Column(
                               children: [
                                 SvgPicture.asset(
@@ -129,7 +129,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                       ),
                       TextButton(
                         child:SizedBox(
-                          height: 0.09.sh,
+                          height: 0.10.sh,
                           child: Column(
                             children: [
                               SvgPicture.asset(
@@ -155,7 +155,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                       ),
                       TextButton(
                         child:SizedBox(
-                          height: 0.09.sh,
+                          height: 0.10.sh,
                           child: Column(
                             children: [
                               SvgPicture.asset(
@@ -181,7 +181,7 @@ class DashboardScreenState extends State<DashboardScreen> {
 
                       TextButton(
                         child:SizedBox(
-                          height: 0.09.sh,
+                          height: 0.10.sh,
                           child: Column(
                             children: [
                               SvgPicture.asset(
