@@ -1,4 +1,6 @@
 
+import 'dart:ui';
+
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/electronic_services_controller.dart';
 import 'package:projectmanagers/widget/buttm_navigator_bar.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +50,7 @@ class _ElectronicServicesScreenState extends State<ElectronicServicesScreen> {
   Widget build(BuildContext context) {
     final isRtl = Localizations.localeOf(context).languageCode == 'ar';
     return  Scaffold(
-      backgroundColor: kColorsWhite,
+
       body: SafeArea(
         child: ZoomDrawer(
           isRtl: isRtl ? true : false,
@@ -56,61 +58,54 @@ class _ElectronicServicesScreenState extends State<ElectronicServicesScreen> {
           style: DrawerStyle.style1,
           menuScreen: MenuWidgetDachbord(zoomDrawerController: zDElectronicServicesController,),
           mainScreen: Scaffold(
+
               appBar: MyAppBar(
                   title: 'الخدمات الإلكترونيه'.tr,
                   zoomDrawerController: zDElectronicServicesController,
                   colorfont: kColorsWhite),
-              backgroundColor: kColorsWhite,
-              body:  controller.obx((ite) =>
-                  Container(
-                    margin: EdgeInsets.only(top: 20.r),
-                    child: SingleChildScrollView(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
+              backgroundColor: kColorsWhite.withOpacity(0.5),
+              body:   Container(
+                color: kColorsWhite.withOpacity(0.1),
+                margin: EdgeInsets.all(6),
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
 
-                        children:[
+                    children: [
+                      Row(
 
-                          SizedBox(
-                            height: 5.h,
-                          ),
-                          Container(
-                            alignment: Alignment.center,
-                            padding: EdgeInsets.all(20.r),
-                            child: Form(
-                              key: _formKey,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-
-
-                                ],
-                              ),
-                            ),
-                          ),
+                        children: [
+                          buildContainer('English language'.tr,kColorsPrimary,kColorsWhite),
+                          buildContainer('English language'.tr,kColorsPrimary,kColorsWhite),
+                          buildContainer('English language'.tr,kColorsPrimary,kColorsWhite),
                         ],
                       ),
-                    ),
-                  ),
-                onLoading:
-                Shimmer(child:
-                Container(
-                  margin: EdgeInsets.only(top: 20.r),
-                  child: SingleChildScrollView(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      SizedBox(
+                        height: 0.02.sh,
+                      ),
+                      Row(
+                        children: [
+                          buildContainer('English language'.tr,kColorsPrimary,kColorsWhite),
+                          buildContainer('English language'.tr,kColorsPrimary,kColorsWhite),
+                          buildContainer('English language'.tr,kColorsPrimary,kColorsWhite),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 0.02.sh,
+                      ),
+                      Row(
+                        children: [
+                          buildContainer('English language'.tr,kColorsPrimary,kColorsWhite),
+                          buildContainer('English language'.tr,kColorsPrimary,kColorsWhite),
+                          buildContainer('English language'.tr,kColorsPrimary,kColorsWhite),
 
-                      children: [
+                        ],
+                      ),
 
-
-                      ],
-                    ),
+                    ],
                   ),
                 ),
-                ),
-                onEmpty: Container(),
-              )
-
-
+              ),
           ),
           clipMainScreen: true,
 
@@ -125,6 +120,68 @@ class _ElectronicServicesScreenState extends State<ElectronicServicesScreen> {
           shadowLayer1Color: kColorsorang,
         ),
       ),
+    );
+  }
+  Widget buildContainer(String text, Color colortext,Color colorborder) {
+    return  Row(
+      children: [
+
+        Container(
+          width: 0.29.sw,
+          height: 0.09.sh,
+          decoration: BoxDecoration(
+              color:kColorsWhite  ,
+              borderRadius: BorderRadius.circular(6.r)
+          ),
+          child: Column(
+            children: [
+              Expanded(
+               flex: 10,
+                child: Padding(
+                  padding:  EdgeInsets.only(top:  25.0),
+                  child: Text(text.toString(),textAlign: TextAlign.center,style: TextStyle(
+                      fontSize: 12,
+                      color: colortext,
+                      fontWeight: FontWeight.w500)),
+                ),
+              ),
+              Expanded(
+                flex: 4,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Container(
+
+                    ),
+                    Container(
+                      width: 0.05.sw,
+                      height: 0.07.sh,
+                      decoration: BoxDecoration(
+                          color: kColorsPrimaryFont ,
+                          borderRadius: BorderRadius.only(topRight:Radius.circular(5) )
+                      ),
+
+                      child: Padding(
+                        padding:  EdgeInsets.all(1.0.r),
+                        child: SvgPicture.asset(
+                          "assets/Icon/arrow-left2.svg",
+                          width: 24.r ,
+                          height: 24.r ,
+                          color: kColorsWhite,
+                        ),
+                      ),
+                    ),
+
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          width: 0.03.sw,
+        ),
+      ],
     );
   }
 }

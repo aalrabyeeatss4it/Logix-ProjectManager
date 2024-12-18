@@ -191,7 +191,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                                         child: Padding(
                                                                           padding:  EdgeInsets.all(3.0.r),
                                                                           child: Image.asset(
-                                                                            "assets/Icons/clear.png",
+                                                                            "assets/Icon/exite.png",
                                                                             width: 20.r,
                                                                             height: 20.r,
                                                                             color: kColorsWhite,),
@@ -442,7 +442,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                                     child: Padding(
                                                                       padding:  EdgeInsets.all(3.0.r),
                                                                       child: Image.asset(
-                                                                        "assets/Icons/clear.png",
+                                                                        "assets/Icon/exite.png",
                                                                         width: 20.r,
                                                                         height: 20.r,
                                                                         color: kColorsWhite,),
@@ -712,7 +712,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                   Get.back();
                                 },
                                 child: Image.asset(
-                                  "assets/Icons/clear.png",
+                                  "assets/Icon/exite.png",
                                   width: 25.r,
                                   height: 25.r,
                                   color: kColorsPrimary,

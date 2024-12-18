@@ -44,9 +44,8 @@ class  ItemAttachments extends StatelessWidget {
                         style: TextStyle(fontSize: 12, color: kColorsPrimary, fontWeight: FontWeight.w500,))),
                 Expanded(
                   flex: 2,
-
-                  child: Image.asset(
-              "assets/Icons/clear.png",
+              child: Image.asset(
+              "assets/Icon/exite.png",
               width: 25.r,
               height: 25.r,
               color: kColorsPrimary,

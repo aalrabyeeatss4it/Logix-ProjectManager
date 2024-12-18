@@ -51,7 +51,7 @@ class CustomDatePaker extends StatelessWidget {
           edit != null
               ? Container(
 
-      padding: EdgeInsets.only(left: 15.r, right: 7.r, bottom: 6.r),
+      padding: EdgeInsets.only(left: 15.r, bottom: 6.r),
         child: Text(
           text!.tr ,
           style: TextStyle(   fontFamily: 'Regular',
@@ -78,7 +78,7 @@ class CustomDatePaker extends StatelessWidget {
                 decoration: InputDecoration(
                   filled: true,
                   suffixIcon: Padding(
-                    padding: EdgeInsets.all(6.0.r),
+                    padding: EdgeInsets.all(10.0.r),
                     child:  iconEnd != null
                         ? SvgPicture.asset(
                       iconEnd!,
@@ -102,17 +102,17 @@ class CustomDatePaker extends StatelessWidget {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5.r),
                       borderSide: BorderSide(width: 0.1,
-                          color: colorborder ?? kColorsLightBlackLow)),
+                          color: colorborder ?? kColorsLightBlack.withOpacity(0.2))),
                   errorBorder: OutlineInputBorder(
                       gapPadding: 0,
                       borderRadius: BorderRadius.circular(5.r),
                       borderSide: BorderSide(color: kColorsRed)),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5.r),
-                      borderSide: BorderSide(width: 1, color: colorborder ?? kColorsLightBlackLow)),
+                      borderSide: BorderSide(width: 1, color: colorborder ?? kColorsLightBlack.withOpacity(0.2))),
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5.r),
-                      borderSide: BorderSide(width: 0.1, color: colorborder ?? kColorsLightBlackLow)),
+                      borderSide: BorderSide(width: 0.1, color: colorborder ?? kColorsLightBlack.withOpacity(0.2))),
                   focusedErrorBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5.r),
                       borderSide: BorderSide(color: kColorsRed)),

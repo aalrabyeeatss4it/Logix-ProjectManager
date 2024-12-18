@@ -21,7 +21,7 @@ class  ItemTaskOld extends StatelessWidget {
         onTap: (){
         },
         child: Container(
-          width: 0.67.sw,
+          width: 0.68.sw,
           child: Row(
             children: [
               Container(
@@ -38,22 +38,24 @@ class  ItemTaskOld extends StatelessWidget {
                       borderRadius: BorderRadius.circular(7.r),
                     ),
                     child: Padding(
-                      padding: EdgeInsets.only(top: 5.0.r, bottom: 5.r,left: 5.0.r,right: 4.0.r),
+                      padding: EdgeInsets.only(top: 2.0.r, bottom: 2.r,left: 5.0.r,right: 4.0.r),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           CustomRowText(text: 'المشروع'.tr,textStyle: TextStyle(fontFamily: 'Regular',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue: "2022/2/2",textValueStyle: TextStyle(fontFamily: 'Regular',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,),
                           CustomRowText(text: 'المهمه'.tr,textStyle: TextStyle(fontFamily: 'Regular',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2026/2/2",textValueStyle: TextStyle(fontFamily: 'Regular',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                width:0.28.sw,
-                                  child: CustomRowText(text: 'تنتهي في'.tr,textStyle: TextStyle(fontFamily: 'Regular',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue: "sgsgsg",textValueStyle: TextStyle(fontFamily: 'Regular',fontSize: 10, color: kColorsPrimaryFont,),backColor: kColorsLightBlackLow,)),
-                              Container(
-                                  width:0.28.sw,
-                                  child: CustomRowText(text: 'متبقي '.tr,textStyle: TextStyle(fontFamily: 'Regular',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue: "sgsgsg",textValueStyle: TextStyle(fontFamily: 'Regular',fontSize: 10, color: kColorsPrimaryFont,),backColor: kColorsLightBlackLow,)),
-                            ],
+                          Padding(
+                            padding:  EdgeInsets.symmetric(horizontal:  8.0),
+                            child: Container(
+                                decoration: BoxDecoration(
+                                  color:kColorsPrimaryFont.withOpacity(0.1) ,
+                                  borderRadius: BorderRadius.circular(7.r),
+                                ),
+
+                                child: Padding(
+                                  padding:  EdgeInsets.all(4.0),
+                                  child: Text('تنتهي في '.tr +'2024/12/12' +"  |  "+'متبقى :'.tr +'3 أيام ' ,  style: TextStyle(fontFamily: 'Regular',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,)),
+                                )),
                           ),
                         ],
                       ),
@@ -62,7 +64,7 @@ class  ItemTaskOld extends StatelessWidget {
                 ],
               ),
               Container(
-                width: 0.02.sw,
+                width: 0.03.sw,
               ),
             ],
           ),
@@ -70,14 +72,7 @@ class  ItemTaskOld extends StatelessWidget {
       );
   }
 }
-
-
-
-
-
 class  ItemHomeShimmer extends StatelessWidget {
-
-
   void select(BuildContext ctx){
   }
   @override

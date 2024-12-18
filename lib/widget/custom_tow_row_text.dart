@@ -6,14 +6,16 @@ import 'package:get/get.dart';
 import '/Constants/Constants.dart';
 
 class CustomTowRowText extends StatelessWidget {
-  CustomTowRowText({ this.text,this.text2,this.textStyle,this.textValue,this.textValue2,this.textValueStyle,this.backColor, super.key});
+  CustomTowRowText({this.flex, this.text,this.text2,this.textStyle,this.textValue,this.textValue2,this.textValueStyle,this.textValue2Style,this.backColor, super.key});
   final String? text;
   final String? text2;
   final String? textValue;
   final String? textValue2;
+  final TextStyle? textValue2Style;
   final TextStyle? textStyle;
   final TextStyle? textValueStyle;
   final Color? backColor;
+  final int? flex;
 
   @override
   Widget build(BuildContext context) {
@@ -27,26 +29,23 @@ class CustomTowRowText extends StatelessWidget {
           ),
           padding:  EdgeInsets.only(top:  5.0.r,right: 6.r,bottom: 4.r),
           width: 0.82.sw,
-
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
             children: [
               Expanded(
-                  flex: 3,
+                  flex: flex!=null ? flex!: 3,
                   child: Text(text.toString()+":",  style: textStyle)),
 
               Expanded(
-                  flex: 3,child: Text(textValue.toString(),  style:textValueStyle)),
+                  flex: flex!=null ? flex!: 3,child: Text(textValue.toString(),  style:textValueStyle)),
 
 
 
 
               Expanded(
-                  flex: 3,child: Text(text2.toString()+":",  style: textStyle)),
+                  flex:flex!=null ?4: 3,child: Text(text2.toString()+":",  style:textValue2Style!=null?textValue2Style: textStyle)),
 
               Expanded(
-                  flex: 3,child: Text(textValue2.toString(),  style:textValueStyle)),
+                  flex:flex!=null ?4: 3,child: Text(textValue2.toString(),  style:textValueStyle)),
             ],
           ),
         ),

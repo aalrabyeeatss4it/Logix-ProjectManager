@@ -23,6 +23,18 @@ class RoutingApp {
   static const String electronic_services_screen = "/electronic_services_screen";
   static const String keeper_covenant_screen = "/keeper_covenant_screen";
   static const String reports_screen = "/reports_screen";
+
+
+
+  static const String projects_screen = "/projects_screen";
+  static const String projects_details_screen = "/projects_details_screen";
+
+
+
+
+  static const String financial_information_screen = "/financial_information_screen";
+  static const String document_library_screen = "/document_library_screen";
+
   // InternalMessaging
 
 

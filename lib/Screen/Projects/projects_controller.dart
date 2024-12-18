@@ -1,6 +1,5 @@
 import 'dart:async';
-import 'dart:convert';
-import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/keeper_covenant_model.dart';
+import 'package:projectmanagers/Screen/Projects/projects_model.dart';
 import 'package:projectmanagers/apiservice/url.dart';
 import 'package:projectmanagers/widget/progisser_bar.dart';
 import 'package:flutter/material.dart';
@@ -11,8 +10,8 @@ import 'package:projectmanagers/apiservice/logout.dart';
 import 'package:projectmanagers/widget/CustomSnackBar.dart';
 import '/apiservice/api_service.dart';
 
-class KeeperCovenantController extends GetxController with StateMixin<KeeperCovenantModel> {
-  ScrollController scrollController = ScrollController();
+class ProjectsController extends GetxController with StateMixin<ProjectsModel> {
+
   late TextEditingController EmployeeNameTextControll;
   late TextEditingController EmaileTextControll;
   late TextEditingController TheNameTextControll;
@@ -36,8 +35,27 @@ class KeeperCovenantController extends GetxController with StateMixin<KeeperCove
     ConfirmPassowrdController = TextEditingController(text: '');
 
   }
-
-
+  onClickVisableOldPassowrd(String txt) {
+    if(txt==''){
+    }
+    else{
+      OldPassowrdvisable.value = !OldPassowrdvisable.value;
+    }
+  }
+  onClickVisableNewPassowrd(String txt) {
+    if(txt==''){
+    }
+    else{
+      NewPassowrdvisable.value = !NewPassowrdvisable.value;
+    }
+  }
+  onClickVisableConfirmPassowrd(String txt) {
+    if(txt==''){
+    }
+    else{
+      ConfirmPassowrdvisable.value = !ConfirmPassowrdvisable.value;
+    }
+  }
     Future<void> Revrech({String? BranchName}) async{
       await getPrfile();
     }
@@ -51,11 +69,11 @@ class KeeperCovenantController extends GetxController with StateMixin<KeeperCove
       }).then((value) {
         change(null, status: RxStatus.loading());
         if (value.statusCode == 200) {
-          print("startgetKeeperCovenant");
-          KeeperCovenantModel? modelKeeperCovenant = KeeperCovenantModel.fromJson(value.data);
+          print("startgetProjects");
+          ProjectsModel? modelProjects = ProjectsModel.fromJson(value.data);
           print(value.data);
-          change(modelKeeperCovenant, status: RxStatus.success());
-
+          change(modelProjects, status: RxStatus.success());
+          initControllarr(modelProjects);
         }
         else if(value.statusCode == 401){
           GetSnackMsg(msg: 'Unauthorized access'.tr,bgClr:kColorsRed ,txClr:kColorsWhite ).showTxt();
@@ -66,12 +84,53 @@ class KeeperCovenantController extends GetxController with StateMixin<KeeperCove
         }
       }
       );
-      print("EndgetKeeperCovenant");
+      print("EndgetProjects");
 
     }
 
 
+  void initControllarr(ProjectsModel modelProjects) {
+    EmployeeNameTextControll = TextEditingController(text: modelProjects.dataProjects?.userFullname.toString());
+    EmaileTextControll = TextEditingController(text: modelProjects.dataProjects?.userEmail.toString());
+    TheNameTextControll = TextEditingController(text: modelProjects.dataProjects?.userName.toString());
+  }
 
+  ChangPassword() async{
+    Get.dialog(Center(
+      child: LoadingIndicatorWidget(),
+    ));
+    print({
+      "UserName":"",
+      "Password": NewPassowrdController.text.trim(),
+      "MemberId": "",
+    });
+
+    await ApiService().postDataLogin(
+        url: urlEditPassword,
+        body: {
+          "Password": NewPassowrdController.text.trim(),
+        },
+      header: {'Authorization': 'Bearer ${stg.read(token)}'},
+    ).then((value) {
+      print(' النتيجه: ${value.statusCode}');
+      if (value.statusCode == 200) {
+         Get.back();
+         RusultPasswordModel? rusultPasswordModel = RusultPasswordModel.fromJson(value.data);
+         print(value.data);
+         stg.write(userPassword, rusultPasswordModel.dataRusultPasswor!.userPassword);
+         GetSnackMsg(msg:rusultPasswordModel.message.toString(), bgClr: kColorsPrimary, txClr: kColorsWhite).showTxt();
+         ClereControllar();
+        print(value.data);
+      }
+      else if(value.statusCode == 401){
+        GetSnackMsg(msg: 'Unauthorized access'.tr,bgClr:kColorsRed ,txClr:kColorsWhite ).showTxt();
+      }
+      else {
+        Get.back();
+      }
+    });
+
+  }
   void ClereControllar() {
     OldPassowrdController.clear();
     NewPassowrdController.clear();

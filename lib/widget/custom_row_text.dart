@@ -6,8 +6,9 @@ import 'package:get/get.dart';
 import '/Constants/Constants.dart';
 
 class CustomRowText extends StatelessWidget {
-  CustomRowText({ this.text,this.textStyle,this.textValue,this.textValueStyle,this.backColor, super.key});
+  CustomRowText({ this.text,this.flex,this.textStyle,this.textValue,this.textValueStyle,this.backColor, super.key});
   final String? text;
+  final int? flex;
   final String? textValue;
   final TextStyle? textStyle;
   final TextStyle? textValueStyle;
@@ -28,7 +29,7 @@ class CustomRowText extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                  flex: 5,
+                  flex:flex!=null?flex! :2,
                   child: Text(text.toString()+":",  style: textStyle)),
 
               Expanded(

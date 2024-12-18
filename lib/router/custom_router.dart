@@ -5,6 +5,10 @@ import 'package:projectmanagers/Screen/Examploe/examole_screen.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/profile/change_password_screen.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/profile/prpfile_screen.dart';
 import 'package:projectmanagers/Screen/Notifcation/notifcation_screen.dart';
+import 'package:projectmanagers/Screen/Projects/ProjectsDetails/DocumentLibrary/document_library_screen.dart';
+import 'package:projectmanagers/Screen/Projects/ProjectsDetails/FinancialInformation/financial_information_screen.dart';
+import 'package:projectmanagers/Screen/Projects/ProjectsDetails/projects_details_screen.dart';
+import 'package:projectmanagers/Screen/Projects/projects_screen.dart';
 import 'package:projectmanagers/Screen/card_wizard_overlap.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/electronic_services_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/keeper_covenant_screen.dart';
@@ -105,10 +109,6 @@ class Pages {
             NotifcationBinding(),
           ]
       ),
-
-
-
-
       GetPage(
           transition: Transition.native,
           transitionDuration: Duration(milliseconds: 400),
@@ -136,6 +136,44 @@ class Pages {
             ReportsBinding(),
           ]
       ),
+
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.projects_screen,
+          page: () => ProjectsScreen(),
+          bindings: [
+            ProjectsBinding(),
+          ]
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.projects_details_screen,
+          page: () => ProjectsDetailsScreen(),
+          bindings: [
+            ProjectsDetailsBinding(),
+          ]
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.financial_information_screen,
+          page: () => FinancialInformationScreen(),
+          bindings: [
+            FinancialInformationBinding(),
+          ]
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.document_library_screen,
+          page: () => DocumentLibraryScreen(),
+          bindings: [
+            DocumentLibraryBinding(),
+          ]
+      ),
+
 
 
     ];

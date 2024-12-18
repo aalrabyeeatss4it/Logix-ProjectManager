@@ -50,7 +50,7 @@ class TextFieldWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.only(left: 11.0.r,right: 11.0.r,top: 5.0.r),
+      padding:  EdgeInsets.only(left: 11.0.r,right: 6.0.r,top: 5.0.r),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

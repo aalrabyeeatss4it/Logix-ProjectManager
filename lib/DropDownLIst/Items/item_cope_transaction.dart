@@ -47,7 +47,7 @@ class  ItemCopeTransactions extends StatelessWidget {
                   flex: 1,
 
                   child: Image.asset(
-              "assets/Icons/clear.png",
+              "assets/Icon/exite.png",
               width: 25.r,
               height: 25.r,
               color: kColorsPrimary,

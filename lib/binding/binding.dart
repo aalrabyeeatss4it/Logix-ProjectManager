@@ -5,6 +5,10 @@ import 'package:projectmanagers/Screen/Auth/Memper/member_controller.dart';
 import 'package:projectmanagers/Screen/Auth/login/login_controller.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/profile/profile_controller.dart';
 import 'package:projectmanagers/Screen/Notifcation/notifcation_controller.dart';
+import 'package:projectmanagers/Screen/Projects/ProjectsDetails/DocumentLibrary/document_library_controller.dart';
+import 'package:projectmanagers/Screen/Projects/ProjectsDetails/FinancialInformation/financial_information_controller.dart';
+import 'package:projectmanagers/Screen/Projects/ProjectsDetails/projects_details_controller.dart';
+import 'package:projectmanagers/Screen/Projects/projects_controller.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/electronic_services_controller.dart';
 import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/keeper_covenant_controller.dart';
 import 'package:projectmanagers/Screen/dashboard/Reports/reports_controller.dart';
@@ -89,6 +93,39 @@ class ElectronicServicesBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<ElectronicServicesController>(() => ElectronicServicesController(),
+    );
+
+  }
+}
+
+class ProjectsBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut<ProjectsController>(() => ProjectsController(),
+    );
+
+  }
+}
+class ProjectsDetailsBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut<ProjectsDetailsController>(() => ProjectsDetailsController(),
+    );
+
+  }
+}
+class FinancialInformationBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut<FinancialInformationController>(() => FinancialInformationController(),
+    );
+
+  }
+}
+class DocumentLibraryBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut<DocumentLibraryController>(() => DocumentLibraryController(),
     );
 
   }

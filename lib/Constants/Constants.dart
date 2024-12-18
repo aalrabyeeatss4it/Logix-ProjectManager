@@ -27,6 +27,7 @@ const Color kColorsPrimaryHrBack =  Color(0xFFF6FAFC);
 // const Color kColorsWhiteButtonTow = Color(0xFF3570B7);
 
 const Color kColorsBlack = Color(0xFF000000);
+const Color kColorsBlackTow = Color(0xFF242424);
 const Color kColorsLightBlack =Colors.black54;
 const Color kColorsLightBlackLow =Color(0xFFAEAEAE);
 const Color kColorsLightBlackLow2 =Color(0xFFA1A1A1);
