@@ -6,7 +6,9 @@ import '/Constants/Constants.dart';
 
 class CustomButton extends StatelessWidget {
   CustomButton({
-    Key ?key,this.isIconEnd,this.IconEnd,this.isIconStart,this.IconStart, required this.onPress, this.text, this.sizeHeight, this.sizeWidth, this.row, this.sizedBoxHeight, this.style, this.disabledColor, this.color, this.fontColor, this.borderColor, this.borderRadius,
+    Key ?key,this.isIconEnd,this.IconEnd,this.isIconStart,this.IconStart, required this.onPress, this.text,
+    this.sizeHeight, this.sizeWidth,   this.sizedBoxHeight, this.style, this.disabledColor, this.color,
+    this.fontColor, this.borderColor, this.borderRadius,
   }) : super(key: key);
   final Function()? onPress;
   final String? text;
@@ -19,7 +21,7 @@ class CustomButton extends StatelessWidget {
   final double ?sizeHeight;
   final double ?sizeWidth;
   final double ?borderRadius;
-  final Widget ?row;
+
   final TextStyle? style;
   final Color ?disabledColor;
   final Color ?color;
@@ -38,7 +40,6 @@ class CustomButton extends StatelessWidget {
         Container(
           width:sizeWidth==null? .75.sw:sizeWidth,
           height:sizeHeight==null? .11.sw:sizeHeight,
-
           decoration: BoxDecoration(
             // border: Border.all(color:borderColor?? kColorsOrange,),
               borderRadius: BorderRadius.circular(
@@ -50,42 +51,78 @@ class CustomButton extends StatelessWidget {
                     color?? kColorsPrimary,
                     color?? kColorsPrimary
                   ])),
-          child: row==null ?MaterialButton(
-            padding: EdgeInsets.zero,
-
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(
-                borderRadius??  10.r),side: BorderSide( color:borderColor?? kColorsPrimary,width: 1) ),
-            disabledColor: disabledColor,
-            onPressed:onPress,
-            child: Padding(
-              padding:  EdgeInsets.only(bottom:4.r),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  isIconStart==true? IconStart!
-                      :SizedBox(width: 0.00.sh,),
-                  isIconStart==true?  SizedBox(
-                    width: 0.03.sw,
-                  )
-                      :SizedBox(width: 0.00.sh,),
-                  Text( text!,
-
-                    style:style!=null?
-                    //style :Theme.of(context).textTheme.titleMedium!.copyWith(color: fontColor??kColorsWhite,)
-                    style : TextStyle(
+          child:
+          // MaterialButton(
+          //   padding: EdgeInsets.zero,
+          //   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(borderRadius??  10.r),side: BorderSide( color:borderColor?? kColorsPrimary,width: 1) ),
+          //   disabledColor: disabledColor,
+          //   onPressed:onPress,
+          //   child: Padding(
+          //     padding:  EdgeInsets.only(bottom:4.r),
+          //     child: Row(
+          //       mainAxisAlignment: MainAxisAlignment.center,
+          //       children: [
+          //         isIconStart==true? IconStart!
+          //             :SizedBox(width: 0.00.sh,),
+          //         isIconStart==true?  SizedBox(
+          //           width: 0.03.sw,
+          //         )
+          //             :SizedBox(width: 0.00.sh,),
+          //         Text( text!,
+          //
+          //           style:style!=null?
+          //           //style :Theme.of(context).textTheme.titleMedium!.copyWith(color: fontColor??kColorsWhite,)
+          //           style : TextStyle(
+          //               fontSize: 16,
+          //               color:fontColor?? Colors.white
+          //           ),
+          //           textAlign: TextAlign.center,maxLines: 1,),
+          //         SizedBox(
+          //           width: 0.03.sw,
+          //         ),
+          //         isIconEnd==true? IconEnd!
+          //             :SizedBox(width: 0.00.sh,),
+          //       ],
+          //     ),
+          //   ),
+          // ),
+          GestureDetector(
+            onTap: onPress,
+            child: Container(
+              padding: EdgeInsets.zero,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(borderRadius ?? 10.r),
+                border: Border.fromBorderSide(BorderSide(
+                  color: borderColor ?? kColorsPrimary,
+                  width: 1,
+                )),
+                color: onPress == null ? disabledColor : null,
+              ),
+              child: Padding(
+                padding: EdgeInsets.only(bottom: 4.r),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    isIconStart == true ? IconStart! : SizedBox(width: 0.00.sh),
+                    isIconStart == true ? SizedBox(width: 0.03.sw) : SizedBox(width: 0.00.sh),
+                    Text(
+                      text!,
+                      style: style != null
+                          ? style
+                          : TextStyle(
                         fontSize: 16,
-                        color:fontColor?? Colors.white
+                        color: fontColor ?? Colors.white,
+                      ),
+                      textAlign: TextAlign.center,
+                      maxLines: 1,
                     ),
-                    textAlign: TextAlign.center,maxLines: 1,),
-                  SizedBox(
-                    width: 0.03.sw,
-                  ),
-                  isIconEnd==true? IconEnd!
-                      :SizedBox(width: 0.00.sh,),
-                ],
+                    SizedBox(width: 0.03.sw),
+                    isIconEnd == true ? IconEnd! : SizedBox(width: 0.00.sh),
+                  ],
+                ),
               ),
             ),
-          ):row,
+          )
         ),
       ],
     );

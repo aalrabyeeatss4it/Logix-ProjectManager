@@ -32,7 +32,7 @@ class ItemFinancialInformation extends StatelessWidget {
           Padding(
             padding:  EdgeInsets.only(left: 0.03.sw,right:  0.03.sw),
             child: Container(
-              height: 0.25.sh,
+
               width: 0.95.sw,
               decoration: BoxDecoration(
                 color: kColorsWhite,

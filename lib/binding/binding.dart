@@ -7,6 +7,8 @@ import 'package:projectmanagers/Screen/MenuDrawer/profile/profile_controller.dar
 import 'package:projectmanagers/Screen/Notifcation/notifcation_controller.dart';
 import 'package:projectmanagers/Screen/Projects/ProjectsDetails/DocumentLibrary/document_library_controller.dart';
 import 'package:projectmanagers/Screen/Projects/ProjectsDetails/FinancialInformation/financial_information_controller.dart';
+import 'package:projectmanagers/Screen/Projects/ProjectsDetails/TasksPerformed/tasks_performed_controller.dart';
+import 'package:projectmanagers/Screen/Projects/ProjectsDetails/TechnicalInformation/technical_information_controller.dart';
 import 'package:projectmanagers/Screen/Projects/ProjectsDetails/projects_details_controller.dart';
 import 'package:projectmanagers/Screen/Projects/projects_controller.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/electronic_services_controller.dart';
@@ -126,6 +128,22 @@ class DocumentLibraryBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<DocumentLibraryController>(() => DocumentLibraryController(),
+    );
+
+  }
+}
+class TechnicalInformationBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut<TechnicalInformationController>(() => TechnicalInformationController(),
+    );
+
+  }
+}
+class TasksPerformedBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut<TasksPerformedController>(() => TasksPerformedController(),
     );
 
   }

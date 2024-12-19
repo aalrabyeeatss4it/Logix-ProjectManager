@@ -11,23 +11,21 @@ import 'package:intl/intl.dart';
 import 'package:projectmanagers/Constants/Constants.dart';
 import 'package:projectmanagers/Constants/my_text.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/menu_widget_dachbord.dart';
-import 'package:projectmanagers/Screen/Projects/ProjectsDetails/DocumentLibrary/document_library_controller.dart';
-import 'package:projectmanagers/Screen/Projects/ProjectsDetails/DocumentLibrary/item_document_library.dart';
-import 'package:projectmanagers/Screen/Projects/ProjectsDetails/DocumentLibrary/tabBar_document_library_controller.dart';
+import 'package:projectmanagers/Screen/Projects/ProjectsDetails/TasksPerformed/item_tasks_performed.dart';
+import 'package:projectmanagers/Screen/Projects/ProjectsDetails/TasksPerformed/tasks_performed_controller.dart';
 import 'package:projectmanagers/apiservice/checkInterNet.dart';
 import 'package:projectmanagers/widget/CustomSnackBar.dart';
 import 'package:projectmanagers/widget/buttm_navigator_bar.dart';
 import 'package:projectmanagers/widget/cutom_appbar.dart';
 
-class DocumentLibraryScreen extends StatefulWidget {
+class TasksPerformedScreen extends StatefulWidget {
   @override
-  State<DocumentLibraryScreen> createState() => _DocumentLibraryScreenState();
+  State<TasksPerformedScreen> createState() => _TasksPerformedScreenState();
 }
 
-class _DocumentLibraryScreenState extends State<DocumentLibraryScreen> {
-  final zDDocumentLibraryController = ZoomDrawerController();
-  final controller = Get.put(DocumentLibraryController());
-  final controllerTabBarDocumentLibrary = Get.put(TabBarDocumentLibraryController());
+class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
+  final zDTasksPerformedController = ZoomDrawerController();
+  final controller = Get.put(TasksPerformedController());
   bool? selectedValue=false;
   bool value1 = true; // القيمة الأولى
   bool value2 = false; // القيمة الثانية
@@ -50,147 +48,53 @@ class _DocumentLibraryScreenState extends State<DocumentLibraryScreen> {
     final isRtl = Localizations
         .localeOf(context)
         .languageCode == 'ar';
-    return DefaultTabController(
-      initialIndex: controllerTabBarDocumentLibrary.selectedIndex,
-      length: 3,
-      child:  Scaffold(
-        body: SafeArea(
-          child: ZoomDrawer(
-            isRtl: isRtl ? true : false,
-            controller: zDDocumentLibraryController,
-            style: DrawerStyle.style1,
-            menuScreen: MenuWidgetDachbord(
-              zoomDrawerController: zDDocumentLibraryController,
-            ),
-            mainScreen: Scaffold(
-              backgroundColor:kColorsWhite.withOpacity(0.6),
-              appBar: MyAppBar(
-                title: 'مكتبة المستندات'.tr,
-                zoomDrawerController: zDDocumentLibraryController,
-              ),
-              body:    Container(
-             color:kColorsWhite.withOpacity(0.1),
-                child: Column(
-                  children: <Widget>[
-                    SizedBox(
-                      height: 0.02.sh,
-                    ),
-                    Container(
-                      height: 0.06.sh,
-                      width: 0.94.sw,
-
-                      child:Align(
-                        alignment: Alignment(1,1),
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: kColorBone,
-                              borderRadius: BorderRadius.circular(10.r)),
-
-                          height: 0.061.sh,
-                          width: 0.94.sw, // أو يمكن ضبط عرض مخصص
-                          child: TabBar(
-                            onTap: (index) {controllerTabBarDocumentLibrary.selectedIndex = index;},
-                            controller: controllerTabBarDocumentLibrary.controllerTabBar,
-                            isScrollable: true,
-                            labelColor: kColorsWhite,
-                            labelStyle: MyText.TitleTabBarWhiteselected(context),
-                            unselectedLabelColor:kColorsBlackTow,
-                            unselectedLabelStyle: MyText.TitleTabBarWhiteunselected(context),
-                            indicatorSize: TabBarIndicatorSize.label,
-                            indicator: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5.r),
-                              color: kColorsPrimaryFont,
-                            ),
-                            padding: EdgeInsets.only(bottom:3.0.r),
-                            dividerColor:Color(0xffF2F2F2) ,
-                            tabs: [
-                              Container(
-                                width: 0.25.sw,
-                                height: 0.04.sh,
-                                child: Tab(text:   "فواتير".tr),
-                              ),
-                              Container(
-                                  width: 0.28.sw,
-                                  height: 0.04.sh,
-                                  child: Tab(text: 'تقارير'.tr)),
-                              Container(
-                                  width: 0.25.sw,
-                                  height: 0.04.sh,
-                                  child: Tab(text: 'جميع المستندات'.tr)),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: TabBarView(
-                        controller: controllerTabBarDocumentLibrary.controllerTabBar,
-                        children: [
-                          Column(
-                            children: [
-                              SizedBox(
-                                height: 0.02.sh,
-                              ),
-                              Expanded(
-                                child:  ListView.builder(
-                                    shrinkWrap: true,
-                                    itemCount: 1,
-                                    itemBuilder: (context, index) =>
-                                        ItemDocumentLibrary()),
-                              ),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              SizedBox(
-                                height: 0.02.sh,
-                              ),
-                              Expanded(
-                                child:  ListView.builder(
-                                    shrinkWrap: true,
-                                    itemCount: 2,
-                                    itemBuilder: (context, index) =>
-                                        ItemDocumentLibrary()),
-                              ),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              SizedBox(
-                                height: 0.02.sh,
-                              ),
-                              Expanded(
-                                child:  ListView.builder(
-                                    shrinkWrap: true,
-                                    itemCount: 3,
-                                    itemBuilder: (context, index) =>
-                                        ItemDocumentLibrary()),
-                              ),
-                            ],
-                          ),
-
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-             clipMainScreen: true,openCurve: Curves.fastOutSlowIn,
-          closeCurve: Curves.bounceIn,
-            borderRadius: 24.0,
-            showShadow: true,
-            angle: 0.0,
-            slideWidth: MediaQuery
-                .of(context)
-                .size
-                .width * 0.65.w,
-            shadowLayer1Color: kColorScafoold,
+    return Scaffold(
+      body: SafeArea(
+        child: ZoomDrawer(
+          isRtl: isRtl ? true : false,
+          controller: zDTasksPerformedController,
+          style: DrawerStyle.style1,
+          menuScreen: MenuWidgetDachbord(
+            zoomDrawerController: zDTasksPerformedController,
           ),
+          mainScreen: Scaffold(
+            backgroundColor:kColorsWhite.withOpacity(0.6),
+            appBar: MyAppBar(
+              title: 'المهام التي تم تنفيذها'.tr,
+              zoomDrawerController: zDTasksPerformedController,
+            ),
+            body:    Container(
+           color:kColorsWhite.withOpacity(0.1),
+              child:  Column(
+                children: [
+                  SizedBox(
+                    height: 0.02.sh,
+                  ),
+                  Expanded(
+                    child:  ListView.builder(
+                        shrinkWrap: true,
+                        itemCount: 5,
+                        itemBuilder: (context, index) =>
+                            ItemTasksPerformed()),
+                  ),
+                ],
+              ),
+            ),
+          ),
+           clipMainScreen: true,openCurve: Curves.fastOutSlowIn,
+        closeCurve: Curves.bounceIn,
+          borderRadius: 24.0,
+          showShadow: true,
+          angle: 0.0,
+          slideWidth: MediaQuery
+              .of(context)
+              .size
+              .width * 0.65.w,
+          shadowLayer1Color: kColorScafoold,
         ),
-        bottomNavigationBar: CustomBottomNavBar(
-          selectedMenu: MenuState.home,
-        ),
+      ),
+      bottomNavigationBar: CustomBottomNavBar(
+        selectedMenu: MenuState.home,
       ),
     );
   }
@@ -450,10 +354,7 @@ class _DocumentLibraryScreenState extends State<DocumentLibraryScreen> {
                   "Attachments".tr,
                   style:   TextStyle(
                       fontSize: 12,
-                      color: controller.selectedIndextab4 == 1
-                          ? kColorsPrimary
-                          : kColorsPrimaryLow,
-                      fontWeight: FontWeight.bold),
+                      color: controller.selectedIndextab4 == 1 ?kColorsPrimary:kColorsPrimaryLow, fontWeight: FontWeight.bold),
                 ),
               ),
             ],
@@ -462,8 +363,6 @@ class _DocumentLibraryScreenState extends State<DocumentLibraryScreen> {
       ],
     );
   }
-
-
 }
 Widget TeaxtLableRow(BuildContext context,  String? text,String? textvalue) {
   final isRtl = Localizations.localeOf(context).languageCode == 'ar';

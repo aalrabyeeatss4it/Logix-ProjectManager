@@ -131,11 +131,13 @@ class _KeeperCovenantScreenState extends State<KeeperCovenantScreen> {
                                                             ),
                                                             child: Padding(
                                                               padding: const EdgeInsets.all(3.0 ),
-                                                              child:  Image.asset(
-                                                                "assets/Icon/exite.png",
+                                                              child:
+                                                              Image.asset(
+                                                                "assets/Icon/clear.png",
                                                                 width: 20.r,
                                                                 height: 20.r,
                                                                 color: kColorsWhite,),
+
                                                             ),
                                                           )),
                                                     ),
@@ -232,6 +234,8 @@ class _KeeperCovenantScreenState extends State<KeeperCovenantScreen> {
                                                         //   height: 0.02.sh,
                                                         // ),
                                                         CustomButton(
+                                                          color:kColorsPrimaryFont ,
+
                                                           text: 'search'.tr,
                                                           isIconEnd: true,
                                                           IconEnd: SvgPicture.asset(

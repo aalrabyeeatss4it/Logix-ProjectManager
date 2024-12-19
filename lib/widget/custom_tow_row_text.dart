@@ -27,7 +27,7 @@ class CustomTowRowText extends StatelessWidget {
               color:backColor  ,
               borderRadius: BorderRadius.circular(10.r)
           ),
-          padding:  EdgeInsets.only(top:  5.0.r,right: 6.r,bottom: 4.r),
+          padding:  EdgeInsets.only(top:  5.0.r,bottom: 4.r),
           width: 0.82.sw,
           child: Row(
             children: [

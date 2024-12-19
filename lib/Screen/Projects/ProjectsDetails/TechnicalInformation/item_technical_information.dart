@@ -14,8 +14,8 @@ import 'package:projectmanagers/widget/custom_row_text.dart';
 import 'package:projectmanagers/widget/custom_tow_row_text.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
 
-class ItemDocumentLibrary extends StatelessWidget {
-  ItemDocumentLibrary();
+class ItemTechnicalInformation extends StatelessWidget {
+  ItemTechnicalInformation();
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +45,12 @@ class ItemDocumentLibrary extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        CustomTowRowText(text: '    اسم المستند'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: "ملف كذا كذا  ", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite, text2: "    التاريخ".tr, textValue2: "2024/2/2",),
-                        CustomRowText(text: ' الوصف'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: " وصف المستند ", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite,),
-                        CustomRowText(text: ' المصدر'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: " مصدر المستند", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite,),
+                        CustomRowText(text: ' اسم المخرج '.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: " مصدر المستند", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite,),
+
+
+                        CustomTowRowText(flex:4,text: ' رقم المخرج'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: "256556", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite, text2: "    العدد".tr, textValue2: " 5325",),
+                        CustomTowRowText(flex:4,text: 'العدد المعتمد سابقا'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: "5555", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite, text2: "العدد في الميثاق".tr, textValue2: "56246",),
+                        CustomRowText(text: ' الملاحظات'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: " وصف المستند ", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite,),
 
 
                       ],
@@ -68,7 +71,7 @@ class ItemDocumentLibrary extends StatelessWidget {
   }
 }
 
-class ItemDocumentLibraryShimmer extends StatelessWidget {
+class ItemTechnicalInformationShimmer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     debugInvertOversizedImages=true;

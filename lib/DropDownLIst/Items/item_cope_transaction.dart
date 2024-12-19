@@ -46,12 +46,11 @@ class  ItemCopeTransactions extends StatelessWidget {
                 Expanded(
                   flex: 1,
 
-                  child: Image.asset(
-              "assets/Icon/exite.png",
-              width: 25.r,
-              height: 25.r,
-              color: kColorsPrimary,
-              ),),
+                  child:   Image.asset(
+                    "assets/Icon/clear.png",
+                    width: 20.r,
+                    height: 20.r,
+                    color: kColorsWhite,),),
 
               ],
             ),

@@ -169,9 +169,9 @@ class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
                       height: 0.01.sh,
                     ),
                     BuldContinerHR("المعلومات الماليه".tr, "assets/Icon/wallet.svg",kColorsPrimary,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.financial_information_screen);}),
-                    BuldContinerHR("مكتبة المستندات".tr, "assets/Icon/folder-open.svg",kColorsPrimary,Color(0xffD4E8EF),(){}),
-                    BuldContinerHR("المعلومات الفنيه".tr, "assets/Icon/document.svg",kColorsPrimary,Color(0xffD4E8EF),(){}),
-                    BuldContinerHR("المهام التي تنفيذها".tr, "assets/Icon/task-square.svg",kColorsPrimary,Color(0xffD4E8EF),(){}),
+                    BuldContinerHR("مكتبة المستندات".tr, "assets/Icon/folder-open.svg",kColorsPrimary,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.document_library_screen);}),
+                    BuldContinerHR("المعلومات الفنيه".tr, "assets/Icon/document.svg",kColorsPrimary,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.technical_information_screen);}),
+                    BuldContinerHR("المهام التي تنفيذها".tr, "assets/Icon/task-square.svg",kColorsPrimary,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.tasks_performed_screen);}),
 
                   ],
                 ),

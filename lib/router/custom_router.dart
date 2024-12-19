@@ -7,6 +7,8 @@ import 'package:projectmanagers/Screen/MenuDrawer/profile/prpfile_screen.dart';
 import 'package:projectmanagers/Screen/Notifcation/notifcation_screen.dart';
 import 'package:projectmanagers/Screen/Projects/ProjectsDetails/DocumentLibrary/document_library_screen.dart';
 import 'package:projectmanagers/Screen/Projects/ProjectsDetails/FinancialInformation/financial_information_screen.dart';
+import 'package:projectmanagers/Screen/Projects/ProjectsDetails/TasksPerformed/tasks_performed_screen.dart';
+import 'package:projectmanagers/Screen/Projects/ProjectsDetails/TechnicalInformation/technical_information_screen.dart';
 import 'package:projectmanagers/Screen/Projects/ProjectsDetails/projects_details_screen.dart';
 import 'package:projectmanagers/Screen/Projects/projects_screen.dart';
 import 'package:projectmanagers/Screen/card_wizard_overlap.dart';
@@ -171,6 +173,24 @@ class Pages {
           page: () => DocumentLibraryScreen(),
           bindings: [
             DocumentLibraryBinding(),
+          ]
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.technical_information_screen,
+          page: () => TechnicalInformationScreen(),
+          bindings: [
+            TechnicalInformationBinding(),
+          ]
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.tasks_performed_screen,
+          page: () => TasksPerformedScreen(),
+          bindings: [
+            TasksPerformedBinding(),
           ]
       ),
 

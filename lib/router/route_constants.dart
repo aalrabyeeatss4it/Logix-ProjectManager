@@ -34,6 +34,8 @@ class RoutingApp {
 
   static const String financial_information_screen = "/financial_information_screen";
   static const String document_library_screen = "/document_library_screen";
+  static const String technical_information_screen = "/technical_information_screen";
+  static const String tasks_performed_screen = "/tasks_performed_screen";
 
   // InternalMessaging
 

@@ -96,7 +96,7 @@ class _FinancialInformationScreenState extends State<FinancialInformationScreen>
                     ),
                     Container(
                       height: 0.06.sh,
-                      width: 0.93.sw,
+                      width: 0.94.sw,
 
                       child:Align(
                         alignment: Alignment(1,1),
@@ -106,7 +106,7 @@ class _FinancialInformationScreenState extends State<FinancialInformationScreen>
                               borderRadius: BorderRadius.circular(10.r)),
 
                           height: 0.061.sh,
-                          width: 0.90.sw, // أو يمكن ضبط عرض مخصص
+                          width: 0.94.sw, // أو يمكن ضبط عرض مخصص
                           child: TabBar(
                             onTap: (index) {controllerTabBarFinancialInformation.selectedIndex = index;},
                             controller: controllerTabBarFinancialInformation.controllerTabBar,
@@ -154,7 +154,7 @@ class _FinancialInformationScreenState extends State<FinancialInformationScreen>
                               Expanded(
                                 child:  ListView.builder(
                                     shrinkWrap: true,
-                                    itemCount: 5,
+                                    itemCount: 1,
                                     itemBuilder: (context, index) =>
                                         ItemFinancialInformation()),
                               ),
@@ -168,7 +168,7 @@ class _FinancialInformationScreenState extends State<FinancialInformationScreen>
                               Expanded(
                                 child:  ListView.builder(
                                     shrinkWrap: true,
-                                    itemCount: 5,
+                                    itemCount: 2,
                                     itemBuilder: (context, index) =>
                                         ItemFinancialInformation()),
                               ),
@@ -182,7 +182,7 @@ class _FinancialInformationScreenState extends State<FinancialInformationScreen>
                               Expanded(
                                 child:  ListView.builder(
                                     shrinkWrap: true,
-                                    itemCount: 5,
+                                    itemCount: 3,
                                     itemBuilder: (context, index) =>
                                         ItemFinancialInformation()),
                               ),

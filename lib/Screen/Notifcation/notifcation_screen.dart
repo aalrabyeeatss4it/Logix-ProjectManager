@@ -190,8 +190,8 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                                         ),
                                                                         child: Padding(
                                                                           padding:  EdgeInsets.all(3.0.r),
-                                                                          child: Image.asset(
-                                                                            "assets/Icon/exite.png",
+                                                                          child:    Image.asset(
+                                                                            "assets/Icon/clear.png",
                                                                             width: 20.r,
                                                                             height: 20.r,
                                                                             color: kColorsWhite,),
@@ -441,8 +441,8 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                                     ),
                                                                     child: Padding(
                                                                       padding:  EdgeInsets.all(3.0.r),
-                                                                      child: Image.asset(
-                                                                        "assets/Icon/exite.png",
+                                                                      child:    Image.asset(
+                                                                        "assets/Icon/clear.png",
                                                                         width: 20.r,
                                                                         height: 20.r,
                                                                         color: kColorsWhite,),
@@ -711,12 +711,11 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                 onTap: () {
                                   Get.back();
                                 },
-                                child: Image.asset(
-                                  "assets/Icon/exite.png",
-                                  width: 25.r,
-                                  height: 25.r,
-                                  color: kColorsPrimary,
-                                )),
+                                child:    Image.asset(
+                                  "assets/Icon/clear.png",
+                                  width: 20.r,
+                                  height: 20.r,
+                                  color: kColorsWhite,),),
                           ),
                         ],
                       ),
