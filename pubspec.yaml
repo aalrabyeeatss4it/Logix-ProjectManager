@@ -113,15 +113,18 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    #    - family: Cairo
-    #      fonts:
-    #        - asset: fonts/Cairo-Regular.ttf
+    - family: Cairo
+      fonts:
+        - asset: fonts/Cairo-Regular.ttf
     - family: ArbFONTS-DINNextLTArabic
       fonts:
         - asset: fonts/ArbFONTS-DINNextLTArabic-Regular.ttf
     - family: Cairo
       fonts:
         - asset: fonts/Cairo-SemiBold.ttf
+    - family: GraphikArabic
+      fonts:
+        - asset: fonts/Graphik-Arabic-SemiBold.ttf
   assets:
     - assets/
     - assets/Icons/

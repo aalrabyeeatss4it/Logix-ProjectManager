@@ -42,8 +42,8 @@ class  ItemTaskOld extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          CustomRowText(text: 'المشروع'.tr,textStyle: TextStyle(fontFamily: 'Regular',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue: "2022/2/2",textValueStyle: TextStyle(fontFamily: 'Regular',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,),
-                          CustomRowText(text: 'المهمه'.tr,textStyle: TextStyle(fontFamily: 'Regular',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2026/2/2",textValueStyle: TextStyle(fontFamily: 'Regular',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,),
+                          CustomRowText(text: 'المشروع'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue: "2022/2/2",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,),
+                          CustomRowText(text: 'المهمه'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2026/2/2",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,),
                           Padding(
                             padding:  EdgeInsets.symmetric(horizontal:  8.0),
                             child: Container(
@@ -54,7 +54,7 @@ class  ItemTaskOld extends StatelessWidget {
 
                                 child: Padding(
                                   padding:  EdgeInsets.all(4.0),
-                                  child: Text('تنتهي في '.tr +'2024/12/12' +"  |  "+'متبقى :'.tr +'3 أيام ' ,  style: TextStyle(fontFamily: 'Regular',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,)),
+                                  child: Text('تنتهي في '.tr +'2024/12/12' +"  |  "+'متبقى :'.tr +'3 أيام ' ,  style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,)),
                                 )),
                           ),
                         ],

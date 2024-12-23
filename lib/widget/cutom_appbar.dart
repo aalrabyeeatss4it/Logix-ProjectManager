@@ -75,7 +75,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                         child: Text(title!,textAlign: TextAlign.center, style:    Theme.of(context)
                             .textTheme
                             .titleMedium
-                            ?.copyWith(fontFamily: 'Regular',color:kColorsBlack,fontWeight: FontWeight.w500,fontSize: 16, )
+                            ?.copyWith(fontFamily: 'GraphikArabic',color:kColorsBlack,fontWeight: FontWeight.w500,fontSize: 16, )
                         ),
                       ),
                     ),

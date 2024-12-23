@@ -51,7 +51,7 @@ class  ItemHome extends StatelessWidget {
                             children: [
                               Expanded(
                                   flex:9,
-                                  child: Text('تركيب نظام لجهه خاصه'.tr,  style: TextStyle(fontFamily: 'Regular',fontSize: 14, color:kColorsBlack , fontWeight: FontWeight.w500,))),
+                                  child: Text('تركيب نظام لجهه خاصه'.tr,  style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 14, color:kColorsBlack , fontWeight: FontWeight.w500,))),
                               Expanded(
                                 flex:5,
                                 child: CustomButton(
@@ -61,7 +61,7 @@ class  ItemHome extends StatelessWidget {
                                   sizeHeight: 0.04.sh,
                                   sizeWidth: 0.30.sw,
                                   text:'متأخر بشكل بسيط'.tr,
-                                  style: TextStyle(fontFamily: 'Regular',
+                                  style: TextStyle(fontFamily: 'GraphikArabic',
                                       fontSize: 12,
                                       color: Color(0xffFF744A)),
                                   onPress: () {
@@ -80,9 +80,9 @@ class  ItemHome extends StatelessWidget {
                           flex:9,
                           child: Column(
                             children: [
-                              CustomRowText(text: 'تاريخ البدايه'.tr,textStyle: TextStyle(fontFamily: 'Regular',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2022/2/2",textValueStyle: TextStyle(fontFamily: 'Regular',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
-                              CustomRowText(text: ' تاريخ النهايه'.tr,textStyle: TextStyle( fontFamily: 'Regular',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2026/2/2",textValueStyle: TextStyle(fontFamily: 'Regular',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
-                              CustomRowText(text: 'مرحلة المشروع'.tr,textStyle: TextStyle(fontFamily: 'Regular',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "sgsgsg",textValueStyle: TextStyle(fontFamily: 'Regular',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
+                              CustomRowText(text: 'تاريخ البدايه'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2022/2/2",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
+                              CustomRowText(text: ' تاريخ النهايه'.tr,textStyle: TextStyle( fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2026/2/2",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
+                              CustomRowText(text: 'مرحلة المشروع'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "sgsgsg",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
                                ],
                           ),
                         ),

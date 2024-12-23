@@ -59,7 +59,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                             color: MenuState.home == widget.selectedMenu
                                 ? kColorsPrimaryFont :kColorsLightBlack,
                           ),
-                          Text("مشاريعي".tr,style: MenuState.home == widget.selectedMenu?TextStyle(   fontFamily: 'Regular',fontSize: 14,color: kColorsPrimaryFont):TextStyle(   fontFamily: 'Regular',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),)
+                          Text("مشاريعي".tr,style: MenuState.home == widget.selectedMenu?TextStyle(   fontFamily: 'GraphikArabic',fontSize: 14,color: kColorsPrimaryFont):TextStyle(   fontFamily: 'GraphikArabic',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),)
                         ],
                       ),
                     ),
@@ -79,7 +79,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                           color: MenuState.ElectronicServices == widget.selectedMenu
                               ? kColorsPrimaryFont :kColorsLightBlack,
                         ),
-                        Text( 'الخدمات الإلكترونيه'.tr,style: MenuState.ElectronicServices == widget.selectedMenu?TextStyle(   fontFamily: 'Regular',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsPrimaryFont):TextStyle(   fontFamily: 'Regular',fontSize: 14,color: kColorsLightBlack),),
+                        Text( 'الخدمات الإلكترونيه'.tr,style: MenuState.ElectronicServices == widget.selectedMenu?TextStyle(   fontFamily: 'GraphikArabic',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsPrimaryFont):TextStyle(   fontFamily: 'GraphikArabic',fontSize: 14,color: kColorsLightBlack),),
 
                       ],
                     ),
@@ -100,7 +100,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                           color: MenuState.KeeperCovenant == widget.selectedMenu
                               ? kColorsPrimaryFont :kColorsLightBlack,
                         ),
-                        Text( ' حافظة العهده'.tr,style: MenuState.KeeperCovenant == widget.selectedMenu?TextStyle(   fontFamily: 'Regular',fontSize: 14,color: kColorsPrimaryFont):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
+                        Text( ' حافظة العهده'.tr,style: MenuState.KeeperCovenant == widget.selectedMenu?TextStyle(   fontFamily: 'GraphikArabic',fontSize: 14,color: kColorsPrimaryFont):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
                       ],
                     ),
                   ),

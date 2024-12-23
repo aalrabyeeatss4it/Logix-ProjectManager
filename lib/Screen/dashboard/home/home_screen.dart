@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   bottom:1.r),
                               child: Text(
                                 "ملخص المشاريع".tr,
-                                style: TextStyle(   fontFamily: 'Regular',color:kColorsBlack,fontSize: 12,fontWeight: FontWeight.w500),)
+                                style: TextStyle(   fontFamily: 'GraphikArabic',color:kColorsBlack,fontSize: 12,fontWeight: FontWeight.w500),)
                           ),
                         ],
                       ),
@@ -93,13 +93,13 @@ class _HomeScreenState extends State<HomeScreen> {
                               Text(
                                 "عدد المشاريع الإجمالي",
                                 style: TextStyle(
-                                  fontFamily: 'Regular', color:kColorsWhite ,
+                                  fontFamily: 'GraphikArabic', color:kColorsWhite ,
                                   fontSize: 12,
                                   fontWeight: FontWeight.w300,
                                 ),
                               ),
                               Text("84"+   "  ", style: TextStyle(
-                                  fontFamily: 'Regular',
+                                  fontFamily: 'GraphikArabic',
                                   color:kColorsWhite ,
                                   fontSize: 12,
                                   fontWeight: FontWeight.w300,
@@ -235,7 +235,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 style: Theme.of(context)
                                     .textTheme
                                     .titleMedium
-                                    ?.copyWith(fontFamily: 'Regular',color:kColorsBlack,fontSize: 14,fontWeight: FontWeight.w500),)
+                                    ?.copyWith(fontFamily: 'GraphikArabic',color:kColorsBlack,fontSize: 14,fontWeight: FontWeight.w500),)
                           ),
 
                         ],
@@ -293,9 +293,9 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(text+" :", style: TextStyle(   fontFamily: 'Regular',color:kColorsBlack,fontSize:10.0, fontWeight: FontWeight.bold,),
+            Text(text+" :", style: TextStyle(   fontFamily: 'GraphikArabic',color:kColorsBlack,fontSize:10.0, fontWeight: FontWeight.bold,),
             ),
-            Text(value, style: TextStyle(   fontFamily: 'Regular',color:colorvalue,fontSize:10.0, fontWeight: FontWeight.bold,),
+            Text(value, style: TextStyle(   fontFamily: 'GraphikArabic',color:colorvalue,fontSize:10.0, fontWeight: FontWeight.bold,),
             ),
           ],
         ),
@@ -355,7 +355,7 @@ class GrideRow extends StatelessWidget {
                       child: Text(
                         text.toString(),
                         style: TextStyle(
-                          fontFamily: 'Regular',
+                          fontFamily: 'GraphikArabic',
                           fontSize: 14,
                           color: Color(0xff242424),
                           fontWeight: FontWeight.w400,

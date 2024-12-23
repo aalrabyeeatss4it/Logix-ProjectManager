@@ -103,7 +103,7 @@ class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
                                           children: [
                                             Expanded(
                                                 flex:9,
-                                                child: Text('تركيب نظام لجهه خاصه'.tr,  style: TextStyle(fontFamily: 'Regular',fontSize: 14, color:kColorsBlack , fontWeight: FontWeight.w500,))),
+                                                child: Text('تركيب نظام لجهه خاصه'.tr,  style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 14, color:kColorsBlack , fontWeight: FontWeight.w500,))),
                                             Expanded(
                                               flex:5,
                                               child: CustomButton(
@@ -113,7 +113,7 @@ class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
                                                 sizeHeight: 0.04.sh,
                                                 sizeWidth: 0.30.sw,
                                                 text:'متأخر بشكل بسيط'.tr,
-                                                style: TextStyle(fontFamily: 'Regular',
+                                                style: TextStyle(fontFamily: 'GraphikArabic',
                                                     fontSize: 12,
                                                     color: Color(0xffFF744A)),
                                                 onPress: () {
@@ -132,9 +132,9 @@ class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
                                         flex:9,
                                         child: Column(
                                           children: [
-                                            CustomRowText(text: 'تاريخ البدايه'.tr,textStyle: TextStyle(fontFamily: 'Regular',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2022/2/2",textValueStyle: TextStyle(fontFamily: 'Regular',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
-                                            CustomRowText(text: ' تاريخ النهايه'.tr,textStyle: TextStyle( fontFamily: 'Regular',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2026/2/2",textValueStyle: TextStyle(fontFamily: 'Regular',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
-                                            CustomRowText(text: 'مرحلة المشروع'.tr,textStyle: TextStyle(fontFamily: 'Regular',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "sgsgsg",textValueStyle: TextStyle(fontFamily: 'Regular',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
+                                            CustomRowText(text: 'تاريخ البدايه'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2022/2/2",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
+                                            CustomRowText(text: ' تاريخ النهايه'.tr,textStyle: TextStyle( fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2026/2/2",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
+                                            CustomRowText(text: 'مرحلة المشروع'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "sgsgsg",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
                                           ],
                                         ),
                                       ),
@@ -168,7 +168,7 @@ class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
                     SizedBox(
                       height: 0.01.sh,
                     ),
-                    BuldContinerHR("المعلومات الماليه".tr, "assets/Icon/wallet.svg",kColorsPrimary,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.financial_information_screen);}),
+                    BuldContinerHR("المعلومات الماليه".tr, "assets/Icon/wallet (1).svg",kColorsPrimary,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.financial_information_screen);}),
                     BuldContinerHR("مكتبة المستندات".tr, "assets/Icon/folder-open.svg",kColorsPrimary,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.document_library_screen);}),
                     BuldContinerHR("المعلومات الفنيه".tr, "assets/Icon/document.svg",kColorsPrimary,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.technical_information_screen);}),
                     BuldContinerHR("المهام التي تنفيذها".tr, "assets/Icon/task-square.svg",kColorsPrimary,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.tasks_performed_screen);}),

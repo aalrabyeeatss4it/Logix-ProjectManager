@@ -262,7 +262,7 @@ class MenuWidgetDachbord extends StatelessWidget {
                 SizedBox(
                   width: 0.04.sw,
                 ),
-                Text(title, style: TextStyle(fontFamily: 'Regular',fontSize:  14.sp, color: FontColore, fontWeight: FontWeight.w700),),
+                Text(title, style: TextStyle(fontFamily: 'GraphikArabic',fontSize:  14.sp, color: FontColore, fontWeight: FontWeight.w700),),
               ],
             ),
           ],

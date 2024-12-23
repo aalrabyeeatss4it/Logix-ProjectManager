@@ -23,6 +23,7 @@ import 'package:shimmer_animation/shimmer_animation.dart';
 class ItemTasksPerformed extends StatelessWidget {
   ItemTasksPerformed();
   final _formKeyChing = GlobalKey<FormState>();
+  final  controller = Get.put(TasksPerformedController());
   final _formKeyAdd = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -68,7 +69,7 @@ class ItemTasksPerformed extends StatelessWidget {
                               sizeHeight: 0.06.sh,
                               sizeWidth: 0.40.sw,
                               text: 'تغيير الحاله'.tr,
-                              style: TextStyle(fontFamily: 'Regular',
+                              style: TextStyle(fontFamily: 'GraphikArabic',
                                   fontSize: 18,
                                   fontWeight: FontWeight.w500,
                                   color:
@@ -78,7 +79,7 @@ class ItemTasksPerformed extends StatelessWidget {
                                   Container(
                                     margin:const EdgeInsets.all(1.0 ),
                                     // height: .42.sh,
-                                    height: 0.70.sh,
+                                    height: 0.28.sh,
                                     width: 1.0.sw,
                                     decoration:const BoxDecoration(color: kColorsWhite,
                                       borderRadius: BorderRadius.only(topLeft:Radius.circular(30 ),topRight: Radius.circular(30 )),
@@ -90,8 +91,9 @@ class ItemTasksPerformed extends StatelessWidget {
                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                             children: [
                                               Container(),
-                                              Text('search'.tr ,
+                                              Text('تغيير الملاحظه'.tr ,
                                                 style: const TextStyle(
+                                                    fontStyle: FontStyle.normal,
                                                     fontSize: 16,
                                                     color: kColorsPrimary,
                                                     fontWeight: FontWeight.w500
@@ -128,110 +130,50 @@ class ItemTasksPerformed extends StatelessWidget {
                                             alignment: Alignment.center,
                                             padding:const EdgeInsets.all(8 ),
                                             child: Form(
-                                              key: _formKeyChing,
+                                              key: _formKeyAdd,
                                               child: Column(
                                                 mainAxisAlignment: MainAxisAlignment.center,
                                                 children: <Widget>[
-
-                                                  SizedBox(
-                                                    height: 0.02.sh,
-                                                  ),
-                                                  GetBuilder<
-                                                      TasksPerformedController>(
-                                                      init:
-                                                      TasksPerformedController(),
+                                                  GetBuilder<TasksPerformedController>(
+                                                      init: TasksPerformedController(),
                                                       builder: (co) {
                                                         return InkWell(
-                                                            onTap:
-                                                                () async {
+                                                            onTap: () async {
                                                               Get.dialog(
                                                                 LoadingIndicatorWidget(),
                                                               );
                                                               Get.back();
-                                                              onClick(co,context);
+                                                              onClick(co, context, controller.typeFilterModel!.typeFilter!,tag: "yes");
                                                             },
-                                                            child:
-                                                            CustomTextInput(
-                                                              iconEnd: Icon(
-                                                                Icons
-                                                                    .keyboard_arrow_down,
-                                                                color:
-                                                                kColorsLightBlack,
-                                                              ),
+                                                            child: CustomTextInput(
+
+                                                              iconEnd: Icon(Icons.keyboard_arrow_down, color: kColorsLightBlack,),
                                                               textAlign: TextAlign.start,
-                                                              text: 'Search b'.tr,
+                                                              text: 'الحاله'.tr,
                                                               filled: true,
                                                               isEnabled: false,
-                                                              readOnly:true ,
-                                                              isRequired: true,
-                                                              labelText: 'undefined'.tr,
-                                                              exText: 'undefined'.tr,
-                                                              // textEditingController: controller.TypeFilterTextControll,
+                                                              labelText: 'Choose'.tr,
+                                                              exText: 'Choose'.tr,
+                                                              textEditingController: controller.SideController,
                                                               styleText:   TextStyle(
-                                                                fontSize:
-                                                                13.sp,
-                                                                color:
-                                                                kColorsBlack,
+                                                                fontSize: 13.sp,
+                                                                color: kColorsBlack,
                                                               ),
                                                               hintstyle: const TextStyle(
-                                                                fontSize:
-                                                                12,
-                                                                color:
-                                                                kColorsLightBlackLow,
+                                                                fontSize: 12,
+                                                                color: kColorsLightBlackLow,
                                                               ),
                                                             ));
                                                       }),
                                                   SizedBox(
                                                     height: 0.02.sh,
                                                   ),
-                                                  // GetBuilder<FollowUpsController>(
-                                                  //     init: FollowUpsController(),
-                                                  //     builder: (co) {
-                                                  //       return InkWell(
-                                                  //           onTap: () async {
-                                                  //             Get.dialog(
-                                                  //               LoadingIndicatorWidget(),
-                                                  //             );
-                                                  //             Get.back();
-                                                  //             onClickSideType(co, context, controller.sideModel!.dataSide!,tag: "yes");
-                                                  //           },
-                                                  //           child: CustomTextInput(
-                                                  //
-                                                  //             iconEnd: Icon(Icons.keyboard_arrow_down, color: kColorsLightBlack,),
-                                                  //             textAlign: TextAlign.start,
-                                                  //             text: 'Side'.tr,
-                                                  //             filled: true,
-                                                  //             isEnabled: false,
-                                                  //             labelText: 'Choose'.tr,
-                                                  //             exText: 'Choose'.tr,
-                                                  //             textEditingController: controller.SideController,
-                                                  //             styleText:   TextStyle(
-                                                  //               fontSize: 13.sp,
-                                                  //               color: kColorsBlack,
-                                                  //             ),
-                                                  //             hintstyle: const TextStyle(
-                                                  //               fontSize: 12,
-                                                  //               color: kColorsLightBlackLow,
-                                                  //             ),
-                                                  //           ));
-                                                  //     }),
-                                                  // SizedBox(
-                                                  //   height: 0.02.sh,
-                                                  // ),
                                                   CustomButton(
                                                     color:kColorsPrimaryFont ,
-
-                                                    text: 'search'.tr,
-                                                    isIconEnd: true,
-                                                    IconEnd: SvgPicture.asset(
-                                                      "assets/Icons/left.svg",
-                                                      width: 24.r ,
-                                                      height: 24.r ,
-                                                      color: kColorsWhite,
-                                                    ),
+                                                    text: 'تغيير'.tr,
                                                     borderRadius: 10.r,
                                                     sizeHeight: 0.06.sh,
-                                                    sizeWidth: 0.94.sw,
+                                                    sizeWidth: 0.90.sw,
                                                     onPress: () async {
                                                       if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
                                                         // if (_formKey.currentState!.validate()) {
@@ -268,7 +210,7 @@ class ItemTasksPerformed extends StatelessWidget {
 
                                 borderColor: kColorsPrimaryFont,
                                 text: 'إضافة ملاحظه'.tr,
-                                style: TextStyle(fontFamily: 'Regular',
+                                style: TextStyle(fontFamily: 'GraphikArabic',
                                     fontSize: 18,
                                     fontWeight: FontWeight.w500,
                                     color:
@@ -278,7 +220,7 @@ class ItemTasksPerformed extends StatelessWidget {
                                     Container(
                                       margin:const EdgeInsets.all(1.0 ),
                                       // height: .42.sh,
-                                      height: 0.70.sh,
+                                      height: 0.35.sh,
                                       width: 1.0.sw,
                                       decoration:const BoxDecoration(color: kColorsWhite,
                                         borderRadius: BorderRadius.only(topLeft:Radius.circular(30 ),topRight: Radius.circular(30 )),
@@ -290,8 +232,9 @@ class ItemTasksPerformed extends StatelessWidget {
                                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                               children: [
                                                 Container(),
-                                                Text('search'.tr ,
+                                                Text('إضافة ملاحظه'.tr ,
                                                   style: const TextStyle(
+                                                      fontStyle: FontStyle.normal,
                                                       fontSize: 16,
                                                       color: kColorsPrimary,
                                                       fontWeight: FontWeight.w500
@@ -335,9 +278,11 @@ class ItemTasksPerformed extends StatelessWidget {
 
                                                     TextFieldWidget(
 
-                                                      text: 'رقم الفاتوره'.tr,
+                                                      text: 'الملاحظه'.tr,
+                                                      hint: "أضف الملاحظه",
                                                       edit: 1,
-                                                      // controller:controller.SubjectController,
+                                                      minLine: 5,
+                                                      maxLine: 5, // controller:controller.SubjectController,
                                                       keyboardType: TextInputType.number,
                                                       color: kColorsDeepWhite,
                                                     ),
@@ -347,54 +292,13 @@ class ItemTasksPerformed extends StatelessWidget {
                                                     SizedBox(
                                                       height: 0.02.sh,
                                                     ),
-                                                    // GetBuilder<FollowUpsController>(
-                                                    //     init: FollowUpsController(),
-                                                    //     builder: (co) {
-                                                    //       return InkWell(
-                                                    //           onTap: () async {
-                                                    //             Get.dialog(
-                                                    //               LoadingIndicatorWidget(),
-                                                    //             );
-                                                    //             Get.back();
-                                                    //             onClickSideType(co, context, controller.sideModel!.dataSide!,tag: "yes");
-                                                    //           },
-                                                    //           child: CustomTextInput(
-                                                    //
-                                                    //             iconEnd: Icon(Icons.keyboard_arrow_down, color: kColorsLightBlack,),
-                                                    //             textAlign: TextAlign.start,
-                                                    //             text: 'Side'.tr,
-                                                    //             filled: true,
-                                                    //             isEnabled: false,
-                                                    //             labelText: 'Choose'.tr,
-                                                    //             exText: 'Choose'.tr,
-                                                    //             textEditingController: controller.SideController,
-                                                    //             styleText:   TextStyle(
-                                                    //               fontSize: 13.sp,
-                                                    //               color: kColorsBlack,
-                                                    //             ),
-                                                    //             hintstyle: const TextStyle(
-                                                    //               fontSize: 12,
-                                                    //               color: kColorsLightBlackLow,
-                                                    //             ),
-                                                    //           ));
-                                                    //     }),
-                                                    // SizedBox(
-                                                    //   height: 0.02.sh,
-                                                    // ),
                                                     CustomButton(
                                                       color:kColorsPrimaryFont ,
+                                                      text: 'إضافه'.tr,
 
-                                                      text: 'search'.tr,
-                                                      isIconEnd: true,
-                                                      IconEnd: SvgPicture.asset(
-                                                        "assets/Icons/left.svg",
-                                                        width: 24.r ,
-                                                        height: 24.r ,
-                                                        color: kColorsWhite,
-                                                      ),
                                                       borderRadius: 10.r,
                                                       sizeHeight: 0.06.sh,
-                                                      sizeWidth: 0.94.sw,
+                                                      sizeWidth: 0.90.sw,
                                                       onPress: () async {
                                                         if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
                                                           // if (_formKey.currentState!.validate()) {
@@ -444,92 +348,129 @@ class ItemTasksPerformed extends StatelessWidget {
       ),
     );
   }
-  onClick(
-      TasksPerformedController controller,
-      BuildContext context,
-      ) {
+
+  onClick(TasksPerformedController controller, BuildContext context, List<TypeFilter> drop, {required String tag}) {
+
     Get.bottomSheet(
       Container(
         decoration: BoxDecoration(
-            color: Get.isDarkMode ? ThemeData.dark().cardColor : Colors.white,
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(10.r),
-                topRight: Radius.circular(10.r))),
-        child: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
-          child: GetBuilder<TasksPerformedController>(
-              init: TasksPerformedController(),
-              builder: (buld) {
-                return Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    SizedBox(
-                      height: 10.h,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(8.0.r),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          SizedBox(
-                            width: 20.w,
-                          ),
-                          Text(
-                            'Choose'.tr,
-                            style:   TextStyle(
+          color: Get.isDarkMode ? ThemeData.dark().cardColor : Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(25),
+            topRight: Radius.circular(25),
+          ),
+        ),
+        child: GetBuilder<TasksPerformedController>(
+          init: TasksPerformedController(),
+          builder: (_c) {
+            // Variable to hold filtered dropdown options
+            return SizedBox(
+              height: 0.60.sh,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  SizedBox(height: 10),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(width: 20),
+                        Text(
+                          'Choose'.tr,
+                          style:   TextStyle(
+                              color: kColorsPrimary,
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(4.0.r),
+                          child: GestureDetector(
+                              onTap: () {
+                                Get.back();
+                              },
+                              child: Image.asset(
+                                "assets/Icons/clear.png",
+                                width: 25.r,
+                                height: 25.r,
                                 color: kColorsPrimary,
-                                fontSize: 14.sp,
-                                fontWeight: FontWeight.bold),
+                              )),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 0.0),
+                    child: SizedBox(
+                      height: 45,
+                      child: TextField(
+                        controller: controller.searchController,
+                        style:   TextStyle(
+                            color: kColorsBlack,
+                            fontSize: 12.sp,
+                            fontWeight: FontWeight.bold),
+                        strutStyle: StrutStyle(height: 1.5),
+                        cursorColor: kColorsPrimary,
+                        decoration: InputDecoration(
+                          hintText: 'search'.tr,
+                          hintStyle:   TextStyle(
+                              color: kColorsPrimary,
+                              fontSize: 12.sp,
+                              fontWeight: FontWeight.bold),
+                          prefixIcon: Icon(Icons.search),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: BorderSide(color: kColorsBackDelete.withOpacity(.3))
                           ),
-                          Padding(
-                            padding: EdgeInsets.all(4.0.r),
-                            child: GestureDetector(
-                                onTap: () {
-                                  Get.back();
-                                },
-                                child: Image.asset(
-                                  "assets/Icons/clear.png",
-                                  width: 25.r,
-                                  height: 25.r,
-                                  color: kColorsPrimary,
-                                )),
-                          ),
-                        ],
+                        ),
+                        onChanged: (value) {
+                          // Trigger rebuild when text input changes
+                          _c.update();
+                        },
                       ),
                     ),
-                    // ...drop.map((e) => InkWell(
-                    //   onTap: () {
-                    //     controller.onChanTypeFilter(
-                    //         e.name.toString(), e.id);
-                    //     Get.back();
-                    //   },
-                    //   child: Padding(
-                    //     padding: EdgeInsets.all(1.0.r),
-                    //     child: Card(
-                    //       elevation: 0,
-                    //       shape: RoundedRectangleBorder(
-                    //           borderRadius: BorderRadius.circular(10.r),
-                    //           side: BorderSide(
-                    //               width: 1,
-                    //               color:
-                    //               kColorsLightBlack.withOpacity(.3))),
-                    //       child: Padding(
-                    //         padding: EdgeInsets.all(8.0.r),
-                    //         child: Text(
-                    //           e.name.toString(),
-                    //           style:   TextStyle(
-                    //               color: kColorsBlack,
-                    //               fontSize: 12.sp,
-                    //               fontWeight: FontWeight.bold),
-                    //         ),
-                    //       ),
-                    //     ),
-                    //   ),
-                    // ))
-                  ],
-                );
-              }),
+                  ),
+                  SizedBox(height: 20),
+                  // Display filtered dropdown options
+                  Expanded(
+                    child: SingleChildScrollView(
+                      child: Column(children: [
+                        ...drop.where((e) => e.name!.toLowerCase().contains(controller.searchController.text.toLowerCase())).map((e) => SizedBox(
+                          width: double.infinity,
+                          child: InkWell(
+                            onTap: () {
+                              controller.onChanSideFilter(e.name.toString(), e.id);
+                              Get.back();
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                              child: Card(
+                                elevation: 0,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  side: BorderSide(width: 1, color: kColorsBackDelete.withOpacity(.3)),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    e.name.toString(),
+                                    style:   TextStyle(color: kColorsBlack, fontSize: 12.sp, fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        )),
+                      ],),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                ],
+              ),
+            );
+          },
         ),
       ),
       elevation: 2,

@@ -286,7 +286,7 @@ class _KeeperCovenantScreenState extends State<KeeperCovenantScreen> {
                                         Text(
                                           'search'.tr,
                                           style:
-                                          TextStyle(fontFamily: 'Regular',color: kColorsPrimary, fontSize: 16,fontWeight: FontWeight.w500),
+                                          TextStyle(fontFamily: 'GraphikArabic',color: kColorsPrimary, fontSize: 16,fontWeight: FontWeight.w500),
                                         ),
                                       ],
                                     ),

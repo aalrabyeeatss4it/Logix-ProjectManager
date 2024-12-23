@@ -99,270 +99,270 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
     );
   }
 
-  Widget BuldTabbBar() {
-    return Column(
-      children: [
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.0.r),
-          child: Row(
-            children: [
-              Container(
-                child: Container(
-                  width: 0.08.sw,
-                  height: 0.05.sh,
-                  decoration: ShapeDecoration(
-                    color: kColorsPrimary,
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(width: 1, color: Color(0xFF9BB7DA)),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "1",
-                      style: const TextStyle(
-                          fontSize: 12,
-                          color: kColorsWhite,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                width: 0.07.sw,
-                height: 0.002.sh,
-                color: controller.selectedIndextab1 == 1
-                    ? kColorsPrimary
-                    : kColorsPrimaryLow,
-              ),
-              Container(
-                width: 0.08.sw,
-                height: 0.05.sh,
-                child: Container(
-                  decoration: ShapeDecoration(
-                    color: controller.selectedIndextab2 == 1
-                        ? kColorsPrimary
-                        : kColorsPrimaryLow,
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(width: 1, color: Color(0xFF9BB7DA)),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "2",
-                      style: const TextStyle(
-                          fontSize: 12,
-                          color: kColorsWhite,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                width: 0.07.sw,
-                height: 0.002.sh,
-                color: controller.selectedIndextab2 == 1
-                    ? kColorsPrimary
-                    : kColorsPrimaryLow,
-              ),
-              Container(
-                width: 0.08.sw,
-                height: 0.05.sh,
-                child: Container(
-                  decoration: ShapeDecoration(
-                    color: controller.selectedIndextab3 == 1
-                        ? kColorsPrimary
-                        : kColorsPrimaryLow,
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(width: 1, color: Color(0xFF9AB7DB)),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "3",
-                      style: const TextStyle(
-                          fontSize: 12,
-                          color: kColorsWhite,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                width: 0.07.sw,
-                height: 0.002.sh,
-                color: controller.selectedIndextab3 == 1
-                    ? kColorsPrimary
-                    : kColorsPrimaryLow,
-              ),
-              Container(
-                width: 0.08.sw,
-                height: 0.05.sh,
-                child: Container(
-                  decoration: ShapeDecoration(
-                    color: controller.selectedIndextab4 == 1
-                        ? kColorsPrimary
-                        : kColorsPrimaryLow,
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(width: 1, color: Color(0xFF9AB7DB)),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "4",
-                      style: const TextStyle(
-                          fontSize: 12,
-                          color: kColorsWhite,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                width: 0.07.sw,
-                height: 0.002.sh,
-                color: controller.selectedIndextab4 == 1
-                    ? kColorsPrimary
-                    : kColorsPrimaryLow,
-              ),
-              Container(
-                width: 0.08.sw,
-                height: 0.05.sh,
-                child: Container(
-                  decoration: ShapeDecoration(
-                    color: controller.selectedIndextab5 == 1
-                        ? kColorsPrimary
-                        : kColorsPrimaryLow,
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(width: 1, color: Color(0xFF9AB7DB)),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "5",
-                      style: const TextStyle(
-                          fontSize: 12,
-                          color: kColorsWhite,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                width: 0.07.sw,
-                height: 0.002.sh,
-                color: controller.selectedIndextab5 == 1
-                    ? kColorsPrimary
-                    : kColorsPrimaryLow,
-              ),
-              Container(
-                width: 0.08.sw,
-                height: 0.05.sh,
-                child: Container(
-                  decoration: ShapeDecoration(
-                    color: controller.selectedIndextab6 == 1
-                        ? kColorsPrimary
-                        : kColorsPrimaryLow,
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(width: 1, color: Color(0xFF9AB7DB)),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "6",
-                      style: const TextStyle(
-                          fontSize: 12,
-                          color: kColorsWhite,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-        Padding(
-          padding: EdgeInsets.all(12.r),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "بيانات رسالة",
-                style:  TextStyle(
-                    fontSize: 12,
-                    color: controller.selectedIndextab1 == 1
-                        ? kColorsPrimary
-                        : kColorsPrimaryLow,
-                    fontWeight: FontWeight.bold),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 2.0.r),
-                child: Text(
-                  "Options".tr,
-                  style:  TextStyle(
-                      fontSize: 12,
-                      color: controller.selectedIndextab2 == 1
-                          ? kColorsPrimary
-                          : kColorsPrimaryLow,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 2.0.r),
-                child: Text(
-                  "نسخة إلى",
-                  style:   TextStyle(
-                      fontSize: 12,
-                      color: controller.selectedIndextab3 == 1
-                          ? kColorsPrimary
-                          : kColorsPrimaryLow,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 2.0.r),
-                child: Text(
-                  "Attachments".tr,
-                  style:   TextStyle(
-                      fontSize: 12,
-                      color: controller.selectedIndextab4 == 1
-                          ? kColorsPrimary
-                          : kColorsPrimaryLow,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 2.0.r),
-                child: Text(
-                  "Attachments".tr,
-                  style:   TextStyle(
-                      fontSize: 12,
-                      color: controller.selectedIndextab4 == 1
-                          ? kColorsPrimary
-                          : kColorsPrimaryLow,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 2.0.r),
-                child: Text(
-                  "Attachments".tr,
-                  style:   TextStyle(
-                      fontSize: 12,
-                      color: controller.selectedIndextab4 == 1 ?kColorsPrimary:kColorsPrimaryLow, fontWeight: FontWeight.bold),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-    );
-  }
+  // Widget BuldTabbBar() {
+  //   return Column(
+  //     children: [
+  //       Padding(
+  //         padding: EdgeInsets.symmetric(horizontal: 20.0.r),
+  //         child: Row(
+  //           children: [
+  //             Container(
+  //               child: Container(
+  //                 width: 0.08.sw,
+  //                 height: 0.05.sh,
+  //                 decoration: ShapeDecoration(
+  //                   color: kColorsPrimary,
+  //                   shape: RoundedRectangleBorder(
+  //                     side: BorderSide(width: 1, color: Color(0xFF9BB7DA)),
+  //                     borderRadius: BorderRadius.circular(8),
+  //                   ),
+  //                 ),
+  //                 child: Center(
+  //                   child: Text(
+  //                     "1",
+  //                     style: const TextStyle(
+  //                         fontSize: 12,
+  //                         color: kColorsWhite,
+  //                         fontWeight: FontWeight.bold),
+  //                   ),
+  //                 ),
+  //               ),
+  //             ),
+  //             Container(
+  //               width: 0.07.sw,
+  //               height: 0.002.sh,
+  //               color: controller.selectedIndextab1 == 1
+  //                   ? kColorsPrimary
+  //                   : kColorsPrimaryLow,
+  //             ),
+  //             Container(
+  //               width: 0.08.sw,
+  //               height: 0.05.sh,
+  //               child: Container(
+  //                 decoration: ShapeDecoration(
+  //                   color: controller.selectedIndextab2 == 1
+  //                       ? kColorsPrimary
+  //                       : kColorsPrimaryLow,
+  //                   shape: RoundedRectangleBorder(
+  //                     side: BorderSide(width: 1, color: Color(0xFF9BB7DA)),
+  //                     borderRadius: BorderRadius.circular(8),
+  //                   ),
+  //                 ),
+  //                 child: Center(
+  //                   child: Text(
+  //                     "2",
+  //                     style: const TextStyle(
+  //                         fontSize: 12,
+  //                         color: kColorsWhite,
+  //                         fontWeight: FontWeight.bold),
+  //                   ),
+  //                 ),
+  //               ),
+  //             ),
+  //             Container(
+  //               width: 0.07.sw,
+  //               height: 0.002.sh,
+  //               color: controller.selectedIndextab2 == 1
+  //                   ? kColorsPrimary
+  //                   : kColorsPrimaryLow,
+  //             ),
+  //             Container(
+  //               width: 0.08.sw,
+  //               height: 0.05.sh,
+  //               child: Container(
+  //                 decoration: ShapeDecoration(
+  //                   color: controller.selectedIndextab3 == 1
+  //                       ? kColorsPrimary
+  //                       : kColorsPrimaryLow,
+  //                   shape: RoundedRectangleBorder(
+  //                     side: BorderSide(width: 1, color: Color(0xFF9AB7DB)),
+  //                     borderRadius: BorderRadius.circular(8),
+  //                   ),
+  //                 ),
+  //                 child: Center(
+  //                   child: Text(
+  //                     "3",
+  //                     style: const TextStyle(
+  //                         fontSize: 12,
+  //                         color: kColorsWhite,
+  //                         fontWeight: FontWeight.bold),
+  //                   ),
+  //                 ),
+  //               ),
+  //             ),
+  //             Container(
+  //               width: 0.07.sw,
+  //               height: 0.002.sh,
+  //               color: controller.selectedIndextab3 == 1
+  //                   ? kColorsPrimary
+  //                   : kColorsPrimaryLow,
+  //             ),
+  //             Container(
+  //               width: 0.08.sw,
+  //               height: 0.05.sh,
+  //               child: Container(
+  //                 decoration: ShapeDecoration(
+  //                   color: controller.selectedIndextab4 == 1
+  //                       ? kColorsPrimary
+  //                       : kColorsPrimaryLow,
+  //                   shape: RoundedRectangleBorder(
+  //                     side: BorderSide(width: 1, color: Color(0xFF9AB7DB)),
+  //                     borderRadius: BorderRadius.circular(8),
+  //                   ),
+  //                 ),
+  //                 child: Center(
+  //                   child: Text(
+  //                     "4",
+  //                     style: const TextStyle(
+  //                         fontSize: 12,
+  //                         color: kColorsWhite,
+  //                         fontWeight: FontWeight.bold),
+  //                   ),
+  //                 ),
+  //               ),
+  //             ),
+  //             Container(
+  //               width: 0.07.sw,
+  //               height: 0.002.sh,
+  //               color: controller.selectedIndextab4 == 1
+  //                   ? kColorsPrimary
+  //                   : kColorsPrimaryLow,
+  //             ),
+  //             Container(
+  //               width: 0.08.sw,
+  //               height: 0.05.sh,
+  //               child: Container(
+  //                 decoration: ShapeDecoration(
+  //                   color: controller.selectedIndextab5 == 1
+  //                       ? kColorsPrimary
+  //                       : kColorsPrimaryLow,
+  //                   shape: RoundedRectangleBorder(
+  //                     side: BorderSide(width: 1, color: Color(0xFF9AB7DB)),
+  //                     borderRadius: BorderRadius.circular(8),
+  //                   ),
+  //                 ),
+  //                 child: Center(
+  //                   child: Text(
+  //                     "5",
+  //                     style: const TextStyle(
+  //                         fontSize: 12,
+  //                         color: kColorsWhite,
+  //                         fontWeight: FontWeight.bold),
+  //                   ),
+  //                 ),
+  //               ),
+  //             ),
+  //             Container(
+  //               width: 0.07.sw,
+  //               height: 0.002.sh,
+  //               color: controller.selectedIndextab5 == 1
+  //                   ? kColorsPrimary
+  //                   : kColorsPrimaryLow,
+  //             ),
+  //             Container(
+  //               width: 0.08.sw,
+  //               height: 0.05.sh,
+  //               child: Container(
+  //                 decoration: ShapeDecoration(
+  //                   color: controller.selectedIndextab6 == 1
+  //                       ? kColorsPrimary
+  //                       : kColorsPrimaryLow,
+  //                   shape: RoundedRectangleBorder(
+  //                     side: BorderSide(width: 1, color: Color(0xFF9AB7DB)),
+  //                     borderRadius: BorderRadius.circular(8),
+  //                   ),
+  //                 ),
+  //                 child: Center(
+  //                   child: Text(
+  //                     "6",
+  //                     style: const TextStyle(
+  //                         fontSize: 12,
+  //                         color: kColorsWhite,
+  //                         fontWeight: FontWeight.bold),
+  //                   ),
+  //                 ),
+  //               ),
+  //             ),
+  //           ],
+  //         ),
+  //       ),
+  //       Padding(
+  //         padding: EdgeInsets.all(12.r),
+  //         child: Row(
+  //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  //           children: [
+  //             Text(
+  //               "بيانات رسالة",
+  //               style:  TextStyle(
+  //                   fontSize: 12,
+  //                   color: controller.selectedIndextab1 == 1
+  //                       ? kColorsPrimary
+  //                       : kColorsPrimaryLow,
+  //                   fontWeight: FontWeight.bold),
+  //             ),
+  //             Padding(
+  //               padding: EdgeInsets.only(left: 2.0.r),
+  //               child: Text(
+  //                 "Options".tr,
+  //                 style:  TextStyle(
+  //                     fontSize: 12,
+  //                     color: controller.selectedIndextab2 == 1
+  //                         ? kColorsPrimary
+  //                         : kColorsPrimaryLow,
+  //                     fontWeight: FontWeight.bold),
+  //               ),
+  //             ),
+  //             Padding(
+  //               padding: EdgeInsets.only(left: 2.0.r),
+  //               child: Text(
+  //                 "نسخة إلى",
+  //                 style:   TextStyle(
+  //                     fontSize: 12,
+  //                     color: controller.selectedIndextab3 == 1
+  //                         ? kColorsPrimary
+  //                         : kColorsPrimaryLow,
+  //                     fontWeight: FontWeight.bold),
+  //               ),
+  //             ),
+  //             Padding(
+  //               padding: EdgeInsets.only(left: 2.0.r),
+  //               child: Text(
+  //                 "Attachments".tr,
+  //                 style:   TextStyle(
+  //                     fontSize: 12,
+  //                     color: controller.selectedIndextab4 == 1
+  //                         ? kColorsPrimary
+  //                         : kColorsPrimaryLow,
+  //                     fontWeight: FontWeight.bold),
+  //               ),
+  //             ),
+  //             Padding(
+  //               padding: EdgeInsets.only(left: 2.0.r),
+  //               child: Text(
+  //                 "Attachments".tr,
+  //                 style:   TextStyle(
+  //                     fontSize: 12,
+  //                     color: controller.selectedIndextab4 == 1
+  //                         ? kColorsPrimary
+  //                         : kColorsPrimaryLow,
+  //                     fontWeight: FontWeight.bold),
+  //               ),
+  //             ),
+  //             Padding(
+  //               padding: EdgeInsets.only(left: 2.0.r),
+  //               child: Text(
+  //                 "Attachments".tr,
+  //                 style:   TextStyle(
+  //                     fontSize: 12,
+  //                     color: controller.selectedIndextab4 == 1 ?kColorsPrimary:kColorsPrimaryLow, fontWeight: FontWeight.bold),
+  //               ),
+  //             ),
+  //           ],
+  //         ),
+  //       ),
+  //     ],
+  //   );
+  // }
 }
 Widget TeaxtLableRow(BuildContext context,  String? text,String? textvalue) {
   final isRtl = Localizations.localeOf(context).languageCode == 'ar';

@@ -40,7 +40,8 @@ ThemeData _buildThemeTest1() {
           color: test1_colorSurfaceWhite
       ),
       backgroundColor: test1_color1_100,
-      titleTextStyle: TextStyle(fontFamily: 'Regular',
+      titleTextStyle: TextStyle(
+          fontFamily: 'GraphikArabic',
           fontSize: 16.0.sp,
           // fontWeight: FontWeight.w300,
           color: test1_colorSurfaceWhite
@@ -61,33 +62,33 @@ TextTheme _buildTest1TextTheme(TextTheme base) {
       .copyWith(
 
 
-    titleSmall: TextStyle(fontFamily: 'Regular',
+    titleSmall: TextStyle(fontFamily: 'GraphikArabic',
         fontSize: 16.0.sp,
         color: kColorsLightBlack
     ),
-    titleMedium: TextStyle(fontFamily: 'Regular',
+    titleMedium: TextStyle(fontFamily: 'GraphikArabic',
         fontSize: 14.0.sp,
         fontWeight: FontWeight.w500,
         color: kColorsLightBlack),
-    titleLarge: TextStyle(fontFamily: 'Regular',
+    titleLarge: TextStyle(fontFamily: 'GraphikArabic',
         fontSize: 20.0.sp,
         fontWeight: FontWeight.bold,
         color: kColorsBlack),
-    bodyMedium: TextStyle(fontFamily: 'Regular',
+    bodyMedium: TextStyle(fontFamily: 'GraphikArabic',
         fontSize: 18.0.sp,
         fontWeight: FontWeight.w300,
         color: Colors.black),
-    bodySmall: TextStyle(fontFamily: 'Regular',
+    bodySmall: TextStyle(fontFamily: 'GraphikArabic',
         fontSize: 14.0.sp,
         fontWeight: FontWeight.w500,
         color:Colors.black),
     labelMedium:
-    TextStyle(fontFamily: 'Regular',fontSize: 14.0.sp, color: kColorsBlack),
-    displaySmall: TextStyle(fontFamily: 'Regular',fontSize: 12.0.sp, color: kColorsBlack, fontWeight: FontWeight.w300,),
-    bodyLarge: TextStyle(   fontFamily: 'Regular',fontSize: 10.0.sp, color: Colors.grey, fontWeight: FontWeight.w300,),
+    TextStyle(fontFamily: 'GraphikArabic',fontSize: 14.0.sp, color: kColorsBlack),
+    displaySmall: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12.0.sp, color: kColorsBlack, fontWeight: FontWeight.w300,),
+    bodyLarge: TextStyle(   fontFamily: 'GraphikArabic',fontSize: 10.0.sp, color: Colors.grey, fontWeight: FontWeight.w300,),
   )
       .apply(
-    fontFamily: 'Regular',
+    fontFamily: 'GraphikArabic',
     displayColor: test1_color2_900,
     bodyColor: test1_color2_900,
 

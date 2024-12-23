@@ -23,82 +23,61 @@ class _SplashScreenState extends State<SplashScreen> {
     print("on start app from timer");
     Timer(
          Duration(seconds: 2), () {
-      stg.read(OpenCardWizard) == null ?Get.offAllNamed( RoutingApp.cardWizardOverlapScreenRoute)  : stg.read(OpenScreenMember) == null ? Get.offAllNamed(
-        RoutingApp.member_screen,) : stg.read(OpenScreenlogen) == null ?
-      Get.offAllNamed(RoutingApp.login_route,) : Get.offAllNamed(RoutingApp.dashboardRoute);
+      // stg.read(OpenCardWizard) == null ?Get.offAllNamed( RoutingApp.cardWizardOverlapScreenRoute)  : stg.read(OpenScreenMember) == null ? Get.offAllNamed(
+      //   RoutingApp.member_screen,) : stg.read(OpenScreenlogen) == null ?
+      // Get.offAllNamed(RoutingApp.login_route,) : Get.offAllNamed(RoutingApp.dashboardRoute);
+      Get.offAllNamed( RoutingApp.cardWizardOverlapScreenRoute);
     });
     print("on start app from timer");
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:   Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+      body:   Container(
+        width: double.infinity,
+        height: 1.0.sh,
+        decoration: BoxDecoration(color: Colors.white),
+        child: Column(
+          children: [
+            Stack(
+             children: [
+               Container(
+                 width:double.infinity,
+                 height: 1.0.sh,
+                 decoration: BoxDecoration(
+                     color: kColorsPrimaryFont,
+                     image:DecorationImage(image:
+                     AssetImage('assets/logooPng.png'
 
-          Container(
-            width: double.infinity,
-            height: 1.0.sh,
-            decoration: BoxDecoration(color: Colors.white),
-            child: Column(
-              children: [
-                Container(
-                  width: 0.80.sw,
-                  height: 0.79.sh,
-                  decoration: BoxDecoration(
-                    // color: kColorsPrimarySalseBlack,
-                      image:DecorationImage(image:
-                      AssetImage('assets/LogoColor.png'),fit: BoxFit.scaleDown,)
-                  ),
-                ),
-                SizedBox( height:0.07.sh,),
-                Padding(
-                  padding:  EdgeInsets.symmetric(horizontal:0.0.r),
-                  child:  Container(
-                    width: double.infinity,
-                    child: Stack(
-                      children: [
+                     ),fit: BoxFit.scaleDown,)
+                 ),
+               ),
+               Positioned(
+                 top: 853,
+                 right: 135,
+                 child: Container(
 
-                        Container(
-                          width: double.infinity,
-                          height:0.11.sh,
-                          decoration: ShapeDecoration(
-                            color: Color(0xFF9BB7DA),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.only(topLeft:Radius.circular(20),topRight: Radius.circular(20)),),),
-                        ),
-                        Padding(
-                          padding:  EdgeInsets.only(top:  15.r),
-                          child: Container(
-                            width: double.infinity,
-                            height:0.11.sh,
-                            decoration: ShapeDecoration(
-                              color: Color(0xFF3570B7),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(topLeft:Radius.circular(20),topRight: Radius.circular(20)),
-                              ),
-                            ),
-                            child: Padding(
-                              padding:
-                              EdgeInsets.only(right:      15.0.r,bottom:  10.0.r,top:  25.0.r,left:  15.0.r),
-                              child:  SvgPicture.asset(
-                                "assets/Icons/loading.svg",
-                                width: 43,
-                                height: 40.r,
-                                color: kColorsWhite,
-                              ),
-                            ),
+                     width:0.35.sw,
 
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
+                     height:  .004.sh,
+                     decoration: BoxDecoration(
+                       color: kColorsWhite,
+                       borderRadius: BorderRadius.circular(7.r),
+                     )
+
+                 ),
+               ),
+             ],
+
+
+
             ),
-          ),
-        ],
+
+
+
+
+          ],
+        ),
       ),
     );
   }

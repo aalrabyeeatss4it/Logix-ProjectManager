@@ -5,18 +5,18 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:projectmanagers/Constants/colors.dart';
 class TitleHederStyles {
   static TextStyle  white = TextStyle(
-    fontFamily: 'Regular',
+    fontFamily: 'GraphikArabic',
     fontSize: 13.sp,
     fontWeight: FontWeight.w600,
     color: MyColors.white,
   );
   static TextStyle black = TextStyle(
-    fontSize: 13.sp,   fontFamily: 'Regular',
+    fontSize: 13.sp,   fontFamily: 'GraphikArabic',
     fontWeight: FontWeight.w600,
     color: MyColors.black,
   );
   static TextStyle primary = TextStyle(
-    fontSize: 13.sp,   fontFamily: 'Regular',
+    fontSize: 13.sp,   fontFamily: 'GraphikArabic',
     fontWeight: FontWeight.w600,
     color: MyColors.kColorsPrimary,
   );

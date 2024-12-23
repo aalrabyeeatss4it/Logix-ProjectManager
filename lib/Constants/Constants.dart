@@ -8,7 +8,7 @@ import 'package:get_storage/get_storage.dart';
 const Color kColorsPrimary = Color(0xff3570B7);
 const Color kColorsPrimaryFont = Color(0xff0792AD);
 const Color kColorsPrimaryLow = Color(0xff9AB7DB);
-const Color kColorsIcon = Color(0xff919191);
+const Color kColorsIcon = Color(0xff242424);
 const Color kColorsPrimarySalse =  Color(0xff2AA7C2);
 const Color kColorsPrimarySalseBlack =  Color(0xff178BB8);
 const Color kColorsDeepPrimary = Color(0xFF0C647F);

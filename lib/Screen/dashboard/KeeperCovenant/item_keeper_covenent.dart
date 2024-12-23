@@ -22,6 +22,7 @@ class ItemKeeperCovenant extends StatelessWidget {
     debugInvertOversizedImages=true;
     final isRtl = Localizations.localeOf(context).languageCode == 'ar';
     return InkWell(
+      splashColor: kColorsWhite,
         onTap: (){
         },
       child: Column(
