@@ -92,7 +92,7 @@ class CustomTextInput extends StatelessWidget {
             height: 0.06.sh,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.r),
-              // border: Border.all(color: kColorsPrimary, width: 0.7,)
+              // border: Border.all(color: kColorsPrimaryFont, width: 0.7,)
             ),
             child: TextFormField(
               textAlign: textAlign ?? (icon1 != null ? TextAlign.center : TextAlign.start),
@@ -325,7 +325,7 @@ class _CustomTimePickerState extends State<CustomTimePicker> {
                   ? Card(
                       margin: EdgeInsets.all(0),
                       elevation: 0,
-                      color: kColorsPrimary.withOpacity(.2),
+                      color: kColorsPrimaryFont.withOpacity(.2),
                       child: Padding(
                         padding: EdgeInsets.all(15.0.r),
                         child: Image.asset(
@@ -514,7 +514,7 @@ class _CustomDatePickerInputState extends State<CustomDatePickerInput> {
                   ? Card(
                       margin: EdgeInsets.all(0),
                       elevation: 0,
-                      color: kColorsPrimary.withOpacity(.2),
+                      color: kColorsPrimaryFont.withOpacity(.2),
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Image.asset(

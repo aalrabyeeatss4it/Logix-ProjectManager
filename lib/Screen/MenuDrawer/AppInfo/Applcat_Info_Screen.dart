@@ -34,7 +34,7 @@ class ApplcatInfoScreen extends StatelessWidget {
             mainScreen: Scaffold(
               backgroundColor: kColorsWhite,
 
-              appBar: MyAppBar(title:  'About the app'.tr,zoomDrawerController: zDApplcatInfoController,colorAll:  kColorTab, colorfont: kColorsPrimary,),
+              appBar: MyAppBar(title:  'About the app'.tr,zoomDrawerController: zDApplcatInfoController,colorAll:  kColorTab, colorfont: kColorsPrimaryFont,),
               body: SingleChildScrollView(
                 child: Padding(
                   padding: EdgeInsets.all(13.r),
@@ -86,7 +86,7 @@ class ApplcatInfoScreen extends StatelessWidget {
                                         "Our application provides integrated solutions for electronic archiving, transaction management, alerts, and task management. It enables you to save and share documents efficiently, manage all types of transactions easily, receive alerts in real time, and send customized group messages simply. Its design supports the organizational structure of the organization and facilitates the management of internal and external correspondence.".tr,
                                         style: TextStyle(fontFamily: 'GraphikArabic',
                                             fontSize: 14,
-                                            color: kColorsPrimary,
+                                            color: kColorsPrimaryFont,
                                             fontWeight: FontWeight.bold)),
                                     SizedBox(
                                       height: 0.05.sh,
@@ -173,7 +173,7 @@ class ApplcatInfoScreen extends StatelessWidget {
         children: [
           Text(
             txtSlach,
-            style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12.sp, color: kColorsPrimary),
+            style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12.sp, color: kColorsPrimaryFont),
           ),
           SizedBox(
             width: 5.w,
@@ -185,7 +185,7 @@ class ApplcatInfoScreen extends StatelessWidget {
               child: Text(
             txtAdvintg,
             maxLines: 3,
-            style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12.sp, color: kColorsPrimary),
+            style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12.sp, color: kColorsPrimaryFont),
               ),
             ),
           ),

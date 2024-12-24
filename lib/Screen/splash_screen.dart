@@ -26,7 +26,8 @@ class _SplashScreenState extends State<SplashScreen> {
       // stg.read(OpenCardWizard) == null ?Get.offAllNamed( RoutingApp.cardWizardOverlapScreenRoute)  : stg.read(OpenScreenMember) == null ? Get.offAllNamed(
       //   RoutingApp.member_screen,) : stg.read(OpenScreenlogen) == null ?
       // Get.offAllNamed(RoutingApp.login_route,) : Get.offAllNamed(RoutingApp.dashboardRoute);
-      Get.offAllNamed( RoutingApp.cardWizardOverlapScreenRoute);
+
+      Get.offAllNamed(RoutingApp.member_screen);
     });
     print("on start app from timer");
   }

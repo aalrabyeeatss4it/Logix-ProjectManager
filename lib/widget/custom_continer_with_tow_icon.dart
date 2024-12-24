@@ -48,7 +48,7 @@ class CustomContinerWithTowIcon extends StatelessWidget {
                             IconBerore!,
                             width: 24.r ,
                             height: 24.r ,
-                            color: kColorsPrimary,
+                            color: kColorsPrimaryFont,
                           ),
                         ),
                       ),

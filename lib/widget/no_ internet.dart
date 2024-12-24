@@ -16,7 +16,7 @@ class NoInternet extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(Icons.wifi_off_rounded,size: 150.r,)
-           , Text('No internet connection'.tr,style: Theme.of(context).textTheme.titleLarge!.copyWith(color: kColorsPrimary),),
+           , Text('No internet connection'.tr,style: Theme.of(context).textTheme.titleLarge!.copyWith(color: kColorsPrimaryFont),),
           ],
         ),
       ));

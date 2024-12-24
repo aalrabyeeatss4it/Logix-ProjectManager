@@ -26,9 +26,9 @@ bool isThemeCurrentlyDark(BuildContext context) {
 
 Color invertColorsTheme(BuildContext context) {
   if (isThemeCurrentlyDark(context)) {
-    return MyColors.kColorsPrimary;
+    return MyColors.kColorsPrimaryFont;
   } else {
-    return MyColors.kColorsPrimarySalse;
+    return MyColors.kColorsPrimaryFontSalse;
   }
 } //returns appropriate theme colors for ui elements
 

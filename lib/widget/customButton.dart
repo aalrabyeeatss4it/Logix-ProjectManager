@@ -48,13 +48,13 @@ class CustomButton extends StatelessWidget {
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                   colors: [
-                    color?? kColorsPrimary,
-                    color?? kColorsPrimary
+                    color?? kColorsPrimaryFont,
+                    color?? kColorsPrimaryFont
                   ])),
           child:
           // MaterialButton(
           //   padding: EdgeInsets.zero,
-          //   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(borderRadius??  10.r),side: BorderSide( color:borderColor?? kColorsPrimary,width: 1) ),
+          //   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(borderRadius??  10.r),side: BorderSide( color:borderColor?? kColorsPrimaryFont,width: 1) ),
           //   disabledColor: disabledColor,
           //   onPressed:onPress,
           //   child: Padding(
@@ -93,7 +93,7 @@ class CustomButton extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(borderRadius ?? 10.r),
                 border: Border.fromBorderSide(BorderSide(
-                  color: borderColor ?? kColorsPrimary,
+                  color: borderColor ?? kColorsPrimaryFont,
                   width: 1,
                 )),
                 color: onPress == null ? disabledColor : null,
@@ -107,9 +107,7 @@ class CustomButton extends StatelessWidget {
                     isIconStart == true ? SizedBox(width: 0.03.sw) : SizedBox(width: 0.00.sh),
                     Text(
                       text!,
-                      style: style != null
-                          ? style
-                          : TextStyle(
+                      style: style != null ? style : TextStyle(
                         fontSize: 14,
                         color: fontColor ?? Colors.white,
                       ),

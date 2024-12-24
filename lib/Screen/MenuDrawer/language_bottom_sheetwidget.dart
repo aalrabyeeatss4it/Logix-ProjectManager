@@ -52,7 +52,7 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
                   Text(
                     'Select your language'.tr,
                     style:
-                    TextStyle(color: kColorsPrimary, fontSize: 16,fontWeight: FontWeight.w500),
+                    TextStyle(color: kColorsPrimaryFont, fontSize: 16,fontWeight: FontWeight.w500),
                   ),
                   Padding(
                     padding:
@@ -98,7 +98,7 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
                                 child: RadioListTile(
                                   title: Text('arabic language'.tr,style: TextStyle(
                                       fontSize: 16,
-                                      color:kColorsPrimary,
+                                      color:kColorsPrimaryFont,
                                       fontWeight: FontWeight.w600)),
                                   value: 1,
                                   groupValue:  isRtl ? 1 : 0,
@@ -120,7 +120,7 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
                                 child: RadioListTile(
                                   title: Text('English language'.tr,style: TextStyle(
                                       fontSize: 16,
-                                      color: kColorsPrimary,
+                                      color: kColorsPrimaryFont,
                                       fontWeight: FontWeight.w600)),
                                   value: 2,
                                   groupValue:  !isRtl ? 2 : 0,

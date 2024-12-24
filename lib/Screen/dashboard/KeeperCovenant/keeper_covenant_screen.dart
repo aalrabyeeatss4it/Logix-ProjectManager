@@ -87,7 +87,7 @@ class _KeeperCovenantScreenState extends State<KeeperCovenantScreen> {
                                   width:  0.92.sw,
                                   decoration: BoxDecoration(
                                       color: kColorsWhite,
-                                      border: Border.all(width: 0.4,color:kColorsPrimary ),
+                                      border: Border.all(width: 0.4,color:kColorsPrimaryFont ),
                                       borderRadius: BorderRadius.circular(5.r)
 
                                   ),
@@ -112,7 +112,7 @@ class _KeeperCovenantScreenState extends State<KeeperCovenantScreen> {
                                                     Text('search'.tr ,
                                                       style: const TextStyle(
                                                           fontSize: 16,
-                                                          color: kColorsPrimary,
+                                                          color: kColorsPrimaryFont,
                                                         fontWeight: FontWeight.w500
                                                       ),),
                                                     Padding(
@@ -286,7 +286,7 @@ class _KeeperCovenantScreenState extends State<KeeperCovenantScreen> {
                                         Text(
                                           'search'.tr,
                                           style:
-                                          TextStyle(fontFamily: 'GraphikArabic',color: kColorsPrimary, fontSize: 16,fontWeight: FontWeight.w500),
+                                          TextStyle(fontFamily: 'GraphikArabic',color: kColorsPrimaryFont, fontSize: 16,fontWeight: FontWeight.w500),
                                         ),
                                       ],
                                     ),

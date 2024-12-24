@@ -109,7 +109,7 @@ class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
                                               child: CustomButton(
                                                 color:Color(0xffFF744A).withOpacity(0.3),
                                                 borderRadius: 8.r,
-                                                borderColor:  kColorsPrimary,
+                                                borderColor:  kColorsPrimaryFont,
                                                 sizeHeight: 0.04.sh,
                                                 sizeWidth: 0.30.sw,
                                                 text:'متأخر بشكل بسيط'.tr,
@@ -168,10 +168,10 @@ class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
                     SizedBox(
                       height: 0.01.sh,
                     ),
-                    BuldContinerHR("المعلومات الماليه".tr, "assets/Icon/wallet (1).svg",kColorsPrimary,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.financial_information_screen);}),
-                    BuldContinerHR("مكتبة المستندات".tr, "assets/Icon/folder-open.svg",kColorsPrimary,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.document_library_screen);}),
-                    BuldContinerHR("المعلومات الفنيه".tr, "assets/Icon/document.svg",kColorsPrimary,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.technical_information_screen);}),
-                    BuldContinerHR("المهام التي تنفيذها".tr, "assets/Icon/task-square.svg",kColorsPrimary,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.tasks_performed_screen);}),
+                    BuldContinerHR("المعلومات الماليه".tr, "assets/Icon/wallet (1).svg",kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.financial_information_screen);}),
+                    BuldContinerHR("مكتبة المستندات".tr, "assets/Icon/folder-open.svg",kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.document_library_screen);}),
+                    BuldContinerHR("المعلومات الفنيه".tr, "assets/Icon/document.svg",kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.technical_information_screen);}),
+                    BuldContinerHR("المهام التي تنفيذها".tr, "assets/Icon/task-square.svg",kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.tasks_performed_screen);}),
 
                   ],
                 ),

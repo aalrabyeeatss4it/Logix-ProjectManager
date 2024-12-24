@@ -93,17 +93,17 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                         controller: controllerTabBarClosedTransactions.controllerTabBar,
                         isScrollable: true,
                         labelColor: kColorsWhite,
-                        labelStyle: TextStyle(fontSize: 14, color: kColorsPrimary, fontWeight: FontWeight.w500,fontFamily:  'Cairo'),
+                        labelStyle: TextStyle(fontSize: 14, color: kColorsPrimaryFont, fontWeight: FontWeight.w500,fontFamily:  'Cairo'),
                         unselectedLabelColor: Color(0xff6F6F6F),
                         unselectedLabelStyle:  TextStyle(fontSize: 14, color:  Color(0xff6F6F6F), fontWeight: FontWeight.w500,fontFamily:  'Cairo'),
                         indicatorSize: TabBarIndicatorSize.label,
-                        indicator: BoxDecoration(borderRadius: BorderRadius.circular(5.r), color: kColorsPrimary,),
+                        indicator: BoxDecoration(borderRadius: BorderRadius.circular(5.r), color: kColorsPrimaryFont,),
 
                         tabs: [
                           Container(
                             // decoration: BoxDecoration(
                             //     borderRadius: BorderRadius.circular(7),
-                            //     border: Border.all(color: kColorsPrimary, width: 1)),
+                            //     border: Border.all(color: kColorsPrimaryFont, width: 1)),
                             width: 0.32.sw,
                             height: 0.04.sh,
                             child: Tab(text: 'New notifications'.tr),
@@ -141,7 +141,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                             Container(
                                                 padding: EdgeInsets.only(left:8.r, right:8.r),
                                                 child: Text('Notification box'.tr,
-                                                  style:  TextStyle(color: kColorsPrimary,fontSize: 14,fontWeight: FontWeight.w500),)
+                                                  style:  TextStyle(color: kColorsPrimaryFont,fontSize: 14,fontWeight: FontWeight.w500),)
                                             ),
                                             Padding(
                                               padding:  EdgeInsets.symmetric(horizontal:8.0.r),
@@ -171,7 +171,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                                   child: Text('Filter'.tr ,
                                                                     style: TextStyle(
                                                                         fontSize: 16,
-                                                                        color: kColorsPrimary),),
+                                                                        color: kColorsPrimaryFont),),
                                                                 ),
                                                                 Padding(
                                                                   padding: EdgeInsets.all(16.0.r),
@@ -316,7 +316,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                             transClosed!.where((notification) => notification.statusName != 'مقرؤة').length>0?Container(
                                                 padding: EdgeInsets.only(left:12.r, right:12.r),
                                                 child: Text('Search results'.tr+" "+controller.count.toString()+" " +"results".tr,
-                                                  style:  TextStyle(color: kColorsPrimary,fontSize: 14,fontWeight: FontWeight.w500),)
+                                                  style:  TextStyle(color: kColorsPrimaryFont,fontSize: 14,fontWeight: FontWeight.w500),)
                                             ): SizedBox(),
                                           ],
                                         ),
@@ -392,7 +392,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                             padding: EdgeInsets.only(left:8.r, right:8.r),
                                             child: Text(
                                               'Notification box'.tr,
-                                              style:  TextStyle(color: kColorsPrimary,fontSize: 14,fontWeight: FontWeight.w500),)
+                                              style:  TextStyle(color: kColorsPrimaryFont,fontSize: 14,fontWeight: FontWeight.w500),)
                                         ),
                                         Padding(
                                           padding:  EdgeInsets.symmetric(horizontal:8.0.r),
@@ -422,7 +422,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                               child: Text('Filter'.tr ,
                                                                 style: TextStyle(
                                                                     fontSize: 16,
-                                                                    color: kColorsPrimary),),
+                                                                    color: kColorsPrimaryFont),),
                                                             ),
                                                             Padding(
                                                               padding: EdgeInsets.all(16.0.r),
@@ -583,7 +583,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                             padding: EdgeInsets.only(left:12.r, right:12.r),
                                             child: Text(
                                               'Search results'.tr+" "+controller.count.toString()+" " +"results".tr,
-                                              style:  TextStyle(color: kColorsPrimary,fontSize: 14,fontWeight: FontWeight.w500),)
+                                              style:  TextStyle(color: kColorsPrimaryFont,fontSize: 14,fontWeight: FontWeight.w500),)
                                         ),
                                       ],
                                     ),
@@ -701,7 +701,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                           Text(
                             'Choose'.tr,
                             style: TextStyle(
-                                color: kColorsPrimary,
+                                color: kColorsPrimaryFont,
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.bold),
                           ),

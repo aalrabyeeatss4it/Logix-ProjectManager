@@ -155,7 +155,7 @@ class MenuWidgetDachbord extends StatelessWidget {
                   backColor1: kColorsorangSignOut,
                   backColor2: kColorsWhite,
                   fontColortext1: Color(0xFFB6000D),
-                  fontColortext2: kColorsPrimary,
+                  fontColortext2: kColorsPrimaryFont,
                   text1: 'Yes'.tr,
                   text2: 'Back'.tr,
                 ),

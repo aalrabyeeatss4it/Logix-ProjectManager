@@ -111,7 +111,7 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
   //                 width: 0.08.sw,
   //                 height: 0.05.sh,
   //                 decoration: ShapeDecoration(
-  //                   color: kColorsPrimary,
+  //                   color: kColorsPrimaryFont,
   //                   shape: RoundedRectangleBorder(
   //                     side: BorderSide(width: 1, color: Color(0xFF9BB7DA)),
   //                     borderRadius: BorderRadius.circular(8),
@@ -132,8 +132,8 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
   //               width: 0.07.sw,
   //               height: 0.002.sh,
   //               color: controller.selectedIndextab1 == 1
-  //                   ? kColorsPrimary
-  //                   : kColorsPrimaryLow,
+  //                   ? kColorsPrimaryFont
+  //                   : kColorsPrimaryFontLow,
   //             ),
   //             Container(
   //               width: 0.08.sw,
@@ -141,8 +141,8 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
   //               child: Container(
   //                 decoration: ShapeDecoration(
   //                   color: controller.selectedIndextab2 == 1
-  //                       ? kColorsPrimary
-  //                       : kColorsPrimaryLow,
+  //                       ? kColorsPrimaryFont
+  //                       : kColorsPrimaryFontLow,
   //                   shape: RoundedRectangleBorder(
   //                     side: BorderSide(width: 1, color: Color(0xFF9BB7DA)),
   //                     borderRadius: BorderRadius.circular(8),
@@ -163,8 +163,8 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
   //               width: 0.07.sw,
   //               height: 0.002.sh,
   //               color: controller.selectedIndextab2 == 1
-  //                   ? kColorsPrimary
-  //                   : kColorsPrimaryLow,
+  //                   ? kColorsPrimaryFont
+  //                   : kColorsPrimaryFontLow,
   //             ),
   //             Container(
   //               width: 0.08.sw,
@@ -172,8 +172,8 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
   //               child: Container(
   //                 decoration: ShapeDecoration(
   //                   color: controller.selectedIndextab3 == 1
-  //                       ? kColorsPrimary
-  //                       : kColorsPrimaryLow,
+  //                       ? kColorsPrimaryFont
+  //                       : kColorsPrimaryFontLow,
   //                   shape: RoundedRectangleBorder(
   //                     side: BorderSide(width: 1, color: Color(0xFF9AB7DB)),
   //                     borderRadius: BorderRadius.circular(8),
@@ -194,8 +194,8 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
   //               width: 0.07.sw,
   //               height: 0.002.sh,
   //               color: controller.selectedIndextab3 == 1
-  //                   ? kColorsPrimary
-  //                   : kColorsPrimaryLow,
+  //                   ? kColorsPrimaryFont
+  //                   : kColorsPrimaryFontLow,
   //             ),
   //             Container(
   //               width: 0.08.sw,
@@ -203,8 +203,8 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
   //               child: Container(
   //                 decoration: ShapeDecoration(
   //                   color: controller.selectedIndextab4 == 1
-  //                       ? kColorsPrimary
-  //                       : kColorsPrimaryLow,
+  //                       ? kColorsPrimaryFont
+  //                       : kColorsPrimaryFontLow,
   //                   shape: RoundedRectangleBorder(
   //                     side: BorderSide(width: 1, color: Color(0xFF9AB7DB)),
   //                     borderRadius: BorderRadius.circular(8),
@@ -225,8 +225,8 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
   //               width: 0.07.sw,
   //               height: 0.002.sh,
   //               color: controller.selectedIndextab4 == 1
-  //                   ? kColorsPrimary
-  //                   : kColorsPrimaryLow,
+  //                   ? kColorsPrimaryFont
+  //                   : kColorsPrimaryFontLow,
   //             ),
   //             Container(
   //               width: 0.08.sw,
@@ -234,8 +234,8 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
   //               child: Container(
   //                 decoration: ShapeDecoration(
   //                   color: controller.selectedIndextab5 == 1
-  //                       ? kColorsPrimary
-  //                       : kColorsPrimaryLow,
+  //                       ? kColorsPrimaryFont
+  //                       : kColorsPrimaryFontLow,
   //                   shape: RoundedRectangleBorder(
   //                     side: BorderSide(width: 1, color: Color(0xFF9AB7DB)),
   //                     borderRadius: BorderRadius.circular(8),
@@ -256,8 +256,8 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
   //               width: 0.07.sw,
   //               height: 0.002.sh,
   //               color: controller.selectedIndextab5 == 1
-  //                   ? kColorsPrimary
-  //                   : kColorsPrimaryLow,
+  //                   ? kColorsPrimaryFont
+  //                   : kColorsPrimaryFontLow,
   //             ),
   //             Container(
   //               width: 0.08.sw,
@@ -265,8 +265,8 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
   //               child: Container(
   //                 decoration: ShapeDecoration(
   //                   color: controller.selectedIndextab6 == 1
-  //                       ? kColorsPrimary
-  //                       : kColorsPrimaryLow,
+  //                       ? kColorsPrimaryFont
+  //                       : kColorsPrimaryFontLow,
   //                   shape: RoundedRectangleBorder(
   //                     side: BorderSide(width: 1, color: Color(0xFF9AB7DB)),
   //                     borderRadius: BorderRadius.circular(8),
@@ -296,8 +296,8 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
   //               style:  TextStyle(
   //                   fontSize: 12,
   //                   color: controller.selectedIndextab1 == 1
-  //                       ? kColorsPrimary
-  //                       : kColorsPrimaryLow,
+  //                       ? kColorsPrimaryFont
+  //                       : kColorsPrimaryFontLow,
   //                   fontWeight: FontWeight.bold),
   //             ),
   //             Padding(
@@ -307,8 +307,8 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
   //                 style:  TextStyle(
   //                     fontSize: 12,
   //                     color: controller.selectedIndextab2 == 1
-  //                         ? kColorsPrimary
-  //                         : kColorsPrimaryLow,
+  //                         ? kColorsPrimaryFont
+  //                         : kColorsPrimaryFontLow,
   //                     fontWeight: FontWeight.bold),
   //               ),
   //             ),
@@ -319,8 +319,8 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
   //                 style:   TextStyle(
   //                     fontSize: 12,
   //                     color: controller.selectedIndextab3 == 1
-  //                         ? kColorsPrimary
-  //                         : kColorsPrimaryLow,
+  //                         ? kColorsPrimaryFont
+  //                         : kColorsPrimaryFontLow,
   //                     fontWeight: FontWeight.bold),
   //               ),
   //             ),
@@ -331,8 +331,8 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
   //                 style:   TextStyle(
   //                     fontSize: 12,
   //                     color: controller.selectedIndextab4 == 1
-  //                         ? kColorsPrimary
-  //                         : kColorsPrimaryLow,
+  //                         ? kColorsPrimaryFont
+  //                         : kColorsPrimaryFontLow,
   //                     fontWeight: FontWeight.bold),
   //               ),
   //             ),
@@ -343,8 +343,8 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
   //                 style:   TextStyle(
   //                     fontSize: 12,
   //                     color: controller.selectedIndextab4 == 1
-  //                         ? kColorsPrimary
-  //                         : kColorsPrimaryLow,
+  //                         ? kColorsPrimaryFont
+  //                         : kColorsPrimaryFontLow,
   //                     fontWeight: FontWeight.bold),
   //               ),
   //             ),
@@ -354,7 +354,7 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
   //                 "Attachments".tr,
   //                 style:   TextStyle(
   //                     fontSize: 12,
-  //                     color: controller.selectedIndextab4 == 1 ?kColorsPrimary:kColorsPrimaryLow, fontWeight: FontWeight.bold),
+  //                     color: controller.selectedIndextab4 == 1 ?kColorsPrimaryFont:kColorsPrimaryFontLow, fontWeight: FontWeight.bold),
   //               ),
   //             ),
   //           ],

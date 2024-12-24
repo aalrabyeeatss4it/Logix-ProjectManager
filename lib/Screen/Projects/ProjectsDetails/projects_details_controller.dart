@@ -119,7 +119,7 @@ class ProjectsDetailsController extends GetxController with StateMixin<ProjectsD
          RusultPasswordModel? rusultPasswordModel = RusultPasswordModel.fromJson(value.data);
          print(value.data);
          stg.write(userPassword, rusultPasswordModel.dataRusultPasswor!.userPassword);
-         GetSnackMsg(msg:rusultPasswordModel.message.toString(), bgClr: kColorsPrimary, txClr: kColorsWhite).showTxt();
+         GetSnackMsg(msg:rusultPasswordModel.message.toString(), bgClr: kColorsPrimaryFont, txClr: kColorsWhite).showTxt();
          ClereControllar();
         print(value.data);
       }

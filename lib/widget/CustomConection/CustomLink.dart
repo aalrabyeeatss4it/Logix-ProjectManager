@@ -32,14 +32,14 @@ class CustomLinkWebsit extends StatelessWidget {
         width:SizeWith==null? 150.w:SizeWith,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(6.r),
-          color: colorAll==null? kColorsPrimary:colorAll,
+          color: colorAll==null? kColorsPrimaryFont:colorAll,
           boxShadow: [
-            BoxShadow(color: colorBoxShadow==null? kColorsPrimary:colorBoxShadow!, spreadRadius: 1,),
+            BoxShadow(color: colorBoxShadow==null? kColorsPrimaryFont:colorBoxShadow!, spreadRadius: 1,),
           ],
         ),
         child: ElevatedButton.icon(
           style: ElevatedButton.styleFrom(
-              backgroundColor: colorAll==null? kColorsPrimary:colorAll),
+              backgroundColor: colorAll==null? kColorsPrimaryFont:colorAll),
           onPressed: () {
             onpress==null?(){}:onpress;
           },
@@ -55,7 +55,7 @@ class CustomLinkWebsit extends StatelessWidget {
           label: Text(text==null?'':text! + '         ',
               style: TextStyle(
                   fontSize: Sizefont==null?15.sp:Sizefont,
-                  color: colorfont==null?kColorsPrimary:colorfont,
+                  color: colorfont==null?kColorsPrimaryFont:colorfont,
                   fontWeight: FontWeight.bold)), // <-- Text
         ),
       ),

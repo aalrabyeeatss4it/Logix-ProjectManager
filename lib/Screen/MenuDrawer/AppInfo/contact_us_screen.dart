@@ -30,7 +30,7 @@ class ContactUsScreen extends StatelessWidget {
             menuScreen: MenuWidgetDachbord(zoomDrawerController: zDContactUsController,),
             mainScreen:Scaffold(
             backgroundColor: kColorsWhite,
-            appBar: MyAppBar(title:  'Contact us'.tr,zoomDrawerController: zDContactUsController,colorAll:  kColorTab, colorfont: kColorsPrimary,),
+            appBar: MyAppBar(title:  'Contact us'.tr,zoomDrawerController: zDContactUsController,colorAll:  kColorTab, colorfont: kColorsPrimaryFont,),
             body: Container(
 
                 width: double.infinity,
@@ -111,7 +111,7 @@ class ContactUsScreen extends StatelessWidget {
               child: Container(
                   decoration: BoxDecoration(
 
-                    color:kColorsPrimary.withOpacity(0.2),
+                    color:kColorsPrimaryFont.withOpacity(0.2),
                     borderRadius: BorderRadius.only(topLeft:Radius.circular(5.r),topRight: Radius.circular(5.r),bottomLeft: Radius.circular(5.r),bottomRight: Radius.circular(5.r)),
                   ),
                   height: 41.h,
@@ -123,7 +123,7 @@ class ContactUsScreen extends StatelessWidget {
                       beforIcon,
                       width: 24.r,
                       height: 24.r,
-                      color: kColorsPrimary,
+                      color: kColorsPrimaryFont,
                       alignment: Alignment.center,
                     ),
 
@@ -169,7 +169,7 @@ class ContactUsScreen extends StatelessWidget {
     return Container(
       height: 0.10.sh,
       decoration: BoxDecoration(
-          color: kColorsPrimary.withOpacity(0.2),
+          color: kColorsPrimaryFont.withOpacity(0.2),
           borderRadius: BorderRadius.circular(5.r)),
       child: Padding(
         padding:  EdgeInsets.only(top:  9.0.r),
@@ -183,7 +183,7 @@ class ContactUsScreen extends StatelessWidget {
                 Icone.toString(),
                 width: 27,
                 height: 27.r,
-                color: kColorsPrimary,
+                color: kColorsPrimaryFont,
               ),
               Padding(
                 padding:  EdgeInsets.only(top:  8.0),
@@ -226,7 +226,7 @@ class ContactUsScreen extends StatelessWidget {
                           Text(
                             'Contact us'.tr,
                             style:
-                            TextStyle(fontFamily: 'GraphikArabic',color: kColorsPrimary, fontSize: 16,fontWeight: FontWeight.w500),
+                            TextStyle(fontFamily: 'GraphikArabic',color: kColorsPrimaryFont, fontSize: 16,fontWeight: FontWeight.w500),
                           ),
                       Padding(
                         padding:
@@ -270,7 +270,7 @@ class ContactUsScreen extends StatelessWidget {
                               ),
                               Expanded(
                                   flex:6,
-                                  child: BuldContainer("رسالة نصية".tr,  "assets/Icons/icone_message-text.svg",kColorsPrimary,kColorsPrimary,kColorGrayCard,(){launch('sms:' + phoneNumber);}
+                                  child: BuldContainer("رسالة نصية".tr,  "assets/Icons/icone_message-text.svg",kColorsPrimaryFont,kColorsPrimaryFont,kColorGrayCard,(){launch('sms:' + phoneNumber);}
                                   )),
                               Expanded(
                                 flex:1,
@@ -280,7 +280,7 @@ class ContactUsScreen extends StatelessWidget {
                               ),
                               Expanded(
                                   flex:6,
-                                  child: BuldContainer('connection'.tr, "assets/Icons/icone_call-add.svg",kColorsPrimary,kColorsPrimary,kColorGrayCard,(){launch('tel:' + phoneNumber);})
+                                  child: BuldContainer('connection'.tr, "assets/Icons/icone_call-add.svg",kColorsPrimaryFont,kColorsPrimaryFont,kColorGrayCard,(){launch('tel:' + phoneNumber);})
                               ),
                               Expanded(
                                 flex:1,
@@ -290,7 +290,7 @@ class ContactUsScreen extends StatelessWidget {
                               ),
                               Expanded(
                                 flex:6,
-                                child: BuldContainer( 'WhatsApp'.tr, "assets/Icons/icone_whatsapp.svg" ,kColorsPrimary,kColorsPrimary,kColorGrayCard,(){launch('https://wa.me/' + phoneNumber);}),
+                                child: BuldContainer( 'WhatsApp'.tr, "assets/Icons/icone_whatsapp.svg" ,kColorsPrimaryFont,kColorsPrimaryFont,kColorGrayCard,(){launch('https://wa.me/' + phoneNumber);}),
                               ),
                               Expanded(
                                 flex:1,

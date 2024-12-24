@@ -66,7 +66,7 @@ class CustomTimePaker extends StatelessWidget {
             height: 0.06.sh,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.r),
-               // border: Border.all(color: kColorsPrimary, width: 0.7,)
+               // border: Border.all(color: kColorsPrimaryFont, width: 0.7,)
             ),
 
             child: DateTimeField(

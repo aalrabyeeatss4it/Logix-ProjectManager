@@ -57,7 +57,7 @@ class  ItemHome extends StatelessWidget {
                                 child: CustomButton(
                                   color:Color(0xffFF744A).withOpacity(0.3),
                                   borderRadius: 8.r,
-                                  borderColor:  kColorsPrimary,
+                                  borderColor:  kColorsPrimaryFont,
                                   sizeHeight: 0.04.sh,
                                   sizeWidth: 0.30.sw,
                                   text:'متأخر بشكل بسيط'.tr,
@@ -164,7 +164,7 @@ class  ItemHomeShimmer extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: kColorsWhite,
                   borderRadius: BorderRadius.circular(15.r),
-                  border: Border.all(width: 0.4.r,color:kColorsPrimary.withOpacity(0.6) ),
+                  border: Border.all(width: 0.4.r,color:kColorsPrimaryFont.withOpacity(0.6) ),
 
                 ),
                 child: Padding(

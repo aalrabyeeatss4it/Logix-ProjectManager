@@ -42,7 +42,7 @@ ItemNotifcation(this.data);
                 decoration: BoxDecoration(
                   color: kColorsWhite,
                   borderRadius: BorderRadius.circular(15.r),
-                  border: Border.all(width: 0.4.r,color:kColorsPrimary.withOpacity(0.6) ),
+                  border: Border.all(width: 0.4.r,color:kColorsPrimaryFont.withOpacity(0.6) ),
 
                 ),
                 child: Padding(
@@ -50,11 +50,11 @@ ItemNotifcation(this.data);
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                    CustomRowText(text:'Registration number'.tr,textStyle: TextStyle(fontSize: 12,   fontFamily: 'GraphikArabic', color:kColorsPrimary , fontWeight: FontWeight.w500,),textValue: data.codeFormat==null?"":data.codeFormat.toString(),textValueStyle: TextStyle(fontSize: 10,    fontFamily: 'GraphikArabic',color: kColorsBlack,),backColor: kColorsWhite,),
-                    CustomRowText(text:'The Topic'.tr,textStyle: TextStyle(fontSize: 12, color:kColorsPrimary ,   fontFamily: 'GraphikArabic', fontWeight: FontWeight.w500,),textValue: data.subject==null?"":data.subject.toString(),textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                    CustomRowText(text:"Sender".tr,textStyle: TextStyle(fontSize: 12, color:kColorsPrimary , fontWeight: FontWeight.w500,),textValue:data.userFullname==null?"":data.userFullname.toString(),textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                    CustomRowText(text:'Transaction history'.tr,textStyle: TextStyle(fontSize: 12, color:kColorsPrimary , fontWeight: FontWeight.w500,),textValue: data.hDate==null?"":data.hDate.toString(),textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                    CustomRowText(text:"Sending Date".tr,textStyle: TextStyle(fontSize: 12, color:kColorsPrimary , fontWeight: FontWeight.w500,),textValue: formattedDatemodifiedOn==null?"":formattedDatemodifiedOn.toString(),textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                    CustomRowText(text:'Registration number'.tr,textStyle: TextStyle(fontSize: 12,   fontFamily: 'GraphikArabic', color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue: data.codeFormat==null?"":data.codeFormat.toString(),textValueStyle: TextStyle(fontSize: 10,    fontFamily: 'GraphikArabic',color: kColorsBlack,),backColor: kColorsWhite,),
+                    CustomRowText(text:'The Topic'.tr,textStyle: TextStyle(fontSize: 12, color:kColorsPrimaryFont ,   fontFamily: 'GraphikArabic', fontWeight: FontWeight.w500,),textValue: data.subject==null?"":data.subject.toString(),textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                    CustomRowText(text:"Sender".tr,textStyle: TextStyle(fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue:data.userFullname==null?"":data.userFullname.toString(),textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                    CustomRowText(text:'Transaction history'.tr,textStyle: TextStyle(fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue: data.hDate==null?"":data.hDate.toString(),textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                    CustomRowText(text:"Sending Date".tr,textStyle: TextStyle(fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue: formattedDatemodifiedOn==null?"":formattedDatemodifiedOn.toString(),textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
                           ],
                   ),
                 ),
@@ -84,7 +84,7 @@ class   ItemNotifcationShimmer extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: kColorsWhite,
                   borderRadius: BorderRadius.circular(15.r),
-                  border: Border.all(width: 0.4.r,color:kColorsPrimary.withOpacity(0.6) ),
+                  border: Border.all(width: 0.4.r,color:kColorsPrimaryFont.withOpacity(0.6) ),
 
                 ),
                 child: Padding(

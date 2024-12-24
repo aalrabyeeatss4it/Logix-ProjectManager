@@ -75,9 +75,9 @@ class _ElectronicServicesScreenState extends State<ElectronicServicesScreen> {
                       Row(
 
                         children: [
-                          buildContainer('English language'.tr,kColorsPrimary,kColorsWhite),
-                          buildContainer('English language'.tr,kColorsPrimary,kColorsWhite),
-                          buildContainer('English language'.tr,kColorsPrimary,kColorsWhite),
+                          buildContainer('English language'.tr,kColorsPrimaryFont,kColorsWhite),
+                          buildContainer('English language'.tr,kColorsPrimaryFont,kColorsWhite),
+                          buildContainer('English language'.tr,kColorsPrimaryFont,kColorsWhite),
                         ],
                       ),
                       SizedBox(
@@ -85,9 +85,9 @@ class _ElectronicServicesScreenState extends State<ElectronicServicesScreen> {
                       ),
                       Row(
                         children: [
-                          buildContainer('English language'.tr,kColorsPrimary,kColorsWhite),
-                          buildContainer('English language'.tr,kColorsPrimary,kColorsWhite),
-                          buildContainer('English language'.tr,kColorsPrimary,kColorsWhite),
+                          buildContainer('English language'.tr,kColorsPrimaryFont,kColorsWhite),
+                          buildContainer('English language'.tr,kColorsPrimaryFont,kColorsWhite),
+                          buildContainer('English language'.tr,kColorsPrimaryFont,kColorsWhite),
                         ],
                       ),
                       SizedBox(
@@ -95,9 +95,9 @@ class _ElectronicServicesScreenState extends State<ElectronicServicesScreen> {
                       ),
                       Row(
                         children: [
-                          buildContainer('English language'.tr,kColorsPrimary,kColorsWhite),
-                          buildContainer('English language'.tr,kColorsPrimary,kColorsWhite),
-                          buildContainer('English language'.tr,kColorsPrimary,kColorsWhite),
+                          buildContainer('English language'.tr,kColorsPrimaryFont,kColorsWhite),
+                          buildContainer('English language'.tr,kColorsPrimaryFont,kColorsWhite),
+                          buildContainer('English language'.tr,kColorsPrimaryFont,kColorsWhite),
 
                         ],
                       ),

@@ -18,7 +18,7 @@ class TitleHederStyles {
   static TextStyle primary = TextStyle(
     fontSize: 13.sp,   fontFamily: 'GraphikArabic',
     fontWeight: FontWeight.w600,
-    color: MyColors.kColorsPrimary,
+    color: MyColors.kColorsPrimaryFont,
   );
 }
 class TitleSmallHederStyles {
@@ -35,7 +35,7 @@ class TitleSmallHederStyles {
   static TextStyle primary = TextStyle(
     fontSize: 15.sp,
     fontWeight: FontWeight.w600,
-    color: MyColors.kColorsPrimary,
+    color: MyColors.kColorsPrimaryFont,
   );
 }
 
@@ -53,7 +53,7 @@ class TextLargeStyles {
   static TextStyle primary = TextStyle(
     fontSize: 19.sp,
     fontWeight: FontWeight.w600,
-    color: MyColors.kColorsPrimary,
+    color: MyColors.kColorsPrimaryFont,
   );
 }
 class TextMedumStyles {
@@ -70,7 +70,7 @@ class TextMedumStyles {
   static TextStyle primary = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeight.w600,
-    color: MyColors.kColorsPrimary,
+    color: MyColors.kColorsPrimaryFont,
   );
 }
 class TextSmallStyles {
@@ -87,7 +87,7 @@ class TextSmallStyles {
   static TextStyle primary = TextStyle(
     fontSize: 13.sp,
     fontWeight: FontWeight.w600,
-    color: MyColors.kColorsPrimary,
+    color: MyColors.kColorsPrimaryFont,
   );
 }
 class TextSmallVerryStyles {
@@ -104,7 +104,7 @@ class TextSmallVerryStyles {
   static TextStyle primary = TextStyle(
     fontSize: 11.sp,
     fontWeight: FontWeight.w600,
-    color: MyColors.kColorsPrimary,
+    color: MyColors.kColorsPrimaryFont,
   );
 }
 
@@ -122,7 +122,7 @@ class TextLargeStylesDrawer {
   static TextStyle primary = TextStyle(
     fontSize: 18.sp,
     fontWeight: FontWeight.w600,
-    color: MyColors.kColorsPrimary,
+    color: MyColors.kColorsPrimaryFont,
   );
 }
 class TextMedumStylesDrawer {
@@ -139,7 +139,7 @@ class TextMedumStylesDrawer {
   static TextStyle primary = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeight.w600,
-    color: MyColors.kColorsPrimary,
+    color: MyColors.kColorsPrimaryFont,
   );
 }
 class TextSmallStylesDrawer {
@@ -156,7 +156,7 @@ class TextSmallStylesDrawer {
   static TextStyle primary = TextStyle(
     fontSize: 11.sp,
     fontWeight: FontWeight.w600,
-    color: MyColors.kColorsPrimary,
+    color: MyColors.kColorsPrimaryFont,
   );
 }
 class TextSmallVerryStylesDrawer {
@@ -173,7 +173,7 @@ class TextSmallVerryStylesDrawer {
   static TextStyle primary = TextStyle(
     fontSize: 11.sp,
     fontWeight: FontWeight.w600,
-    color: MyColors.kColorsPrimary,
+    color: MyColors.kColorsPrimaryFont,
   );
 }
 

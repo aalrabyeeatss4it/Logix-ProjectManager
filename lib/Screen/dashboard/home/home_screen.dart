@@ -343,7 +343,7 @@ class GrideRow extends StatelessWidget {
               // width: 0.45.sw,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15.r),
-                color: kColorsPrimary.withOpacity(0.3),
+                color: kColorsPrimaryFont.withOpacity(0.3),
               ),
               child: Center(
                 child: Column(
@@ -372,7 +372,7 @@ class GrideRow extends StatelessWidget {
               child: Container(
                 padding: EdgeInsets.all(4.r), // padding حول الرقم
                 decoration: BoxDecoration(
-                  color:  Count==null? kColorsPrimary.withOpacity(0.0):Colors.red, // لون الخلفية
+                  color:  Count==null? kColorsPrimaryFont.withOpacity(0.0):Colors.red, // لون الخلفية
                   borderRadius: BorderRadius.circular(12.r),
                 ),
                 child: Text(

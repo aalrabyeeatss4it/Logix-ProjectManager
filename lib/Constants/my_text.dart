@@ -9,7 +9,7 @@ class MyText{
   static TextStyle TitleAppBarePrimary(BuildContext context){
     return TextStyle(fontFamily: 'GraphikArabic',
         fontSize: 13.sp,
-        color: kColorsPrimary,
+        color: kColorsPrimaryFont,
         fontWeight: FontWeight.bold);
   }
   ////////////////////////////////////////////////////////////
@@ -22,14 +22,14 @@ class MyText{
   static TextStyle TitleLargeColorePrimary(BuildContext context){
     return TextStyle(fontFamily: 'GraphikArabic',
     fontSize: 19.sp,
-     color: kColorsPrimary,
+     color: kColorsPrimaryFont,
      fontWeight: FontWeight.bold);
   }
 
   static TextStyle TitleMedumColorePrimary(BuildContext context){
     return TextStyle(fontFamily: 'GraphikArabic',
         fontSize: 16.sp,
-        color: kColorsPrimary,
+        color: kColorsPrimaryFont,
         //fontWeight: FontWeight.bold
     );
   }
@@ -37,13 +37,13 @@ class MyText{
   static TextStyle TitleSmallColorePrimary(BuildContext context){
     return TextStyle(fontFamily: 'GraphikArabic',
         fontSize: 14.sp,
-        color: kColorsPrimary);
+        color: kColorsPrimaryFont);
   }
   static TextStyle TitleSmallVeryColorePrimary(BuildContext context){
     return TextStyle(
         fontFamily: 'GraphikArabic',
         fontSize: 12.sp,
-        color: kColorsPrimary
+        color: kColorsPrimaryFont
     );
   }
 
@@ -220,7 +220,7 @@ class MyText{
   static TextStyle TitleTabBarWhiteselected(BuildContext context) {
     return TextStyle(
         fontSize: 13,
-        color: kColorsPrimary,
+        color: kColorsPrimaryFont,
         fontFamily: 'GraphikArabic',
         fontWeight: FontWeight.bold);
   }

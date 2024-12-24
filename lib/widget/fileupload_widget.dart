@@ -35,16 +35,16 @@ final Function? onDone;
               borderType: BorderType.Rect,
               radius: Radius.circular(70.r),
               dashPattern: [9, 9],
-              color: kColorsPrimary,
+              color: kColorsPrimaryFont,
               strokeWidth: 2,
               child: Container(
                 height:0.06.sh ,
                 width: 0.35.sw,
-                color:kColorsPrimary.withOpacity(0.1) ,
+                color:kColorsPrimaryFont.withOpacity(0.1) ,
 
                 child: Container(
                   decoration: BoxDecoration(
-                    color:kColorsPrimary.withOpacity(0.1) ,
+                    color:kColorsPrimaryFont.withOpacity(0.1) ,
                     borderRadius: BorderRadius.circular(10),
                   ),
 
@@ -55,14 +55,14 @@ final Function? onDone;
                         "assets/Icons/uplode.svg",
                         width: 21,
                         height: 13,
-                        color: kColorsPrimary,
+                        color: kColorsPrimaryFont,
                       ),
                       SizedBox(width: 0.015.sw,),
                       Text('download'.tr,style:
                       TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.bold,
-                        color: kColorsPrimary,
+                        color: kColorsPrimaryFont,
                       ),)
                     ],),
                 ),
@@ -103,7 +103,7 @@ class FileUploadImageCustom extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               width: .3*Get.width,
               decoration:DottedDecoration(
-                color: kColorsPrimary,
+                color: kColorsPrimaryFont,
                 shape: Shape.box,
                 borderRadius: BorderRadius.circular(10), //remove this to get plane rectange
               ),
@@ -111,7 +111,7 @@ class FileUploadImageCustom extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset("assets/Icons/upload.png",width: 20.w,height: 20.w,color:kColorsPrimary,),
+                    Image.asset("assets/Icons/upload.png",width: 20.w,height: 20.w,color:kColorsPrimaryFont,),
                     SizedBox(width: 10.w,),
                     Text("download".tr,style: Theme.of(context).textTheme.titleSmall,)
                   ],),

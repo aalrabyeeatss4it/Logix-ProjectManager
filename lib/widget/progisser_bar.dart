@@ -15,7 +15,7 @@ class LoadingIndicatorWidget extends StatelessWidget {
             child: Center(
               child: LoadingIndicator(
                 indicatorType: Indicator.ballSpinFadeLoader, /// Required, The loading type of the widget
-                colors:  [kColorsPrimary],     /// Optional, The color collections
+                colors:  [kColorsPrimaryFont],     /// Optional, The color collections
                 /// Optional, The stroke of the line, only applicable to widget which contains line
                 backgroundColor: kColorsWhite,/// Optional, Background of the widget
                 pathBackgroundColor: kColorsWhite  /// Optional, the stroke backgroundColor

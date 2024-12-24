@@ -42,10 +42,10 @@ class CardWizardOverlapRouteState extends State<CardWizardOverlapRoute> {
       "استعرض أداء مشاريعك بوضوح عبر تقارير دقيقة وإحصائيات تدعم قراراتك.".tr,
        ];
     List<Color> wizard_color = [
-      kColorsPrimary,
-      kColorsPrimary,
-      kColorsPrimary,
-      kColorsPrimary,
+      kColorsPrimaryFont,
+      kColorsPrimaryFont,
+      kColorsPrimaryFont,
+      kColorsPrimaryFont,
     ];
     for (int i = 0; i < wizard_title.length; i++) {
       Wizard obj = new Wizard();
@@ -68,33 +68,39 @@ class CardWizardOverlapRouteState extends State<CardWizardOverlapRoute> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      backgroundColor:  kColorsPrimaryFont,
       appBar: PreferredSize(preferredSize: Size.fromHeight(0),
           child: Container(color: kColorsPrimaryFont)),
-      body: Column(
+      body: SingleChildScrollView(
+        child: Column(
 
-        children: [
-          Container(
-            height: 0.15.sh,
-            color:  kColorsPrimaryFont,
-            child: Padding(
-              padding:  EdgeInsets.only(top:  0.01.sh),
+          children: [
+            SizedBox(height: 0.04.sh,),
+            Padding(
+              padding:   EdgeInsets.symmetric(horizontal:  18.0),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  SizedBox(width: 0.70.sw,),
-                  CustomButton(
-                    IconEnd: SvgPicture.asset(
-                      "assets/Icons/back.svg",
-                      width: 15.r,
-                      height: 15.r,
-                      color: kColorsLightBlack,
+                  InkWell(
+                    onTap:(){
+                      pageController.previousPage(duration: Duration(milliseconds: 300), curve: Curves.easeOut);
+                    },
+                    child: SvgPicture.asset(
+                      "assets/Icon/arraw_rajhit.svg",
+                      width: 24,
+                      height: 24,
+                      color: kColorsWhite,
                     ),
-                    isIconEnd: true,
-                    sizeWidth: 0.25.sw,
-                    borderColor: Color(0xffD0DDED),
+                  ),
+
+                  CustomButton(
+                    sizeHeight: 0.045.sh,
+                    sizeWidth: 0.18.sw,
+                    borderColor: kColorsWhite.withOpacity(0.1),
                     text: 'back'.tr,
-                    color:Color(0xffD0DDED),
+                    color:kColorsWhite.withOpacity(0.1),
                     style:  TextStyle(fontFamily: 'GraphikArabic',
-                      color: Color(0xFF5C6672),
+                      color: kColorsWhite,
                       fontSize: 16,
                     ),
                     onPress: () {
@@ -109,54 +115,51 @@ class CardWizardOverlapRouteState extends State<CardWizardOverlapRoute> {
                 ],
               ),
             ),
-          ),
-          Container(
-            width: 1.0.sw,
-            height: 0.80.sh,
-            decoration: BoxDecoration(color: kColorsPrimaryFont),
-            child: Stack(
-              children: [
-                // Container الخلفية
-                Container(
-                  width: 1.0.sw,
-                  height: 0.03.sh,
+            SizedBox(height: 0.03.sh,),
+            Container(
+              width: 1.0.sw,
+              height: 0.87.sh,
+              decoration: BoxDecoration(color: kColorsPrimaryFont),
+              child: Stack(
+                children: [
+                  // Container الخلفية
 
-                ),
-                Positioned(
-                  top: -0.1.sh, // تحريك 10% للأعلى
-                  left: 0.04.sw, // محاذاة للوسط
-                  child: Container(
-                    width: 0.92.sw,
-                    height: 0.80.sh,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15.r),
-                      color: kColorsRed,
+                  Positioned(
+                    top: -0.1.sh, // تحريك 10% للأعلى
+                    left: 0.04.sw, // محاذاة للوسط
+                    child: Container(
+                      width: 0.92.sw,
+                      height: 0.80.sh,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15.r),
+                        color: kColorsRed,
+                      ),
                     ),
                   ),
-                ),
 
-                Container(
-                  width: 1.0.sw,
-                  height: 0.80.sh,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15.r),
-                    color: kColorsWhite,
+                  Container(
+                    width: 1.0.sw,
+                    height: 0.90.sh,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15.r),
+                      color: kColorsWhite,
+                    ),
                   ),
-                ),
 
-                // Container ملون باللون الأحمر
+                  // Container ملون باللون الأحمر
 
-                // PageView
-                PageView(
-                  onPageChanged: onPageViewChange,
-                  controller: pageController,
-                  children: buildPageViewItem(),
-                ),
+                  // PageView
+                  PageView(
+                    onPageChanged: onPageViewChange,
+                    controller: pageController,
+                    children: buildPageViewItem(),
+                  ),
 
-              ],
-            ),
-          )
-        ],
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -175,7 +178,7 @@ class CardWizardOverlapRouteState extends State<CardWizardOverlapRoute> {
       Widget wg = Column(
         children: <Widget>[
           SizedBox(
-            height: 0.13.sh,
+            height: 0.16.sh,
           ),
           Padding(
             padding:  EdgeInsets.only(right: 10.r,left: 10.r),
@@ -186,7 +189,7 @@ class CardWizardOverlapRouteState extends State<CardWizardOverlapRoute> {
             ),
           ),
           SizedBox(
-            height: 0.07.sh,
+            height: 0.06.sh,
           ),
           Padding(
             padding:  EdgeInsets.only(right: 10.r,left: 10.r),
@@ -220,7 +223,7 @@ class CardWizardOverlapRouteState extends State<CardWizardOverlapRoute> {
             ),
           ),
           SizedBox(
-            height: 0.07.sh,
+            height: 0.065.sh,
           ),
           Padding(
             padding:  EdgeInsets.only(right: 10.r,left: 10.r),
@@ -237,17 +240,18 @@ class CardWizardOverlapRouteState extends State<CardWizardOverlapRoute> {
           ),
 
           SizedBox(
-            height: 0.13.sh,
+            height: 0.140.sh,
           ),
 
           CustomButton(
             sizeHeight: 0.06.sh,
             sizeWidth: 0.90.sw,
-            text:isLast ? 'Get started now'.tr:'Next'.tr,
+            text:isLast ? 'تسجيل الدخول'.tr:'Next'.tr,
             color: kColorsPrimaryFont,
             style:  TextStyle(
                 fontFamily: 'GraphikArabic',
-                fontSize: 14.sp,
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
                 color: kColorsWhite
             ),
             onPress: () {
@@ -267,7 +271,7 @@ class CardWizardOverlapRouteState extends State<CardWizardOverlapRoute> {
             },
           ),
           SizedBox(
-            height: 0.11.sh,
+            height: 0.121.sh,
           ),
           Padding(
             padding:  EdgeInsets.only(top:0.0.sh,),

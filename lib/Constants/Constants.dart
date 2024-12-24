@@ -4,21 +4,20 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 
-// const Color kColorsPrimary =  Color(0xff0692AC);
-const Color kColorsPrimary = Color(0xff3570B7);
-const Color kColorsPrimaryFont = Color(0xff0792AD);
-const Color kColorsPrimaryLow = Color(0xff9AB7DB);
+// const Color kColorsPrimaryFont =  Color(0xff0692AC);
+const Color kColorsPrimaryFont =Color(0xff0792AD);
+const Color kColorsPrimaryFontLow = Color(0xff9AB7DB);
 const Color kColorsIcon = Color(0xff242424);
-const Color kColorsPrimarySalse =  Color(0xff2AA7C2);
-const Color kColorsPrimarySalseBlack =  Color(0xff178BB8);
+const Color kColorsPrimaryFontSalse =  Color(0xff2AA7C2);
+const Color kColorsPrimaryFontSalseBlack =  Color(0xff178BB8);
 const Color kColorsDeepPrimary = Color(0xFF0C647F);
-const Color kColorsPrimaryPorder = Color(0xFF7091BE);
+const Color kColorsPrimaryFontPorder = Color(0xFF7091BE);
 const Color kColorsWhite = Color(0xFFffffff);
 const Color kColorsWhiteTow = Color(0xFFF5F5F5);
 const Color kColorsWhiteButton = Color(0xFFE9F7FE);
 const Color kColorsWhiteButtonTow = Color(0xFFD7E3EC);
 
-const Color kColorsPrimaryHrBack =  Color(0xFFF6FAFC);
+const Color kColorsPrimaryFontHrBack =  Color(0xFFF6FAFC);
 
 // const Color kColorsWhiteButtonTow = Color(0xFF3570B7);
 // const Color kColorsWhiteButtonTow = Color(0xFF173251);

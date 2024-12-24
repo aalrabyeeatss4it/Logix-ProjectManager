@@ -241,7 +241,7 @@ class _CustomDateHijryPakerState extends State<CustomDateHijryPaker> {
                       "assets/Icons/Data.png",
                       width: 20.r,
                       height: 20.r,
-                      color: kColorsPrimary,
+                      color: kColorsPrimaryFont,
                     ),
                   ),
                   hintText: widget.hint,

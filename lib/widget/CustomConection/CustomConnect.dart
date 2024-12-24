@@ -31,9 +31,9 @@ class CustomConnection extends StatelessWidget {
        width:SizeWith==null? 125.w:SizeWith,
       decoration: BoxDecoration(
         borderRadius:BoxShadowtruorfalse==true? BorderRadius.circular(8.r):BorderRadius.circular(0.r),
-        color: colorAll==null? kColorsPrimary:colorAll,
+        color: colorAll==null? kColorsPrimaryFont:colorAll,
         boxShadow: [
-          BoxShadow(color: colorBoxShadow==null? kColorsPrimary:colorBoxShadow!,spreadRadius: 1,),
+          BoxShadow(color: colorBoxShadow==null? kColorsPrimaryFont:colorBoxShadow!,spreadRadius: 1,),
         ],
       ),
       child: ElevatedButton.icon(
@@ -50,11 +50,11 @@ class CustomConnection extends StatelessWidget {
           }
 
         },
-        icon:  Image.asset(iconData==null?"assets/Icons/phoneColore.png":iconData!, width: 15.r, height: 15.r,color: colorIcon==null? kColorsPrimary:colorIcon,),
+        icon:  Image.asset(iconData==null?"assets/Icons/phoneColore.png":iconData!, width: 15.r, height: 15.r,color: colorIcon==null? kColorsPrimaryFont:colorIcon,),
         label: Container(
           child: Text(text==null?'':text!,style: TextStyle(
               fontSize: Sizefont==null?9.sp:Sizefont,
-              color: colorfont==null?kColorsPrimary:colorfont
+              color: colorfont==null?kColorsPrimaryFont:colorfont
           ),),
         ), // <-- Text
       ),
@@ -92,7 +92,7 @@ class CustomConnection extends StatelessWidget {
                   onTap: () => launch('tel:' + phoneNumber),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: kColorsPrimary,
+                      color: kColorsPrimaryFont,
                       borderRadius: BorderRadius.circular(7.r),
                     ),
                     height: 40.0.h,

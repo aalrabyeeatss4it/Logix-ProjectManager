@@ -89,7 +89,7 @@ class  ItemHomeShimmer extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: kColorsWhite,
                   borderRadius: BorderRadius.circular(15.r),
-                  border: Border.all(width: 0.4.r,color:kColorsPrimary.withOpacity(0.6) ),
+                  border: Border.all(width: 0.4.r,color:kColorsPrimaryFont.withOpacity(0.6) ),
 
                 ),
                 child: Padding(

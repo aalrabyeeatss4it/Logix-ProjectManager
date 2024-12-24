@@ -33,7 +33,7 @@ class  ItemCopeTransactions extends StatelessWidget {
                     child: Text(
 
                         ' - ',
-                        style: TextStyle(fontSize: 12, color: kColorsPrimary, fontWeight: FontWeight.w500,)),
+                        style: TextStyle(fontSize: 12, color: kColorsPrimaryFont, fontWeight: FontWeight.w500,)),
                   )
                 ),
                 Expanded(
@@ -42,7 +42,7 @@ class  ItemCopeTransactions extends StatelessWidget {
                       // "30/04/ 2024",
                       // controller.inboxReferralsModel!.dataReferrals!.first.hDate.toString(),
                       'Copy to'.tr+  data.name.toString(),
-                        style: TextStyle(fontSize:12, color: kColorsPrimary, fontWeight: FontWeight.w500,))),
+                        style: TextStyle(fontSize:12, color: kColorsPrimaryFont, fontWeight: FontWeight.w500,))),
                 Expanded(
                   flex: 1,
 
@@ -79,7 +79,7 @@ class   ItemCopeTransactionsShimmer extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: kColorsWhite,
                   borderRadius: BorderRadius.circular(15.r),
-                  border: Border.all(width: 0.4.r,color:kColorsPrimary.withOpacity(0.6) ),
+                  border: Border.all(width: 0.4.r,color:kColorsPrimaryFont.withOpacity(0.6) ),
 
                 ),
                 child: Padding(

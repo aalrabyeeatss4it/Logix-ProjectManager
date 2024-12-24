@@ -87,7 +87,7 @@ class ItemTechnicalInformationShimmer extends StatelessWidget {
                 color: kColorsWhite,
                 borderRadius: BorderRadius.circular(15.r),
                 border: Border.all(
-                    width: 0.4.r, color: kColorsPrimary.withOpacity(0.6)),
+                    width: 0.4.r, color: kColorsPrimaryFont.withOpacity(0.6)),
               ),
               child: Padding(
                 padding: EdgeInsets.only(

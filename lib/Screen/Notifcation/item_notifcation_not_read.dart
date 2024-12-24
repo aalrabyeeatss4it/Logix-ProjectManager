@@ -33,7 +33,7 @@ ItemNotifcationNotRead(this.data);
                 decoration: BoxDecoration(
                   color: kColorsWhite,
                   borderRadius: BorderRadius.circular(15.r),
-                  border: Border.all(width: 0.4.r,color:kColorsPrimary.withOpacity(0.6) ),
+                  border: Border.all(width: 0.4.r,color:kColorsPrimaryFont.withOpacity(0.6) ),
 
                 ),
                 child: Padding(
@@ -57,7 +57,7 @@ ItemNotifcationNotRead(this.data);
                                     flex:5,
 
 
-                                    child: Text('Registration number'.tr+":",  style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimary , fontWeight: FontWeight.w500,))),
+                                    child: Text('Registration number'.tr+":",  style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,))),
 
                                 Expanded(
                                     flex:9,
@@ -65,9 +65,9 @@ ItemNotifcationNotRead(this.data);
                                 Expanded(
                                   flex:3,
                                   child: CustomButton(
-                                    color:data.statusName.toString()==null?kColorsWhite: kColorsPrimary,
+                                    color:data.statusName.toString()==null?kColorsWhite: kColorsPrimaryFont,
                                     borderRadius: 8.r,
-                                    borderColor: data.statusName.toString()==null?kColorsWhite: kColorsPrimary,
+                                    borderColor: data.statusName.toString()==null?kColorsWhite: kColorsPrimaryFont,
                                     sizeHeight: 0.04.sh,
                                     sizeWidth: 0.15.sw,
                                     text:data.statusName.toString(),
@@ -83,10 +83,10 @@ ItemNotifcationNotRead(this.data);
                           ),
                         ],
                       ),
-                    CustomRowText(text:'The Topic'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimary , fontWeight: FontWeight.w500,),textValue: data.subject==null?"":data.subject.toString(),textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                    CustomRowText(text:"Sender".tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimary , fontWeight: FontWeight.w500,),textValue:data.userFullname==null?"":data.userFullname.toString(),textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                    CustomRowText(text:'Transaction history'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimary , fontWeight: FontWeight.w500,),textValue: data.hDate==null?"":data.hDate.toString(),textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                    CustomRowText(text:"Sending Date".tr,textStyle: TextStyle(fontSize: 12, color:kColorsPrimary , fontWeight: FontWeight.w500,),textValue: data.createdOn==null?"":data.createdOn.toString(),textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                    CustomRowText(text:'The Topic'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue: data.subject==null?"":data.subject.toString(),textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                    CustomRowText(text:"Sender".tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue:data.userFullname==null?"":data.userFullname.toString(),textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                    CustomRowText(text:'Transaction history'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue: data.hDate==null?"":data.hDate.toString(),textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                    CustomRowText(text:"Sending Date".tr,textStyle: TextStyle(fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue: data.createdOn==null?"":data.createdOn.toString(),textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
                           ],
                   ),
                 ),
@@ -116,7 +116,7 @@ class   ItemNotifcationNotReadShimmer extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: kColorsWhite,
                   borderRadius: BorderRadius.circular(15.r),
-                  border: Border.all(width: 0.4.r,color:kColorsPrimary.withOpacity(0.6) ),
+                  border: Border.all(width: 0.4.r,color:kColorsPrimaryFont.withOpacity(0.6) ),
 
                 ),
                 child: Padding(

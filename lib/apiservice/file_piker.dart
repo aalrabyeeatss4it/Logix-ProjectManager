@@ -31,7 +31,7 @@ import 'package:projectmanagers/Constants/Constants.dart';
              },
              child:  Text( 'Gallery'.tr,style:  TextStyle(
                  fontSize: 14.sp,
-                 color: kColorsPrimary
+                 color: kColorsPrimaryFont
              )),
            ),
            CupertinoActionSheetAction(
@@ -42,7 +42,7 @@ import 'package:projectmanagers/Constants/Constants.dart';
              },
              child:  Text('Files'.tr,style:  TextStyle(
                  fontSize: 14.sp,
-                 color: kColorsPrimary
+                 color: kColorsPrimaryFont
              )),
            ),
            CupertinoActionSheetAction(

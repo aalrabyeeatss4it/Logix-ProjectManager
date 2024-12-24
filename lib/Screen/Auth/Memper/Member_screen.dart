@@ -29,132 +29,151 @@ class MemberScreen extends StatelessWidget {
     // TODO: implement build
     final isRtl = Localizations.localeOf(context).languageCode == 'ar';
     return Scaffold(
-      backgroundColor: kColorsWhite,
-      body: SafeArea(
-        bottom: false,
-        child: ZoomDrawer(
-          isRtl: isRtl ? true : false,
-          controller: zDMemberController,
-          style: DrawerStyle.style1,
-          menuScreen: MenuWidgetDachbord(
-            zoomDrawerController: zDMemberController,
-          ),
-          mainScreen: Scaffold(
-            backgroundColor: kColorsWhite,
-            // appBar:  MyAppBar(title:   'Sign in'.tr,zoomDrawerController: zDLoginController,EndIcon: false, colorfont: kColorsWhite,colorAll:kColorsPrimarySalse ),
-            body: Padding(
-              padding:  EdgeInsets.all(4.0),
-              child: Column(
+      backgroundColor:  kColorsPrimaryFont,
+      appBar: PreferredSize(preferredSize: Size.fromHeight(0),
+          child: Container(color: kColorsPrimaryFont)),
+      body: SingleChildScrollView(
+        child: Column(
+
+          children: [
+            SizedBox(height: 0.03.sh,),
+            Container(
+              width:342,
+              height: 39,
+
+              decoration: BoxDecoration(
+                  color: kColorsPrimaryFont,
+                  image:DecorationImage(image:
+                  AssetImage('assets/logooPng.png'
+
+                  ),fit: BoxFit.scaleDown,)
+              ),
+            ),
+            SizedBox(height: 0.06.sh,),
+            Container(
+              width: 1.0.sw,
+              height: 0.87.sh,
+              decoration: BoxDecoration(color: kColorsPrimaryFont),
+              child: Stack(
                 children: [
-                  Expanded(
-                      flex: 3,
-                      child: AppBarEsyDox(title:'Membership registration'.tr, EndIcon: false,zoomDrawerController:  zDMemberController)),
-                  Expanded(
-                    flex: 11,
-                    child: Form(
-                      key: _formKeyMember,
-                      child: SingleChildScrollView(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            SizedBox(height: 0.15.sh,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-
-                                Text( 'Membership registration'.tr,
-                                  style: TextStyle(fontFamily: 'GraphikArabic',
-                                      fontSize: 20,
-                                      color: kColorsBlack,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 0.05.sh,
-                            ),
-                            TextFieldWidget(
-                              hint:'Enter Membership No'.tr,
-                              text: 'Membership'.tr,
-                              edit: 1,
-                              controller:Get.find<MemberController>().memberIdTextController,
-                              requirement: true,
-                              color: kColorsDeepWhite,
-                              iconStart:Padding(
-                                padding:  EdgeInsets.only(right:isRtl==true? 0.0.r:4.0.r,left: isRtl==true? 4.0.r:0.0.r),
-                                child: Padding(
-                                  padding:
-                                  EdgeInsets.all(11.0.r),
-                                  child:   SvgPicture.asset(
-                                    "assets/Icons/member.svg",
-                                    width: 20.r,
-                                    height: 20.r,
-                                    color: kColorsPrimary,
-                                  ),
-                                ),
-                              ),
-                              keyboardType: TextInputType.text,
-                            ),
-                            SizedBox(
-                              height: 0.02.sh,
-                            ),
-                            CustomButton(
-                              isIconEnd:false,
-                              text: 'Next'.tr,
-                              borderRadius: 10.r,
-                              sizeHeight: 0.06.sh,
-                              sizeWidth: 0.93.sw,
-                              style:TextStyle(fontFamily: 'GraphikArabic',
-                                  fontSize: 16,
-                                  color: kColorsWhite,
-                                  fontWeight: FontWeight.w600),
-                              onPress:() {
-
-                                if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
-                                  if (_formKeyMember.currentState!.validate()) {
-                                    if (Get.find<MemberController>().memberIdTextController.text == null ||
-                                        Get.find<MemberController>().memberIdTextController.text.isEmpty ||
-                                        Get.find<MemberController>().memberIdTextController.text.length <= 2) {
-                                      GetSnackMsg(msg: 'Enter Membership No'.tr, bgClr: kColorsRed, txClr: kColorsWhite)
-                                          .showTxt();
-                                    } else {
-                                      Get.find<MemberController>().memberApi();
-                                    }
-                                  }
-                                } else {
-                                  print("No Connection".tr);
-                                  GetSnackMsg(msg: "No Connection".tr, bgClr: kColorsRed,
-                                      txClr: kColorsWhite)
-                                      .showTxt();
-
-                                }
-
-                              },
-                            ),
-                            SizedBox(
-                              height: 0.08.sh,
-                            ),
-                          ],
-                        ),
+                  Positioned(
+                    top: -0.1.sh, // تحريك 10% للأعلى
+                    left: 0.04.sw, // محاذاة للوسط
+                    child: Container(
+                      width: 0.92.sw,
+                      height: 0.80.sh,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15.r),
+                        color: kColorsRed,
                       ),
                     ),
                   ),
-                  // SizedBox(
-                  //   height: 0.50.sh,
-                  // ),
+                  Container(
+                    width: 1.0.sw,
+                    height: 0.90.sh,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15.r),
+                      color: kColorsWhite,
+                    ),
+                  ),
+
+                  // Container ملون باللون الأحمر
+
+                  // PageView
+                  Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: 0.03.sh,
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'أهلا بعودتك!'.tr,
+                            style: TextStyle(
+                                fontFamily: 'GraphikArabic',
+                                fontSize: 24,
+                                color: kColorsBlack,
+                                fontWeight: FontWeight.w500),
+                          ),
+                          Text(
+                            'ادخل البيانات التالية لتتمكن من الوصول إلى حسابك!'
+                                .tr,
+                            style: TextStyle(
+                              fontFamily: 'GraphikArabic',
+                              fontSize: 14,
+                              color: kColorsBlack,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 0.04.sh,
+                      ),
+                      TextFieldWidgetAuth(
+                        hint: 'Enter Membership No'.tr,
+                        text: 'Membership'.tr,
+                        edit: 1,
+                        controller:
+                            Get.find<MemberController>().memberIdTextController,
+                        requirement: true,
+                        color: kColorsPrimaryFont,
+
+                        keyboardType: TextInputType.text,
+                      ),
+                      SizedBox(
+                        height: 0.03.sh,
+                      ),
+                      CustomButton(
+                        isIconEnd: false,
+                        text: 'Next'.tr,
+                        borderRadius: 10.r,
+                        sizeHeight: 0.06.sh,
+                        sizeWidth: 0.96.sw,
+                        color: kColorsPrimaryFont,
+                        style:TextStyle(
+                            fontFamily: 'GraphikArabic',
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            color: kColorsWhite
+                        ),
+                        onPress: () {
+                          if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
+                            // if (_formKeyMember.currentState!.validate()) {
+                              if (Get.find<MemberController>().memberIdTextController.text == null || Get.find<MemberController>().memberIdTextController.text.isEmpty ||
+                                  Get.find<MemberController>().memberIdTextController.text.length <= 2) {
+                                GetSnackMsg(msg: 'Enter Membership No'.tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
+                              } else {
+                                Get.find<MemberController>().memberApi();
+                              }
+                            // }
+                          } else {
+                            print("No Connection".tr);
+                            GetSnackMsg(msg: "No Connection".tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
+                          }
+                        },
+                      ),
+                      SizedBox(
+                        height: 0.495.sh,
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.only(top:0.0.sh,),
+                        child: Container(
+                            width:0.35.sw,
+                            height:  .005.sh,
+                            decoration: BoxDecoration(
+                              color: kColorsBlack,
+                              borderRadius: BorderRadius.circular(7.r),
+                            )
+
+                        ),
+                      ),
+                    ],
+                  )
                 ],
               ),
-            ),
-
-          ),
-          clipMainScreen: true,
-          // slideWidth: MediaQuery.of(context).size.width * (isRtl == true ? .45 : 0.65),
-          openCurve: Curves.slowMiddle,
-          closeCurve: Curves.slowMiddle,
-          borderRadius: 24.0,
-          showShadow: true,
-          angle: 0.0, slideWidth: MediaQuery.of(context).size.width * 0.65.w,
-          shadowLayer1Color: kColorScafoold,
+            )
+          ],
         ),
       ),
     );

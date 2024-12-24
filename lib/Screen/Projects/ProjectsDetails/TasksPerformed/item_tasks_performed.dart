@@ -95,7 +95,7 @@ class ItemTasksPerformed extends StatelessWidget {
                                                 style: const TextStyle(
                                                     fontStyle: FontStyle.normal,
                                                     fontSize: 16,
-                                                    color: kColorsPrimary,
+                                                    color: kColorsPrimaryFont,
                                                     fontWeight: FontWeight.w500
                                                 ),),
                                               Padding(
@@ -236,7 +236,7 @@ class ItemTasksPerformed extends StatelessWidget {
                                                   style: const TextStyle(
                                                       fontStyle: FontStyle.normal,
                                                       fontSize: 16,
-                                                      color: kColorsPrimary,
+                                                      color: kColorsPrimaryFont,
                                                       fontWeight: FontWeight.w500
                                                   ),),
                                                 Padding(
@@ -380,7 +380,7 @@ class ItemTasksPerformed extends StatelessWidget {
                         Text(
                           'Choose'.tr,
                           style:   TextStyle(
-                              color: kColorsPrimary,
+                              color: kColorsPrimaryFont,
                               fontSize: 14.sp,
                               fontWeight: FontWeight.bold),
                         ),
@@ -394,7 +394,7 @@ class ItemTasksPerformed extends StatelessWidget {
                                 "assets/Icons/clear.png",
                                 width: 25.r,
                                 height: 25.r,
-                                color: kColorsPrimary,
+                                color: kColorsPrimaryFont,
                               )),
                         ),
                       ],
@@ -412,11 +412,11 @@ class ItemTasksPerformed extends StatelessWidget {
                             fontSize: 12.sp,
                             fontWeight: FontWeight.bold),
                         strutStyle: StrutStyle(height: 1.5),
-                        cursorColor: kColorsPrimary,
+                        cursorColor: kColorsPrimaryFont,
                         decoration: InputDecoration(
                           hintText: 'search'.tr,
                           hintStyle:   TextStyle(
-                              color: kColorsPrimary,
+                              color: kColorsPrimaryFont,
                               fontSize: 12.sp,
                               fontWeight: FontWeight.bold),
                           prefixIcon: Icon(Icons.search),
@@ -495,7 +495,7 @@ class ItemTasksPerformedShimmer extends StatelessWidget {
                 color: kColorsWhite,
                 borderRadius: BorderRadius.circular(15.r),
                 border: Border.all(
-                    width: 0.4.r, color: kColorsPrimary.withOpacity(0.6)),
+                    width: 0.4.r, color: kColorsPrimaryFont.withOpacity(0.6)),
               ),
               child: Padding(
                 padding: EdgeInsets.only(
