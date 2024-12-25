@@ -32,148 +32,148 @@ class MemberScreen extends StatelessWidget {
       backgroundColor:  kColorsPrimaryFont,
       appBar: PreferredSize(preferredSize: Size.fromHeight(0),
           child: Container(color: kColorsPrimaryFont)),
-      body: SingleChildScrollView(
-        child: Column(
+      body: Container(
+        color: kColorsPrimaryFont,
+        width: 1.0.sw,
+        height: 1.0.sh,
+        child: SingleChildScrollView(
+          child: Column(
 
-          children: [
-            SizedBox(height: 0.03.sh,),
-            Container(
-              width:342,
-              height: 39,
+            children: [
+              SizedBox(height: 0.03.sh,),
+              Container(
+                width:0.90.sw,
+                height: 0.085.sh,
 
-              decoration: BoxDecoration(
-                  color: kColorsPrimaryFont,
-                  image:DecorationImage(image:
-                  AssetImage('assets/logooPng.png'
+                decoration: BoxDecoration(
+                    color: kColorsPrimaryFont,
+                    image:DecorationImage(image:
+                    AssetImage('assets/logooPng.png'
 
-                  ),fit: BoxFit.scaleDown,)
+                    ),fit: BoxFit.scaleDown,)
+                ),
               ),
-            ),
-            SizedBox(height: 0.06.sh,),
-            Container(
-              width: 1.0.sw,
-              height: 0.87.sh,
-              decoration: BoxDecoration(color: kColorsPrimaryFont),
-              child: Stack(
-                children: [
-                  Positioned(
-                    top: -0.1.sh, // تحريك 10% للأعلى
-                    left: 0.04.sw, // محاذاة للوسط
-                    child: Container(
-                      width: 0.92.sw,
-                      height: 0.80.sh,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.r),
-                        color: kColorsRed,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 1.0.sw,
-                    height: 0.90.sh,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15.r),
-                      color: kColorsWhite,
-                    ),
-                  ),
+              SizedBox(height: 0.02.sh,),
+              Container(
+                width: 1.0.sw,
+                child: Stack(
+                  alignment:  Alignment.center,
+                  children: [
+                    Container(
+                      width: 0.90.sw,
+                      height: 0.91.sh,
+                      decoration: ShapeDecoration(
+                        color: kColorsWhite.withOpacity(0.1),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(topLeft:Radius.circular(20),topRight: Radius.circular(20)),),),
 
-                  // Container ملون باللون الأحمر
-
-                  // PageView
-                  Column(
-                    children: <Widget>[
-                      SizedBox(
-                        height: 0.03.sh,
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'أهلا بعودتك!'.tr,
-                            style: TextStyle(
-                                fontFamily: 'GraphikArabic',
-                                fontSize: 24,
-                                color: kColorsBlack,
-                                fontWeight: FontWeight.w500),
-                          ),
-                          Text(
-                            'ادخل البيانات التالية لتتمكن من الوصول إلى حسابك!'
-                                .tr,
-                            style: TextStyle(
-                              fontFamily: 'GraphikArabic',
-                              fontSize: 14,
-                              color: kColorsBlack,
+                    ),
+                    Positioned(
+                      bottom: 6,
+                      child: Container(
+                        width: 1.0.sw,
+                        height: 0.88.sh,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: kColorsWhite,
+                        ),
+                        child:     Column(
+                          children: <Widget>[
+                            SizedBox(
+                              height: 0.03.sh,
                             ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 0.04.sh,
-                      ),
-                      TextFieldWidgetAuth(
-                        hint: 'Enter Membership No'.tr,
-                        text: 'Membership'.tr,
-                        edit: 1,
-                        controller:
-                            Get.find<MemberController>().memberIdTextController,
-                        requirement: true,
-                        color: kColorsPrimaryFont,
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'أهلا بعودتك!'.tr,
+                                  style: TextStyle(
+                                      fontFamily: 'GraphikArabic',
+                                      fontSize: 24,
+                                      color: kColorsBlack,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                Text(
+                                  'ادخل البيانات التالية لتتمكن من الوصول إلى حسابك!'
+                                      .tr,
+                                  style: TextStyle(
+                                    fontFamily: 'GraphikArabic',
+                                    fontSize: 14,
+                                    color: kColorsBlack.withOpacity(0.4),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 0.04.sh,
+                            ),
+                            TextFieldWidgetAuth(
+                              hint: 'L-5269877'.tr,
+                              text: 'رقم العضويه'.tr,
+                              edit: 1,
+                              controller: Get.find<MemberController>().memberIdTextController,
+                              requirement: true,
+                              color: kColorsPrimaryFont,
+                              keyboardType: TextInputType.text,
+                            ),
+                            SizedBox(
+                              height: 0.03.sh,
+                            ),
+                            CustomButton(
+                              isIconEnd: false,
+                              text: 'Next'.tr,
+                              borderRadius: 10.r,
+                              sizeHeight: 0.06.sh,
+                              sizeWidth: 0.96.sw,
+                              color: kColorsPrimaryFont,
+                              style:TextStyle(
+                                  fontFamily: 'GraphikArabic',
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                  color: kColorsWhite
+                              ),
+                              onPress: () {
+                                if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
+                                  // if (_formKeyMember.currentState!.validate()) {
+                                  if (Get.find<MemberController>().memberIdTextController.text == null || Get.find<MemberController>().memberIdTextController.text.isEmpty ||
+                                      Get.find<MemberController>().memberIdTextController.text.length <= 2) {
+                                    GetSnackMsg(msg: 'Enter Membership No'.tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
+                                  } else {
+                                    Get.find<MemberController>().memberApi();
+                                  }
+                                  // }
+                                } else {
+                                  print("No Connection".tr);
+                                  GetSnackMsg(msg: "No Connection".tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
+                                }
+                              },
+                            ),
+                            SizedBox(
+                              height: 0.495.sh,
+                            ),
+                            Padding(
+                              padding:  EdgeInsets.only(top:0.0.sh,),
+                              child: Container(
+                                  width:0.35.sw,
+                                  height:  .005.sh,
+                                  decoration: BoxDecoration(
+                                    color: kColorsBlack,
+                                    borderRadius: BorderRadius.circular(7.r),
+                                  )
 
-                        keyboardType: TextInputType.text,
-                      ),
-                      SizedBox(
-                        height: 0.03.sh,
-                      ),
-                      CustomButton(
-                        isIconEnd: false,
-                        text: 'Next'.tr,
-                        borderRadius: 10.r,
-                        sizeHeight: 0.06.sh,
-                        sizeWidth: 0.96.sw,
-                        color: kColorsPrimaryFont,
-                        style:TextStyle(
-                            fontFamily: 'GraphikArabic',
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                            color: kColorsWhite
-                        ),
-                        onPress: () {
-                          if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
-                            // if (_formKeyMember.currentState!.validate()) {
-                              if (Get.find<MemberController>().memberIdTextController.text == null || Get.find<MemberController>().memberIdTextController.text.isEmpty ||
-                                  Get.find<MemberController>().memberIdTextController.text.length <= 2) {
-                                GetSnackMsg(msg: 'Enter Membership No'.tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
-                              } else {
-                                Get.find<MemberController>().memberApi();
-                              }
-                            // }
-                          } else {
-                            print("No Connection".tr);
-                            GetSnackMsg(msg: "No Connection".tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
-                          }
-                        },
-                      ),
-                      SizedBox(
-                        height: 0.495.sh,
-                      ),
-                      Padding(
-                        padding:  EdgeInsets.only(top:0.0.sh,),
-                        child: Container(
-                            width:0.35.sw,
-                            height:  .005.sh,
-                            decoration: BoxDecoration(
-                              color: kColorsBlack,
-                              borderRadius: BorderRadius.circular(7.r),
-                            )
-
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                    ],
-                  )
-                ],
+                    ),
+                  ],
+                ),
               ),
-            )
-          ],
+
+
+            ],
+          ),
         ),
       ),
     );

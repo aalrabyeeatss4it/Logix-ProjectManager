@@ -71,94 +71,90 @@ class CardWizardOverlapRouteState extends State<CardWizardOverlapRoute> {
       backgroundColor:  kColorsPrimaryFont,
       appBar: PreferredSize(preferredSize: Size.fromHeight(0),
           child: Container(color: kColorsPrimaryFont)),
-      body: SingleChildScrollView(
-        child: Column(
+      body: Container(
+        color: kColorsPrimaryFont,
+        width: 1.0.sw,
+        height: 1.0.sh,
+        child: SingleChildScrollView(
+          child: Column(
 
-          children: [
-            SizedBox(height: 0.04.sh,),
-            Padding(
-              padding:   EdgeInsets.symmetric(horizontal:  18.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  InkWell(
-                    onTap:(){
-                      pageController.previousPage(duration: Duration(milliseconds: 300), curve: Curves.easeOut);
-                    },
-                    child: SvgPicture.asset(
-                      "assets/Icon/arraw_rajhit.svg",
-                      width: 24,
-                      height: 24,
-                      color: kColorsWhite,
-                    ),
-                  ),
-
-                  CustomButton(
-                    sizeHeight: 0.045.sh,
-                    sizeWidth: 0.18.sw,
-                    borderColor: kColorsWhite.withOpacity(0.1),
-                    text: 'back'.tr,
-                    color:kColorsWhite.withOpacity(0.1),
-                    style:  TextStyle(fontFamily: 'GraphikArabic',
-                      color: kColorsWhite,
-                      fontSize: 16,
-                    ),
-                    onPress: () {
-                      print("OpenAppOne in Carz back"+ stg.read(OpenAppOne).toString());
-                      setState(() {
-                        stg.write(OpenCardWizard,'OpenCardWizard' );
-                        Get.offAllNamed(RoutingApp.splashRoute);
-                      });
-
-                    },
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 0.03.sh,),
-            Container(
-              width: 1.0.sw,
-              height: 0.87.sh,
-              decoration: BoxDecoration(color: kColorsPrimaryFont),
-              child: Stack(
-                children: [
-                  // Container الخلفية
-
-                  Positioned(
-                    top: -0.1.sh, // تحريك 10% للأعلى
-                    left: 0.04.sw, // محاذاة للوسط
-                    child: Container(
-                      width: 0.92.sw,
-                      height: 0.80.sh,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.r),
-                        color: kColorsRed,
+            children: [
+              SizedBox(height: 0.04.sh,),
+              Padding(
+                padding:   EdgeInsets.symmetric(horizontal:  18.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    InkWell(
+                      onTap:(){
+                        pageController.previousPage(duration: Duration(milliseconds: 300), curve: Curves.easeOut);
+                      },
+                      child: SvgPicture.asset(
+                        "assets/Icon/arraw_rajhit.svg",
+                        width: 24,
+                        height: 24,
+                        color: kColorsWhite,
                       ),
                     ),
-                  ),
 
-                  Container(
-                    width: 1.0.sw,
-                    height: 0.90.sh,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15.r),
-                      color: kColorsWhite,
+                    CustomButton(
+                      sizeHeight: 0.045.sh,
+                      sizeWidth: 0.18.sw,
+                      borderColor: kColorsWhite.withOpacity(0.1),
+                      text: 'back'.tr,
+                      color:kColorsWhite.withOpacity(0.1),
+                      style:  TextStyle(fontFamily: 'GraphikArabic',
+                        color: kColorsWhite,
+                        fontSize: 16,
+                      ),
+                      onPress: () {
+                        print("OpenAppOne in Carz back"+ stg.read(OpenAppOne).toString());
+                        setState(() {
+                          stg.write(OpenCardWizard,'OpenCardWizard' );
+                          Get.offAllNamed(RoutingApp.splashRoute);
+                        });
+
+                      },
                     ),
-                  ),
-
-                  // Container ملون باللون الأحمر
-
-                  // PageView
-                  PageView(
-                    onPageChanged: onPageViewChange,
-                    controller: pageController,
-                    children: buildPageViewItem(),
-                  ),
-
-                ],
+                  ],
+                ),
               ),
-            )
-          ],
+              SizedBox(height: 0.03.sh,),
+              Container(
+                width: 1.0.sw,
+                child: Stack(
+                  alignment:  Alignment.center,
+                  children: [
+                    Container(
+                      width: 0.90.sw,
+                      height: 0.91.sh,
+                      decoration: ShapeDecoration(
+                        color: kColorsWhite.withOpacity(0.1),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(topLeft:Radius.circular(20),topRight: Radius.circular(20)),),),
+
+                    ),
+                    Positioned(
+                      bottom: 6,
+                      child: Container(
+                        width: 1.0.sw,
+                        height: 0.88.sh,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: kColorsWhite,
+                        ),
+                        child:     PageView(
+                          onPageChanged: onPageViewChange,
+                          controller: pageController,
+                          children: buildPageViewItem(),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -219,7 +215,6 @@ class CardWizardOverlapRouteState extends State<CardWizardOverlapRoute> {
               style: TextStyle(fontFamily: 'GraphikArabic',
                 fontSize: 14,
                 color: kColorsLightBlack,),
-
             ),
           ),
           SizedBox(
@@ -271,7 +266,7 @@ class CardWizardOverlapRouteState extends State<CardWizardOverlapRoute> {
             },
           ),
           SizedBox(
-            height: 0.121.sh,
+            height: 0.10.sh,
           ),
           Padding(
             padding:  EdgeInsets.only(top:0.0.sh,),
