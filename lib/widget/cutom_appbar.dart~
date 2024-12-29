@@ -42,7 +42,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                     flex: 1,
                     child: IsHome!=true?InkWell(
                         onTap: () {
-                          Scaffold.of(context).openDrawer();
+                          Get.back();
+                          // zoomDrawerController!.toggle!();
                         },
                         child:
                       Padding(
