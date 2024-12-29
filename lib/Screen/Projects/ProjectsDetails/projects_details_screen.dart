@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+
 import 'package:get/get.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:projectmanagers/Constants/Constants.dart';
@@ -26,7 +26,6 @@ class ProjectsDetailsScreen extends StatefulWidget {
 }
 
 class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
-  final zDProjectsDetailsController = ZoomDrawerController();
   final controller = Get.put(ProjectsDetailsController());
   int percentage = 50;
   @override
@@ -49,149 +48,134 @@ class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     final isRtl = Localizations.localeOf(context).languageCode == 'ar';
-    return  Scaffold(
+    return
+      Scaffold(
+        appBar:   MyAppBar(
+            title: 'تفاصيل المشروع'.tr,
+            colorfont: kColorsWhite),
+        drawer: Drawer(
+          child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
+        ),
+        backgroundColor: kColorsWhite,
+        body: SafeArea(
+          child:  Container(
+            color:  kColorsWhite.withOpacity(0.1),
+            margin: EdgeInsets.only(top: 20.r),
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
 
-      body: SafeArea(
-        child: ZoomDrawer(
-          isRtl: isRtl ? true : false,
-          controller: zDProjectsDetailsController,
-          style: DrawerStyle.style1,
-          menuScreen: MenuWidgetDachbord(zoomDrawerController: zDProjectsDetailsController,),
-          mainScreen: Scaffold(
-            appBar: MyAppBar(
-                title: 'تفاصيل المشروع'.tr,
-                zoomDrawerController: zDProjectsDetailsController,
-                colorfont: kColorsWhite),
-            backgroundColor:kColorsWhite.withOpacity(0.5),
-            body:     Container(
-              color:  kColorsWhite.withOpacity(0.1),
-              margin: EdgeInsets.only(top: 20.r),
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                children:[
+                  SizedBox(
+                    height: 0.01.sh,
+                  ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding:  EdgeInsets.only(left: 0.01.sw,right:  0.01.sw),
+                        child: Container(
+                          width: 343.w,
+                          decoration: BoxDecoration(
+                            color: kColorsWhite,
+                            borderRadius: BorderRadius.circular(7.r),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(top: 5.0.r, bottom: 5.r,left: 5.0.r,right: 10.0.r),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Column(
+                                  children: [
+                                    Container(
+                                      decoration: BoxDecoration(
+                                          color:kColorsWhite  ,
+                                          borderRadius: BorderRadius.circular(10.r)
+                                      ),
+                                      padding:  EdgeInsets.only(top:  2.0.r,right: 6.r,bottom: 2.r),
+                                      width: 0.99.sw,
+                                      child: Row(
 
-                  children:[
-                    SizedBox(
-                      height: 0.01.sh,
-                    ),
-                    Column(
-                      children: [
-                        Padding(
-                          padding:  EdgeInsets.only(left: 0.01.sw,right:  0.01.sw),
-                          child: Container(
-                            width: 343.w,
-                            decoration: BoxDecoration(
-                              color: kColorsWhite,
-                              borderRadius: BorderRadius.circular(7.r),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsets.only(top: 5.0.r, bottom: 5.r,left: 5.0.r,right: 10.0.r),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Column(
-                                    children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                            color:kColorsWhite  ,
-                                            borderRadius: BorderRadius.circular(10.r)
-                                        ),
-                                        padding:  EdgeInsets.only(top:  2.0.r,right: 6.r,bottom: 2.r),
-                                        width: 0.99.sw,
-                                        child: Row(
-
-                                          children: [
-                                            Expanded(
-                                                flex:9,
-                                                child: Text('تركيب نظام لجهه خاصه'.tr,  style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 14, color:kColorsBlack , fontWeight: FontWeight.w500,))),
-                                            Expanded(
-                                              flex:5,
-                                              child: CustomButton(
-                                                color:Color(0xffFF744A).withOpacity(0.3),
-                                                borderRadius: 8.r,
-                                                borderColor:  kColorsPrimaryFont,
-                                                sizeHeight: 0.04.sh,
-                                                sizeWidth: 0.30.sw,
-                                                text:'متأخر بشكل بسيط'.tr,
-                                                style: TextStyle(fontFamily: 'GraphikArabic',
-                                                    fontSize: 12,
-                                                    color: Color(0xffFF744A)),
-                                                onPress: () {
-                                                },
-                                              ),
+                                        children: [
+                                          Expanded(
+                                              flex:9,
+                                              child: Text('تركيب نظام لجهه خاصه'.tr,  style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 14, color:kColorsBlack , fontWeight: FontWeight.w500,))),
+                                          Expanded(
+                                            flex:5,
+                                            child: CustomButton(
+                                              color:Color(0xffFF744A).withOpacity(0.3),
+                                              borderRadius: 8.r,
+                                              borderColor:  kColorsPrimaryFont,
+                                              sizeHeight: 0.04.sh,
+                                              sizeWidth: 0.30.sw,
+                                              text:'متأخر بشكل بسيط'.tr,
+                                              style: TextStyle(fontFamily: 'GraphikArabic',
+                                                  fontSize: 12,
+                                                  color: Color(0xffFF744A)),
+                                              onPress: () {
+                                              },
                                             ),
-                                          ],
-                                        ),
+                                          ),
+                                        ],
                                       ),
+                                    ),
 
-                                    ],
-                                  ),
-                                  Row(
-                                    children: [
-                                      Expanded(
-                                        flex:9,
-                                        child: Column(
-                                          children: [
-                                            CustomRowText(text: 'تاريخ البدايه'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2022/2/2",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
-                                            CustomRowText(text: ' تاريخ النهايه'.tr,textStyle: TextStyle( fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2026/2/2",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
-                                            CustomRowText(text: 'مرحلة المشروع'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "sgsgsg",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
-                                          ],
-                                        ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Expanded(
+                                      flex:9,
+                                      child: Column(
+                                        children: [
+                                          CustomRowText(text: 'تاريخ البدايه'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2022/2/2",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
+                                          CustomRowText(text: ' تاريخ النهايه'.tr,textStyle: TextStyle( fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2026/2/2",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
+                                          CustomRowText(text: 'مرحلة المشروع'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "sgsgsg",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
+                                        ],
                                       ),
-                                      Expanded(
-                                        flex:4,
-                                        child:CircularPercentIndicator(
-                                          radius: 35.0,
+                                    ),
+                                    Expanded(
+                                      flex:4,
+                                      child:CircularPercentIndicator(
+                                        radius: 35.0,
 
-                                          lineWidth: 15.0,
-                                          animation: true,
-                                          percent: percentage / 100,
-                                          center: Text("$percentage%", style: TextStyle(fontSize: 12.0),),
-                                          circularStrokeCap: CircularStrokeCap.round,
-                                          progressColor: kColorsPrimaryFont,
-                                          backgroundColor: kColorsPrimaryFont.withOpacity(0.2),
-                                        ),
+                                        lineWidth: 15.0,
+                                        animation: true,
+                                        percent: percentage / 100,
+                                        center: Text("$percentage%", style: TextStyle(fontSize: 12.0),),
+                                        circularStrokeCap: CircularStrokeCap.round,
+                                        progressColor: kColorsPrimaryFont,
+                                        backgroundColor: kColorsPrimaryFont.withOpacity(0.2),
                                       ),
+                                    ),
 
-                                    ],
-                                  ),
-                                ],
-                              ),
+                                  ],
+                                ),
+                              ],
                             ),
                           ),
                         ),
-                        SizedBox(
-                          height: 0.01.sh,
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 0.01.sh,
-                    ),
-                    BuldContinerHR("المعلومات الماليه".tr, "assets/Icon/wallet (1).svg",kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.financial_information_screen);}),
-                    BuldContinerHR("مكتبة المستندات".tr, "assets/Icon/folder-open.svg",kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.document_library_screen);}),
-                    BuldContinerHR("المعلومات الفنيه".tr, "assets/Icon/document.svg",kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.technical_information_screen);}),
-                    BuldContinerHR("المهام التي تنفيذها".tr, "assets/Icon/task-square.svg",kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.tasks_performed_screen);}),
+                      ),
+                      SizedBox(
+                        height: 0.01.sh,
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 0.01.sh,
+                  ),
+                  BuldContinerHR("المعلومات الماليه".tr, "assets/Icon/wallet (1).svg",kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.financial_information_screen);}),
+                  BuldContinerHR("مكتبة المستندات".tr, "assets/Icon/folder-open.svg",kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.document_library_screen);}),
+                  BuldContinerHR("المعلومات الفنيه".tr, "assets/Icon/document.svg",kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.technical_information_screen);}),
+                  BuldContinerHR("المهام التي تنفيذها".tr, "assets/Icon/task-square.svg",kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.tasks_performed_screen);}),
 
-                  ],
-                ),
+                ],
               ),
             ),
           ),
-          clipMainScreen: true,
-            openCurve: Curves.slowMiddle,
-          closeCurve: Curves.slowMiddle,
-          borderRadius: 24.0,
-          showShadow: true,
-          angle: 0.0,
-          // drawerShadowsBackgroundColor: Colors.grey[300],
-          slideWidth: MediaQuery.of(context).size.width * 0.65.w,
-          shadowLayer1Color: kColorsorang,
         ),
 
-      ),
-      bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home,),
-    );
+      );
+
   }
 
   Widget BuldContinerHR(String TextChart ,String IconBerore,Color IconColore,Color ColorLain,Function()? Onpress1) {

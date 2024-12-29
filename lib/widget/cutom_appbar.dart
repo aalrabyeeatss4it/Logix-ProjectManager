@@ -2,7 +2,6 @@ import 'package:projectmanagers/router/route_constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '/Constants/Constants.dart';
@@ -12,10 +11,9 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Color? colorAll;
   final Color? colorfont;
   final bool? IsHome;
-  final ZoomDrawerController? zoomDrawerController ;
   @override
   final Size preferredSize;
-  MyAppBar({Key? key, this.title,this.IsHome, this.zoomDrawerController, this.colorAll, this.colorfont})
+  MyAppBar({Key? key, this.title,this.IsHome,  this.colorAll, this.colorfont})
       : preferredSize = Size.fromHeight(0.06.sh),
         super(key: key);
   @override

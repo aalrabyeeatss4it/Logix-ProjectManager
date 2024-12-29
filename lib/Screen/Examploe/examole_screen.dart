@@ -29,7 +29,6 @@ class ExamoleScreen extends StatefulWidget {
 }
 
 class _ExamoleScreenState extends State<ExamoleScreen> {
-  final zDExamoleController = ZoomDrawerController();
   final controller = Get.put(ExamoleController());
 
   final _formKeyDataAdd1 = GlobalKey<FormState>();

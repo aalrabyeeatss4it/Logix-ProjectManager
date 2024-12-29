@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:intl/intl.dart';
@@ -24,7 +23,6 @@ class TechnicalInformationScreen extends StatefulWidget {
 }
 
 class _TechnicalInformationScreenState extends State<TechnicalInformationScreen> {
-  final zDTechnicalInformationController = ZoomDrawerController();
   final controller = Get.put(TechnicalInformationController());
   bool? selectedValue=false;
   bool value1 = true; // القيمة الأولى
@@ -48,55 +46,37 @@ class _TechnicalInformationScreenState extends State<TechnicalInformationScreen>
     final isRtl = Localizations
         .localeOf(context)
         .languageCode == 'ar';
-    return Scaffold(
-      body: SafeArea(
-        child: ZoomDrawer(
-          isRtl: isRtl ? true : false,
-          controller: zDTechnicalInformationController,
-          style: DrawerStyle.style1,
-          menuScreen: MenuWidgetDachbord(
-            zoomDrawerController: zDTechnicalInformationController,
-          ),
-          mainScreen: Scaffold(
-            backgroundColor:kColorsWhite.withOpacity(0.6),
-            appBar: MyAppBar(
-              title: 'المعلومات الفنيه'.tr,
-              zoomDrawerController: zDTechnicalInformationController,
-            ),
-            body:    Container(
-           color:kColorsWhite.withOpacity(0.1),
-              child:  Column(
-                children: [
-                  SizedBox(
-                    height: 0.02.sh,
-                  ),
-                  Expanded(
-                    child:  ListView.builder(
-                        shrinkWrap: true,
-                        itemCount: 5,
-                        itemBuilder: (context, index) =>
-                            ItemTechnicalInformation()),
-                  ),
-                ],
-              ),
-            ),
-          ),
-           clipMainScreen: true,openCurve: Curves.fastOutSlowIn,
-        closeCurve: Curves.bounceIn,
-          borderRadius: 24.0,
-          showShadow: true,
-          angle: 0.0,
-          slideWidth: MediaQuery
-              .of(context)
-              .size
-              .width * 0.65.w,
-          shadowLayer1Color: kColorScafoold,
+    return
+      Scaffold(
+        appBar: MyAppBar(
+          title: 'المعلومات الفنيه'.tr,
         ),
-      ),
-      bottomNavigationBar: CustomBottomNavBar(
-        selectedMenu: MenuState.home,
-      ),
-    );
+        drawer: Drawer(
+          child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
+        ),
+        backgroundColor: kColorsWhite,
+        body: SafeArea(
+          child:  Container(
+            color:kColorsWhite.withOpacity(0.1),
+            child:  Column(
+              children: [
+                SizedBox(
+                  height: 0.02.sh,
+                ),
+                Expanded(
+                  child:  ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: 5,
+                      itemBuilder: (context, index) =>
+                          ItemTechnicalInformation()),
+                ),
+              ],
+            ),
+          ),
+        ),
+
+      );
+
   }
 
   Widget BuldTabbBar() {

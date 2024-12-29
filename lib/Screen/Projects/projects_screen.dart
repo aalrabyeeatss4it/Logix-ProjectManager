@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
 import 'package:projectmanagers/Constants/Constants.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/menu_widget_dachbord.dart';
@@ -22,7 +21,6 @@ class ProjectsScreen extends StatefulWidget {
 }
 
 class _ProjectsScreenState extends State<ProjectsScreen> {
-  final zDProjectsController = ZoomDrawerController();
   final controller = Get.put(ProjectsController());
   final _formKey = GlobalKey<FormState>();
   @override
@@ -44,68 +42,48 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
   @override
   Widget build(BuildContext context) {
     final isRtl = Localizations.localeOf(context).languageCode == 'ar';
-    return  GestureDetector(
-      onTap: () {
-        // إغلاق القائمة الجانبية عند الضغط على الشاشة
-        zDProjectsController.toggle!(); // أو zDMemberController.close!(); إذا كنت تريد الإغلاق فقط
-      },
-      child: Scaffold(
+    return
+      Scaffold(
+        appBar:     MyAppBar(
+          title: 'Projects personly'.tr,
+          colorfont: kColorsWhite),
+        drawer: Drawer(
+          child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
+        ),
         backgroundColor: kColorsWhite,
         body: SafeArea(
-          child: ZoomDrawer(
-            isRtl: isRtl ? true : false,
-            controller: zDProjectsController,
-            style: DrawerStyle.style1,
-            menuScreen: MenuWidgetDachbord(zoomDrawerController: zDProjectsController,),
-            mainScreen: Scaffold(
-              appBar: MyAppBar(
-                  title: 'Projects personly'.tr,
-                  zoomDrawerController: zDProjectsController,
-                  colorfont: kColorsWhite),
-              backgroundColor: kColorsWhite,
-              body:     Container(
-                margin: EdgeInsets.only(top: 20.r),
-                child: SingleChildScrollView(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+          child: Container(
+            margin: EdgeInsets.only(top: 20.r),
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
 
-                    children:[
-                      SizedBox(
-                        height: 5.h,
-                      ),
-                      Container(
-                        alignment: Alignment.center,
-                        padding: EdgeInsets.all(20.r),
-                        child: Form(
-                          key: _formKey,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-
-
-
-
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
+                children:[
+                  SizedBox(
+                    height: 5.h,
                   ),
-                ),
+                  Container(
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.all(20.r),
+                    child: Form(
+                      key: _formKey,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+
+
+
+
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
-            clipMainScreen: true,
-              openCurve: Curves.slowMiddle,
-            closeCurve: Curves.slowMiddle,
-            borderRadius: 24.0,
-            showShadow: true,
-            angle: 0.0,
-            // drawerShadowsBackgroundColor: Colors.grey[300],
-            slideWidth: MediaQuery.of(context).size.width * 0.65.w,
-            shadowLayer1Color: kColorsorang,
           ),
         ),
-      ),
-    );
+
+      );
   }
 }

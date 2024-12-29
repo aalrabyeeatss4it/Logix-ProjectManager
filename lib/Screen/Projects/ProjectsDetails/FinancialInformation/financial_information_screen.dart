@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:intl/intl.dart';
@@ -25,7 +24,6 @@ class FinancialInformationScreen extends StatefulWidget {
 }
 
 class _FinancialInformationScreenState extends State<FinancialInformationScreen> {
-  final zDFinancialInformationController = ZoomDrawerController();
   final controller = Get.put(FinancialInformationController());
   final controllerTabBarFinancialInformation = Get.put(TabBarFinancialInformationController());
 
@@ -72,146 +70,125 @@ class _FinancialInformationScreenState extends State<FinancialInformationScreen>
     return DefaultTabController(
       initialIndex: controllerTabBarFinancialInformation.selectedIndex,
       length: 3,
-      child:  Scaffold(
+      child:
+      Scaffold(
+         appBar: MyAppBar(
+        title: 'المعلومات الماليه'.tr,
+      ),
+        backgroundColor: kColorsWhite,
         body: SafeArea(
-          child: ZoomDrawer(
-            isRtl: isRtl ? true : false,
-            controller: zDFinancialInformationController,
-            style: DrawerStyle.style1,
-            menuScreen: MenuWidgetDachbord(
-              zoomDrawerController: zDFinancialInformationController,
-            ),
-            mainScreen: Scaffold(
-              backgroundColor:kColorsWhite.withOpacity(0.6),
-              appBar: MyAppBar(
-                title: 'المعلومات الماليه'.tr,
-                zoomDrawerController: zDFinancialInformationController,
-              ),
-              body:    Container(
-             color:kColorsWhite.withOpacity(0.1),
-                child: Column(
-                  children: <Widget>[
-                    SizedBox(
-                      height: 0.02.sh,
-                    ),
-                    Container(
-                      height: 0.06.sh,
-                      width: 0.94.sw,
+          child: Container(
+            color:kColorsWhite.withOpacity(0.1),
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 0.02.sh,
+                ),
+                Container(
+                  height: 0.06.sh,
+                  width: 0.94.sw,
 
-                      child:Align(
-                        alignment: Alignment(1,1),
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: kColorBone,
-                              borderRadius: BorderRadius.circular(10.r)),
+                  child:Align(
+                    alignment: Alignment(1,1),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: kColorBone,
+                          borderRadius: BorderRadius.circular(10.r)),
 
-                          height: 0.061.sh,
-                          width: 0.94.sw, // أو يمكن ضبط عرض مخصص
-                          child: TabBar(
-                            onTap: (index) {controllerTabBarFinancialInformation.selectedIndex = index;},
-                            controller: controllerTabBarFinancialInformation.controllerTabBar,
-                            isScrollable: true,
-                            labelColor: kColorsWhite,
-                            labelStyle: MyText.TitleTabBarWhiteselected(context),
-                            unselectedLabelColor:kColorsBlackTow,
-                            unselectedLabelStyle: MyText.TitleTabBarWhiteunselected(context),
-                            indicatorSize: TabBarIndicatorSize.label,
-                            indicator: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5.r),
-                              color: kColorsPrimaryFont,
-                            ),
-                            padding: EdgeInsets.only(bottom:3.0.r),
-                            dividerColor:Color(0xffF2F2F2) ,
-                            tabs: [
-                              Container(
-                                width: 0.25.sw,
-                                height: 0.04.sh,
-                                child: Tab(text:   "جدول الكميات".tr),
-                              ),
-                              Container(
-                                  width: 0.28.sw,
-                                  height: 0.04.sh,
-                                  child: Tab(text: 'سجل الدفعات'.tr)),
-                              Container(
-                                  width: 0.25.sw,
-                                  height: 0.04.sh,
-                                  child: Tab(text: 'شهادات الإنجاز'.tr)),
-
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: TabBarView(
+                      height: 0.061.sh,
+                      width: 0.94.sw, // أو يمكن ضبط عرض مخصص
+                      child: TabBar(
+                        onTap: (index) {controllerTabBarFinancialInformation.selectedIndex = index;},
                         controller: controllerTabBarFinancialInformation.controllerTabBar,
-                        children: [
-                          Column(
-                            children: [
-                              SizedBox(
-                                height: 0.02.sh,
-                              ),
-                              Expanded(
-                                child:  ListView.builder(
-                                    shrinkWrap: true,
-                                    itemCount: 1,
-                                    itemBuilder: (context, index) =>
-                                        ItemFinancialInformation()),
-                              ),
-                            ],
+                        isScrollable: true,
+                        labelColor: kColorsWhite,
+                        labelStyle: MyText.TitleTabBarWhiteselected(context),
+                        unselectedLabelColor:kColorsBlackTow,
+                        unselectedLabelStyle: MyText.TitleTabBarWhiteunselected(context),
+                        indicatorSize: TabBarIndicatorSize.label,
+                        indicator: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5.r),
+                          color: kColorsPrimaryFont,
+                        ),
+                        padding: EdgeInsets.only(bottom:3.0.r),
+                        dividerColor:Color(0xffF2F2F2) ,
+                        tabs: [
+                          Container(
+                            width: 0.25.sw,
+                            height: 0.04.sh,
+                            child: Tab(text:   "جدول الكميات".tr),
                           ),
-                          Column(
-                            children: [
-                              SizedBox(
-                                height: 0.02.sh,
-                              ),
-                              Expanded(
-                                child:  ListView.builder(
-                                    shrinkWrap: true,
-                                    itemCount: 2,
-                                    itemBuilder: (context, index) =>
-                                        ItemFinancialInformation()),
-                              ),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              SizedBox(
-                                height: 0.02.sh,
-                              ),
-                              Expanded(
-                                child:  ListView.builder(
-                                    shrinkWrap: true,
-                                    itemCount: 3,
-                                    itemBuilder: (context, index) =>
-                                        ItemFinancialInformation()),
-                              ),
-                            ],
-                          ),
+                          Container(
+                              width: 0.28.sw,
+                              height: 0.04.sh,
+                              child: Tab(text: 'سجل الدفعات'.tr)),
+                          Container(
+                              width: 0.25.sw,
+                              height: 0.04.sh,
+                              child: Tab(text: 'شهادات الإنجاز'.tr)),
 
                         ],
                       ),
                     ),
-                  ],
+                  ),
                 ),
-              ),
+                Expanded(
+                  child: TabBarView(
+                    controller: controllerTabBarFinancialInformation.controllerTabBar,
+                    children: [
+                      Column(
+                        children: [
+                          SizedBox(
+                            height: 0.02.sh,
+                          ),
+                          Expanded(
+                            child:  ListView.builder(
+                                shrinkWrap: true,
+                                itemCount: 1,
+                                itemBuilder: (context, index) =>
+                                    ItemFinancialInformation()),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          SizedBox(
+                            height: 0.02.sh,
+                          ),
+                          Expanded(
+                            child:  ListView.builder(
+                                shrinkWrap: true,
+                                itemCount: 2,
+                                itemBuilder: (context, index) =>
+                                    ItemFinancialInformation()),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          SizedBox(
+                            height: 0.02.sh,
+                          ),
+                          Expanded(
+                            child:  ListView.builder(
+                                shrinkWrap: true,
+                                itemCount: 3,
+                                itemBuilder: (context, index) =>
+                                    ItemFinancialInformation()),
+                          ),
+                        ],
+                      ),
+
+                    ],
+                  ),
+                ),
+              ],
             ),
-             clipMainScreen: true,openCurve: Curves.fastOutSlowIn,
-          closeCurve: Curves.bounceIn,
-            borderRadius: 24.0,
-            showShadow: true,
-            angle: 0.0,
-            slideWidth: MediaQuery
-                .of(context)
-                .size
-                .width * 0.65.w,
-            shadowLayer1Color: kColorScafoold,
           ),
         ),
-        bottomNavigationBar: CustomBottomNavBar(
-          selectedMenu: MenuState.home,
-        ),
+        bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
       ),
+
     );
   }
 

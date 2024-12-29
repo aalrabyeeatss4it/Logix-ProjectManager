@@ -4,83 +4,60 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
 import 'package:projectmanagers/widget/cutom_appbar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '/Constants/Constants.dart';
 class ContactUsScreen extends StatelessWidget {
-  final zDContactUsController=ZoomDrawerController();
   @override
   Widget build(BuildContext context) {
 
     final isRtl = Localizations.localeOf(context).languageCode=='ar';
-    return  GestureDetector(
-      onTap: () {
-        // إغلاق القائمة الجانبية عند الضغط على الشاشة
-        zDContactUsController.toggle!(); // أو zDMemberController.close!(); إذا كنت تريد الإغلاق فقط
-      },
-      child: Scaffold(
+    return
+      Scaffold(
+        appBar:   MyAppBar(title:  'Contact us'.tr ,colorAll:  kColorTab, colorfont: kColorsPrimaryFont,),
+
+    drawer: Drawer(
+          child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
+        ),
         backgroundColor: kColorsWhite,
-        body:  SafeArea(
-          child: ZoomDrawer(isRtl:isRtl?true: false,
-            controller: zDContactUsController,
-            style: DrawerStyle.style1,
-            menuScreen: MenuWidgetDachbord(zoomDrawerController: zDContactUsController,),
-            mainScreen:Scaffold(
-            backgroundColor: kColorsWhite,
-            appBar: MyAppBar(title:  'Contact us'.tr,zoomDrawerController: zDContactUsController,colorAll:  kColorTab, colorfont: kColorsPrimaryFont,),
-            body: Container(
+        body: SafeArea(
+          child: Container(
 
-                width: double.infinity,
-               color: kColorsWhite,
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
+            width: double.infinity,
+            color: kColorsWhite,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
 
 
-                      SizedBox(
-                        height: 0.02.sh,
-                      ),
-                      Padding(
-                        padding:  EdgeInsets.symmetric(horizontal:  15.0.r),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            buildCardContact(context,'Website'.tr,'https://lijantech.com/',   "assets/Icons/icon_websaite.svg",   "assets/Icons/icon_websaite.svg",'Website'),
-                            buildCardContact(context,'Unified number'.tr,'+966 50 020 2248',   "assets/Icons/icone_call.svg",   "assets/Icons/icone_call.svg",'Mobile'),
-                            buildCardContact(context,'Email'.tr,'marketing@ss4it.com.sa',   "assets/Icons/icone_direct.svg",   "assets/Icons/icone_direct.svg",'Email'),
-                            buildCardContact(context,'Location'.tr,'https://www.google.com/maps/place/%D8%A7%D9%84%D8%AD%D9%84%D9%88%D9%84+%D8%A7%D9%84%D9%82%D9%8A%D8%A7%D8%B3%D9%8A%D8%A9+%D9%84%D8%AA%D9%82%D9%86%D9%8A%D8%A9+%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%E2%80%AD/@24.6819463,46.6926869,17z/data=!3m1!4b1!4m5!3m4!1s0x3e2f048a70fb455d:0x70ad30e932737f9b!8m2!3d24.681856!4d46.6905443',   "assets/Icons/icone_map.svg",   "assets/Icons/icone_map.svg",'Location'),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 0.30.sh,
-                      ),
-
-                    ],
+                  SizedBox(
+                    height: 0.02.sh,
                   ),
-                ),
+                  Padding(
+                    padding:  EdgeInsets.symmetric(horizontal:  15.0.r),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        buildCardContact(context,'Website'.tr,'https://lijantech.com/',   "assets/Icons/icon_websaite.svg",   "assets/Icons/icon_websaite.svg",'Website'),
+                        buildCardContact(context,'Unified number'.tr,'+966 50 020 2248',   "assets/Icons/icone_call.svg",   "assets/Icons/icone_call.svg",'Mobile'),
+                        buildCardContact(context,'Email'.tr,'marketing@ss4it.com.sa',   "assets/Icons/icone_direct.svg",   "assets/Icons/icone_direct.svg",'Email'),
+                        buildCardContact(context,'Location'.tr,'https://www.google.com/maps/place/%D8%A7%D9%84%D8%AD%D9%84%D9%88%D9%84+%D8%A7%D9%84%D9%82%D9%8A%D8%A7%D8%B3%D9%8A%D8%A9+%D9%84%D8%AA%D9%82%D9%86%D9%8A%D8%A9+%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%E2%80%AD/@24.6819463,46.6926869,17z/data=!3m1!4b1!4m5!3m4!1s0x3e2f048a70fb455d:0x70ad30e932737f9b!8m2!3d24.681856!4d46.6905443',   "assets/Icons/icone_map.svg",   "assets/Icons/icone_map.svg",'Location'),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 0.30.sh,
+                  ),
+
+                ],
               ),
             ),
-            clipMainScreen: true,
-
-            // slideWidth: MediaQuery.of(context).size.width * (isRtl == true ? .45 : 0.65),
-            openCurve: Curves.slowMiddle,
-            closeCurve: Curves.slowMiddle,
-            borderRadius: 24.0,
-            showShadow: true,
-            angle: 0.0,
-            // drawerShadowsBackgroundColor: Colors.grey[300],
-            slideWidth: MediaQuery.of(context).size.width * 0.65.w,
-            shadowLayer1Color: kColorsorang,
-
           ),
         ),
 
-      ),
-    );
+      );
 
   }
 

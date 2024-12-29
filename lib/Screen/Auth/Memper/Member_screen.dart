@@ -10,7 +10,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -19,7 +18,6 @@ import 'package:projectmanagers/widget/input_text.dart';
 import '/Constants/Constants.dart';
 
 class MemberScreen extends StatelessWidget {
-  final zDMemberController = ZoomDrawerController();
   final  controller = Get.find<MemberController>();
   final _formKeyMember = GlobalKey<FormState>();
   @override
