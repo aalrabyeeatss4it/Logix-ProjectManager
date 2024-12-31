@@ -66,236 +66,65 @@ class _KeeperCovenantScreenState extends State<KeeperCovenantScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  alignment: Alignment.center,
-                  padding:const EdgeInsets.only(right:  8,left: 8),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal:8.0 ),
-                            child: Container(
-                              height: 0.04.sh,
-                              width:  0.92.sw,
-                              decoration: BoxDecoration(
-                                  color: kColorsWhite,
-                                  border: Border.all(width: 0.4,color:kColorsPrimaryFont ),
-                                  borderRadius: BorderRadius.circular(5.r)
+                InkWell(
+                  onTap: () {
+                    Get.toNamed(RoutingApp.add_keeper_covenant_screen);
+                  },
+                  child: Container(
+                    alignment: Alignment.center,
+                    padding:const EdgeInsets.only(right:  8,left: 8),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal:4.0 ),
+                              child: Container(
+                                height: 0.04.sh,
+                                width:  0.93.sw,
+                                decoration: BoxDecoration(
+                                    color: kColorsPrimaryFont,
+                                    border: Border.all(width: 0.4,color:kColorsPrimaryFont ),
+                                    borderRadius: BorderRadius.circular(5.r)
 
-                              ),
-                              child: InkWell(
-                                onTap: () {
-                                  Get.bottomSheet(
-                                    Container(
-                                      margin:const EdgeInsets.all(1.0 ),
-                                      // height: .42.sh,
-                                      height: 0.70.sh,
-                                      width: 1.0.sw,
-                                      decoration:const BoxDecoration(color: kColorsWhite,
-                                        borderRadius: BorderRadius.only(topLeft:Radius.circular(30 ),topRight: Radius.circular(30 )),
-                                      ),
-                                      child: SingleChildScrollView(
-                                        child: Column(
-                                          children: [
-                                            Row(
-                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                              children: [
-                                                Container(),
-                                                Text('search'.tr ,
-                                                  style: const TextStyle(
-                                                      fontSize: 16,
-                                                      color: kColorsPrimaryFont,
-                                                      fontWeight: FontWeight.w500
-                                                  ),),
-                                                Padding(
-                                                  padding:const EdgeInsets.all(16.0 ),
-                                                  child:
-                                                  GestureDetector(
-                                                      onTap: () {
-                                                        Get.back();
-                                                      },
-                                                      child: Container(
-                                                        height: 20.h,
-                                                        width: 20.w,
-                                                        decoration: BoxDecoration(
-                                                          borderRadius: BorderRadius.circular(25.r),
-                                                          color: kColorsLightBlackLow,
-                                                        ),
-                                                        child: Padding(
-                                                          padding: const EdgeInsets.all(3.0 ),
-                                                          child:
-                                                          Image.asset(
-                                                            "assets/Icon/clear.png",
-                                                            width: 20.r,
-                                                            height: 20.r,
-                                                            color: kColorsWhite,),
-
-                                                        ),
-                                                      )),
-                                                ),
-                                              ],
-                                            ),
-                                            Container(
-                                              alignment: Alignment.center,
-                                              padding:const EdgeInsets.all(8 ),
-                                              child: Form(
-                                                key: _formKey,
-                                                child: Column(
-                                                  mainAxisAlignment: MainAxisAlignment.center,
-                                                  children: <Widget>[
-                                                    CustomDatePaker(
-                                                      text: 'من تاريخ'.tr ,
-                                                      edit: 1,
-                                                      // controller: controller.FromDateController,
-                                                    ),
-                                                    SizedBox(
-                                                      height: 0.02.sh,
-                                                    ),
-                                                    CustomDatePaker(
-                                                      text: 'To Date'.tr ,
-                                                      edit: 1,
-                                                      // controller: controller.ToDateController,
-                                                    ),
-                                                    TextFieldWidget(
-                                                      text: 'نوع المصروف'.tr,
-                                                      edit: 1,
-                                                      // controller:controller.RegistrationNumberController,
-                                                      keyboardType: TextInputType.text,
-                                                      color: kColorsDeepWhite,
-                                                    ),
-
-                                                    SizedBox(height: 0.02.sh,),
-                                                    TextFieldWidget(
-
-                                                      text: 'الإجمالي'.tr,
-                                                      edit: 1,
-                                                      // controller:controller.SubjectController,
-                                                      keyboardType: TextInputType.number,
-                                                      color: kColorsDeepWhite,
-                                                    ),
-
-                                                    SizedBox(
-                                                      height: 0.02.sh,
-                                                    ),
-                                                    TextFieldWidget(
-
-                                                      text: 'رقم الفاتوره'.tr,
-                                                      edit: 1,
-                                                      // controller:controller.SubjectController,
-                                                      keyboardType: TextInputType.number,
-                                                      color: kColorsDeepWhite,
-                                                    ),
-
-
-
-                                                    SizedBox(
-                                                      height: 0.02.sh,
-                                                    ),
-                                                    // GetBuilder<FollowUpsController>(
-                                                    //     init: FollowUpsController(),
-                                                    //     builder: (co) {
-                                                    //       return InkWell(
-                                                    //           onTap: () async {
-                                                    //             Get.dialog(
-                                                    //               LoadingIndicatorWidget(),
-                                                    //             );
-                                                    //             Get.back();
-                                                    //             onClickSideType(co, context, controller.sideModel!.dataSide!,tag: "yes");
-                                                    //           },
-                                                    //           child: CustomTextInput(
-                                                    //
-                                                    //             iconEnd: Icon(Icons.keyboard_arrow_down, color: kColorsLightBlack,),
-                                                    //             textAlign: TextAlign.start,
-                                                    //             text: 'Side'.tr,
-                                                    //             filled: true,
-                                                    //             isEnabled: false,
-                                                    //             labelText: 'Choose'.tr,
-                                                    //             exText: 'Choose'.tr,
-                                                    //             textEditingController: controller.SideController,
-                                                    //             styleText:   TextStyle(
-                                                    //               fontSize: 13.sp,
-                                                    //               color: kColorsBlack,
-                                                    //             ),
-                                                    //             hintstyle: const TextStyle(
-                                                    //               fontSize: 12,
-                                                    //               color: kColorsLightBlackLow,
-                                                    //             ),
-                                                    //           ));
-                                                    //     }),
-                                                    // SizedBox(
-                                                    //   height: 0.02.sh,
-                                                    // ),
-                                                    CustomButton(
-                                                      color:kColorsPrimaryFont ,
-
-                                                      text: 'search'.tr,
-                                                      isIconEnd: true,
-                                                      IconEnd: SvgPicture.asset(
-                                                        "assets/Icons/left.svg",
-                                                        width: 24.r ,
-                                                        height: 24.r ,
-                                                        color: kColorsWhite,
-                                                      ),
-                                                      borderRadius: 10.r,
-                                                      sizeHeight: 0.06.sh,
-                                                      sizeWidth: 0.94.sw,
-                                                      onPress: () async {
-                                                        if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
-                                                          // if (_formKey.currentState!.validate()) {
-                                                          print("Connection".tr);
-                                                          Get.back();
-                                                          // await  controller.getDataFollowUpsApi();
-                                                          //   }
-                                                          // } else {
-                                                          //   print("No Connection".tr);
-                                                          //   GetSnackMsg(msg: "No Connection".tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
-                                                        }
-                                                      },
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                          ],
+                                ),
+                                child: InkWell(
+                                  onTap: () {
+                                    Get.toNamed(RoutingApp.add_keeper_covenant_screen);
+                                  },
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Padding(
+                                        padding:  EdgeInsets.all(6.0),
+                                        child: SvgPicture.asset(
+                                          "assets/Icon/search-normal.svg",
+                                          width: 16,
+                                          height: 16,
+                                          color: kColorsWhite,
                                         ),
                                       ),
-                                    ),
-                                    elevation: 2,
-                                    isScrollControlled: true,
-                                  );
-                                },
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Padding(
-                                      padding:  EdgeInsets.all(6.0),
-                                      child: SvgPicture.asset(
-                                        "assets/Icon/search-normal.svg",
-                                        width: 16,
-                                        height: 16,
+                                      Text(
+                                        'حافظة عهدة جديدة'.tr,
+                                        style:
+                                        TextStyle(fontFamily: 'GraphikArabic',color: kColorsWhite, fontSize: 16,fontWeight: FontWeight.w500),
                                       ),
-                                    ),
-                                    Text(
-                                      'search'.tr,
-                                      style:
-                                      TextStyle(fontFamily: 'GraphikArabic',color: kColorsPrimaryFont, fontSize: 16,fontWeight: FontWeight.w500),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
 
-                        ],
-                      ),
-                      SizedBox(
-                        height: 0.05.sh,
-                      ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 0.05.sh,
+                        ),
 
-                    ],
+                      ],
+                    ),
                   ),
                 ),
                 Expanded(

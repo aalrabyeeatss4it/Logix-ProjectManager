@@ -12,6 +12,7 @@ import 'package:projectmanagers/Screen/Projects/ProjectsDetails/TechnicalInforma
 import 'package:projectmanagers/Screen/Projects/ProjectsDetails/projects_details_controller.dart';
 import 'package:projectmanagers/Screen/Projects/projects_controller.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/electronic_services_controller.dart';
+import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/add_keeper_covenant_controller.dart';
 import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/keeper_covenant_controller.dart';
 import 'package:projectmanagers/Screen/dashboard/Reports/reports_controller.dart';
 
@@ -87,6 +88,14 @@ class KeeperCovenantBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<KeeperCovenantController>(() => KeeperCovenantController(),
+    );
+
+  }
+}
+class AddKeeperCovenantBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut<AddKeeperCovenantController>(() => AddKeeperCovenantController(),
     );
 
   }

@@ -23,11 +23,11 @@ class _SplashScreenState extends State<SplashScreen> {
     print("on start app from timer");
     Timer(
          Duration(seconds: 2), () {
-      // stg.read(OpenCardWizard) == null ?Get.offAllNamed( RoutingApp.cardWizardOverlapScreenRoute)  : stg.read(OpenScreenMember) == null ? Get.offAllNamed(
-      //   RoutingApp.member_screen,) : stg.read(OpenScreenlogen) == null ?
-      // Get.offAllNamed(RoutingApp.login_route,) : Get.offAllNamed(RoutingApp.dashboardRoute);
+      stg.read(OpenCardWizard) == null ?Get.offAllNamed( RoutingApp.cardWizardOverlapScreenRoute)  : stg.read(OpenScreenMember) == null ? Get.offAllNamed(
+        RoutingApp.member_screen,) : stg.read(OpenScreenlogen) == null ?
+      Get.offAllNamed(RoutingApp.login_route,) : Get.offAllNamed(RoutingApp.dashboardRoute);
 
-      Get.offAllNamed(RoutingApp.member_screen);
+
     });
     print("on start app from timer");
   }

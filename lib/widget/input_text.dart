@@ -77,14 +77,15 @@ class CustomTextInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(
-          left: 10.0.r, right: 10.0.r),
+      padding: EdgeInsets.only(left: 11.0.r,right: 6.0.r,top: 5.0.r),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           text == null ? SizedBox() : Padding(
-            padding: EdgeInsets.only(bottom: 5.0.r, right: 4.0.r),
-            child: Text(text.toString() , style: styleText ?? TextStyle(fontSize: 14, color: kColorsBlack,),
+            padding: EdgeInsets.only(
+                left:20.r, right:4.r,
+                bottom:5.r),
+            child: Text(text.toString() , style:  TextStyle(fontSize: 14, color: Color(0xff010B38),  ),
             ),
           ),
           SizedBox(height:  0.01.sh),
@@ -92,7 +93,6 @@ class CustomTextInput extends StatelessWidget {
             height: 0.06.sh,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.r),
-              // border: Border.all(color: kColorsPrimaryFont, width: 0.7,)
             ),
             child: TextFormField(
               textAlign: textAlign ?? (icon1 != null ? TextAlign.center : TextAlign.start),
@@ -100,7 +100,7 @@ class CustomTextInput extends StatelessWidget {
               initialValue: inetValue,
               decoration: InputDecoration(
                 labelStyle: TextStyle(
-                  fontSize: 11.sp,
+                  fontSize: 12,
                   color: kColorsBlack,
                 ),
                 fillColor: fillColor ?? kColorsWhite,

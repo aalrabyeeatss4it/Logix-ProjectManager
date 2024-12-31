@@ -21,7 +21,15 @@ class RoutingApp {
 
 
   static const String electronic_services_screen = "/electronic_services_screen";
+
+
+
   static const String keeper_covenant_screen = "/keeper_covenant_screen";
+  static const String add_keeper_covenant_screen = "/add_keeper_covenant_screen";
+
+
+
+
   static const String reports_screen = "/reports_screen";
 
 

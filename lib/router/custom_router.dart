@@ -13,6 +13,7 @@ import 'package:projectmanagers/Screen/Projects/ProjectsDetails/projects_details
 import 'package:projectmanagers/Screen/Projects/projects_screen.dart';
 import 'package:projectmanagers/Screen/card_wizard_overlap.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/electronic_services_screen.dart';
+import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/add_keeper_covenant_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/keeper_covenant_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/Reports/reports_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/dashboard_screen.dart';
@@ -127,6 +128,15 @@ class Pages {
           page: () => KeeperCovenantScreen(),
           bindings: [
             KeeperCovenantBinding(),
+          ]
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.add_keeper_covenant_screen,
+          page: () => AddKeeperCovenantScreen(),
+          bindings: [
+            AddKeeperCovenantBinding(),
           ]
       ),
       GetPage(

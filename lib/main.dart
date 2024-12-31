@@ -23,7 +23,7 @@ void main() async {
    HttpOverrides.global = MyHttpOverrides();
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: kColorsPrimaryFont, // اللون الخلفي لشريط الحالة
+    statusBarColor: kColorsWhite, // اللون الخلفي لشريط الحالة
     statusBarIconBrightness: Brightness.dark, // لون الأيقونات (فاتح أو داكن)
   ));
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp],);
@@ -64,7 +64,7 @@ class _MyAppState extends State<MyApp>{
             getPages: Pages.pages(),
             defaultTransition: Transition.rightToLeftWithFade,
             transitionDuration:const  Duration(milliseconds: 400),
-            initialRoute: RoutingApp.cardWizardOverlapScreenRoute
+            initialRoute: RoutingApp.splashRoute
         )
     );
   }

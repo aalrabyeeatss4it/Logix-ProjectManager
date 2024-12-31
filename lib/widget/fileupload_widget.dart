@@ -35,37 +35,33 @@ final Function? onDone;
               borderType: BorderType.Rect,
               radius: Radius.circular(70.r),
               dashPattern: [9, 9],
-              color: kColorsPrimaryFont,
-              strokeWidth: 2,
+              color: kColorsBlackTow.withOpacity(0.7),
+              strokeWidth: 1,
               child: Container(
-                height:0.06.sh ,
+                height:0.045.sh ,
                 width: 0.35.sw,
-                color:kColorsPrimaryFont.withOpacity(0.1) ,
-
-                child: Container(
-                  decoration: BoxDecoration(
-                    color:kColorsPrimaryFont.withOpacity(0.1) ,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset(
-                        "assets/Icons/uplode.svg",
-                        width: 21,
-                        height: 13,
-                        color: kColorsPrimaryFont,
-                      ),
-                      SizedBox(width: 0.015.sw,),
-                      Text('download'.tr,style:
-                      TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                        color: kColorsPrimaryFont,
-                      ),)
-                    ],),
+                decoration: BoxDecoration(
+                  color: Color(0xff178CAF).withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(12),
                 ),
+
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset(
+                      "assets/Icons/uplode.svg",
+                      width: 21,
+                      height: 13,
+                      color:  kColorsBlackTow.withOpacity(0.7),
+                    ),
+                    SizedBox(width: 0.015.sw,),
+                    Text('download'.tr,style:
+                    TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      color:  kColorsBlackTow.withOpacity(0.7),
+                    ),)
+                  ],),
               ),
             ),
           ),

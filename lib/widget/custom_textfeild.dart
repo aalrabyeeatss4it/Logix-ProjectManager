@@ -62,9 +62,8 @@ class TextFieldWidget extends StatelessWidget {
                 text!.tr,
 
                 style: TextStyle(
-                  fontFamily: 'GraphikArabic',
-                  fontSize: 12,
-                  color: kColorsBlack,
+                  fontSize: 14,
+                  color: Color(0xff010B38),
                 ),)
           ):SizedBox(),
           TextFormField(

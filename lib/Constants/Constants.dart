@@ -4,7 +4,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 
-// const Color kColorsPrimaryFont =  Color(0xff0692AC);
+// const Color kColorsPrimaryFont =  Color(0xff178CAF);
 const Color kColorsPrimaryFont =Color(0xff0792AD);
 const Color kColorsPrimaryFontLow = Color(0xff9AB7DB);
 const Color kColorsIcon = Color(0xff242424);
