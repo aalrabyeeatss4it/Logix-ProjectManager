@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/services.dart';
 import 'package:projectmanagers/router/route_constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     print("on start app from timer");
     Timer(
-         Duration(seconds: 2), () {
+         Duration(seconds: 2 ), () {
       stg.read(OpenCardWizard) == null ?Get.offAllNamed( RoutingApp.cardWizardOverlapScreenRoute)  : stg.read(OpenScreenMember) == null ? Get.offAllNamed(
         RoutingApp.member_screen,) : stg.read(OpenScreenlogen) == null ?
       Get.offAllNamed(RoutingApp.login_route,) : Get.offAllNamed(RoutingApp.dashboardRoute);
@@ -33,6 +34,10 @@ class _SplashScreenState extends State<SplashScreen> {
   }
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: kColorsPrimaryFont, // اللون الخلفي لشريط الحالة
+      statusBarIconBrightness: Brightness.light, // لون الأيقونات (فاتح أو داكن)
+    ));
     return Scaffold(
       body:   Container(
         width: double.infinity,

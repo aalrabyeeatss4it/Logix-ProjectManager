@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:flutter/services.dart';
 import 'package:projectmanagers/Constants/Constants.dart';
 import 'package:projectmanagers/Models/wizard.dart';
 import 'package:projectmanagers/router/route_constants.dart';
@@ -66,7 +67,10 @@ class CardWizardOverlapRouteState extends State<CardWizardOverlapRoute> {
 
   @override
   Widget build(BuildContext context) {
-
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: kColorsPrimaryFont, // اللون الخلفي لشريط الحالة
+      statusBarIconBrightness: Brightness.light, // لون الأيقونات (فاتح أو داكن)
+    ));
     return Scaffold(
       backgroundColor:  kColorsPrimaryFont,
       appBar: PreferredSize(preferredSize: Size.fromHeight(0),

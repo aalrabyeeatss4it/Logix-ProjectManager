@@ -12,6 +12,9 @@ import 'package:projectmanagers/Screen/Projects/ProjectsDetails/TechnicalInforma
 import 'package:projectmanagers/Screen/Projects/ProjectsDetails/projects_details_screen.dart';
 import 'package:projectmanagers/Screen/Projects/projects_screen.dart';
 import 'package:projectmanagers/Screen/card_wizard_overlap.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ArchiveDocumentProject/add_archive_document_project_screen.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/CloseProject/add_close_project_screen.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/UplodeReportProject/add_uplode_report_project_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/electronic_services_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/add_keeper_covenant_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/keeper_covenant_screen.dart';
@@ -112,6 +115,9 @@ class Pages {
             NotifcationBinding(),
           ]
       ),
+
+
+      //الخدمات الالكترونية
       GetPage(
           transition: Transition.native,
           transitionDuration: Duration(milliseconds: 400),
@@ -121,6 +127,38 @@ class Pages {
             ElectronicServicesBinding(),
           ]
       ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.add_close_project_screen,
+          page: () => AddCloseProjectScreen(),
+          bindings: [
+            AddCloseProjectBinding(),
+          ]
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.add_uplode_report_project_screen,
+          page: () => AddUplodeReportProjectScreen(),
+          bindings: [
+            AddUplodeReportProjectBinding(),
+          ]
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.add_archive_document_project_screen,
+          page: () => AddArchiveDocumentProjectScreen(),
+          bindings: [
+            AddArchiveDocumentProjectBinding(),
+          ]
+      ),
+
+
+
+
+      //حافظة العهد
       GetPage(
           transition: Transition.native,
           transitionDuration: Duration(milliseconds: 400),

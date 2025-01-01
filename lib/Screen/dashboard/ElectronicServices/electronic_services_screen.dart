@@ -51,7 +51,7 @@ class _ElectronicServicesScreenState extends State<ElectronicServicesScreen> {
       Scaffold(
         appBar:  MyAppBar(
             title: 'الخدمات الإلكترونيه'.tr,
-            colorfont: kColorsWhite),
+            colorfont: kColorsWhite, IsHome: true,),
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
@@ -68,9 +68,9 @@ class _ElectronicServicesScreenState extends State<ElectronicServicesScreen> {
                   Row(
 
                     children: [
-                      buildContainer('English language'.tr,kColorsPrimaryFont,kColorsWhite),
-                      buildContainer('English language'.tr,kColorsPrimaryFont,kColorsWhite),
-                      buildContainer('English language'.tr,kColorsPrimaryFont,kColorsWhite),
+                      buildContainer('طلب إغلاق مشروع'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_close_project_screen);}),
+                      buildContainer('طلب مورد لمشروع'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_close_project_screen);}),
+                      buildContainer('رفع تقرير عن مشروع'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_uplode_report_project_screen);}),
                     ],
                   ),
                   SizedBox(
@@ -78,9 +78,9 @@ class _ElectronicServicesScreenState extends State<ElectronicServicesScreen> {
                   ),
                   Row(
                     children: [
-                      buildContainer('English language'.tr,kColorsPrimaryFont,kColorsWhite),
-                      buildContainer('English language'.tr,kColorsPrimaryFont,kColorsWhite),
-                      buildContainer('English language'.tr,kColorsPrimaryFont,kColorsWhite),
+                      buildContainer('ارشفة المستندات للمشروع'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_archive_document_project_screen);}),
+                      buildContainer('تحديث الخطة الزمنية'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_close_project_screen);}),
+                      buildContainer('الدروس المستفادة من المشروع'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_close_project_screen);}),
                     ],
                   ),
                   SizedBox(
@@ -88,9 +88,9 @@ class _ElectronicServicesScreenState extends State<ElectronicServicesScreen> {
                   ),
                   Row(
                     children: [
-                      buildContainer('English language'.tr,kColorsPrimaryFont,kColorsWhite),
-                      buildContainer('English language'.tr,kColorsPrimaryFont,kColorsWhite),
-                      buildContainer('English language'.tr,kColorsPrimaryFont,kColorsWhite),
+                      buildContainer('طلب صرف مواد لمشروع'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_close_project_screen);}),
+                      buildContainer('طلب شراء مواد لمشروع'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_close_project_screen);}),
+                      buildContainer('طلب تسوية عهدة'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_close_project_screen);}),
 
                     ],
                   ),
@@ -104,66 +104,85 @@ class _ElectronicServicesScreenState extends State<ElectronicServicesScreen> {
       );
 
   }
-  Widget buildContainer(String text, Color colortext,Color colorborder) {
-    return  Row(
-      children: [
+  Widget buildContainer(String text, Color colortext,Color colorborder,Function? onpress) {
+    return  InkWell(
+      onTap: () {
+        onpress!();
+      },
+      child: Row(
+        children: [
 
-        Container(
-          width: 0.29.sw,
-          height: 0.09.sh,
-          decoration: BoxDecoration(
-              color:kColorsWhite  ,
-              borderRadius: BorderRadius.circular(6.r)
-          ),
-          child: Column(
-            children: [
-              Expanded(
-               flex: 10,
-                child: Padding(
-                  padding:  EdgeInsets.only(top:  25.0),
-                  child: Text(text.toString(),textAlign: TextAlign.center,style: TextStyle(
-                      fontSize: 12,
-                      color: colortext,
-                      fontWeight: FontWeight.w500)),
+          Container(
+            width: 0.29.sw,
+            height: 0.09.sh,
+            decoration: BoxDecoration(
+                color:kColorsWhite  ,
+                borderRadius: BorderRadius.circular(6.r),
+              boxShadow: [
+                BoxShadow(
+                  color: kColorsLightBlackLow.withOpacity(0.2),
+                  spreadRadius: 4,
+                  blurRadius: 5.r,
+                  offset:Offset(0, 2), // changes position of shadow
                 ),
-              ),
-              Expanded(
-                flex: 4,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Container(
+              ],
+            ),
+            child: Column(
+              children: [
+                Expanded(
+                 flex: 10,
+                  child:
 
+                  Center(
+                    child: Padding(
+                      padding:  EdgeInsets.only(top:  10.0,right: 10.0.r,left: 10.0.r),
+                      child: Text(text.toString(),textAlign: TextAlign.center,  style: TextStyle(
+                        color: Color(0xFF242424),
+                        fontSize: 12,
+                        fontFamily: 'GraphikArabic',
+                        fontWeight: FontWeight.w400,
+                        height: 1.37,
+                      ),),
                     ),
-                    Container(
-                      width: 0.05.sw,
-                      height: 0.07.sh,
-                      decoration: BoxDecoration(
-                          color: kColorsPrimaryFont ,
-                          borderRadius: BorderRadius.only(topRight:Radius.circular(5) )
+                  ),
+                ),
+                Expanded(
+                  flex: 4,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Container(
                       ),
+                      Container(
+                        width: 0.05.sw,
+                        height: 0.07.sh,
+                        decoration: BoxDecoration(
+                            color: kColorsPrimaryFont ,
+                            borderRadius: BorderRadius.only(topRight:Radius.circular(5) )
+                        ),
 
-                      child: Padding(
-                        padding:  EdgeInsets.all(1.0.r),
-                        child: SvgPicture.asset(
-                          "assets/Icon/arrow-left2.svg",
-                          width: 24.r ,
-                          height: 24.r ,
-                          color: kColorsWhite,
+                        child: Padding(
+                          padding:  EdgeInsets.all(1.0.r),
+                          child: SvgPicture.asset(
+                            "assets/Icon/arrow-left2.svg",
+                            width: 24.r ,
+                            height: 24.r ,
+                            color: kColorsWhite,
+                          ),
                         ),
                       ),
-                    ),
 
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-        Container(
-          width: 0.03.sw,
-        ),
-      ],
+          Container(
+            width: 0.03.sw,
+          ),
+        ],
+      ),
     );
   }
 }

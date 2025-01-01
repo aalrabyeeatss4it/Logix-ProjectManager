@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:projectmanagers/Screen/Auth/login/login_controller.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/menu_widget_dachbord.dart';
 import 'package:projectmanagers/apiservice/checkInterNet.dart';
@@ -30,6 +31,10 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: kColorsPrimaryFont, // اللون الخلفي لشريط الحالة
+      statusBarIconBrightness: Brightness.light, // لون الأيقونات (فاتح أو داكن)
+    ));
     final isRtl = Localizations.localeOf(context).languageCode == 'ar';
     return Scaffold(
       backgroundColor: kColorsPrimaryFont,

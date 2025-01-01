@@ -56,7 +56,7 @@ class TextFieldWidget extends StatelessWidget {
         children: [
           edit!=null?  Container(
               padding: EdgeInsets.only(
-                  left:20.r, right:4.r,
+                  left:20.r,
                   bottom:5.r),
               child: Text(
                 text!.tr,

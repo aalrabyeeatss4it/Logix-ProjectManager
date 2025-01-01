@@ -22,7 +22,6 @@ import 'package:shimmer_animation/shimmer_animation.dart';
 
 class ItemTasksPerformed extends StatelessWidget {
   ItemTasksPerformed();
-  final _formKeyChing = GlobalKey<FormState>();
   final  controller = Get.put(TasksPerformedController());
   final _formKeyAdd = GlobalKey<FormState>();
   @override
@@ -45,6 +44,14 @@ class ItemTasksPerformed extends StatelessWidget {
               decoration: BoxDecoration(
                 color: kColorsWhite,
                 borderRadius: BorderRadius.circular(10.r),
+                boxShadow: [
+                  BoxShadow(
+                    color: kColorsLightBlackLow.withOpacity(0.2),
+                    spreadRadius: 1,
+                    blurRadius: 5.r,
+                    offset:Offset(0, 7), // changes position of shadow
+                  ),
+                ],
               ),
               child: Padding(
                 padding: EdgeInsets.only(top: 5.0.r, bottom: 5.r, left:isRtl!=true? 10.0.r:0.0, right:isRtl==true? 10.0.r:0.0),
@@ -53,12 +60,12 @@ class ItemTasksPerformed extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        CustomRowText(text: 'المهمه'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsPrimaryFont, fontWeight: FontWeight.w500,), textValue: " مصدر المستند", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite,),
+                        CustomRowText(text: 'المهمه'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsPrimaryFont, fontWeight: FontWeight.w500,), textValue: " مصدر المستند", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite,),
 
-                        CustomTowRowText(flex:4,text: 'المسؤؤل'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: "حذيفه المجيدي", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite, text2: "الحاله".tr, textValue2: "لم يتم البدء",),
-                        CustomTowRowText(flex:4,text: 'رقم النشاط '.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: "5555", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite, text2: "إنجاز المخطط".tr, textValue2: "95%",),
-                        CustomTowRowText(flex:4,text: 'تاريخ البدايه الفعلي '.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: "2023/5/8", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite, text2: "تاريخ النهايه الفعلي ".tr, textValue2: " 2028/5/9",),
-                        CustomTowRowText(flex:4,text: 'نسبة المهمه من المشروع'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: "56%", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite, text2: "نسبة الإنجاز الفعلي".tr, textValue2: "23%",),
+                        CustomTowRowText(flex:4,text: 'المسؤؤل'.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "حذيفه المجيدي", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "الحاله".tr, textValue2: "لم يتم البدء",),
+                        CustomTowRowText(flex:4,text: 'رقم النشاط '.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "5555", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "إنجاز المخطط".tr, textValue2: "95%",),
+                        CustomTowRowText(flex:4,text: 'تاريخ البدايه الفعلي '.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "2023/5/8", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "تاريخ النهايه الفعلي ".tr, textValue2: " 2028/5/9",),
+                        CustomTowRowText(flex:4,text: 'نسبة المهمه من المشروع'.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "56%", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "نسبة الإنجاز الفعلي".tr, textValue2: "23%",),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
@@ -66,12 +73,14 @@ class ItemTasksPerformed extends StatelessWidget {
                             CustomButton(
                               color: kColorsPrimaryFont,
                               borderRadius: 6.r,
-                              sizeHeight: 0.06.sh,
+                              sizeHeight: 0.05.sh,
                               sizeWidth: 0.40.sw,
                               text: 'تغيير الحاله'.tr,
-                              style: TextStyle(fontFamily: 'GraphikArabic',
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w500,
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'GraphikArabic',
+                                  fontWeight: FontWeight.w600,
+                                  height: 1.17,
                                   color:
                                   kColorsWhite),
                               onPress: () async{
@@ -205,14 +214,16 @@ class ItemTasksPerformed extends StatelessWidget {
                               child: CustomButton(
                                 color: kColorsWhite,
                                 borderRadius: 6.r,
-                                sizeHeight: 0.06.sh,
+                                sizeHeight: 0.05.sh,
                                 sizeWidth: 0.40.sw,
 
                                 borderColor: kColorsPrimaryFont,
                                 text: 'إضافة ملاحظه'.tr,
-                                style: TextStyle(fontFamily: 'GraphikArabic',
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w500,
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    fontFamily: 'GraphikArabic',
+                                    fontWeight: FontWeight.w600,
+                                    height: 1.17,
                                     color:
                                     kColorsPrimaryFont),
                                 onPress: () async{

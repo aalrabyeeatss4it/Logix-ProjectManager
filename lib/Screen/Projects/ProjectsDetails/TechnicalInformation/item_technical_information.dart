@@ -35,8 +35,16 @@ class ItemTechnicalInformation extends StatelessWidget {
 
               width: 0.95.sw,
               decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: kColorsLightBlackLow.withOpacity(0.4),
+                    spreadRadius:2,
+                    blurRadius: 5.r,
+                    offset:Offset(0, 10), // changes position of shadow
+                  ),
+                ],
                 color: kColorsWhite,
-                borderRadius: BorderRadius.circular(10.r),
+                borderRadius: BorderRadius.circular(5),
               ),
               child: Padding(
                 padding: EdgeInsets.only(top: 5.0.r, bottom: 5.r, left:isRtl!=true? 10.0.r:0.0, right:isRtl==true? 10.0.r:0.0),
@@ -45,12 +53,10 @@ class ItemTechnicalInformation extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        CustomRowText(text: ' اسم المخرج '.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: " مصدر المستند", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite,),
-
-
-                        CustomTowRowText(flex:4,text: ' رقم المخرج'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: "256556", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite, text2: "    العدد".tr, textValue2: " 5325",),
-                        CustomTowRowText(flex:4,text: 'العدد المعتمد سابقا'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: "5555", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite, text2: "العدد في الميثاق".tr, textValue2: "56246",),
-                        CustomRowText(text: ' الملاحظات'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: " وصف المستند ", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite,),
+                        CustomRowText(flex :3,text: ' اسم المخرج '.tr, textStyle:   TextStyle(fontSize: 12, color:kColorsPrimaryFont, fontWeight: FontWeight.w500,), textValue: " مصدر المستند", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite,),
+                        CustomTowRowText(flex:4,text: ' رقم المخرج'.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "256556", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "    العدد".tr, textValue2: " 5325",),
+                        CustomTowRowText(flex:4,text: 'العدد المعتمد سابقا'.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "5555", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "العدد في الميثاق".tr, textValue2: "56246",),
+                        CustomRowText(text: ' الملاحظات'.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: " وصف المستند ", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite,),
 
 
                       ],
@@ -63,7 +69,7 @@ class ItemTechnicalInformation extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 0.01.sh,
+            height: 0.005.sh,
           ),
         ],
       ),

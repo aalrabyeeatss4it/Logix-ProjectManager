@@ -54,7 +54,7 @@ class _KeeperCovenantScreenState extends State<KeeperCovenantScreen> {
       Scaffold(
         appBar:  MyAppBar(
             title: 'حافظة العهدة'.tr,
-            colorfont: kColorsWhite),
+            colorfont: kColorsWhite, IsHome: true,),
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
@@ -82,7 +82,7 @@ class _KeeperCovenantScreenState extends State<KeeperCovenantScreen> {
                             Padding(
                               padding: const EdgeInsets.symmetric(horizontal:4.0 ),
                               child: Container(
-                                height: 0.04.sh,
+                                height: 0.05.sh,
                                 width:  0.93.sw,
                                 decoration: BoxDecoration(
                                     color: kColorsPrimaryFont,
@@ -100,9 +100,9 @@ class _KeeperCovenantScreenState extends State<KeeperCovenantScreen> {
                                       Padding(
                                         padding:  EdgeInsets.all(6.0),
                                         child: SvgPicture.asset(
-                                          "assets/Icon/search-normal.svg",
-                                          width: 16,
-                                          height: 16,
+                                          "assets/Icon/AddKeeper.svg",
+                                          width: 24,
+                                          height: 24,
                                           color: kColorsWhite,
                                         ),
                                       ),
@@ -132,7 +132,14 @@ class _KeeperCovenantScreenState extends State<KeeperCovenantScreen> {
                       shrinkWrap: true,
                       itemCount: 3,
                       itemBuilder: (context, index) =>
-                          ItemKeeperCovenant()),
+                          Column(
+                            children: [
+                              ItemKeeperCovenant(),
+                              SizedBox(
+                                height: 0.01.sh,
+                              ),
+                            ],
+                          )),
                 ),
 
               ],

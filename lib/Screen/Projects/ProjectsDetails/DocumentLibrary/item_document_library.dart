@@ -37,6 +37,14 @@ class ItemDocumentLibrary extends StatelessWidget {
               decoration: BoxDecoration(
                 color: kColorsWhite,
                 borderRadius: BorderRadius.circular(10.r),
+                boxShadow: [
+                  BoxShadow(
+                    color: kColorsLightBlackLow.withOpacity(0.2),
+                    spreadRadius: 1,
+                    blurRadius: 5.r,
+                    offset:Offset(0, 7), // changes position of shadow
+                  ),
+                ],
               ),
               child: Padding(
                 padding: EdgeInsets.only(top: 5.0.r, bottom: 5.r, left:isRtl!=true? 10.0.r:0.0, right:isRtl==true? 10.0.r:0.0),
@@ -45,9 +53,9 @@ class ItemDocumentLibrary extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        CustomTowRowText(text: '    اسم المستند'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: "ملف كذا كذا  ", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite, text2: "    التاريخ".tr, textValue2: "2024/2/2",),
-                        CustomRowText(text: ' الوصف'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: " وصف المستند ", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite,),
-                        CustomRowText(text: ' المصدر'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: " مصدر المستند", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite,),
+                        CustomTowRowText(text: '    اسم المستند'.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "ملف كذا كذا  ", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "    التاريخ".tr, textValue2: "2024/2/2",),
+                        CustomRowText(text: ' الوصف'.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: " وصف المستند ", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite,),
+                        CustomRowText(text: ' المصدر'.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: " مصدر المستند", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite,),
 
 
                       ],

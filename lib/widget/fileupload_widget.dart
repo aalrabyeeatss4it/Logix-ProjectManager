@@ -69,7 +69,9 @@ final Function? onDone;
         SizedBox(width: 10,),
         Expanded(child: CustomText(text:name == '' ? 'There is no archive'.tr:name,textStyle: TextStyle(
           fontSize: 12,
-          fontWeight: FontWeight.w500,
+          fontFamily: 'GraphikArabic',
+          fontWeight: FontWeight.w400,
+          height: 2,
           color: Color(0xFFA4A4A4),
         ),))
       ],

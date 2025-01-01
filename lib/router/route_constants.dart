@@ -21,7 +21,9 @@ class RoutingApp {
 
 
   static const String electronic_services_screen = "/electronic_services_screen";
-
+  static const String add_close_project_screen = "/add_close_project_screen";
+  static const String add_archive_document_project_screen = "/add_archive_document_project_screen";
+  static const String add_uplode_report_project_screen = "/add_uplode_report_project_screen";
 
 
   static const String keeper_covenant_screen = "/keeper_covenant_screen";

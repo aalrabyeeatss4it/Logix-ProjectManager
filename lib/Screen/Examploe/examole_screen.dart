@@ -77,7 +77,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //          style: TextStyle(
             //            color: Color(0xFF242424),
             //            fontSize: 16,
-            //            fontFamily: 'Graphik Arabic',
+            //            fontFamily: 'GraphikArabic',
             //            fontWeight: FontWeight.w500,
             //            height: 1.02,
             //          ),
@@ -135,7 +135,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //                        style: TextStyle(
             //                          color: Color(0xFF292D32),
             //                          fontSize: 14,
-            //                          fontFamily: 'Graphik Arabic',
+            //                          fontFamily: 'GraphikArabic',
             //                          fontWeight: FontWeight.w400,
             //                        ),
             //                      ),
@@ -170,7 +170,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //                      style: TextStyle(
             //                        color: Color(0xFF0792AD),
             //                        fontSize: 14,
-            //                        fontFamily: 'Graphik Arabic',
+            //                        fontFamily: 'GraphikArabic',
             //                        fontWeight: FontWeight.w400,
             //                      ),
             //                    ),
@@ -206,7 +206,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //                        style: TextStyle(
             //                          color: Color(0xFF242424),
             //                          fontSize: 14,
-            //                          fontFamily: 'Graphik Arabic',
+            //                          fontFamily: 'GraphikArabic',
             //                          fontWeight: FontWeight.w400,
             //                        ),
             //                      ),
@@ -243,7 +243,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //                        style: TextStyle(
             //                          color: Color(0xFF292D32),
             //                          fontSize: 14,
-            //                          fontFamily: 'Graphik Arabic',
+            //                          fontFamily: 'GraphikArabic',
             //                          fontWeight: FontWeight.w400,
             //                        ),
             //                      ),
@@ -280,7 +280,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //          style: TextStyle(
             //            color: Color(0xFF010B38),
             //            fontSize: 14,
-            //            fontFamily: 'Graphik Arabic',
+            //            fontFamily: 'GraphikArabic',
             //            fontWeight: FontWeight.w400,
             //            height: 1.14,
             //          ),
@@ -311,7 +311,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //                style: TextStyle(
             //                  color: Color(0x66010B38),
             //                  fontSize: 12,
-            //                  fontFamily: 'Graphik Arabic',
+            //                  fontFamily: 'GraphikArabic',
             //                  fontWeight: FontWeight.w400,
             //                  height: 2,
             //                ),
@@ -350,7 +350,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //                style: TextStyle(
             //                  color: Color(0x66010B38),
             //                  fontSize: 12,
-            //                  fontFamily: 'Graphik Arabic',
+            //                  fontFamily: 'GraphikArabic',
             //                  fontWeight: FontWeight.w400,
             //                  height: 2,
             //                ),
@@ -368,7 +368,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //          style: TextStyle(
             //            color: Color(0xFF010B38),
             //            fontSize: 14,
-            //            fontFamily: 'Graphik Arabic',
+            //            fontFamily: 'GraphikArabic',
             //            fontWeight: FontWeight.w400,
             //            height: 1.14,
             //          ),
@@ -412,7 +412,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //                        style: TextStyle(
             //                          color: Color(0x66010B38),
             //                          fontSize: 12,
-            //                          fontFamily: 'Graphik Arabic',
+            //                          fontFamily: 'GraphikArabic',
             //                          fontWeight: FontWeight.w400,
             //                          height: 2,
             //                        ),
@@ -462,7 +462,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //          style: TextStyle(
             //            color: Color(0xFF010B38),
             //            fontSize: 14,
-            //            fontFamily: 'Graphik Arabic',
+            //            fontFamily: 'GraphikArabic',
             //            fontWeight: FontWeight.w400,
             //            height: 1.14,
             //          ),
@@ -506,7 +506,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //                        style: TextStyle(
             //                          color: Color(0x66010B38),
             //                          fontSize: 12,
-            //                          fontFamily: 'Graphik Arabic',
+            //                          fontFamily: 'GraphikArabic',
             //                          fontWeight: FontWeight.w400,
             //                          height: 2,
             //                        ),
@@ -552,7 +552,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //          style: TextStyle(
             //            color: Color(0xFF010B38),
             //            fontSize: 14,
-            //            fontFamily: 'Graphik Arabic',
+            //            fontFamily: 'GraphikArabic',
             //            fontWeight: FontWeight.w400,
             //            height: 1.14,
             //          ),
@@ -567,7 +567,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //          style: TextStyle(
             //            color: Color(0xFF010B38),
             //            fontSize: 14,
-            //            fontFamily: 'Graphik Arabic',
+            //            fontFamily: 'GraphikArabic',
             //            fontWeight: FontWeight.w400,
             //            height: 1.14,
             //          ),
@@ -582,7 +582,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //          style: TextStyle(
             //            color: Color(0xFF010B38),
             //            fontSize: 14,
-            //            fontFamily: 'Graphik Arabic',
+            //            fontFamily: 'GraphikArabic',
             //            fontWeight: FontWeight.w400,
             //            height: 1.14,
             //          ),
@@ -597,7 +597,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //          style: TextStyle(
             //            color: Color(0xFF010B38),
             //            fontSize: 14,
-            //            fontFamily: 'Graphik Arabic',
+            //            fontFamily: 'GraphikArabic',
             //            fontWeight: FontWeight.w400,
             //            height: 1.14,
             //          ),
@@ -612,7 +612,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //          style: TextStyle(
             //            color: Color(0xFF010B38),
             //            fontSize: 14,
-            //            fontFamily: 'Graphik Arabic',
+            //            fontFamily: 'GraphikArabic',
             //            fontWeight: FontWeight.w400,
             //            height: 1.14,
             //          ),
@@ -627,7 +627,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //          style: TextStyle(
             //            color: Color(0xFF010B38),
             //            fontSize: 14,
-            //            fontFamily: 'Graphik Arabic',
+            //            fontFamily: 'GraphikArabic',
             //            fontWeight: FontWeight.w400,
             //            height: 1.14,
             //          ),
@@ -658,7 +658,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //                style: TextStyle(
             //                  color: Color(0x66010B38),
             //                  fontSize: 12,
-            //                  fontFamily: 'Graphik Arabic',
+            //                  fontFamily: 'GraphikArabic',
             //                  fontWeight: FontWeight.w400,
             //                  height: 2,
             //                ),
@@ -697,7 +697,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //                style: TextStyle(
             //                  color: Color(0x66010B38),
             //                  fontSize: 12,
-            //                  fontFamily: 'Graphik Arabic',
+            //                  fontFamily: 'GraphikArabic',
             //                  fontWeight: FontWeight.w400,
             //                  height: 2,
             //                ),
@@ -736,7 +736,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //                style: TextStyle(
             //                  color: Color(0x66010B38),
             //                  fontSize: 12,
-            //                  fontFamily: 'Graphik Arabic',
+            //                  fontFamily: 'GraphikArabic',
             //                  fontWeight: FontWeight.w400,
             //                  height: 2,
             //                ),
@@ -770,7 +770,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //                style: TextStyle(
             //                  color: Color(0x66010B38),
             //                  fontSize: 12,
-            //                  fontFamily: 'Graphik Arabic',
+            //                  fontFamily: 'GraphikArabic',
             //                  fontWeight: FontWeight.w400,
             //                  height: 2,
             //                ),
@@ -804,7 +804,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //                style: TextStyle(
             //                  color: Color(0x66010B38),
             //                  fontSize: 12,
-            //                  fontFamily: 'Graphik Arabic',
+            //                  fontFamily: 'GraphikArabic',
             //                  fontWeight: FontWeight.w400,
             //                  height: 2,
             //                ),
@@ -838,7 +838,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //                style: TextStyle(
             //                  color: Color(0x66010B38),
             //                  fontSize: 12,
-            //                  fontFamily: 'Graphik Arabic',
+            //                  fontFamily: 'GraphikArabic',
             //                  fontWeight: FontWeight.w400,
             //                  height: 2,
             //                ),
@@ -856,7 +856,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //          style: TextStyle(
             //            color: Color(0xFF010B38),
             //            fontSize: 14,
-            //            fontFamily: 'Graphik Arabic',
+            //            fontFamily: 'GraphikArabic',
             //            fontWeight: FontWeight.w400,
             //            height: 1.14,
             //          ),
@@ -892,7 +892,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //                style: TextStyle(
             //                  color: Color(0x66010B38),
             //                  fontSize: 12,
-            //                  fontFamily: 'Graphik Arabic',
+            //                  fontFamily: 'GraphikArabic',
             //                  fontWeight: FontWeight.w400,
             //                  height: 2,
             //                ),
@@ -910,7 +910,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //          style: TextStyle(
             //            color: Color(0xFF178CAF),
             //            fontSize: 14,
-            //            fontFamily: 'Graphik Arabic',
+            //            fontFamily: 'GraphikArabic',
             //            fontWeight: FontWeight.w600,
             //            height: 1.14,
             //          ),
@@ -925,7 +925,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //          style: TextStyle(
             //            color: Color(0xFF010B38),
             //            fontSize: 14,
-            //            fontFamily: 'Graphik Arabic',
+            //            fontFamily: 'GraphikArabic',
             //            fontWeight: FontWeight.w400,
             //            height: 1.14,
             //          ),
@@ -961,7 +961,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //                style: TextStyle(
             //                  color: Color(0x66010B38),
             //                  fontSize: 12,
-            //                  fontFamily: 'Graphik Arabic',
+            //                  fontFamily: 'GraphikArabic',
             //                  fontWeight: FontWeight.w400,
             //                  height: 2,
             //                ),
@@ -979,7 +979,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //          style: TextStyle(
             //            color: Color(0xFF010B38),
             //            fontSize: 14,
-            //            fontFamily: 'Graphik Arabic',
+            //            fontFamily: 'GraphikArabic',
             //            fontWeight: FontWeight.w400,
             //            height: 1.14,
             //          ),
@@ -1015,7 +1015,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //                        style: TextStyle(
             //                          color: Color(0xFF3A5260),
             //                          fontSize: 12,
-            //                          fontFamily: 'Graphik Arabic',
+            //                          fontFamily: 'GraphikArabic',
             //                          fontWeight: FontWeight.w500,
             //                        ),
             //                      ),
@@ -1036,7 +1036,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //          style: TextStyle(
             //            color: Color(0x99242424),
             //            fontSize: 12,
-            //            fontFamily: 'Graphik Arabic',
+            //            fontFamily: 'GraphikArabic',
             //            fontWeight: FontWeight.w400,
             //            height: 2,
             //          ),
@@ -1092,7 +1092,7 @@ class _ExamoleScreenState extends State<ExamoleScreen> {
             //                          style: TextStyle(
             //                            color: Colors.white,
             //                            fontSize: 14,
-            //                            fontFamily: 'Graphik Arabic',
+            //                            fontFamily: 'GraphikArabic',
             //                            fontWeight: FontWeight.w500,
             //                            height: 1.71,
             //                          ),

@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -19,86 +18,244 @@ class ItemKeeperCovenant extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    debugInvertOversizedImages=true;
+    debugInvertOversizedImages = true;
     final isRtl = Localizations.localeOf(context).languageCode == 'ar';
-    return InkWell(
-      splashColor: kColorsWhite,
-        onTap: (){
-        },
-      child: Column(
-        children: [
-          Padding(
-            padding:  EdgeInsets.only(left: 0.03.sw,right:  0.03.sw),
-            child: Container(
-              height: 0.25.sh,
-              width: 0.95.sw,
-              decoration: BoxDecoration(
-                color: kColorsWhite,
-                borderRadius: BorderRadius.circular(10.r),
-              ),
+    return Padding(
+      padding: EdgeInsets.only(left: 0.03.sw, right: 0.03.sw),
+      child: Container(
+        height: 0.25.sh,
+        width: 0.95.sw,
+        decoration: BoxDecoration(
+          color: kColorsWhite,
+          borderRadius: BorderRadius.circular(10.r),
+          boxShadow: [
+            BoxShadow(
+              color: kColorsLightBlackLow.withOpacity(0.2),
+              spreadRadius: 4,
+              blurRadius: 5.r,
+              offset:Offset(0, 2), // changes position of shadow
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              flex: 6,
               child: Padding(
-                padding: EdgeInsets.only(top: 5.0.r, bottom: 5.r, left:isRtl!=true? 10.0.r:0.0, right:isRtl==true? 10.0.r:0.0),
+                padding: EdgeInsets.only(
+                    top: 5.0.r,
+                    bottom: 5.r,
+                    left: isRtl != true ? 10.0.r : 0.0,
+                    right: isRtl == true ? 10.0.r : 0.0),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Expanded(
-                      flex: 6,
-                      child: Column(
-                        children: [
-                          CustomTowRowText(flex: 2,text: 'الرقم '.tr,textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue:"14", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite, text2: 'نوع المصروف'.tr, textValue2: "",textValue2Style: const TextStyle(fontSize: 12, color: kColorsPrimaryFont, fontWeight: FontWeight.w500,),),
-                          CustomTowRowText(text: 'اسم مركز التكلفه'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: "الإداره العامه", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite, text2: "رقم الفاتوره".tr, textValue2: "554",),
-                          CustomTowRowText(text: "اسم المورد".tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: "سلامه رضوان", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite, text2: "الرقم الضريبي".tr, textValue2:"4474747454",),
-                          CustomRowText(text:  'التاريخ'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: "2021/4/5", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite,),
-                          CustomRowText(text:  'البيان'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,), textValue: "مثال على بيان السطر", textValueStyle: const TextStyle(fontSize: 12, color: kColorsBlackTow,), backColor: kColorsWhite,),
-                        ],
+                    CustomTowRowText(
+                      flex: 2,
+                      text: 'الرقم '.tr,
+                      textStyle:   TextStyle(
+                        color: kColorsBlack.withOpacity(0.7),
+                        fontSize: 12,
+                        fontFamily: 'GraphikArabic',
+                        fontWeight: FontWeight.w400,
+                        height: 1.37,
+                      ),
+                      textValue: "14",
+                      textValueStyle:   TextStyle(
+                        color: Color(0xFF242424).withOpacity(0.5),
+                        fontSize: 12,
+                        fontFamily: 'GraphikArabic',
+                        fontWeight: FontWeight.w400,
+                        height: 1.37,
+                      ),
+                      backColor: kColorsWhite,
+                      text2: 'نوع المصروف'.tr,
+                      textValue2: "بنزين",
+                      textValue2Style:   TextStyle(
+                        color: kColorsBlack.withOpacity(0.7),
+                        fontSize: 12,
+
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        color:  Color(0xff0692AC).withOpacity(0.2),
-                        child: Padding(
-                          padding:   EdgeInsets. only(left:isRtl==true?  20.0:4,right:isRtl==true? 4.0:20),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text("المبلغ :", style: TextStyle( fontSize: 12.0,color: kColorsBlack,),),
-                                  Text("70.0%", style: TextStyle( fontSize: 12.0,color: kColorsPrimaryFont,),),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text("الضريبه :", style: TextStyle( fontSize: 12.0,color: kColorsBlack,),),
-                                  Text("70.0%", style: TextStyle( fontSize: 12.0,color: kColorsPrimaryFont,),),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text("الإجمالي :", style: TextStyle( fontSize: 12.0,color: kColorsBlack,),),
-                                  Text("70.0%", style: TextStyle( fontSize: 12.0,color: kColorsPrimaryFont,),),
-                                ],
-                              ),
-
-                            ],
-                          ),
-                        ),
+                    CustomTowRowText(
+                      text: 'اسم مركز التكلفه'.tr,
+                      textStyle:   TextStyle(
+                        color: kColorsBlack.withOpacity(0.7),
+                        fontSize: 12,
+                        fontFamily: 'GraphikArabic',
+                        fontWeight: FontWeight.w400,
+                        height: 1.37,
                       ),
+                      textValue: "الإداره العامه",
+                      textValueStyle:   TextStyle(
+                        color: Color(0xFF242424).withOpacity(0.5),
+                        fontSize: 12,
+                        fontFamily: 'GraphikArabic',
+                        fontWeight: FontWeight.w400,
+                        height: 1.37,
+                      ),
+                      backColor: kColorsWhite,
+                      text2: "رقم الفاتوره".tr,
+                      textValue2: "554",
                     ),
-
+                    CustomTowRowText(
+                      text: "اسم المورد".tr,
+                      textStyle:   TextStyle(
+                        color: kColorsBlack.withOpacity(0.7),
+                        fontSize: 12,
+                        fontFamily: 'GraphikArabic',
+                        fontWeight: FontWeight.w400,
+                        height: 1.37,
+                      ),
+                      textValue: "سلامه رضوان",
+                      textValueStyle:   TextStyle(
+                        color: Color(0xFF242424).withOpacity(0.5),
+                        fontSize: 12,
+                        fontFamily: 'GraphikArabic',
+                        fontWeight: FontWeight.w400,
+                        height: 1.37,
+                      ),
+                      backColor: kColorsWhite,
+                      text2: "الرقم الضريبي".tr,
+                      textValue2: "4474747454",
+                    ),
+                    CustomRowText(
+                      text: 'التاريخ'.tr,
+                      textStyle:   TextStyle(
+                        color: kColorsBlack.withOpacity(0.7),
+                        fontSize: 12,
+                        fontFamily: 'GraphikArabic',
+                        fontWeight: FontWeight.w400,
+                        height: 1.37,
+                      ),
+                      textValue: "2021/4/5",
+                      textValueStyle:   TextStyle(
+                        color: Color(0xFF242424).withOpacity(0.5),
+                        fontSize: 12,
+                        fontFamily: 'GraphikArabic',
+                        fontWeight: FontWeight.w400,
+                        height: 1.37,
+                      ),
+                      backColor: kColorsWhite,
+                    ),
+                    CustomRowText(
+                      text: 'البيان'.tr,
+                      textStyle: const TextStyle(
+                        fontSize: 12,
+                        fontFamily: 'GraphikArabic',
+                        fontWeight: FontWeight.w400,
+                      ),
+                      textValue: "مثال على بيان السطر",
+                      textValueStyle:   TextStyle(
+                        color: Color(0xFF242424).withOpacity(0.5),
+                        fontSize: 12,
+                        fontFamily: 'GraphikArabic',
+                        fontWeight: FontWeight.w400,
+                        height: 1.37,
+                      ),
+                      backColor: kColorsWhite,
+                    ),
                   ],
                 ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 12.0.h,
-          ),
-        ],
+            Expanded(
+              flex: 1,
+              child: Container(
+                width: double.infinity,
+                color: Color(0xff0692AC).withOpacity(0.2),
+                child: Padding(
+                  padding: EdgeInsets.only(left: isRtl == true ? 20.0 : 8, right: isRtl == true ? 8.0 : 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        mainAxisAlignment:
+                        MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "المبلغ :",
+                            style: TextStyle(
+                              color: Color(0xFF242424),
+                              fontSize: 12,
+                              fontFamily: 'GraphikArabic',
+                              fontWeight: FontWeight.w400,
+                              height: 1.37,
+                            ),
+                          ),
+                          Text(
+                            "70.0%",
+                            style: TextStyle(
+                              color: Color(0xFF0692AC),
+                              fontSize: 12,
+                              fontFamily: 'GraphikArabic',
+                              fontWeight: FontWeight.w400,
+                              height: 1.37,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment:
+                        MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "الضريبه :",
+                            style: TextStyle(
+                              color: Color(0xFF242424),
+                              fontSize: 12,
+                              fontFamily: 'GraphikArabic',
+                              fontWeight: FontWeight.w400,
+                              height: 1.37,
+                            ),
+                          ),
+                          Text(
+                            "70.0%",
+                            style: TextStyle(
+                              color: Color(0xFF0692AC),
+                              fontSize: 12,
+                              fontFamily: 'GraphikArabic',
+                              fontWeight: FontWeight.w400,
+                              height: 1.37,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment:
+                        MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "الإجمالي :",
+                            style: TextStyle(
+                              color: Color(0xFF242424),
+                              fontSize: 12,
+                              fontFamily: 'GraphikArabic',
+                              fontWeight: FontWeight.w400,
+                              height: 1.37,
+                            ),
+                          ),
+                          Text(
+                            "70.0%",
+                            style: TextStyle(
+                              color: Color(0xFF0692AC),
+                              fontSize: 12,
+                              fontFamily: 'GraphikArabic',
+                              fontWeight: FontWeight.w400,
+                              height: 1.37,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+          ],
+        ),
       ),
     );
   }
@@ -107,7 +264,7 @@ class ItemKeeperCovenant extends StatelessWidget {
 class ItemKeeperCovenantShimmer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    debugInvertOversizedImages=true;
+    debugInvertOversizedImages = true;
     return Shimmer(
       child: Column(
         children: [

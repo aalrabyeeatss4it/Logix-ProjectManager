@@ -17,44 +17,62 @@ class  ItemTaskOld extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return
-      InkWell(
-        onTap: (){
-        },
-        child: Container(
-          width: 0.68.sw,
-          child: Row(
-            children: [
-              Container(
-                color: kColorsPrimaryFont,
-                width: 0.01.sw,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+      Container(
+        width: 0.68.sw,
+        child: Row(
+          children: [
+            Container(
+              color: kColorsPrimaryFont,
+              width: 0.01.sw,
+            ),
+            SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    width: 0.64.sw,
+                    width: 0.65.sw,
                     decoration: BoxDecoration(
                       color: kColorsWhite,
                       borderRadius: BorderRadius.circular(7.r),
                     ),
                     child: Padding(
-                      padding: EdgeInsets.only(top: 2.0.r, bottom: 2.r,left: 5.0.r,right: 4.0.r),
+                      padding: EdgeInsets.only(top: 5.0.r, bottom: 5.r,left: 5.0.r,right: 4.0.r),
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          CustomRowText(text: 'المشروع'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue: "2022/2/2",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,),
-                          CustomRowText(text: 'المهمه'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2026/2/2",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,),
+                          CustomRowText(text: 'المشروع'.tr,textStyle: TextStyle(color: Color(0xFF0792AD),
+                            fontSize: 12,
+                            fontFamily: 'GraphikArabic',
+                            fontWeight: FontWeight.w500,
+                            height: 1.37,),textValue: "تطوير نظام محاسبي جديد",textValueStyle: TextStyle( color: Color(0xFF242424),
+                            fontSize: 12,
+                            fontFamily: 'Graphik Arabic',
+                            fontWeight: FontWeight.w400,
+                            height: 1.37,),backColor: kColorsLightBlackLow,),
+                          CustomRowText(text: 'المهمه'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "متابعة تقدم فريق التطوير في تنفيذ خاصية إدارة الضرائب",textValueStyle: TextStyle(
+                            color: Color(0xFF242424),
+                            fontSize: 12,
+                            fontFamily: 'Graphik Arabic',
+                            fontWeight: FontWeight.w400,
+                            height: 1.37,),backColor: kColorsLightBlackLow,),
                           Padding(
                             padding:  EdgeInsets.symmetric(horizontal:  8.0),
                             child: Container(
+                                width: 0.88.sw,
                                 decoration: BoxDecoration(
                                   color:kColorsPrimaryFont.withOpacity(0.1) ,
                                   borderRadius: BorderRadius.circular(7.r),
                                 ),
 
-                                child: Padding(
-                                  padding:  EdgeInsets.all(4.0),
-                                  child: Text('تنتهي في '.tr +'2024/12/12' +"  |  "+'متبقى :'.tr +'3 أيام ' ,  style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,)),
+                                child: Center(
+                                  child: Padding(
+                                    padding:  EdgeInsets.all(4.0),
+                                    child: Text('تنتهي في '.tr +'2024/12/12' +"   |   "+'متبقى :'.tr +'3 أيام ' ,  style: TextStyle( color: Color(0xFF178CAF),
+                                      fontSize: 12,
+                                      fontFamily: 'GraphikArabic',
+                                      fontWeight: FontWeight.w400,
+                                      height: 1.37,)),
+                                  ),
                                 )),
                           ),
                         ],
@@ -63,11 +81,11 @@ class  ItemTaskOld extends StatelessWidget {
                   ),
                 ],
               ),
-              Container(
-                width: 0.03.sw,
-              ),
-            ],
-          ),
+            ),
+            Container(
+              width: 0.02.sw,
+            ),
+          ],
         ),
       );
   }

@@ -62,7 +62,11 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                   child: Center(
                     child: Padding(
                       padding:   EdgeInsets.only(right:isRtl==true?  18.0:0,left:isRtl!=true?  18.0:0 ),
-                      child: Text(title!,textAlign: TextAlign.center,  style: TextStyle(   fontFamily: 'GraphikArabic',color:kColorsBlack,fontSize: 16,fontWeight: FontWeight.w500),
+                      child: Text(title!,textAlign: TextAlign.center,  style: TextStyle(     color: Color(0xFF242424),
+                        fontSize: 16,
+                        fontFamily: 'GraphikArabic',
+                        fontWeight: FontWeight.w500,
+                        height: 1.02,),
                       ),
                     ),
                   ),

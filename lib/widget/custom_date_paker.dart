@@ -96,7 +96,7 @@ class CustomDatePaker extends StatelessWidget {
                   hintText: hint,
                   fillColor: kColorsWhite,
                   errorMaxLines: 1,
-                  hintStyle: TextStyle(   fontFamily: 'GraphikArabic',color: Colors.black,fontSize: 9.sp),
+                  hintStyle: TextStyle(   fontFamily: 'GraphikArabic',color: Colors.black.withOpacity(0.5),fontSize: 9.sp),
                   contentPadding:
                   EdgeInsets.symmetric(vertical: 2.h, horizontal: 10.w),
                   border: OutlineInputBorder(

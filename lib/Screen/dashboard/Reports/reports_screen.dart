@@ -50,7 +50,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
       Scaffold(
         appBar: MyAppBar(
             title: ' التقارير'.tr,
-            colorfont: kColorsWhite),
+            colorfont: kColorsWhite, IsHome: true,),
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),

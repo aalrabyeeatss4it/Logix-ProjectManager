@@ -41,7 +41,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: kColorsWhite, // اللون الخلفي لشريط الحالة
+      statusBarIconBrightness: Brightness.dark, // لون الأيقونات (فاتح أو داكن)
+    ));
     final isRtl = Localizations.localeOf(context).languageCode == 'ar';
     return
       Scaffold(
@@ -68,7 +71,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                 bottom:1.r),
                             child: Text(
                               "ملخص المشاريع".tr,
-                              style: TextStyle(   fontFamily: 'GraphikArabic',color:kColorsBlack,fontSize: 12,fontWeight: FontWeight.w500),)
+                              style: TextStyle(
+                                color: Color(0xFF242424),
+                                fontSize: 12,
+                                fontFamily: 'GraphikArabic',
+                                fontWeight: FontWeight.w500,
+                                height: 1.37,
+                              ),)
                         ),
                       ],
                     ),
@@ -195,14 +204,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                             ListView.builder(
                                               physics: BouncingScrollPhysics(),
                                               scrollDirection: Axis.horizontal,
-                                              padding: EdgeInsets.symmetric(vertical: 4.r),
+                                              padding: EdgeInsets.symmetric(vertical: 4),
                                               itemCount: 3,
                                               itemBuilder: (context, index) => ItemTaskOld(),
                                             ),
                                             ListView.builder(
                                               physics: BouncingScrollPhysics(),
                                               scrollDirection: Axis.horizontal,
-                                              padding: EdgeInsets.symmetric(vertical: 4.r),
+                                              padding: EdgeInsets.symmetric(vertical: 4),
                                               itemCount: 3,
                                               itemBuilder: (context, index) => ItemTaskNew(),
                                             ),
@@ -228,10 +237,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                 bottom:1.r),
                             child: Text(
                               "مشاريعي".tr,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleMedium
-                                  ?.copyWith(fontFamily: 'GraphikArabic',color:kColorsBlack,fontSize: 14,fontWeight: FontWeight.w500),)
+                                style: TextStyle(
+                                  color: Color(0xFF242424),
+                                  fontSize: 14,
+                                  fontFamily: 'GraphikArabic',
+                                  fontWeight: FontWeight.w500,
+                                  height: 1.17,
+                                ),)
                         ),
 
                       ],
@@ -280,9 +292,9 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(text+" :", style: TextStyle(   fontFamily: 'GraphikArabic',color:kColorsBlack,fontSize:10.0, fontWeight: FontWeight.bold,),
+            Text(text+" :", style: TextStyle(   fontFamily: 'GraphikArabic',color:kColorsBlack,fontSize:10.0, fontWeight: FontWeight.bold, height: 1.37,),
             ),
-            Text(value, style: TextStyle(   fontFamily: 'GraphikArabic',color:colorvalue,fontSize:10.0, fontWeight: FontWeight.bold,),
+            Text(value, style: TextStyle(   fontFamily: 'GraphikArabic',color:colorvalue,fontSize:12.0, fontWeight: FontWeight.w600, height: 1.37,),
             ),
           ],
         ),

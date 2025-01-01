@@ -51,7 +51,13 @@ class  ItemHome extends StatelessWidget {
                             children: [
                               Expanded(
                                   flex:9,
-                                  child: Text('تركيب نظام لجهه خاصه'.tr,  style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 14, color:kColorsBlack , fontWeight: FontWeight.w500,))),
+                                  child: Text('تركيب نظام لجهه خاصه'.tr,    style: TextStyle(
+                                    color: Color(0xFF242424),
+                                    fontSize: 14,
+                                    fontFamily: 'GraphikArabic',
+                                    fontWeight: FontWeight.w500,
+                                    height: 1.17,
+                                  ),)),
                               Expanded(
                                 flex:5,
                                 child: CustomButton(
@@ -61,9 +67,13 @@ class  ItemHome extends StatelessWidget {
                                   sizeHeight: 0.04.sh,
                                   sizeWidth: 0.30.sw,
                                   text:'متأخر بشكل بسيط'.tr,
-                                  style: TextStyle(fontFamily: 'GraphikArabic',
-                                      fontSize: 12,
-                                      color: Color(0xffFF744A)),
+                                  style: TextStyle(
+                                    color: Color(0xFFFF744A),
+                                    fontSize: 10,
+                                    fontFamily: 'GraphikArabic',
+                                    fontWeight: FontWeight.w500,
+                                    height: 1.64,
+                                  ),
                                   onPress: () {
                                   },
                                 ),
@@ -80,9 +90,24 @@ class  ItemHome extends StatelessWidget {
                           flex:9,
                           child: Column(
                             children: [
-                              CustomRowText(text: 'تاريخ البدايه'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2022/2/2",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
-                              CustomRowText(text: ' تاريخ النهايه'.tr,textStyle: TextStyle( fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2026/2/2",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
-                              CustomRowText(text: 'مرحلة المشروع'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "sgsgsg",textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 4,),
+                              CustomRowText(text: 'تاريخ البدايه'.tr,textStyle: TextStyle(     fontSize: 12,
+                                fontFamily: 'GraphikArabic',
+                                height: 1.37, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2022/2/2",textValueStyle: TextStyle( color: Color(0xFF242424).withOpacity(0.5),
+              fontSize: 12,
+              fontFamily: 'GraphikArabic',
+              fontWeight: FontWeight.w400,),backColor: kColorsLightBlackLow,flex: 4,),
+                              CustomRowText(text: ' تاريخ النهايه'.tr,textStyle: TextStyle( fontSize: 12,
+                                fontFamily: 'GraphikArabic',
+                                height: 1.37, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2024/05/01",textValueStyle: TextStyle( color: Color(0xFF242424).withOpacity(0.5),
+              fontSize: 12,
+              fontFamily: 'GraphikArabic',
+              fontWeight: FontWeight.w400,),backColor: kColorsLightBlackLow,flex: 4,),
+                              CustomRowText(text: 'مرحلة المشروع'.tr,textStyle: TextStyle(fontSize: 12,
+                                fontFamily: 'GraphikArabic',
+                                 color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "جمع المتطلبات",textValueStyle: TextStyle( color: Color(0xFF242424).withOpacity(0.5),
+              fontSize: 12,
+              fontFamily: 'GraphikArabic',
+              fontWeight: FontWeight.w400,),backColor: kColorsLightBlackLow,flex: 4,),
                                ],
                           ),
                         ),
@@ -94,7 +119,13 @@ class  ItemHome extends StatelessWidget {
                             lineWidth: 13.0,
                             animation: true,
                             percent: percentage / 100,
-                            center: Text("$percentage%", style: TextStyle(fontSize: 12.0),),
+                            center: Text("$percentage%",   style: TextStyle(
+                              color: Color(0xFF242424),
+                              fontSize: 10,
+                              fontFamily: 'GraphikArabic',
+                              fontWeight: FontWeight.w400,
+                              height: 1.64,
+                            ),),
                             circularStrokeCap: CircularStrokeCap.round,
                             progressColor: kColorsPrimaryFont,
                             backgroundColor: kColorsPrimaryFont.withOpacity(0.2),
@@ -107,7 +138,13 @@ class  ItemHome extends StatelessWidget {
                       children: [
                         Expanded(
                         flex:14,
-                        child: CustomRowText(text: 'مدير المشروع'.tr,textStyle: TextStyle(fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue:"xxbxbxbxb",textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsLightBlackLow,flex: 3,)),
+                        child: CustomRowText(text: 'مدير المشروع'.tr,textStyle: TextStyle(color: Color(0xFF242424),
+                          fontSize: 12,
+                          fontFamily: 'GraphikArabic',
+                          fontWeight: FontWeight.w400,),textValue:"فارس سفيان الصلوي",textValueStyle: TextStyle(color: Color(0xFF242424).withOpacity(0.5),
+                          fontSize: 12,
+                          fontFamily: 'GraphikArabic',
+                          fontWeight: FontWeight.w400,),backColor: kColorsLightBlackLow,flex: 3,)),
                         Expanded(
                           flex:2,
                           child: InkWell(

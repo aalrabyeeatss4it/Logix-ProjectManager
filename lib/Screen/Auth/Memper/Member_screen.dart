@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:projectmanagers/Screen/Auth/Memper/member_controller.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/menu_widget_dachbord.dart';
 import 'package:projectmanagers/apiservice/checkInterNet.dart';
@@ -22,11 +23,15 @@ class MemberScreen extends StatelessWidget {
   final _formKeyMember = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: kColorsPrimaryFont, // اللون الخلفي لشريط الحالة
+      statusBarIconBrightness: Brightness.light, // لون الأيقونات (فاتح أو داكن)
+    ));
     print("OpenAppOne in member"+ stg.read(OpenAppOne).toString());
     // TODO: implement build
     final isRtl = Localizations.localeOf(context).languageCode == 'ar';
     return Scaffold(
+
       backgroundColor:  kColorsPrimaryFont,
       appBar: PreferredSize(preferredSize: Size.fromHeight(0),
           child: Container(color: kColorsPrimaryFont)),

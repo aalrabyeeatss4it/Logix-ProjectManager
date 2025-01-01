@@ -116,7 +116,10 @@ class DashboardScreenState extends State<DashboardScreen> {
                                 SizedBox(
                                   height: 0.01.sh,
                                 ),
-                                Text("مشاريعي".tr,style:  _pageIndex==0?TextStyle(fontFamily: 'GraphikArabic',fontSize: 14,color: kColorsPrimaryFont):TextStyle(fontFamily: 'GraphikArabic',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
+                                Text("مشاريعي".tr,style:  _pageIndex==0?TextStyle( color: Color(0xFF242424),
+              fontSize: 14,
+              fontFamily: 'GraphikArabic',
+              fontWeight: FontWeight.w400,):TextStyle(fontFamily: 'GraphikArabic',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
                                 SizedBox(
                                   height: 0.010.sh,
                                 ),
@@ -142,7 +145,10 @@ class DashboardScreenState extends State<DashboardScreen> {
                               SizedBox(
                                 height: 0.01.sh,
                               ),
-                              Text( 'الخدمات الإلكترونيه'.tr,style: _pageIndex==1?TextStyle(fontFamily: 'GraphikArabic',fontSize: 14,color: kColorsPrimaryFont):TextStyle(fontFamily: 'GraphikArabic',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
+                              Text( 'الخدمات الإلكترونيه'.tr,style: _pageIndex==1?TextStyle( color: kColorsPrimaryFont,
+              fontSize: 14,
+              fontFamily: 'GraphikArabic',
+              fontWeight: FontWeight.w400,):TextStyle(fontFamily: 'GraphikArabic',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
                               SizedBox(
                                 height: 0.010.sh,
                               ),
@@ -167,7 +173,10 @@ class DashboardScreenState extends State<DashboardScreen> {
                               SizedBox(
                                 height: 0.01.sh,
                               ),
-                              Text( ' حافظة العهده'.tr,style: _pageIndex==2?TextStyle(fontFamily: 'GraphikArabic',fontSize: 14,color: kColorsPrimaryFont):TextStyle(fontFamily: 'GraphikArabic',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
+                              Text( ' حافظة العهده'.tr,style: _pageIndex==2?TextStyle( color: kColorsPrimaryFont,
+              fontSize: 14,
+              fontFamily: 'GraphikArabic',
+              fontWeight: FontWeight.w400,):TextStyle(fontFamily: 'GraphikArabic',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
                               SizedBox(
                                 height: 0.010.sh,
                               ),
@@ -178,7 +187,6 @@ class DashboardScreenState extends State<DashboardScreen> {
                           Get.offAll(DashboardScreen(pageIndex: 2),transition: Transition.noTransition,);
                         },
                       ),
-
                       TextButton(
                         child:SizedBox(
                           height: 0.10.sh,
@@ -193,7 +201,10 @@ class DashboardScreenState extends State<DashboardScreen> {
                               SizedBox(
                                 height: 0.01.sh,
                               ),
-                              Text(  'التقارير'.tr,style:_pageIndex==3?TextStyle(fontFamily: 'GraphikArabic',fontSize: 14,color: kColorsPrimaryFont):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
+                              Text(  'التقارير'.tr,style:_pageIndex==3?TextStyle( color:kColorsPrimaryFont,
+              fontSize: 14,
+              fontFamily: 'GraphikArabic',
+              fontWeight: FontWeight.w400,):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
                               SizedBox(
                                 height: 0.010.sh,
                               ),
