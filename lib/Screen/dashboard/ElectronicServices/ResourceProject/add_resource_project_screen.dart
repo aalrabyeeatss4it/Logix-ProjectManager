@@ -1,18 +1,20 @@
 
-import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/add_dilog.dart';
-import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/add_keeper_covenant_controller.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:projectmanagers/Constants/Constants.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/menu_widget_dachbord.dart';
+
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ResourceProject/add_resource_project_controller.dart';
 import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/filter_model.dart';
 import 'package:projectmanagers/apiservice/checkInterNet.dart';
 import 'package:projectmanagers/apiservice/file_piker.dart';
 import 'package:projectmanagers/router/route_constants.dart';
 import 'package:projectmanagers/widget/CustomSnackBar.dart';
 import 'package:projectmanagers/widget/CustomSubmitDialog.dart';
+import 'package:projectmanagers/widget/add_dilog.dart';
 import 'package:projectmanagers/widget/buttm_navigator_bar.dart';
 import 'package:projectmanagers/widget/customButton.dart';
 import 'package:projectmanagers/widget/custom_date_paker.dart';
@@ -22,16 +24,16 @@ import 'package:projectmanagers/widget/fileupload_widget.dart';
 import 'package:projectmanagers/widget/input_text.dart';
 import 'package:projectmanagers/widget/progisser_bar.dart';
 
-class AddKeeperCovenantScreen extends StatefulWidget {
+class AddResourceProjectScreen extends StatefulWidget {
 
   var show_tabBar;
-  AddKeeperCovenantScreen({this.show_tabBar});
+  AddResourceProjectScreen({this.show_tabBar});
   @override
-  State<AddKeeperCovenantScreen> createState() => _AddKeeperCovenantScreenState();
+  State<AddResourceProjectScreen> createState() => _AddResourceProjectScreenState();
 }
 
-class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
-  final controller = Get.put(AddKeeperCovenantController());
+class _AddResourceProjectScreenState extends State<AddResourceProjectScreen> {
+  final controller = Get.put(AddResourceProjectController());
   final _formKey = GlobalKey<FormState>();
   @override
   void initState() {
@@ -54,8 +56,7 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
     return
       Scaffold(
         appBar:  MyAppBar(
-            title: 'حافظة عهده جديده'.tr,
-
+            title: 'طلب مورد لمشروع'.tr,
             colorfont: kColorsWhite),
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
@@ -67,7 +68,6 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-
                 children:[
                   SizedBox(
                     height: 5.h,
@@ -80,45 +80,36 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Row(
-                            children: [
-                              Expanded(
-                                flex: 3,
-                                child: TextFieldWidget(
-                                  text: 'رقم مركز التكلفه'.tr,
-                                  sizeFontText: 12.sp,
-                                  edit: 1,
-                                  hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
-                                  maxLine: 1,
-                                  keyboardType: TextInputType.number,
-                                ),
-                              ),
 
-                              Expanded(
-                                flex: 5,
-                                child: TextFieldWidget(
-                                  text:  'اسم مركز التكلفه'.tr,
-                                  sizeFontText: 12.sp,
-                                  edit: 1,
-                                  maxLine: 1,
-                                  hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
-                                  keyboardType: TextInputType.text,
+                          SizedBox(
+                            height: 0.01.sh,
+                          ),
+                          TextFieldWidget(
+                            text:  'الرقم '.tr,
+                            hint: 'أدخل الرقم'.tr,
+                            sizeFontText: 12.sp,
+                            edit: 1,
+                            maxLine: 1,
+                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            keyboardType: TextInputType.text,
 
-                                ),
-                              ),
-                            ],
                           ),
                           SizedBox(
                             height: 0.01.sh,
                           ),
-                          CustomDatePaker(
-                            text: 'التاريخ'.tr ,
+                          TextFieldWidget(
+                            text:  'نوع المورد ( الوصف ) '.tr,
+                            hint: ' الوصف  '.tr,
+                            sizeFontText: 12.sp,
                             edit: 1,
-                            reqeurment: false,
-                            colorborder: kColorsBlackporder,
+                            maxLine: 1,
+                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            keyboardType: TextInputType.text,
+
                           ),
+
                           SizedBox(height: 0.01.sh,),
-                          GetBuilder<AddKeeperCovenantController>(
+                          GetBuilder<AddResourceProjectController>(
                               init: controller,
                               builder: (co) {
                                 return InkWell(
@@ -132,7 +123,63 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                                     child: CustomTextInput(
                                       iconEnd: Icon(Icons.keyboard_arrow_down, color: kColorsLightBlack,),
                                       textAlign: TextAlign.start,
-                                      text:  ' نوع المصروف'.tr,
+                                      text:  'داخلي أو خارجي'.tr,
+                                      filled: true,
+                                      isEnabled: false,
+                                      isRequired: true,
+                                      labelText: 'Choose'.tr,
+                                      exText: 'Choose'.tr,
+                                      textEditingController: controller.FilterNameController,
+                                      styleText: TextStyle(fontFamily: 'Cairo',
+                                        fontSize: 14.sp,
+                                        color: kColorsBlack,
+                                      ),
+                                    ));
+                              }),
+                          SizedBox(height: 0.01.sh,),
+                          GetBuilder<AddResourceProjectController>(
+                              init: controller,
+                              builder: (co) {
+                                return InkWell(
+                                    onTap: () async {
+                                      Get.dialog(
+                                        LoadingIndicatorWidget(),
+                                      );
+                                      Get.back();
+                                      onClickTypeMasroff( co, context, controller.filterModel!.dataFilter);
+                                    },
+                                    child: CustomTextInput(
+                                      iconEnd: Icon(Icons.keyboard_arrow_down, color: kColorsLightBlack,),
+                                      textAlign: TextAlign.start,
+                                      text:  ' الإدارة'.tr,
+                                      filled: true,
+                                      isEnabled: false,
+                                      isRequired: true,
+                                      labelText: 'Choose'.tr,
+                                      exText: 'Choose'.tr,
+                                      textEditingController: controller.FilterNameController,
+                                      styleText: TextStyle(fontFamily: 'Cairo',
+                                        fontSize: 14.sp,
+                                        color: kColorsBlack,
+                                      ),
+                                    ));
+                              }),
+                          SizedBox(height: 0.01.sh,),
+                          GetBuilder<AddResourceProjectController>(
+                              init: controller,
+                              builder: (co) {
+                                return InkWell(
+                                    onTap: () async {
+                                      Get.dialog(
+                                        LoadingIndicatorWidget(),
+                                      );
+                                      Get.back();
+                                      onClickTypeMasroff( co, context, controller.filterModel!.dataFilter);
+                                    },
+                                    child: CustomTextInput(
+                                      iconEnd: Icon(Icons.keyboard_arrow_down, color: kColorsLightBlack,),
+                                      textAlign: TextAlign.start,
+                                      text:  'المدير'.tr,
                                       filled: true,
                                       isEnabled: false,
                                       isRequired: true,
@@ -146,169 +193,19 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                                     ));
                               }),
                           SizedBox(
-                            height: 0.01.sh,
-                          ),
-                          Row(
-                            children: [
-                              Expanded(
-                                flex: 5,
-                                child: TextFieldWidget(
-                                  text: ' المبلغ '.tr,
-                                  hint: 'أدخل المبلغ'.tr,
-                                  sizeFontText: 12.sp,
-                                  edit: 1,
-                                  hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
-                                  maxLine: 1,
-                                  keyboardType: TextInputType.number,
-
-                                ),
-                              ),
-
-                              Expanded(
-                                flex: 5,
-                                child: TextFieldWidget(
-                                  text:  ' الضريبه'.tr,
-                                  hint: 'أدخل الضريبه '.tr,
-                                  sizeFontText: 12.sp,
-                                  edit: 1,
-                                  maxLine: 1,
-                                  hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
-                                  keyboardType: TextInputType.text,
-
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 0.01.sh,
-                          ),
-                          TextFieldWidget(
-                            text:  ' الإجمالي '.tr,
-                            hint: 'أدخل الإجمالي  '.tr,
-                            sizeFontText: 12.sp,
-                            edit: 1,
-                            maxLine: 1,
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
-                            keyboardType: TextInputType.text,
-
-                          ),
-                          SizedBox(
-                            height: 0.01.sh,
-                          ),
-                          Row(
-                            children: [
-                              Expanded(
-                                flex: 5,
-                                child: TextFieldWidget(
-                                  text: ' الرقم الضريبي '.tr,
-                                  hint: 'أدخل الرقم الضريبي '.tr,
-                                  sizeFontText: 12.sp,
-                                  edit: 1,
-                                  hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
-                                  maxLine: 1,
-                                  keyboardType: TextInputType.number,
-
-                                ),
-                              ),
-
-                              Expanded(
-                                flex: 5,
-                                child: TextFieldWidget(
-                                  text:  ' رقم الفاتورة'.tr,
-                                  hint: 'أدخل رقم الفاتورة  '.tr,
-                                  sizeFontText: 12.sp,
-                                  edit: 1,
-                                  maxLine: 1,
-                                  hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
-                                  keyboardType: TextInputType.text,
-
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 0.01.sh,
-                          ),
-
-                          TextFieldWidget(
-                            text: 'المورد'.tr,
-                            hint: 'أدخل   المورد   '.tr,
-                            sizeFontText: 12.sp,
-                            // hint: "support@ss4it.com.sa",
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
-                            edit: 1,
-                            maxLine: 1,
-                          ),
-                          SizedBox(
                             height: 15.h,
                           ),
                           TextFieldWidget(
-                            text: 'البيان'.tr,
-                            hint: '  البيان..'.tr,
+                            text: 'الملاحظات'.tr,
+                            hint: 'أدخل  الملاحظات'.tr,
                             sizeFontText: 12.sp,
                             hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             edit: 1,
-                            maxLine: 5,
-                            minLine: 5,
+                            maxLine: 4,
+                            minLine: 4,
+
                           ),
-                          SizedBox(
-                            height: 0.03.sh,
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                  padding: EdgeInsets.only(
-                                      left:2.r, right:10.r,
-                                      bottom:1.r),
-                                  child: Text(
-                                    "المرفقات".tr,
-                                    style: TextStyle(    fontSize: 14,
-                                      fontFamily: 'GraphikArabic',
-                                      fontWeight: FontWeight.w600,
-                                      height: 1.14,color:kColorsPrimaryFont, ),)
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 0.02.sh,
-                          ),
-                          TextFieldWidget(
-                            text: ' اسم المستند'.tr,
-                            hint: ' ادخل اسم المستند'.tr,
-                            sizeFontText: 12.sp,
-                            hintStyle:TextStyle(    fontSize: 14,
-                                fontFamily: 'GraphikArabic',
-                                fontWeight: FontWeight.w400,
-                                height: 1.14,color:Colors.black.withOpacity(0.4)  ),
-                            edit: 1,
-                          ),
-                          SizedBox(
-                            height: 0.03.sh,
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                  padding: EdgeInsets.only(
-                                      left:2.r, right:10.r,
-                                      bottom:1.r),
-                                  child: Text(
-                                    "مسار الملف".tr,
-                                    style: TextStyle(     fontSize: 14,
-                                      fontFamily: 'GraphikArabic',
-                                      fontWeight: FontWeight.w400,
-                                      height: 1.14,color:kColorsBlackTow, ),)
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 0.02.sh,
-                          ),
-                          GetBuilder<FilePickerController>(
-                              init: FilePickerController(),
-                              builder: (fileController) {
-                                return FileUploadCustom(controller: fileController,name: fileController.name,);
-                              }
-                          ),
+
                           SizedBox(
                             height: 0.03.sh,
                           ),
@@ -317,22 +214,29 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                             borderRadius: 8.r,
                             sizeHeight: 0.05.sh,
                             sizeWidth: 0.93.sw,
-                            text: 'إضافه'.tr,
+                            text: 'إرسال الطلب'.tr,
+                            isIconEnd: true,
+                            IconEnd: SvgPicture.asset(
+                              "assets/Icons/left.svg",
+                              width: 24 ,
+                              height: 24 ,
+                              color: kColorsWhite,
+                            ),
                             style: TextStyle(
-                                fontFamily: 'GraphikArabic',
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: kColorsWhite),
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontFamily: 'GraphikArabic',
+                              fontWeight: FontWeight.w500,
+                              height: 1.71,),
                             onPress: () async {
                               showDialog(
                                 context: context,
                                 builder: (context) => CustomSubmitOptionDialog(
-                                  onPress: () {
+                                  onPress: (){
                                     Get.back();
-                                    Get.dialog(AddDialog());
-
+                                    Get.dialog(AddSuccsessDialog());
                                   },
-                                  text:   'هل أنت متأكد '.tr,
+                                  text:   'هل أنت متأكد من إرسال الطلب؟'.tr,
                                   Colore: kColorsWhite,
                                   ColoreCleare: kColorsLightBlack,
                                   backColor1:kColorsPrimaryFont,
@@ -365,7 +269,7 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
 
       );
   }
-  onClickTypeMasroff(AddKeeperCovenantController controller, BuildContext context,       List<DataFilter> drop,) {
+  onClickTypeMasroff(AddResourceProjectController controller, BuildContext context,       List<DataFilter> drop,) {
     Get.bottomSheet(
       StatefulBuilder(
           builder: (context, setState) {
@@ -380,7 +284,7 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                     topRight: Radius.circular(25),
                   ),
                 ),
-                child: GetBuilder<AddKeeperCovenantController>(
+                child: GetBuilder<AddResourceProjectController>(
                   init: controller,
                   builder: (_c) {
                     return SizedBox(

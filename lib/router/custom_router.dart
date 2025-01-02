@@ -14,6 +14,10 @@ import 'package:projectmanagers/Screen/Projects/projects_screen.dart';
 import 'package:projectmanagers/Screen/card_wizard_overlap.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ArchiveDocumentProject/add_archive_document_project_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/CloseProject/add_close_project_screen.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ExchangeRequest/add_request_exchange_screen.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/LessonsProject/add_lisince_project_screen.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/RequestCovenant/request_covenant_screen.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ResourceProject/add_resource_project_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/UplodeReportProject/add_uplode_report_project_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/electronic_services_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/add_keeper_covenant_screen.dart';
@@ -152,6 +156,41 @@ class Pages {
           page: () => AddArchiveDocumentProjectScreen(),
           bindings: [
             AddArchiveDocumentProjectBinding(),
+          ]
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.add_lisince_project_screen,
+          page: () => AddLessonsProjectScreen(),
+          bindings: [
+            AddLessonsProjectBinding(),
+          ]
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.add_resource_project_screen,
+          page: () => AddResourceProjectScreen(),
+          bindings: [
+            AddResourceProjectBinding(),
+          ]
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.add_request_covenant_screen,
+          page: () => RequestCovenantScreen(),
+          bindings: [
+            RequestCovenantBinding(),
+          ]
+      ), GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.add_request_exchang_screen,
+          page: () => AddRequestExchangeScreen(),
+          bindings: [
+            AddRequestExchangeBinding(),
           ]
       ),
 

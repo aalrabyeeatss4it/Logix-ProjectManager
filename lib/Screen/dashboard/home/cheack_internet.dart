@@ -105,7 +105,7 @@ class CheackInternetScreen extends StatelessWidget {
                       borderRadius: 5.r,
                       color: kColorsRedTow,
                       borderColor: kColorsRedTow,
-                      sizeHeight: 0.06.sh,
+                      sizeHeight: 0.05.sh,
                       sizeWidth: .85.sw,
                       style: TextStyle(
                         fontSize: 13.sp,

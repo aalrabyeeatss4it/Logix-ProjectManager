@@ -202,14 +202,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                         child: TabBarView(
                                           children: [
                                             ListView.builder(
-                                              physics: BouncingScrollPhysics(),
+
                                               scrollDirection: Axis.horizontal,
                                               padding: EdgeInsets.symmetric(vertical: 4),
                                               itemCount: 3,
                                               itemBuilder: (context, index) => ItemTaskOld(),
                                             ),
                                             ListView.builder(
-                                              physics: BouncingScrollPhysics(),
+
                                               scrollDirection: Axis.horizontal,
                                               padding: EdgeInsets.symmetric(vertical: 4),
                                               itemCount: 3,

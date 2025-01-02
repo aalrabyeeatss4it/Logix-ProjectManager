@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 
-class AddCloseProjectDialog extends StatelessWidget {
+class AddSuccsessDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +80,7 @@ class AddCloseProjectDialog extends StatelessWidget {
                   SizedBox(
                     height: 0.02.sh,
                   ),
-                  Text('تم إضافة عهده جديده بنجاح'.tr ,
+                  Text('تم إرسال الطلب بنجاح!'.tr ,
                     style: const TextStyle(
                         fontSize: 16,
                         color: kColorsPrimaryFont,

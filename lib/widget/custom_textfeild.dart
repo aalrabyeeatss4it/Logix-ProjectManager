@@ -87,7 +87,7 @@ class TextFieldWidget extends StatelessWidget {
             decoration: InputDecoration(
                 hintText: hint==null?'':hint ,
                 filled: true,
-                fillColor:  kColorsWhite,
+                fillColor: color!=null?color: kColorsWhite,
                 errorMaxLines: 1,
                 hintStyle:hintStyle?? TextStyle(fontFamily: 'GraphikArabic',
                     fontSize: 12,

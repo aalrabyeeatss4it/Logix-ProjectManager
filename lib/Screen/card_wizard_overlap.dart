@@ -243,7 +243,7 @@ class CardWizardOverlapRouteState extends State<CardWizardOverlapRoute> {
           ),
 
           CustomButton(
-            sizeHeight: 0.06.sh,
+            sizeHeight: 0.05.sh,
             sizeWidth: 0.90.sw,
             text:isLast ? 'تسجيل الدخول'.tr:'Next'.tr,
             color: kColorsPrimaryFont,

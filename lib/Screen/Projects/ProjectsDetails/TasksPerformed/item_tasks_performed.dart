@@ -181,7 +181,7 @@ class ItemTasksPerformed extends StatelessWidget {
                                                     color:kColorsPrimaryFont ,
                                                     text: 'تغيير'.tr,
                                                     borderRadius: 10.r,
-                                                    sizeHeight: 0.06.sh,
+                                                    sizeHeight: 0.05.sh,
                                                     sizeWidth: 0.90.sw,
                                                     onPress: () async {
                                                       if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
@@ -295,7 +295,7 @@ class ItemTasksPerformed extends StatelessWidget {
                                                       minLine: 5,
                                                       maxLine: 5, // controller:controller.SubjectController,
                                                       keyboardType: TextInputType.number,
-                                                      color: kColorsDeepWhite,
+
                                                     ),
 
 
@@ -308,7 +308,7 @@ class ItemTasksPerformed extends StatelessWidget {
                                                       text: 'إضافه'.tr,
 
                                                       borderRadius: 10.r,
-                                                      sizeHeight: 0.06.sh,
+                                                      sizeHeight: 0.05.sh,
                                                       sizeWidth: 0.90.sw,
                                                       onPress: () async {
                                                         if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {

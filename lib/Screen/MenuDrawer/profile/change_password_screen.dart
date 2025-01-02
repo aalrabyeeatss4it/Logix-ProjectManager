@@ -155,7 +155,7 @@ class _ChangPasswordScreenState extends State<ChangPasswordScreen> {
                               child: CustomButton(
                                 isIconEnd:false,
                                 borderRadius: 8.r,
-                                sizeHeight: 0.06.sh,
+                                sizeHeight: 0.05.sh,
                                 sizeWidth: 0.85.sw,
                                 text:  "change password".tr,
                                 style:  TextStyle(fontSize: 14, color: kColorsWhiteButtonTow,   fontFamily: 'GraphikArabic',),

@@ -240,7 +240,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                                   controller:controller.ValuaFilterTextControll,
                                                                   requirement: true,
                                                                   keyboardType: TextInputType.text,
-                                                                  color: kColorsDeepWhite,
+
                                                                 ),
                                                                 SizedBox(
                                                                   height: 0.02.sh,
@@ -255,7 +255,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                                     color: kColorsWhite,
                                                                   ),
                                                                   borderRadius: 10.r,
-                                                                  sizeHeight: 0.06.sh,
+                                                                  sizeHeight: 0.05.sh,
                                                                   sizeWidth: 0.92.sw,
                                                                   onPress: () async {
                                                                     if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
@@ -510,7 +510,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                                 color: kColorsWhite,
                                                               ),
                                                               borderRadius: 10.r,
-                                                              sizeHeight: 0.06.sh,
+                                                              sizeHeight: 0.05.sh,
                                                               sizeWidth: 0.92.sw,
                                                               onPress: () async {
                                                                 if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {

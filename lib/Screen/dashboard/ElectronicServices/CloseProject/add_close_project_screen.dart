@@ -7,21 +7,18 @@ import 'package:get/get.dart';
 import 'package:projectmanagers/Constants/Constants.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/menu_widget_dachbord.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/CloseProject/add_close_project_controller.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/CloseProject/add_close_project_dilog.dart';
 import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/filter_model.dart';
 import 'package:projectmanagers/apiservice/checkInterNet.dart';
 import 'package:projectmanagers/apiservice/file_piker.dart';
-import 'package:projectmanagers/router/route_constants.dart';
 import 'package:projectmanagers/widget/CustomSnackBar.dart';
 import 'package:projectmanagers/widget/CustomSubmitDialog.dart';
+import 'package:projectmanagers/widget/add_dilog.dart';
 import 'package:projectmanagers/widget/buttm_navigator_bar.dart';
 import 'package:projectmanagers/widget/customButton.dart';
 import 'package:projectmanagers/widget/custom_date_paker.dart';
 import 'package:projectmanagers/widget/custom_textfeild.dart';
 import 'package:projectmanagers/widget/cutom_appbar.dart';
 import 'package:projectmanagers/widget/fileupload_widget.dart';
-import 'package:projectmanagers/widget/input_text.dart';
-import 'package:projectmanagers/widget/progisser_bar.dart';
 
 class AddCloseProjectScreen extends StatefulWidget {
 
@@ -92,7 +89,7 @@ class _AddCloseProjectScreenState extends State<AddCloseProjectScreen> {
                             maxLine: 1,
                             hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             keyboardType: TextInputType.text,
-                            color: kColorsPrimaryFont ,
+
                           ),
                           SizedBox(
                             height: 0.01.sh,
@@ -118,7 +115,6 @@ class _AddCloseProjectScreenState extends State<AddCloseProjectScreen> {
                             edit: 1,
                             maxLine: 5,
                             minLine: 5,
-                            color: kColorsPrimaryFont ,
                           ),
                           SizedBox(
                             height: 0.03.sh,
@@ -150,8 +146,6 @@ class _AddCloseProjectScreenState extends State<AddCloseProjectScreen> {
                                 fontWeight: FontWeight.w400,
                                 height: 1.14,color:Colors.black.withOpacity(0.4)  ),
                             edit: 1,
-
-                            color: kColorsPrimaryFont ,
                           ),
                           SizedBox(
                             height: 0.03.sh,
@@ -186,7 +180,7 @@ class _AddCloseProjectScreenState extends State<AddCloseProjectScreen> {
                           CustomButton(
                             color: kColorsPrimaryFont,
                             borderRadius: 8.r,
-                            sizeHeight: 0.06.sh,
+                            sizeHeight: 0.05.sh,
                             sizeWidth: 0.93.sw,
                             text: 'إرسال الطلب'.tr,
                             isIconEnd: true,
@@ -208,10 +202,10 @@ class _AddCloseProjectScreenState extends State<AddCloseProjectScreen> {
                                 builder: (context) => CustomSubmitOptionDialog(
                                   onPress: () {
                                     Get.back();
-                                    Get.dialog(AddCloseProjectDialog());
+                                    Get.dialog(AddSuccsessDialog());
 
                                   },
-                                  text:   'هل أنت متأكد '.tr,
+                                  text:   'هل أنت متأكد من إرسال الطلب؟'.tr,
                                   Colore: kColorsWhite,
                                   ColoreCleare: kColorsLightBlack,
                                   backColor1:kColorsPrimaryFont,

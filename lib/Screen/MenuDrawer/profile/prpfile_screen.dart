@@ -81,7 +81,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             maxLine: 1,
                             keyboardType: TextInputType.text,
-                            color: kColorsPrimaryFont,
+
                             controller:controller.EmployeeNameTextControll ,
                             read: true,
                           ),
@@ -96,7 +96,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             // hint: "admin",
                             hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             keyboardType: TextInputType.text,
-                            color: kColorsPrimaryFont,
+
                             controller:controller.TheNameTextControll ,
                             read: true,
                           ),
@@ -113,7 +113,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             edit: 1,
                             maxLine: 1,
                             keyboardType: TextInputType.emailAddress,
-                            color: kColorsPrimaryFont,
+
                             controller:controller.EmaileTextControll ,
                             read: true,
                           ),

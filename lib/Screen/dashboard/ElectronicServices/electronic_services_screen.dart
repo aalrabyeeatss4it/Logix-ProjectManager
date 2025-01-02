@@ -69,7 +69,7 @@ class _ElectronicServicesScreenState extends State<ElectronicServicesScreen> {
 
                     children: [
                       buildContainer('طلب إغلاق مشروع'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_close_project_screen);}),
-                      buildContainer('طلب مورد لمشروع'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_close_project_screen);}),
+                      buildContainer('طلب مورد لمشروع'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_resource_project_screen);}),
                       buildContainer('رفع تقرير عن مشروع'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_uplode_report_project_screen);}),
                     ],
                   ),
@@ -80,7 +80,7 @@ class _ElectronicServicesScreenState extends State<ElectronicServicesScreen> {
                     children: [
                       buildContainer('ارشفة المستندات للمشروع'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_archive_document_project_screen);}),
                       buildContainer('تحديث الخطة الزمنية'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_close_project_screen);}),
-                      buildContainer('الدروس المستفادة من المشروع'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_close_project_screen);}),
+                      buildContainer('الدروس المستفادة من المشروع'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_lisince_project_screen);}),
                     ],
                   ),
                   SizedBox(
@@ -89,8 +89,8 @@ class _ElectronicServicesScreenState extends State<ElectronicServicesScreen> {
                   Row(
                     children: [
                       buildContainer('طلب صرف مواد لمشروع'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_close_project_screen);}),
-                      buildContainer('طلب شراء مواد لمشروع'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_close_project_screen);}),
-                      buildContainer('طلب تسوية عهدة'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_close_project_screen);}),
+                      buildContainer('طلب شراء مواد لمشروع'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_request_exchang_screen);}),
+                      buildContainer('طلب تسوية عهدة'.tr,kColorsBlack,kColorsWhite,(){Get.toNamed(RoutingApp.add_request_covenant_screen);}),
 
                     ],
                   ),

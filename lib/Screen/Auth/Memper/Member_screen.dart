@@ -126,7 +126,7 @@ class MemberScreen extends StatelessWidget {
                               isIconEnd: false,
                               text: 'Next'.tr,
                               borderRadius: 10.r,
-                              sizeHeight: 0.06.sh,
+                              sizeHeight: 0.05.sh,
                               sizeWidth: 0.96.sw,
                               color: kColorsPrimaryFont,
                               style:TextStyle(
