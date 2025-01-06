@@ -1,4 +1,5 @@
 
+import 'package:projectmanagers/Core/Utils/assets.dart';
 import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/add_dilog.dart';
 import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/add_keeper_covenant_controller.dart';
 import 'package:flutter/material.dart';
@@ -60,7 +61,7 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
-        backgroundColor: kColorsWhite,
+
         body: SafeArea(
           child: Container(
 
@@ -86,9 +87,9 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                                 flex: 3,
                                 child: TextFieldWidget(
                                   text: 'رقم مركز التكلفه'.tr,
-                                  sizeFontText: 12.sp,
+                                  sizeFontText: 12,
                                   edit: 1,
-                                  hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                                  hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                                   maxLine: 1,
                                   keyboardType: TextInputType.number,
                                 ),
@@ -98,10 +99,10 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                                 flex: 5,
                                 child: TextFieldWidget(
                                   text:  'اسم مركز التكلفه'.tr,
-                                  sizeFontText: 12.sp,
+                                  sizeFontText: 12,
                                   edit: 1,
                                   maxLine: 1,
-                                  hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                                  hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                                   keyboardType: TextInputType.text,
 
                                 ),
@@ -139,8 +140,8 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                                       labelText: 'Choose'.tr,
                                       exText: 'Choose'.tr,
                                       textEditingController: controller.FilterNameController,
-                                      styleText: TextStyle(fontFamily: 'Cairo',
-                                        fontSize: 14.sp,
+                                      styleText: const TextStyle(fontFamily: 'Cairo',
+                                        fontSize: 14,
                                         color: kColorsBlack,
                                       ),
                                     ));
@@ -155,9 +156,9 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                                 child: TextFieldWidget(
                                   text: ' المبلغ '.tr,
                                   hint: 'أدخل المبلغ'.tr,
-                                  sizeFontText: 12.sp,
+                                  sizeFontText: 12,
                                   edit: 1,
-                                  hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                                  hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                                   maxLine: 1,
                                   keyboardType: TextInputType.number,
 
@@ -169,10 +170,10 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                                 child: TextFieldWidget(
                                   text:  ' الضريبه'.tr,
                                   hint: 'أدخل الضريبه '.tr,
-                                  sizeFontText: 12.sp,
+                                  sizeFontText: 12,
                                   edit: 1,
                                   maxLine: 1,
-                                  hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                                  hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                                   keyboardType: TextInputType.text,
 
                                 ),
@@ -185,10 +186,10 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                           TextFieldWidget(
                             text:  ' الإجمالي '.tr,
                             hint: 'أدخل الإجمالي  '.tr,
-                            sizeFontText: 12.sp,
+                            sizeFontText: 12,
                             edit: 1,
                             maxLine: 1,
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             keyboardType: TextInputType.text,
 
                           ),
@@ -202,9 +203,9 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                                 child: TextFieldWidget(
                                   text: ' الرقم الضريبي '.tr,
                                   hint: 'أدخل الرقم الضريبي '.tr,
-                                  sizeFontText: 12.sp,
+                                  sizeFontText: 12,
                                   edit: 1,
-                                  hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                                  hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                                   maxLine: 1,
                                   keyboardType: TextInputType.number,
 
@@ -216,10 +217,10 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                                 child: TextFieldWidget(
                                   text:  ' رقم الفاتورة'.tr,
                                   hint: 'أدخل رقم الفاتورة  '.tr,
-                                  sizeFontText: 12.sp,
+                                  sizeFontText: 12,
                                   edit: 1,
                                   maxLine: 1,
-                                  hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                                  hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                                   keyboardType: TextInputType.text,
 
                                 ),
@@ -233,9 +234,9 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                           TextFieldWidget(
                             text: 'المورد'.tr,
                             hint: 'أدخل   المورد   '.tr,
-                            sizeFontText: 12.sp,
+                            sizeFontText: 12,
                             // hint: "support@ss4it.com.sa",
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             edit: 1,
                             maxLine: 1,
                           ),
@@ -245,8 +246,8 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                           TextFieldWidget(
                             text: 'البيان'.tr,
                             hint: '  البيان..'.tr,
-                            sizeFontText: 12.sp,
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            sizeFontText: 12,
+                            hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             edit: 1,
                             maxLine: 5,
                             minLine: 5,
@@ -262,7 +263,7 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                                       bottom:1.r),
                                   child: Text(
                                     "المرفقات".tr,
-                                    style: TextStyle(    fontSize: 14,
+                                    style: const TextStyle(    fontSize: 14,
                                       fontFamily: 'GraphikArabic',
                                       fontWeight: FontWeight.w600,
                                       height: 1.14,color:kColorsPrimaryFont, ),)
@@ -275,8 +276,8 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                           TextFieldWidget(
                             text: ' اسم المستند'.tr,
                             hint: ' ادخل اسم المستند'.tr,
-                            sizeFontText: 12.sp,
-                            hintStyle:TextStyle(    fontSize: 14,
+                            sizeFontText: 12,
+                            hintStyle: TextStyle(    fontSize: 14,
                                 fontFamily: 'GraphikArabic',
                                 fontWeight: FontWeight.w400,
                                 height: 1.14,color:Colors.black.withOpacity(0.4)  ),
@@ -293,7 +294,7 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                                       bottom:1.r),
                                   child: Text(
                                     "مسار الملف".tr,
-                                    style: TextStyle(     fontSize: 14,
+                                    style: const TextStyle(     fontSize: 14,
                                       fontFamily: 'GraphikArabic',
                                       fontWeight: FontWeight.w400,
                                       height: 1.14,color:kColorsBlackTow, ),)
@@ -318,7 +319,7 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                             sizeHeight: 0.05.sh,
                             sizeWidth: 0.93.sw,
                             text: 'إضافه'.tr,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontFamily: 'GraphikArabic',
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
@@ -393,14 +394,14 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 SizedBox(width: 20),
                                 Text(
                                   'Choose'.tr,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: kColorsPrimaryFont,
-                                      fontSize: 14.sp,
+                                      fontSize: 14,
                                       fontWeight: FontWeight.bold),
                                 ),
                                 Padding(
@@ -410,7 +411,7 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                                       Get.back();
                                     },
                                     child: Image.asset(
-                                      "assets/Icons/clear.png",
+                                      AssestData.clear2,
                                       width: 25.r,
                                       height: 25.r,
                                       color: kColorsPrimaryFont,
@@ -432,16 +433,16 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                                     flex: 9,
                                     child: TextField(
                                       controller: _c.searchCustomerController,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           color: kColorsBlack,
-                                          fontSize: 12.sp,
+                                          fontSize: 12,
                                           fontWeight: FontWeight.bold),
                                       cursorColor: kColorsPrimaryFont,
                                       decoration: InputDecoration(
                                         hintText: 'search'.tr,
-                                        hintStyle: TextStyle(
+                                        hintStyle: const TextStyle(
                                             color: kColorsPrimaryFont,
-                                            fontSize: 12.sp,
+                                            fontSize: 12,
                                             fontWeight: FontWeight.bold),
                                         prefixIcon: Icon(Icons.search),
                                         border: OutlineInputBorder(
@@ -501,9 +502,9 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                                               padding: const EdgeInsets.all(8.0),
                                               child: Text(
                                                 e.name.toString(),
-                                                style: TextStyle(
+                                                style: const TextStyle(
                                                     color: kColorsBlack,
-                                                    fontSize: 12.sp,
+                                                    fontSize: 12,
                                                     fontWeight: FontWeight.bold),
                                               ),
                                             ),

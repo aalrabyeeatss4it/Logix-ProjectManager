@@ -58,7 +58,7 @@ class CustomContinerWithTowIcon extends StatelessWidget {
                           padding:  EdgeInsets.only(left: 7.0.r,right: 7.0.r),
                           child: Text(
                               text.toString(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 14,
                                 color: Color(0xff242424),
                                 fontWeight: FontWeight.w600,

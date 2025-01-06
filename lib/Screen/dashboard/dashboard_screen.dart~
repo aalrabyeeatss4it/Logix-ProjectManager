@@ -161,7 +161,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                           child: Column(
                             children: [
                               SvgPicture.asset(
-                                AssestData.my_bookmark,
+                                "assets/Icon/bookmark.svg",
                                 width: 24,
                                 height: 24,
                                 color: _pageIndex==2?kColorsPrimaryFont :kColorsLightBlack,
@@ -169,10 +169,10 @@ class DashboardScreenState extends State<DashboardScreen> {
                               SizedBox(
                                 height: 0.01.sh,
                               ),
-                              Text( ' حافظة العهده'.tr,style: _pageIndex==2?const TextStyle( color: kColorsPrimaryFont,
+                              Text( ' حافظة العهده'.tr,style: _pageIndex==2?TextStyle( color: kColorsPrimaryFont,
               fontSize: 14,
               fontFamily: 'GraphikArabic',
-              fontWeight: FontWeight.w400,):const TextStyle(fontFamily: 'GraphikArabic',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
+              fontWeight: FontWeight.w400,):TextStyle(fontFamily: 'GraphikArabic',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
                               SizedBox(
                                 height: 0.010.sh,
                               ),
@@ -189,7 +189,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                           child: Column(
                             children: [
                               SvgPicture.asset(
-                             AssestData.my_chart,
+                                "assets/Icon/chart-2.svg",
                                 width: 24,
                                 height: 24,
                                 color:_pageIndex==3?kColorsPrimaryFont:kColorsLightBlack,
@@ -197,10 +197,10 @@ class DashboardScreenState extends State<DashboardScreen> {
                               SizedBox(
                                 height: 0.01.sh,
                               ),
-                              Text(  'التقارير'.tr,style:_pageIndex==3?const TextStyle( color:kColorsPrimaryFont,
+                              Text(  'التقارير'.tr,style:_pageIndex==3?TextStyle( color:kColorsPrimaryFont,
               fontSize: 14,
               fontFamily: 'GraphikArabic',
-              fontWeight: FontWeight.w400,):const TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
+              fontWeight: FontWeight.w400,):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
                               SizedBox(
                                 height: 0.010.sh,
                               ),

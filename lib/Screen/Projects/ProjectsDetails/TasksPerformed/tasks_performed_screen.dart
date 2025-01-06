@@ -55,7 +55,7 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
-        backgroundColor: kColorsWhite,
+
         body: SafeArea(
           child: Container(
             color:kColorsWhite.withOpacity(0.1),
@@ -75,274 +75,11 @@ class _TasksPerformedScreenState extends State<TasksPerformedScreen> {
             ),
           ),
         ),
-
+        bottomNavigationBar:   CustomBottomNavBar(selectedMenu: MenuState.home),
       );
   }
 
-  // Widget BuldTabbBar() {
-  //   return Column(
-  //     children: [
-  //       Padding(
-  //         padding: EdgeInsets.symmetric(horizontal: 20.0.r),
-  //         child: Row(
-  //           children: [
-  //             Container(
-  //               child: Container(
-  //                 width: 0.08.sw,
-  //                 height: 0.05.sh,
-  //                 decoration: ShapeDecoration(
-  //                   color: kColorsPrimaryFont,
-  //                   shape: RoundedRectangleBorder(
-  //                     side: BorderSide(width: 1, color: Color(0xFF9BB7DA)),
-  //                     borderRadius: BorderRadius.circular(8),
-  //                   ),
-  //                 ),
-  //                 child: Center(
-  //                   child: Text(
-  //                     "1",
-  //                     style: const TextStyle(
-  //                         fontSize: 12,
-  //                         color: kColorsWhite,
-  //                         fontWeight: FontWeight.bold),
-  //                   ),
-  //                 ),
-  //               ),
-  //             ),
-  //             Container(
-  //               width: 0.07.sw,
-  //               height: 0.002.sh,
-  //               color: controller.selectedIndextab1 == 1
-  //                   ? kColorsPrimaryFont
-  //                   : kColorsPrimaryFontLow,
-  //             ),
-  //             Container(
-  //               width: 0.08.sw,
-  //               height: 0.05.sh,
-  //               child: Container(
-  //                 decoration: ShapeDecoration(
-  //                   color: controller.selectedIndextab2 == 1
-  //                       ? kColorsPrimaryFont
-  //                       : kColorsPrimaryFontLow,
-  //                   shape: RoundedRectangleBorder(
-  //                     side: BorderSide(width: 1, color: Color(0xFF9BB7DA)),
-  //                     borderRadius: BorderRadius.circular(8),
-  //                   ),
-  //                 ),
-  //                 child: Center(
-  //                   child: Text(
-  //                     "2",
-  //                     style: const TextStyle(
-  //                         fontSize: 12,
-  //                         color: kColorsWhite,
-  //                         fontWeight: FontWeight.bold),
-  //                   ),
-  //                 ),
-  //               ),
-  //             ),
-  //             Container(
-  //               width: 0.07.sw,
-  //               height: 0.002.sh,
-  //               color: controller.selectedIndextab2 == 1
-  //                   ? kColorsPrimaryFont
-  //                   : kColorsPrimaryFontLow,
-  //             ),
-  //             Container(
-  //               width: 0.08.sw,
-  //               height: 0.05.sh,
-  //               child: Container(
-  //                 decoration: ShapeDecoration(
-  //                   color: controller.selectedIndextab3 == 1
-  //                       ? kColorsPrimaryFont
-  //                       : kColorsPrimaryFontLow,
-  //                   shape: RoundedRectangleBorder(
-  //                     side: BorderSide(width: 1, color: Color(0xFF9AB7DB)),
-  //                     borderRadius: BorderRadius.circular(8),
-  //                   ),
-  //                 ),
-  //                 child: Center(
-  //                   child: Text(
-  //                     "3",
-  //                     style: const TextStyle(
-  //                         fontSize: 12,
-  //                         color: kColorsWhite,
-  //                         fontWeight: FontWeight.bold),
-  //                   ),
-  //                 ),
-  //               ),
-  //             ),
-  //             Container(
-  //               width: 0.07.sw,
-  //               height: 0.002.sh,
-  //               color: controller.selectedIndextab3 == 1
-  //                   ? kColorsPrimaryFont
-  //                   : kColorsPrimaryFontLow,
-  //             ),
-  //             Container(
-  //               width: 0.08.sw,
-  //               height: 0.05.sh,
-  //               child: Container(
-  //                 decoration: ShapeDecoration(
-  //                   color: controller.selectedIndextab4 == 1
-  //                       ? kColorsPrimaryFont
-  //                       : kColorsPrimaryFontLow,
-  //                   shape: RoundedRectangleBorder(
-  //                     side: BorderSide(width: 1, color: Color(0xFF9AB7DB)),
-  //                     borderRadius: BorderRadius.circular(8),
-  //                   ),
-  //                 ),
-  //                 child: Center(
-  //                   child: Text(
-  //                     "4",
-  //                     style: const TextStyle(
-  //                         fontSize: 12,
-  //                         color: kColorsWhite,
-  //                         fontWeight: FontWeight.bold),
-  //                   ),
-  //                 ),
-  //               ),
-  //             ),
-  //             Container(
-  //               width: 0.07.sw,
-  //               height: 0.002.sh,
-  //               color: controller.selectedIndextab4 == 1
-  //                   ? kColorsPrimaryFont
-  //                   : kColorsPrimaryFontLow,
-  //             ),
-  //             Container(
-  //               width: 0.08.sw,
-  //               height: 0.05.sh,
-  //               child: Container(
-  //                 decoration: ShapeDecoration(
-  //                   color: controller.selectedIndextab5 == 1
-  //                       ? kColorsPrimaryFont
-  //                       : kColorsPrimaryFontLow,
-  //                   shape: RoundedRectangleBorder(
-  //                     side: BorderSide(width: 1, color: Color(0xFF9AB7DB)),
-  //                     borderRadius: BorderRadius.circular(8),
-  //                   ),
-  //                 ),
-  //                 child: Center(
-  //                   child: Text(
-  //                     "5",
-  //                     style: const TextStyle(
-  //                         fontSize: 12,
-  //                         color: kColorsWhite,
-  //                         fontWeight: FontWeight.bold),
-  //                   ),
-  //                 ),
-  //               ),
-  //             ),
-  //             Container(
-  //               width: 0.07.sw,
-  //               height: 0.002.sh,
-  //               color: controller.selectedIndextab5 == 1
-  //                   ? kColorsPrimaryFont
-  //                   : kColorsPrimaryFontLow,
-  //             ),
-  //             Container(
-  //               width: 0.08.sw,
-  //               height: 0.05.sh,
-  //               child: Container(
-  //                 decoration: ShapeDecoration(
-  //                   color: controller.selectedIndextab6 == 1
-  //                       ? kColorsPrimaryFont
-  //                       : kColorsPrimaryFontLow,
-  //                   shape: RoundedRectangleBorder(
-  //                     side: BorderSide(width: 1, color: Color(0xFF9AB7DB)),
-  //                     borderRadius: BorderRadius.circular(8),
-  //                   ),
-  //                 ),
-  //                 child: Center(
-  //                   child: Text(
-  //                     "6",
-  //                     style: const TextStyle(
-  //                         fontSize: 12,
-  //                         color: kColorsWhite,
-  //                         fontWeight: FontWeight.bold),
-  //                   ),
-  //                 ),
-  //               ),
-  //             ),
-  //           ],
-  //         ),
-  //       ),
-  //       Padding(
-  //         padding: EdgeInsets.all(12.r),
-  //         child: Row(
-  //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  //           children: [
-  //             Text(
-  //               "بيانات رسالة",
-  //               style:  TextStyle(
-  //                   fontSize: 12,
-  //                   color: controller.selectedIndextab1 == 1
-  //                       ? kColorsPrimaryFont
-  //                       : kColorsPrimaryFontLow,
-  //                   fontWeight: FontWeight.bold),
-  //             ),
-  //             Padding(
-  //               padding: EdgeInsets.only(left: 2.0.r),
-  //               child: Text(
-  //                 "Options".tr,
-  //                 style:  TextStyle(
-  //                     fontSize: 12,
-  //                     color: controller.selectedIndextab2 == 1
-  //                         ? kColorsPrimaryFont
-  //                         : kColorsPrimaryFontLow,
-  //                     fontWeight: FontWeight.bold),
-  //               ),
-  //             ),
-  //             Padding(
-  //               padding: EdgeInsets.only(left: 2.0.r),
-  //               child: Text(
-  //                 "نسخة إلى",
-  //                 style:   TextStyle(
-  //                     fontSize: 12,
-  //                     color: controller.selectedIndextab3 == 1
-  //                         ? kColorsPrimaryFont
-  //                         : kColorsPrimaryFontLow,
-  //                     fontWeight: FontWeight.bold),
-  //               ),
-  //             ),
-  //             Padding(
-  //               padding: EdgeInsets.only(left: 2.0.r),
-  //               child: Text(
-  //                 "Attachments".tr,
-  //                 style:   TextStyle(
-  //                     fontSize: 12,
-  //                     color: controller.selectedIndextab4 == 1
-  //                         ? kColorsPrimaryFont
-  //                         : kColorsPrimaryFontLow,
-  //                     fontWeight: FontWeight.bold),
-  //               ),
-  //             ),
-  //             Padding(
-  //               padding: EdgeInsets.only(left: 2.0.r),
-  //               child: Text(
-  //                 "Attachments".tr,
-  //                 style:   TextStyle(
-  //                     fontSize: 12,
-  //                     color: controller.selectedIndextab4 == 1
-  //                         ? kColorsPrimaryFont
-  //                         : kColorsPrimaryFontLow,
-  //                     fontWeight: FontWeight.bold),
-  //               ),
-  //             ),
-  //             Padding(
-  //               padding: EdgeInsets.only(left: 2.0.r),
-  //               child: Text(
-  //                 "Attachments".tr,
-  //                 style:   TextStyle(
-  //                     fontSize: 12,
-  //                     color: controller.selectedIndextab4 == 1 ?kColorsPrimaryFont:kColorsPrimaryFontLow, fontWeight: FontWeight.bold),
-  //               ),
-  //             ),
-  //           ],
-  //         ),
-  //       ),
-  //     ],
-  //   );
-  // }
+
 }
 Widget TeaxtLableRow(BuildContext context,  String? text,String? textvalue) {
   final isRtl = Localizations.localeOf(context).languageCode == 'ar';
@@ -353,13 +90,13 @@ Widget TeaxtLableRow(BuildContext context,  String? text,String? textvalue) {
         Expanded(
           flex: 2,
           child: Text(text??""+" :",
-              style: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,)
+              style:  const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,)
           ),
         ),
         Expanded(
           flex: 4,
           child: Text(textvalue??"",
-              style: const TextStyle(fontSize: 11, color:  Color(0xffA4A4A4)),
+              style:  const TextStyle(fontSize: 11, color:  Color(0xffA4A4A4)),
             overflow: TextOverflow.visible, // تأكد من أن النص يظهر بدون قص
             softWrap: true, // تفعيل التفاف النص
           ),

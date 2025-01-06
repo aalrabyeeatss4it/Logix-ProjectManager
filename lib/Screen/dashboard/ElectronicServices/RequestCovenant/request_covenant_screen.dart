@@ -1,4 +1,5 @@
 
+import 'package:projectmanagers/Core/Utils/assets.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/RequestCovenant/item_request_covenant.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/RequestCovenant/request_covenant_controller.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,7 @@ import 'package:projectmanagers/router/route_constants.dart';
 import 'package:projectmanagers/widget/CustomSnackBar.dart';
 import 'package:projectmanagers/widget/CustomSubmitDialog.dart';
 import 'package:projectmanagers/widget/add_dilog.dart';
+import 'package:projectmanagers/widget/buttm_navigator_bar.dart';
 import 'package:projectmanagers/widget/customButton.dart';
 import 'package:projectmanagers/widget/cutom_appbar.dart';
 
@@ -55,7 +57,7 @@ class _RequestCovenantScreenState extends State<RequestCovenantScreen> {
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
-        backgroundColor: kColorsWhite,
+
         body: SafeArea(
           child: Container(
             color: kColorsWhite.withOpacity(0.1),
@@ -88,12 +90,12 @@ class _RequestCovenantScreenState extends State<RequestCovenantScreen> {
                     text: 'إرسال الطلب'.tr,
                     isIconEnd: true,
                     IconEnd: SvgPicture.asset(
-                      "assets/Icons/left.svg",
+                      AssestData.left,
                       width: 24 ,
                       height: 24 ,
                       color: kColorsWhite,
                     ),
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 14,
                       fontFamily: 'GraphikArabic',
@@ -128,6 +130,7 @@ class _RequestCovenantScreenState extends State<RequestCovenantScreen> {
             ),
           ),
         ),
+        bottomNavigationBar:   CustomBottomNavBar(selectedMenu: MenuState.home),
       );
 
   }

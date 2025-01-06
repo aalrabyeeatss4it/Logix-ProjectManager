@@ -44,7 +44,7 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
           Padding(
             padding:  EdgeInsets.only(top:  8.0),
             child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(
                     width: 53.w,
@@ -52,7 +52,7 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
                   Text(
                     'Select your language'.tr,
                     style:
-                    TextStyle(color: kColorsPrimaryFont, fontSize: 16,fontWeight: FontWeight.w500),
+                    const TextStyle(color: kColorsPrimaryFont, fontSize: 16,fontWeight: FontWeight.w500),
                   ),
                   Padding(
                     padding:
@@ -96,7 +96,7 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
                               child: Padding(
                                 padding:  EdgeInsets.symmetric(horizontal:  12.0.r),
                                 child: RadioListTile(
-                                  title: Text('arabic language'.tr,style: TextStyle(
+                                  title: Text('arabic language'.tr,style: const TextStyle(
                                       fontSize: 16,
                                       color:kColorsPrimaryFont,
                                       fontWeight: FontWeight.w600)),
@@ -118,7 +118,7 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
                               child: Padding(
                                 padding:  EdgeInsets.symmetric(horizontal:  12.0.r),
                                 child: RadioListTile(
-                                  title: Text('English language'.tr,style: TextStyle(
+                                  title: Text('English language'.tr,style: const TextStyle(
                                       fontSize: 16,
                                       color: kColorsPrimaryFont,
                                       fontWeight: FontWeight.w600)),

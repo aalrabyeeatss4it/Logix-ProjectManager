@@ -85,7 +85,7 @@ class CustomTextInput extends StatelessWidget {
             padding: EdgeInsets.only(
                 left:20.r, right:4.r,
                 bottom:5.r),
-            child: Text(text.toString() , style:  TextStyle(fontSize: 14, color: Color(0xff010B38),  ),
+            child: Text(text.toString() , style:  const TextStyle(fontSize: 14, color: Color(0xff010B38),  ),
             ),
           ),
           SizedBox(height:  0.01.sh),
@@ -99,7 +99,7 @@ class CustomTextInput extends StatelessWidget {
               cursorColor: context.theme.primaryColor,
               initialValue: inetValue,
               decoration: InputDecoration(
-                labelStyle: TextStyle(
+                labelStyle: const TextStyle(
                   fontSize: 12,
                   color: kColorsBlack,
                 ),
@@ -111,7 +111,7 @@ class CustomTextInput extends StatelessWidget {
                     ? "${""}\t$exText"
                     : ""
                     : labelText.tr,
-                hintStyle: TextStyle(
+                hintStyle: const TextStyle(
                   fontSize: 12,
                   color: kColorsLightBlack,
 
@@ -164,7 +164,7 @@ class CustomTextInput extends StatelessWidget {
 
               ),
               onChanged: onChangeText,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 12,
                 color: kColorsLightBlack,
               ),

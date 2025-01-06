@@ -70,7 +70,7 @@ class TextFieldWidget extends StatelessWidget {
             initialValue: initialValue,
             onChanged: onChanged,
             controller: controller,
-            style:  TextStyle(fontFamily: 'GraphikArabic',color: colorfont!=null ? colorfont : kColorsLightBlack,fontSize: 12),
+            style:  TextStyle(fontFamily: 'GraphikArabic',color: colorfont!=null ? colorfont : kColorsLightBlack,fontSize: 12.sp),
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return _errorMessage(requirement ?? false); // استخدم قيمة افتراضية لـ requirement
@@ -211,7 +211,7 @@ class TextFieldWidgetAuth extends StatelessWidget {
                 style:  TextStyle(
                   fontFamily: 'GraphikArabic',
                   color: colorfont ?? kColorsLightBlack,
-                  fontSize: 12,
+                  fontSize: 12.sp,
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {

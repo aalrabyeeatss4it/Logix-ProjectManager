@@ -53,9 +53,9 @@ class ItemDocumentLibrary extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        CustomTowRowText(text: '    اسم المستند'.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "ملف كذا كذا  ", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "    التاريخ".tr, textValue2: "2024/2/2",),
-                        CustomRowText(text: ' الوصف'.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: " وصف المستند ", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite,),
-                        CustomRowText(text: ' المصدر'.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: " مصدر المستند", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite,),
+                        CustomTowRowText(text: '    اسم المستند'.tr, textStyle:    TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "ملف كذا كذا  ", textValueStyle:    TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "    التاريخ".tr, textValue2: "2024/2/2",),
+                        CustomRowText(text: ' الوصف'.tr, textStyle:    TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: " وصف المستند ", textValueStyle:    TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite,),
+                        CustomRowText(text: ' المصدر'.tr, textStyle:    TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: " مصدر المستند", textValueStyle:    TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite,),
 
 
                       ],
@@ -102,13 +102,13 @@ class ItemDocumentLibraryShimmer extends StatelessWidget {
                   children: [
                     CustomRowText(
                       text: " ",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: "",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -116,13 +116,13 @@ class ItemDocumentLibraryShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: "",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: "",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -130,13 +130,13 @@ class ItemDocumentLibraryShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: "",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: " ",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -144,13 +144,13 @@ class ItemDocumentLibraryShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: " ",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: "",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -158,13 +158,13 @@ class ItemDocumentLibraryShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: " ",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: " ",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -172,13 +172,13 @@ class ItemDocumentLibraryShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: "",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: "  ",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),

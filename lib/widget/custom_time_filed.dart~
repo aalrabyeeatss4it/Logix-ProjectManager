@@ -73,7 +73,7 @@ class CustomTimePaker extends StatelessWidget {
             child: DateTimeField(
               //onChanged: onChange,
               controller: controller,
-              style: const TextStyle(color: Colors.black, fontSize: 11),
+              style: TextStyle(color: Colors.black, fontSize: 11.sp),
               validator: (value) {
                 if (value == null) {
                   return _errorMessage(reqeurment!);

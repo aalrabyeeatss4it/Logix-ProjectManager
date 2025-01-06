@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:projectmanagers/Constants/Constants.dart';
+import 'package:projectmanagers/Core/Utils/assets.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/menu_widget_dachbord.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ExchangeRequest/add_request_exchange_controller.dart';
 import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/filter_model.dart';
@@ -61,7 +62,7 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
-        backgroundColor: kColorsWhite,
+
         body: SafeArea(
           child: Container(
 
@@ -87,10 +88,10 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
                           TextFieldWidget(
                             text:  ' رقم الطلب '.tr,
                             hint: 'أدخل رقم الطلب  '.tr,
-                            sizeFontText: 12.sp,
+                            sizeFontText: 12,
                             edit: 1,
                             maxLine: 1,
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             keyboardType: TextInputType.text,
 
                           ),
@@ -113,10 +114,10 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
                           TextFieldWidget(
                             text:  '    المخزن '.tr,
                             hint: 'أدخل المخزن '.tr,
-                            sizeFontText: 12.sp,
+                            sizeFontText: 12,
                             edit: 1,
                             maxLine: 1,
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            hintStyle:  TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             keyboardType: TextInputType.text,
 
                           ),
@@ -131,7 +132,7 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
                                       bottom:1.r),
                                   child: Text(
                                     "الأصناف".tr,
-                                    style: TextStyle(    fontSize: 14,
+                                    style: const TextStyle(    fontSize: 14,
                                       fontFamily: 'GraphikArabic',
                                       fontWeight: FontWeight.w600,
                                       height: 1.14,color:kColorsPrimaryFont, ),)
@@ -160,8 +161,8 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
                                       labelText: 'Choose'.tr,
                                       exText: 'Choose'.tr,
                                       textEditingController: controller.FilterNameController,
-                                      styleText: TextStyle(fontFamily: 'Cairo',
-                                        fontSize: 14.sp,
+                                      styleText:  TextStyle(fontFamily: 'Cairo',
+                                        fontSize: 14,
                                         color: kColorsBlack,
                                       ),
                                     ));
@@ -176,8 +177,8 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
                                 child: TextFieldWidget(
                                   text: 'رقم الصنف'.tr,
                                   hint: 'أدخل رقم الصنف'.tr,
-                                  sizeFontText: 12.sp,
-                                  hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                                  sizeFontText: 12,
+                                  hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                                   edit: 1,
 
                                 ),
@@ -188,8 +189,8 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
                                 child: TextFieldWidget(
                                   text: 'اسم الصنف'.tr,
                                   hint: 'أدخل اسم الصنف '.tr,
-                                  sizeFontText: 12.sp,
-                                  hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                                  sizeFontText: 12,
+                                  hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                                   edit: 1,
 
                                 ),
@@ -202,8 +203,8 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
                           TextFieldWidget(
                             text: 'الكمية '.tr,
                             hint: 'أدخل الكمية'.tr,
-                            sizeFontText: 12.sp,
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            sizeFontText: 12,
+                            hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             edit: 1,
 
                           ),
@@ -222,12 +223,12 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
                             text: 'إضافه'.tr,
                             isIconEnd: true,
                             IconEnd: SvgPicture.asset(
-                              "assets/Icons/left.svg",
+                              AssestData.left,
                               width: 24 ,
                               height: 24 ,
                               color: kColorsWhite,
                             ),
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 14,
                               fontFamily: 'GraphikArabic',
@@ -301,14 +302,14 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 SizedBox(width: 20),
                                 Text(
                                   'Choose'.tr,
-                                  style: TextStyle(
+                                  style:  TextStyle(
                                       color: kColorsPrimaryFont,
-                                      fontSize: 14.sp,
+                                      fontSize: 14,
                                       fontWeight: FontWeight.bold),
                                 ),
                                 Padding(
@@ -318,7 +319,7 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
                                       Get.back();
                                     },
                                     child: Image.asset(
-                                      "assets/Icons/clear.png",
+                                      AssestData.clear2,
                                       width: 25.r,
                                       height: 25.r,
                                       color: kColorsPrimaryFont,
@@ -340,16 +341,16 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
                                     flex: 9,
                                     child: TextField(
                                       controller: _c.searchCustomerController,
-                                      style: TextStyle(
+                                      style:  TextStyle(
                                           color: kColorsBlack,
-                                          fontSize: 12.sp,
+                                          fontSize: 12,
                                           fontWeight: FontWeight.bold),
                                       cursorColor: kColorsPrimaryFont,
                                       decoration: InputDecoration(
                                         hintText: 'search'.tr,
-                                        hintStyle: TextStyle(
+                                        hintStyle:  TextStyle(
                                             color: kColorsPrimaryFont,
-                                            fontSize: 12.sp,
+                                            fontSize: 12,
                                             fontWeight: FontWeight.bold),
                                         prefixIcon: Icon(Icons.search),
                                         border: OutlineInputBorder(
@@ -409,9 +410,9 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
                                               padding: const EdgeInsets.all(8.0),
                                               child: Text(
                                                 e.name.toString(),
-                                                style: TextStyle(
+                                                style:  TextStyle(
                                                     color: kColorsBlack,
-                                                    fontSize: 12.sp,
+                                                    fontSize: 12,
                                                     fontWeight: FontWeight.bold),
                                               ),
                                             ),
@@ -478,7 +479,7 @@ class ConfirmDialog extends StatelessWidget {
                 SizedBox(
                   height: 0.02.sh,
                 ),
-                Text("تأكيد بيانات الطلب",style: TextStyle( color: Color(0xFF242424),
+                Text("تأكيد بيانات الطلب",style: const TextStyle( color: Color(0xFF242424),
                   fontSize: 16,
                   fontFamily: 'GraphikArabic',
                   fontWeight: FontWeight.w500,
@@ -489,8 +490,8 @@ class ConfirmDialog extends StatelessWidget {
                 TextFieldWidget(
                   text: 'البند '.tr,
                   hint: 'أدخل البند'.tr,
-                  sizeFontText: 12.sp,
-                  hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                  sizeFontText: 12,
+                  hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                   edit: 1,
                   color: Color(0xffC8C9CC).withOpacity(0.3) ,
                   colorborder: Color(0xffC8C9CC).withOpacity(0.3) ,
@@ -501,8 +502,8 @@ class ConfirmDialog extends StatelessWidget {
                 TextFieldWidget(
                   text: 'اسم الصنف '.tr,
                   hint: 'أدخل اسم الصنف'.tr,
-                  sizeFontText: 12.sp,
-                  hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                  sizeFontText: 12,
+                  hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                   edit: 1,
                   color: Color(0xffC8C9CC).withOpacity(0.3) ,
                   colorborder: Color(0xffC8C9CC).withOpacity(0.3) ,
@@ -513,8 +514,8 @@ class ConfirmDialog extends StatelessWidget {
                 TextFieldWidget(
                   text: 'الكمية   '.tr,
                   hint: 'أدخل  الكمية'.tr,
-                  sizeFontText: 12.sp,
-                  hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                  sizeFontText: 12,
+                  hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                   edit: 1,
                   color: Color(0xffC8C9CC).withOpacity(0.3) ,
                   colorborder: Color(0xffC8C9CC).withOpacity(0.3) ,
@@ -534,7 +535,7 @@ class ConfirmDialog extends StatelessWidget {
                             style: TextButton.styleFrom(
                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.r))
                                 ,backgroundColor: backColor1),
-                            onPressed: onPress, child: Text(text1!,style:TextStyle(
+                            onPressed: onPress, child: Text(text1!,style: TextStyle(
                           fontSize: 16,
                           color: fontColortext1,
                           fontWeight: FontWeight.w500,
@@ -557,7 +558,7 @@ class ConfirmDialog extends StatelessWidget {
                           ),
                           onPressed: (){
                             Get.back();
-                          }, child: Text(text2!,style:TextStyle(
+                          }, child: Text(text2!,style: TextStyle(
                           fontSize: 16,
                           color: fontColortext2,
                           fontWeight: FontWeight.w500,

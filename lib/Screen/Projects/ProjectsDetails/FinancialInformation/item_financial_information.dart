@@ -53,11 +53,11 @@ class ItemFinancialInformation extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        CustomRowText(text:  'اسم البند'.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "مثال على بيان السطر", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite,),
+                        CustomRowText(text:  'اسم البند'.tr, textStyle:    TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "مثال على بيان السطر", textValueStyle:    TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite,),
 
-                        CustomTowRowText(text: ' رقم البند'.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "222  ", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: " اسم البند".tr, textValue2: "اسم البند",),
-                        CustomTowRowText(text: 'السعر الإفرادي'.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "0.00  ", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "السعر الإجمالي".tr, textValue2: " 0.00  ",),
-                        CustomTowRowText(text: 'الكميه  '.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "0.00  ", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: " المبلغ المنصرف".tr, textValue2: "  0.00 ",),
+                        CustomTowRowText(text: ' رقم البند'.tr, textStyle:    TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "222  ", textValueStyle:    TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: " اسم البند".tr, textValue2: "اسم البند",),
+                        CustomTowRowText(text: 'السعر الإفرادي'.tr, textStyle:    TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "0.00  ", textValueStyle:    TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "السعر الإجمالي".tr, textValue2: " 0.00  ",),
+                        CustomTowRowText(text: 'الكميه  '.tr, textStyle:    TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "0.00  ", textValueStyle:    TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: " المبلغ المنصرف".tr, textValue2: "  0.00 ",),
 
                       ],
                     ),
@@ -103,13 +103,13 @@ class ItemFinancialInformationShimmer extends StatelessWidget {
                   children: [
                     CustomRowText(
                       text: " ",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: "",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -117,13 +117,13 @@ class ItemFinancialInformationShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: "",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: "",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -131,13 +131,13 @@ class ItemFinancialInformationShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: "",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: " ",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -145,13 +145,13 @@ class ItemFinancialInformationShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: " ",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: "",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -159,13 +159,13 @@ class ItemFinancialInformationShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: " ",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: " ",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -173,13 +173,13 @@ class ItemFinancialInformationShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: "",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: "  ",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),

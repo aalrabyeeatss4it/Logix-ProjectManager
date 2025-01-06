@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:projectmanagers/Constants/Constants.dart';
+import 'package:projectmanagers/Core/Utils/assets.dart';
 import 'package:projectmanagers/Screen/dashboard/dashboard_screen.dart';
 
 class CustomBottomNavBar extends StatefulWidget {
@@ -45,7 +46,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
             height: 0.10.sh,
 
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 TextButton(
                     child: SizedBox(
@@ -53,13 +54,13 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                       child: Column(
                         children: [
                           SvgPicture.asset(
-                            "assets/Icon/home-hashtag.svg",
+                            AssestData.my_project,
                             width: 24.r,
                             height: 24.r,
                             color: MenuState.home == widget.selectedMenu
                                 ? kColorsPrimaryFont :kColorsLightBlack,
                           ),
-                          Text("مشاريعي".tr,style: MenuState.home == widget.selectedMenu?TextStyle(   fontFamily: 'GraphikArabic',fontSize: 14,color: kColorsPrimaryFont):TextStyle(   fontFamily: 'GraphikArabic',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),)
+                          Text("مشاريعي".tr,style: MenuState.home == widget.selectedMenu?const TextStyle(   fontFamily: 'GraphikArabic',fontSize: 14,color: kColorsPrimaryFont):const TextStyle(   fontFamily: 'GraphikArabic',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),)
                         ],
                       ),
                     ),
@@ -73,13 +74,13 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                     child: Column(
                       children: [
                         SvgPicture.asset(
-                          "assets/Icon/hashtag.svg",
+                          AssestData.my_service,
                           width: 24.r,
                           height: 24.r,
                           color: MenuState.ElectronicServices == widget.selectedMenu
                               ? kColorsPrimaryFont :kColorsLightBlack,
                         ),
-                        Text( 'الخدمات الإلكترونيه'.tr,style: MenuState.ElectronicServices == widget.selectedMenu?TextStyle(   fontFamily: 'GraphikArabic',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsPrimaryFont):TextStyle(   fontFamily: 'GraphikArabic',fontSize: 14,color: kColorsLightBlack),),
+                        Text( 'الخدمات الإلكترونيه'.tr,style: MenuState.ElectronicServices == widget.selectedMenu?const TextStyle(   fontFamily: 'GraphikArabic',fontSize: 12,fontWeight: FontWeight.w600,color: kColorsPrimaryFont):const TextStyle(   fontFamily: 'GraphikArabic',fontSize: 14,color: kColorsLightBlack),),
 
                       ],
                     ),
@@ -94,13 +95,13 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                     child: Column(
                       children: [
                         SvgPicture.asset(
-                          "assets/Icon/bookmark.svg",
+                          AssestData.my_bookmark,
                           width: 24.r,
                           height: 24.r,
                           color: MenuState.KeeperCovenant == widget.selectedMenu
                               ? kColorsPrimaryFont :kColorsLightBlack,
                         ),
-                        Text( ' حافظة العهده'.tr,style: MenuState.KeeperCovenant == widget.selectedMenu?TextStyle(   fontFamily: 'GraphikArabic',fontSize: 14,color: kColorsPrimaryFont):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
+                        Text( ' حافظة العهده'.tr,style: MenuState.KeeperCovenant == widget.selectedMenu?const TextStyle(   fontFamily: 'GraphikArabic',fontSize: 14,color: kColorsPrimaryFont):const TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),),
                       ],
                     ),
                   ),
@@ -115,13 +116,13 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                     child: Column(
                       children: [
                         SvgPicture.asset(
-                          "assets/Icon/chart-2.svg",
+                          AssestData.my_chart,
                           width: 24.r,
                           height: 24.r,
                           color: MenuState.Reports == widget.selectedMenu
                               ? kColorsPrimaryFont :kColorsLightBlack,
                         ),
-                        Text(  'التقارير'.tr,style: MenuState.Reports == widget.selectedMenu?TextStyle(fontSize: 14,color: kColorsPrimaryFont):TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),)
+                        Text(  'التقارير'.tr,style: MenuState.Reports == widget.selectedMenu?const TextStyle(fontSize: 14,color: kColorsPrimaryFont):const TextStyle(fontSize: 12,fontWeight: FontWeight.w600,color: kColorsLightBlack),)
                       ],
                     ),
                   ),

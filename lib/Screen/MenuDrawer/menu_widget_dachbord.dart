@@ -290,7 +290,7 @@ Widget sliderItem(
               IsLOgOut==true?SizedBox(): SizedBox(
                 width: 0.04.sw,
               ),
-              Text(title, style:   TextStyle(fontFamily: 'Cairo',fontSize:  14.sp, color: FontColore, fontWeight: FontWeight.w700),),
+              Text(title, style:     TextStyle(fontFamily: 'Cairo',fontSize:  14, color: FontColore, fontWeight: FontWeight.w700),),
             ],
           ),
         ],

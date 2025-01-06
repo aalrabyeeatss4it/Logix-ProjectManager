@@ -72,7 +72,7 @@ class CustomButton extends StatelessWidget {
           //
           //           style:style!=null?
           //           //style :Theme.of(context).textTheme.titleMedium!.copyWith(color: fontColor??kColorsWhite,)
-          //           style : const TextStyle(
+          //           style : TextStyle(
           //               fontSize: 16,
           //               color:fontColor?? Colors.white
           //           ),
@@ -107,7 +107,7 @@ class CustomButton extends StatelessWidget {
                     isIconStart == true ? SizedBox(width: 0.03.sw) : SizedBox(width: 0.00.sh),
                     Text(
                       text!,
-                      style: style != null ? style :   TextStyle(
+                      style: style != null ? style : TextStyle(
                         fontSize: 14,
                         color: fontColor ?? Colors.white,
                       ),

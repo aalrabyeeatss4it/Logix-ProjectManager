@@ -21,7 +21,7 @@ class ContactUsScreen extends StatelessWidget {
     drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
-        backgroundColor: kColorsWhite,
+
         body: SafeArea(
           child: Container(
 
@@ -116,7 +116,7 @@ class ContactUsScreen extends StatelessWidget {
               child: Text(
                 txt,
                 textAlign: TextAlign.start,
-                style:TextStyle(fontFamily: 'GraphikArabic',
+                style:const TextStyle(fontFamily: 'GraphikArabic',
                   fontSize: 16,
                   color: kColorsLightBlack,
                   fontWeight: FontWeight.w600,
@@ -167,7 +167,7 @@ class ContactUsScreen extends StatelessWidget {
                 child: Text(
                   text,
                   style:
-                  TextStyle(fontFamily: 'GraphikArabic',color: fontColor, fontSize: 13,fontWeight: FontWeight.w500),
+                   TextStyle(fontFamily: 'GraphikArabic',color: fontColor, fontSize: 13,fontWeight: FontWeight.w500),
                 ),
               )
             ],
@@ -195,7 +195,7 @@ class ContactUsScreen extends StatelessWidget {
                   Padding(
                     padding:  EdgeInsets.only(top:  8.0),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                       SizedBox(
                         width: 53.w,
@@ -203,7 +203,7 @@ class ContactUsScreen extends StatelessWidget {
                           Text(
                             'Contact us'.tr,
                             style:
-                            TextStyle(fontFamily: 'GraphikArabic',color: kColorsPrimaryFont, fontSize: 16,fontWeight: FontWeight.w500),
+                            const TextStyle(fontFamily: 'GraphikArabic',color: kColorsPrimaryFont, fontSize: 16,fontWeight: FontWeight.w500),
                           ),
                       Padding(
                         padding:

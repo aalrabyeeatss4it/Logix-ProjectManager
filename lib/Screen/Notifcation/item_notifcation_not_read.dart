@@ -57,11 +57,11 @@ ItemNotifcationNotRead(this.data);
                                     flex:5,
 
 
-                                    child: Text('Registration number'.tr+":",  style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,))),
+                                    child: Text('Registration number'.tr+":",  style: const TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,))),
 
                                 Expanded(
                                     flex:9,
-                                    child: Text(data.codeFormat.toString(),  style:TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,))),
+                                    child: Text(data.codeFormat.toString(),  style:const TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,))),
                                 Expanded(
                                   flex:3,
                                   child: CustomButton(
@@ -71,7 +71,7 @@ ItemNotifcationNotRead(this.data);
                                     sizeHeight: 0.04.sh,
                                     sizeWidth: 0.15.sw,
                                     text:data.statusName.toString(),
-                                    style: TextStyle(fontFamily: 'GraphikArabic',
+                                    style: const TextStyle(fontFamily: 'GraphikArabic',
                                         fontSize: 12,
                                         color: kColorsWhite),
                                     onPress: () {
@@ -83,10 +83,10 @@ ItemNotifcationNotRead(this.data);
                           ),
                         ],
                       ),
-                    CustomRowText(text:'The Topic'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue: data.subject==null?"":data.subject.toString(),textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                    CustomRowText(text:"Sender".tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue:data.userFullname==null?"":data.userFullname.toString(),textValueStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                    CustomRowText(text:'Transaction history'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue: data.hDate==null?"":data.hDate.toString(),textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                    CustomRowText(text:"Sending Date".tr,textStyle: TextStyle(fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue: data.createdOn==null?"":data.createdOn.toString(),textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                    CustomRowText(text:'The Topic'.tr,textStyle: const TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue: data.subject==null?"":data.subject.toString(),textValueStyle: const TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                    CustomRowText(text:"Sender".tr,textStyle: const TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue:data.userFullname==null?"":data.userFullname.toString(),textValueStyle: const TextStyle(fontFamily: 'GraphikArabic',fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                    CustomRowText(text:'Transaction history'.tr,textStyle: const TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue: data.hDate==null?"":data.hDate.toString(),textValueStyle: const TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                    CustomRowText(text:"Sending Date".tr,textStyle: const TextStyle(fontSize: 12, color:kColorsPrimaryFont , fontWeight: FontWeight.w500,),textValue: data.createdOn==null?"":data.createdOn.toString(),textValueStyle: const TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
                           ],
                   ),
                 ),
@@ -124,12 +124,12 @@ class   ItemNotifcationNotReadShimmer extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      CustomRowText(text: " ",textStyle: TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "",textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                      CustomRowText(text: "",textStyle: TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "",textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                      CustomRowText(text: "",textStyle: TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: " ",textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                      CustomRowText(text: " ",textStyle: TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "",textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                      CustomRowText(text: " ",textStyle: TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: " ",textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                      CustomRowText(text: "",textStyle: TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "  ",textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: Color(0xffEBF1F8),),
+                      CustomRowText(text: " ",textStyle: const TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "",textValueStyle: const TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                      CustomRowText(text: "",textStyle: const TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "",textValueStyle: const TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                      CustomRowText(text: "",textStyle: const TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: " ",textValueStyle: const TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                      CustomRowText(text: " ",textStyle: const TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "",textValueStyle: const TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                      CustomRowText(text: " ",textStyle: const TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: " ",textValueStyle: const TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                      CustomRowText(text: "",textStyle: const TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "  ",textValueStyle: const TextStyle(fontSize: 10, color: kColorsBlack,),backColor: Color(0xffEBF1F8),),
                     ],
                   ),
                 ),

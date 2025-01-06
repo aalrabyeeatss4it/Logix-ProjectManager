@@ -53,7 +53,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
-        backgroundColor: kColorsWhite,
+
         body: SafeArea(
           child: Container(
             margin: EdgeInsets.only(top: 20.r),
@@ -75,10 +75,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         children: <Widget>[
                           TextFieldWidget(
                             text: 'Employee Name'.tr,
-                            sizeFontText: 12.sp,
+                            sizeFontText: 12,
                             edit: 1,
                             // hint: "مدير النظام",
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            hintStyle:  TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             maxLine: 1,
                             keyboardType: TextInputType.text,
 
@@ -90,11 +90,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                           TextFieldWidget(
                             text:  'Username'.tr,
-                            sizeFontText: 12.sp,
+                            sizeFontText: 12,
                             edit: 1,
                             maxLine: 1,
                             // hint: "admin",
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            hintStyle:  TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             keyboardType: TextInputType.text,
 
                             controller:controller.TheNameTextControll ,
@@ -107,9 +107,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             //hint: 'Enter Topic Title'.tr,
                             //  initialValue: profile?.dataProfile?.userEmail.toString(),
                             text: 'Email'.tr,
-                            sizeFontText: 12.sp,
+                            sizeFontText: 12,
                             // hint: "support@ss4it.com.sa",
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            hintStyle:  TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             edit: 1,
                             maxLine: 1,
                             keyboardType: TextInputType.emailAddress,
@@ -147,8 +147,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       flex: 8,
                                       child: Text(
                                         "change password".tr,
-                                        style: TextStyle(fontFamily: 'GraphikArabic',
-                                            fontSize: 13.sp,
+                                        style: const TextStyle(fontFamily: 'GraphikArabic',
+                                            fontSize: 13,
                                             color: kColorsPrimaryFont,
                                             fontWeight: FontWeight.bold),
                                       ),

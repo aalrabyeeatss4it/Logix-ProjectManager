@@ -50,7 +50,7 @@ class CustomSubmitOptionDialog extends StatelessWidget {
               Container(
                   alignment: Alignment.center,
                   width: .7.sw,
-                  child: Text(text!,textAlign: TextAlign.center,style:TextStyle(
+                  child: Text(text!,textAlign: TextAlign.center,style:const TextStyle(
                       fontSize: 16,
                       color: kColorsBlack,
                       fontWeight: FontWeight.w500
@@ -68,7 +68,7 @@ class CustomSubmitOptionDialog extends StatelessWidget {
                           style: TextButton.styleFrom(
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.r))
                               ,backgroundColor: backColor1),
-                          onPressed: onPress, child: Text(text1!,style:TextStyle(
+                          onPressed: onPress, child: Text(text1!,style:  TextStyle(
                         fontSize: 16,
                         color: fontColortext1,
                         fontWeight: FontWeight.w500,
@@ -91,7 +91,7 @@ class CustomSubmitOptionDialog extends StatelessWidget {
                         ),
                         onPressed: (){
                           Get.back();
-                        }, child: Text(text2!,style:TextStyle(
+                        }, child: Text(text2!,style:  TextStyle(
                         fontSize: 16,
                         color: fontColortext2,
                         fontWeight: FontWeight.w500,

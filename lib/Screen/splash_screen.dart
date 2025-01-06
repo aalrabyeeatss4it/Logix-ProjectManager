@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/services.dart';
+import 'package:projectmanagers/Core/Utils/assets.dart';
 import 'package:projectmanagers/router/route_constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +43,6 @@ class _SplashScreenState extends State<SplashScreen> {
       body:   Container(
         width: double.infinity,
         height: 1.0.sh,
-        decoration: BoxDecoration(color: Colors.white),
         child: Column(
           children: [
             Stack(
@@ -53,7 +53,7 @@ class _SplashScreenState extends State<SplashScreen> {
                  decoration: BoxDecoration(
                      color: kColorsPrimaryFont,
                      image:DecorationImage(image:
-                     AssetImage('assets/logooPng.png'
+                     AssetImage(AssestData.Logo
 
                      ),fit: BoxFit.scaleDown,)
                  ),
@@ -62,9 +62,7 @@ class _SplashScreenState extends State<SplashScreen> {
                  top: 853,
                  right: 135,
                  child: Container(
-
                      width:0.35.sw,
-
                      height:  .004.sh,
                      decoration: BoxDecoration(
                        color: kColorsWhite,

@@ -8,6 +8,7 @@ import 'package:projectmanagers/Screen/Projects/projects_controller.dart';
 import 'package:projectmanagers/apiservice/checkInterNet.dart';
 import 'package:projectmanagers/router/route_constants.dart';
 import 'package:projectmanagers/widget/CustomSnackBar.dart';
+import 'package:projectmanagers/widget/buttm_navigator_bar.dart';
 import 'package:projectmanagers/widget/custom_textfeild.dart';
 import 'package:projectmanagers/widget/cutom_appbar.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
@@ -50,7 +51,7 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
-        backgroundColor: kColorsWhite,
+
         body: SafeArea(
           child: Container(
             margin: EdgeInsets.only(top: 20.r),
@@ -83,6 +84,7 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
             ),
           ),
         ),
+        bottomNavigationBar:   CustomBottomNavBar(selectedMenu: MenuState.home),
 
       );
   }

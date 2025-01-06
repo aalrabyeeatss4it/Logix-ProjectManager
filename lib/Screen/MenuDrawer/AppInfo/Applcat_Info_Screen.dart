@@ -20,7 +20,7 @@ class ApplcatInfoScreen extends StatelessWidget {
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
-        backgroundColor: kColorsWhite,
+
         body: SafeArea(
           child: SingleChildScrollView(
             child: Padding(
@@ -34,7 +34,7 @@ class ApplcatInfoScreen extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(10.r),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
@@ -71,7 +71,7 @@ class ApplcatInfoScreen extends StatelessWidget {
                               children: [
                                 Text(
                                     "Our application provides integrated solutions for electronic archiving, transaction management, alerts, and task management. It enables you to save and share documents efficiently, manage all types of transactions easily, receive alerts in real time, and send customized group messages simply. Its design supports the organizational structure of the organization and facilitates the management of internal and external correspondence.".tr,
-                                    style: TextStyle(fontFamily: 'GraphikArabic',
+                                    style: const TextStyle(fontFamily: 'GraphikArabic',
                                         fontSize: 14,
                                         color: kColorsPrimaryFont,
                                         fontWeight: FontWeight.bold)),
@@ -79,19 +79,19 @@ class ApplcatInfoScreen extends StatelessWidget {
                                   height: 0.05.sh,
                                 ),
 
-                                Text("1-  "+'Electronic archiving'.tr, style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 15, color: kColorsBlack, fontWeight: FontWeight.w500)),
+                                Text("1-  "+'Electronic archiving'.tr, style: const TextStyle(fontFamily: 'GraphikArabic',fontSize: 15, color: kColorsBlack, fontWeight: FontWeight.w500)),
                                 SizedBox(
                                   height: 0.02.sh,
                                 ),
-                                Text("2-  "+'Manage incoming and outgoing transactions'.tr, style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 15, color: kColorsBlack, fontWeight: FontWeight.w500)),
+                                Text("2-  "+'Manage incoming and outgoing transactions'.tr, style: const TextStyle(fontFamily: 'GraphikArabic',fontSize: 15, color: kColorsBlack, fontWeight: FontWeight.w500)),
                                 SizedBox(
                                   height: 0.02.sh,
                                 ),
-                                Text("3-  "+'Alerts and notifications system'.tr, style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 15, color: kColorsBlack, fontWeight: FontWeight.w500)),
+                                Text("3-  "+'Alerts and notifications system'.tr, style: const TextStyle(fontFamily: 'GraphikArabic',fontSize: 15, color: kColorsBlack, fontWeight: FontWeight.w500)),
                                 SizedBox(
                                   height: 0.02.sh,
                                 ),
-                                Text("4-  "+'Task management'.tr, style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 15, color: kColorsBlack, fontWeight: FontWeight.w500)),
+                                Text("4-  "+'Task management'.tr, style: const TextStyle(fontFamily: 'GraphikArabic',fontSize: 15, color: kColorsBlack, fontWeight: FontWeight.w500)),
                               ],
                             ),
                           ),
@@ -117,7 +117,7 @@ class ApplcatInfoScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 20.w),
           child: Text(text,
               maxLines: 4,
-              style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 14.sp, color: Colors.black)),
+              style: const TextStyle(fontFamily: 'GraphikArabic',fontSize: 14, color: Colors.black)),
         ),
         SizedBox(
           height: 10.h,
@@ -151,7 +151,7 @@ class ApplcatInfoScreen extends StatelessWidget {
         children: [
           Text(
             txtSlach,
-            style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12.sp, color: kColorsPrimaryFont),
+            style: const TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color: kColorsPrimaryFont),
           ),
           SizedBox(
             width: 5.w,
@@ -163,7 +163,7 @@ class ApplcatInfoScreen extends StatelessWidget {
               child: Text(
             txtAdvintg,
             maxLines: 3,
-            style: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12.sp, color: kColorsPrimaryFont),
+            style: const TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color: kColorsPrimaryFont),
               ),
             ),
           ),

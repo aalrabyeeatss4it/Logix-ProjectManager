@@ -85,9 +85,9 @@ class _CategoriesState extends State<Categories> {
                                     padding: EdgeInsets.only(bottom: 1.0.w),
                                     child: Text(
                                       widget.Tab_Bar[index],
-                                      style: TextStyle(
+                                      style:  TextStyle(
                                         fontWeight: FontWeight.w400,
-                                        fontSize: 11.sp,
+                                        fontSize: 11,
                                         color: controller.selectedCategoryIndex == index ? kColorsWhite : Color(0xff5A86C1),
                                       ),
                                     ),

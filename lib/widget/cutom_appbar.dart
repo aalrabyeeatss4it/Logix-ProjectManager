@@ -1,3 +1,4 @@
+import 'package:projectmanagers/Core/Utils/assets.dart';
 import 'package:projectmanagers/router/route_constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +49,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                       padding:  EdgeInsets.only(right:  10.0.r),
                       child:
                       SvgPicture.asset(
-                        "assets/Icon/Line arrow-rightttt.svg",
+                        AssestData.back,
                         width: 24.r ,
                         height: 24.r ,
                         color: kColorsBlackTow,
@@ -62,7 +63,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                   child: Center(
                     child: Padding(
                       padding:   EdgeInsets.only(right:isRtl==true?  18.0:0,left:isRtl!=true?  18.0:0 ),
-                      child: Text(title!,textAlign: TextAlign.center,  style: TextStyle(     color: Color(0xFF242424),
+                      child: Text(title!,textAlign: TextAlign.center,  style: const TextStyle(     color: Color(0xFF242424),
                         fontSize: 16,
                         fontFamily: 'GraphikArabic',
                         fontWeight: FontWeight.w500,
@@ -88,10 +89,10 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                         child: Row(
                           children: [
                             Text("العربيه ", style:
-                            TextStyle(color:kColorsPrimaryFont,fontWeight: FontWeight.bold,fontSize: 12, )
+                            const TextStyle(color:kColorsPrimaryFont,fontWeight: FontWeight.bold,fontSize: 12, )
                             ),
                             SvgPicture.asset(
-                              "assets/Icon/GlobeSimple.svg",
+                             AssestData.languge,
                               width: 24.r ,
                               height: 24.r ,
                               color: kColorsPrimaryFont,

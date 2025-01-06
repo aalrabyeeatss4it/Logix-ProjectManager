@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:projectmanagers/Constants/Constants.dart';
+import 'package:projectmanagers/Core/Utils/assets.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/menu_widget_dachbord.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ArchiveDocumentProject/add_archive_document_project_controller.dart';
 import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/filter_model.dart';
@@ -61,7 +62,7 @@ class _AddArchiveDocumentProjectScreenState extends State<AddArchiveDocumentProj
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
-        backgroundColor: kColorsWhite,
+
         body: SafeArea(
           child: Container(
 
@@ -87,10 +88,10 @@ class _AddArchiveDocumentProjectScreenState extends State<AddArchiveDocumentProj
                           TextFieldWidget(
                             text:  '    اسم المستند '.tr,
                             hint: 'أدخل   اسم المستند     '.tr,
-                            sizeFontText: 12.sp,
+                            sizeFontText: 12,
                             edit: 1,
                             maxLine: 1,
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            hintStyle:  TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             keyboardType: TextInputType.text,
 
                           ),
@@ -129,8 +130,8 @@ class _AddArchiveDocumentProjectScreenState extends State<AddArchiveDocumentProj
                                       labelText: 'Choose'.tr,
                                       exText: 'Choose'.tr,
                                       textEditingController: controller.FilterNameController,
-                                      styleText: TextStyle(fontFamily: 'Cairo',
-                                        fontSize: 14.sp,
+                                      styleText:   TextStyle(fontFamily: 'Cairo',
+                                        fontSize: 14,
                                         color: kColorsBlack,
                                       ),
                                     ));
@@ -141,8 +142,8 @@ class _AddArchiveDocumentProjectScreenState extends State<AddArchiveDocumentProj
                           TextFieldWidget(
                             text: 'الوصف'.tr,
                             hint: 'أدخل الوصف'.tr,
-                            sizeFontText: 12.sp,
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            sizeFontText: 12,
+                            hintStyle:  TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             edit: 1,
                             maxLine: 4,
                             minLine: 4,
@@ -154,8 +155,8 @@ class _AddArchiveDocumentProjectScreenState extends State<AddArchiveDocumentProj
                           TextFieldWidget(
                             text: 'المصدر'.tr,
                             hint: 'أدخل المصدر '.tr,
-                            sizeFontText: 12.sp,
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            sizeFontText: 12,
+                            hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             edit: 1,
 
                           ),
@@ -170,7 +171,7 @@ class _AddArchiveDocumentProjectScreenState extends State<AddArchiveDocumentProj
                                       bottom:1.r),
                                   child: Text(
                                     "المرفقات".tr,
-                                    style: TextStyle(    fontSize: 14,
+                                    style: const TextStyle(    fontSize: 14,
                                         fontFamily: 'GraphikArabic',
                                         fontWeight: FontWeight.w600,
                                         height: 1.14,color:kColorsPrimaryFont, ),)
@@ -183,8 +184,8 @@ class _AddArchiveDocumentProjectScreenState extends State<AddArchiveDocumentProj
                           TextFieldWidget(
                             text: ' اسم المستند'.tr,
                             hint: ' ادخل اسم المستند'.tr,
-                            sizeFontText: 12.sp,
-                            hintStyle:TextStyle(    fontSize: 14,
+                            sizeFontText: 12,
+                            hintStyle: TextStyle(    fontSize: 14,
                                 fontFamily: 'GraphikArabic',
                                 fontWeight: FontWeight.w400,
                                 height: 1.14,color:Colors.black.withOpacity(0.4)  ),
@@ -202,7 +203,7 @@ class _AddArchiveDocumentProjectScreenState extends State<AddArchiveDocumentProj
                                       bottom:1.r),
                                   child: Text(
                                     "مسار الملف".tr,
-                                    style: TextStyle(     fontSize: 14,
+                                    style: const TextStyle(     fontSize: 14,
                                         fontFamily: 'GraphikArabic',
                                         fontWeight: FontWeight.w400,
                                         height: 1.14,color:kColorsBlackTow, ),)
@@ -229,12 +230,12 @@ class _AddArchiveDocumentProjectScreenState extends State<AddArchiveDocumentProj
                             text: 'إرسال الطلب'.tr,
                             isIconEnd: true,
                             IconEnd: SvgPicture.asset(
-                              "assets/Icons/left.svg",
+                              AssestData.left,
                               width: 24 ,
                               height: 24 ,
                               color: kColorsWhite,
                             ),
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 14,
                               fontFamily: 'GraphikArabic',
@@ -309,14 +310,14 @@ class _AddArchiveDocumentProjectScreenState extends State<AddArchiveDocumentProj
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 SizedBox(width: 20),
                                 Text(
                                   'Choose'.tr,
-                                  style: TextStyle(
+                                  style:   TextStyle(
                                       color: kColorsPrimaryFont,
-                                      fontSize: 14.sp,
+                                      fontSize: 14,
                                       fontWeight: FontWeight.bold),
                                 ),
                                 Padding(
@@ -326,7 +327,7 @@ class _AddArchiveDocumentProjectScreenState extends State<AddArchiveDocumentProj
                                       Get.back();
                                     },
                                     child: Image.asset(
-                                      "assets/Icons/clear.png",
+                                      AssestData.clear2,
                                       width: 25.r,
                                       height: 25.r,
                                       color: kColorsPrimaryFont,
@@ -348,16 +349,16 @@ class _AddArchiveDocumentProjectScreenState extends State<AddArchiveDocumentProj
                                     flex: 9,
                                     child: TextField(
                                       controller: _c.searchCustomerController,
-                                      style: TextStyle(
+                                      style:   TextStyle(
                                           color: kColorsBlack,
-                                          fontSize: 12.sp,
+                                          fontSize: 12,
                                           fontWeight: FontWeight.bold),
                                       cursorColor: kColorsPrimaryFont,
                                       decoration: InputDecoration(
                                         hintText: 'search'.tr,
-                                        hintStyle: TextStyle(
+                                        hintStyle:   TextStyle(
                                             color: kColorsPrimaryFont,
-                                            fontSize: 12.sp,
+                                            fontSize: 12,
                                             fontWeight: FontWeight.bold),
                                         prefixIcon: Icon(Icons.search),
                                         border: OutlineInputBorder(
@@ -417,9 +418,9 @@ class _AddArchiveDocumentProjectScreenState extends State<AddArchiveDocumentProj
                                               padding: const EdgeInsets.all(8.0),
                                               child: Text(
                                                 e.name.toString(),
-                                                style: TextStyle(
+                                                style:   TextStyle(
                                                     color: kColorsBlack,
-                                                    fontSize: 12.sp,
+                                                    fontSize: 12,
                                                     fontWeight: FontWeight.bold),
                                               ),
                                             ),

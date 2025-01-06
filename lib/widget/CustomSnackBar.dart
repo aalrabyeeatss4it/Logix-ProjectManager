@@ -17,8 +17,8 @@ class GetSnackMsg{
       messageText: Text(
         msg,
         textAlign: TextAlign.center,
-        style: TextStyle(
-            fontSize: 13.sp,
+        style:   TextStyle(
+            fontSize: 13,
             fontWeight: FontWeight.w600,
             color: Colors.white),
       ),

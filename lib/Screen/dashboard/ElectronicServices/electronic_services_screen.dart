@@ -1,6 +1,7 @@
 
 import 'dart:ui';
 
+import 'package:projectmanagers/Core/Utils/assets.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/electronic_services_controller.dart';
 import 'package:projectmanagers/widget/buttm_navigator_bar.dart';
 import 'package:flutter/material.dart';
@@ -55,7 +56,7 @@ class _ElectronicServicesScreenState extends State<ElectronicServicesScreen> {
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
-        backgroundColor: kColorsWhite,
+
         body: SafeArea(
           child: Container(
             color: kColorsWhite.withOpacity(0.1),
@@ -136,7 +137,7 @@ class _ElectronicServicesScreenState extends State<ElectronicServicesScreen> {
                   Center(
                     child: Padding(
                       padding:  EdgeInsets.only(top:  10.0,right: 10.0.r,left: 10.0.r),
-                      child: Text(text.toString(),textAlign: TextAlign.center,  style: TextStyle(
+                      child: Text(text.toString(),textAlign: TextAlign.center,  style: const TextStyle(
                         color: Color(0xFF242424),
                         fontSize: 12,
                         fontFamily: 'GraphikArabic',
@@ -164,7 +165,7 @@ class _ElectronicServicesScreenState extends State<ElectronicServicesScreen> {
                         child: Padding(
                           padding:  EdgeInsets.all(1.0.r),
                           child: SvgPicture.asset(
-                            "assets/Icon/arrow-left2.svg",
+                            AssestData.arrow_left2,
                             width: 24.r ,
                             height: 24.r ,
                             color: kColorsWhite,

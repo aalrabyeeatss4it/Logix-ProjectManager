@@ -58,7 +58,7 @@ class _KeeperCovenantScreenState extends State<KeeperCovenantScreen> {
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
-        backgroundColor: kColorsWhite,
+
         body: SafeArea(
           child: Container(
             color: kColorsWhite.withOpacity(0.1),
@@ -77,7 +77,7 @@ class _KeeperCovenantScreenState extends State<KeeperCovenantScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
                               padding: const EdgeInsets.symmetric(horizontal:4.0 ),
@@ -109,7 +109,7 @@ class _KeeperCovenantScreenState extends State<KeeperCovenantScreen> {
                                       Text(
                                         'حافظة عهدة جديدة'.tr,
                                         style:
-                                        TextStyle(fontFamily: 'GraphikArabic',color: kColorsWhite, fontSize: 16,fontWeight: FontWeight.w500),
+                                        const TextStyle(fontFamily: 'GraphikArabic',color: kColorsWhite, fontSize: 16,fontWeight: FontWeight.w500),
                                       ),
                                     ],
                                   ),

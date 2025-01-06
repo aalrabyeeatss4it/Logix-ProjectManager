@@ -54,7 +54,7 @@ class _TechnicalInformationScreenState extends State<TechnicalInformationScreen>
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
-        backgroundColor: kColorsWhite,
+
         body: SafeArea(
           child:  Container(
             color:kColorsWhite.withOpacity(0.1),
@@ -74,6 +74,7 @@ class _TechnicalInformationScreenState extends State<TechnicalInformationScreen>
             ),
           ),
         ),
+        bottomNavigationBar:   CustomBottomNavBar(selectedMenu: MenuState.home),
 
       );
 
@@ -100,7 +101,7 @@ class _TechnicalInformationScreenState extends State<TechnicalInformationScreen>
                   child: Center(
                     child: Text(
                       "1",
-                      style: const TextStyle(
+                      style:  const TextStyle(
                           fontSize: 12,
                           color: kColorsWhite,
                           fontWeight: FontWeight.bold),
@@ -131,7 +132,7 @@ class _TechnicalInformationScreenState extends State<TechnicalInformationScreen>
                   child: Center(
                     child: Text(
                       "2",
-                      style: const TextStyle(
+                      style:  const TextStyle(
                           fontSize: 12,
                           color: kColorsWhite,
                           fontWeight: FontWeight.bold),
@@ -162,7 +163,7 @@ class _TechnicalInformationScreenState extends State<TechnicalInformationScreen>
                   child: Center(
                     child: Text(
                       "3",
-                      style: const TextStyle(
+                      style:  const TextStyle(
                           fontSize: 12,
                           color: kColorsWhite,
                           fontWeight: FontWeight.bold),
@@ -193,7 +194,7 @@ class _TechnicalInformationScreenState extends State<TechnicalInformationScreen>
                   child: Center(
                     child: Text(
                       "4",
-                      style: const TextStyle(
+                      style:  const TextStyle(
                           fontSize: 12,
                           color: kColorsWhite,
                           fontWeight: FontWeight.bold),
@@ -224,7 +225,7 @@ class _TechnicalInformationScreenState extends State<TechnicalInformationScreen>
                   child: Center(
                     child: Text(
                       "5",
-                      style: const TextStyle(
+                      style:  const TextStyle(
                           fontSize: 12,
                           color: kColorsWhite,
                           fontWeight: FontWeight.bold),
@@ -255,7 +256,7 @@ class _TechnicalInformationScreenState extends State<TechnicalInformationScreen>
                   child: Center(
                     child: Text(
                       "6",
-                      style: const TextStyle(
+                      style:  const TextStyle(
                           fontSize: 12,
                           color: kColorsWhite,
                           fontWeight: FontWeight.bold),
@@ -269,11 +270,11 @@ class _TechnicalInformationScreenState extends State<TechnicalInformationScreen>
         Padding(
           padding: EdgeInsets.all(12.r),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 "بيانات رسالة",
-                style:  TextStyle(
+                style:   TextStyle(
                     fontSize: 12,
                     color: controller.selectedIndextab1 == 1
                         ? kColorsPrimaryFont
@@ -284,7 +285,7 @@ class _TechnicalInformationScreenState extends State<TechnicalInformationScreen>
                 padding: EdgeInsets.only(left: 2.0.r),
                 child: Text(
                   "Options".tr,
-                  style:  TextStyle(
+                  style:   TextStyle(
                       fontSize: 12,
                       color: controller.selectedIndextab2 == 1
                           ? kColorsPrimaryFont
@@ -296,7 +297,7 @@ class _TechnicalInformationScreenState extends State<TechnicalInformationScreen>
                 padding: EdgeInsets.only(left: 2.0.r),
                 child: Text(
                   "نسخة إلى",
-                  style:   TextStyle(
+                  style:    TextStyle(
                       fontSize: 12,
                       color: controller.selectedIndextab3 == 1
                           ? kColorsPrimaryFont
@@ -308,7 +309,7 @@ class _TechnicalInformationScreenState extends State<TechnicalInformationScreen>
                 padding: EdgeInsets.only(left: 2.0.r),
                 child: Text(
                   "Attachments".tr,
-                  style:   TextStyle(
+                  style:    TextStyle(
                       fontSize: 12,
                       color: controller.selectedIndextab4 == 1
                           ? kColorsPrimaryFont
@@ -320,7 +321,7 @@ class _TechnicalInformationScreenState extends State<TechnicalInformationScreen>
                 padding: EdgeInsets.only(left: 2.0.r),
                 child: Text(
                   "Attachments".tr,
-                  style:   TextStyle(
+                  style:    TextStyle(
                       fontSize: 12,
                       color: controller.selectedIndextab4 == 1
                           ? kColorsPrimaryFont
@@ -332,7 +333,7 @@ class _TechnicalInformationScreenState extends State<TechnicalInformationScreen>
                 padding: EdgeInsets.only(left: 2.0.r),
                 child: Text(
                   "Attachments".tr,
-                  style:   TextStyle(
+                  style:    TextStyle(
                       fontSize: 12,
                       color: controller.selectedIndextab4 == 1
                           ? kColorsPrimaryFont
@@ -358,13 +359,13 @@ Widget TeaxtLableRow(BuildContext context,  String? text,String? textvalue) {
         Expanded(
           flex: 2,
           child: Text(text??""+" :",
-              style: const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,)
+              style:  const TextStyle(fontSize: 12, color: kColorsBlack, fontWeight: FontWeight.w500,)
           ),
         ),
         Expanded(
           flex: 4,
           child: Text(textvalue??"",
-              style: const TextStyle(fontSize: 11, color:  Color(0xffA4A4A4)),
+              style:  const TextStyle(fontSize: 11, color:  Color(0xffA4A4A4)),
             overflow: TextOverflow.visible, // تأكد من أن النص يظهر بدون قص
             softWrap: true, // تفعيل التفاف النص
           ),

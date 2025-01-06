@@ -46,8 +46,8 @@ class BuldCardWithoutImag extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal:  10.0.r,vertical: 20.0.r),
                   child: Text(
                     TextValue1!,
-                    style: TextStyle(
-                      fontSize: 16.sp,
+                    style:   TextStyle(
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                       color: TextValue1Colore,
                     ),
@@ -56,7 +56,7 @@ class BuldCardWithoutImag extends StatelessWidget {
                 Container(width: 1.w),
                 Text(
                   Text1!,
-                  style: TextStyle(
+                  style:   TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
                     color: Text1Colore,
@@ -90,8 +90,8 @@ class BuldCardWithoutImag extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal:  10.0.r,vertical: 15.0.r),
                   child: Text(
                     TextValue2!,
-                    style: TextStyle(
-                      fontSize: 16.sp,
+                    style:   TextStyle(
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                       color: TextValue2Colore,
                     ),
@@ -100,7 +100,7 @@ class BuldCardWithoutImag extends StatelessWidget {
                 Container(width: 1.w),
                 Text(
                   Text2!,
-                  style: TextStyle(
+                  style:   TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
                     color: Text2Colore,
@@ -150,8 +150,8 @@ class BuldCardWithoutImagShimere extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal:  10.0.r,vertical: 15.0.r),
                     child: Text(
                      "",
-                      style: TextStyle(
-                        fontSize: 15.sp,
+                      style:   TextStyle(
+                        fontSize: 15,
                         fontWeight: FontWeight.bold,
                         color: kColorsWhite,
                       ),
@@ -160,8 +160,8 @@ class BuldCardWithoutImagShimere extends StatelessWidget {
                   Container(width: 1.w),
                   Text(
                     "",
-                    style: TextStyle(
-                      fontSize: 13.sp,
+                    style:   TextStyle(
+                      fontSize: 13,
                       fontWeight: FontWeight.w600,
                       color: kColorsWhite,
                     ),
@@ -194,8 +194,8 @@ class BuldCardWithoutImagShimere extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal:  10.0.r,vertical: 15.0.r),
                     child: Text(
                       "",
-                      style: TextStyle(
-                        fontSize: 15.sp,
+                      style:   TextStyle(
+                        fontSize: 15,
                         fontWeight: FontWeight.bold,
                         color: kColorsWhite,
                       ),
@@ -204,8 +204,8 @@ class BuldCardWithoutImagShimere extends StatelessWidget {
                   Container(width: 1.w),
                   Text(
                     "",
-                    style: TextStyle(
-                      fontSize: 13.sp,
+                    style:   TextStyle(
+                      fontSize: 13,
                       fontWeight: FontWeight.w600,
                       color: kColorsWhite,
                     ),

@@ -54,7 +54,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
-        backgroundColor: kColorsWhite,
+
         body: SafeArea(
           child:  controller.obx((ite) =>
               Container(

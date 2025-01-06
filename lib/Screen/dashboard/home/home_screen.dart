@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
-        backgroundColor: kColorsWhite,
+
         body: SafeArea(
           child: Container(
             color: kColorsWhite.withOpacity(0.1),
@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 bottom:1.r),
                             child: Text(
                               "ملخص المشاريع".tr,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Color(0xFF242424),
                                 fontSize: 12,
                                 fontFamily: 'GraphikArabic',
@@ -97,13 +97,13 @@ class _HomeScreenState extends State<HomeScreen> {
                           children: [
                             Text(
                               "عدد المشاريع الإجمالي",
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontFamily: 'GraphikArabic', color:kColorsWhite ,
                                 fontSize: 12,
                                 fontWeight: FontWeight.w300,
                               ),
                             ),
-                            Text("84"+   "  ", style: TextStyle(
+                            Text("84"+   "  ", style: const TextStyle(
                               fontFamily: 'GraphikArabic',
                               color:kColorsWhite ,
                               fontSize: 12,
@@ -237,7 +237,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 bottom:1.r),
                             child: Text(
                               "مشاريعي".tr,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Color(0xFF242424),
                                   fontSize: 14,
                                   fontFamily: 'GraphikArabic',
@@ -292,9 +292,9 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(text+" :", style: TextStyle(   fontFamily: 'GraphikArabic',color:kColorsBlack,fontSize:10.0, fontWeight: FontWeight.bold, height: 1.37,),
+            Text(text+" :", style: const TextStyle(   fontFamily: 'GraphikArabic',color:kColorsBlack,fontSize:10.0, fontWeight: FontWeight.bold, height: 1.37,),
             ),
-            Text(value, style: TextStyle(   fontFamily: 'GraphikArabic',color:colorvalue,fontSize:12.0, fontWeight: FontWeight.w600, height: 1.37,),
+            Text(value, style:   TextStyle(   fontFamily: 'GraphikArabic',color:colorvalue,fontSize:12.0, fontWeight: FontWeight.w600, height: 1.37,),
             ),
           ],
         ),
@@ -353,7 +353,7 @@ class GrideRow extends StatelessWidget {
                       padding: EdgeInsets.only(left: 7.0.r, right: 7.0.r, top: 7.0.r),
                       child: Text(
                         text.toString(),
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontFamily: 'GraphikArabic',
                           fontSize: 14,
                           color: Color(0xff242424),
@@ -376,9 +376,9 @@ class GrideRow extends StatelessWidget {
                 ),
                 child: Text(
                   Count==null?"":Count.toString(),
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white, // لون الرقم
-                    fontSize: 16.sp, // حجم الخط
+                    fontSize: 16, // حجم الخط
                     fontWeight: FontWeight.bold,
                   ),
                 ),

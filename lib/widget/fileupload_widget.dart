@@ -1,4 +1,5 @@
 
+import 'package:projectmanagers/Core/Utils/assets.dart';
 import 'package:projectmanagers/apiservice/file_piker.dart';
 import 'package:projectmanagers/widget/CustomText.dart';
 import 'package:dotted_border/dotted_border.dart';
@@ -49,14 +50,14 @@ final Function? onDone;
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SvgPicture.asset(
-                      "assets/Icons/uplode.svg",
+                      AssestData.uplode,
                       width: 21,
                       height: 13,
                       color:  kColorsBlackTow.withOpacity(0.7),
                     ),
                     SizedBox(width: 0.015.sw,),
                     Text('download'.tr,style:
-                    TextStyle(
+                      TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
                       color:  kColorsBlackTow.withOpacity(0.7),
@@ -67,7 +68,7 @@ final Function? onDone;
           ),
         ),
         SizedBox(width: 10,),
-        Expanded(child: CustomText(text:name == '' ? 'There is no archive'.tr:name,textStyle: TextStyle(
+        Expanded(child: CustomText(text:name == '' ? 'There is no archive'.tr:name,textStyle: const TextStyle(
           fontSize: 12,
           fontFamily: 'GraphikArabic',
           fontWeight: FontWeight.w400,

@@ -1,4 +1,5 @@
 import 'package:flutter/services.dart';
+import 'package:projectmanagers/Core/Utils/assets.dart';
 import 'package:projectmanagers/Screen/Auth/Memper/member_controller.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/menu_widget_dachbord.dart';
 import 'package:projectmanagers/apiservice/checkInterNet.dart';
@@ -51,7 +52,7 @@ class MemberScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: kColorsPrimaryFont,
                     image:DecorationImage(image:
-                    AssetImage('assets/logooPng.png'
+                    AssetImage(AssestData.Logo
 
                     ),fit: BoxFit.scaleDown,)
                 ),
@@ -90,7 +91,7 @@ class MemberScreen extends StatelessWidget {
                               children: [
                                 Text(
                                   'أهلا بعودتك!'.tr,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontFamily: 'GraphikArabic',
                                       fontSize: 24,
                                       color: kColorsBlack,
@@ -99,7 +100,7 @@ class MemberScreen extends StatelessWidget {
                                 Text(
                                   'ادخل البيانات التالية لتتمكن من الوصول إلى حسابك!'
                                       .tr,
-                                  style: TextStyle(
+                                  style:   TextStyle(
                                     fontFamily: 'GraphikArabic',
                                     fontSize: 14,
                                     color: kColorsBlack.withOpacity(0.4),
@@ -129,7 +130,7 @@ class MemberScreen extends StatelessWidget {
                               sizeHeight: 0.05.sh,
                               sizeWidth: 0.96.sw,
                               color: kColorsPrimaryFont,
-                              style:TextStyle(
+                              style:const TextStyle(
                                   fontFamily: 'GraphikArabic',
                                   fontSize: 16,
                                   fontWeight: FontWeight.w500,

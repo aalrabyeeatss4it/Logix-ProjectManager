@@ -22,7 +22,7 @@ class AddDialog extends StatelessWidget {
              child: Column(
             children: [
               Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
                       children: [
@@ -33,7 +33,7 @@ class AddDialog extends StatelessWidget {
                         Padding(
                           padding: EdgeInsets.all(3.0.r),
                           child: Text(''.tr ,
-                            style: const TextStyle(
+                            style: const   TextStyle(
                                 fontSize: 14,
                                 color: kColorsBlack
                             ),),
@@ -81,7 +81,7 @@ class AddDialog extends StatelessWidget {
                     height: 0.02.sh,
                   ),
                   Text('تم إضافة عهده جديده بنجاح'.tr ,
-                    style: const TextStyle(
+                    style: const   TextStyle(
                         fontSize: 16,
                         color: kColorsPrimaryFont,
                       fontWeight: FontWeight.w500

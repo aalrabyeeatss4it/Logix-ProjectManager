@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:projectmanagers/Constants/Constants.dart';
+import 'package:projectmanagers/Core/Utils/assets.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/menu_widget_dachbord.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/LessonsProject/add_lisince_project_controller.dart';
 import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/filter_model.dart';
@@ -61,7 +62,7 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
-        backgroundColor: kColorsWhite,
+
         body: SafeArea(
           child: Container(
 
@@ -87,10 +88,10 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
                           TextFieldWidget(
                             text:  '     رقم الدرس   '.tr,
                             hint: 'أدخل      رقم الدرس     '.tr,
-                            sizeFontText: 12.sp,
+                            sizeFontText: 12,
                             edit: 1,
                             maxLine: 1,
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             keyboardType: TextInputType.text,
 
                           ),
@@ -129,8 +130,8 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
                                       labelText: 'Choose'.tr,
                                       exText: 'Choose'.tr,
                                       textEditingController: controller.FilterNameController,
-                                      styleText: TextStyle(fontFamily: 'Cairo',
-                                        fontSize: 14.sp,
+                                      styleText:  TextStyle(fontFamily: 'Cairo',
+                                        fontSize: 14,
                                         color: kColorsBlack,
                                       ),
                                     ));
@@ -157,8 +158,8 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
                                       labelText: 'Choose'.tr,
                                       exText: 'Choose'.tr,
                                       textEditingController: controller.FilterNameController,
-                                      styleText: TextStyle(fontFamily: 'Cairo',
-                                        fontSize: 14.sp,
+                                      styleText:  TextStyle(fontFamily: 'Cairo',
+                                        fontSize: 14,
                                         color: kColorsBlack,
                                       ),
                                     ));
@@ -185,8 +186,8 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
                                       labelText: 'Choose'.tr,
                                       exText: 'Choose'.tr,
                                       textEditingController: controller.FilterNameController,
-                                      styleText: TextStyle(fontFamily: 'Cairo',
-                                        fontSize: 14.sp,
+                                      styleText:  TextStyle(fontFamily: 'Cairo',
+                                        fontSize: 14,
                                         color: kColorsBlack,
                                       ),
                                     ));
@@ -211,8 +212,8 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
                                       labelText: 'Choose'.tr,
                                       exText: 'Choose'.tr,
                                       textEditingController: controller.FilterNameController,
-                                      styleText: TextStyle(fontFamily: 'Cairo',
-                                        fontSize: 14.sp,
+                                      styleText:  TextStyle(fontFamily: 'Cairo',
+                                        fontSize: 14,
                                         color: kColorsBlack,
                                       ),
                                     ));
@@ -223,8 +224,8 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
                           TextFieldWidget(
                             text: 'اسم الموظف'.tr,
                             hint: 'أدخل اسم الموظف'.tr,
-                            sizeFontText: 12.sp,
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            sizeFontText: 12,
+                            hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             edit: 1,
 
                           ),
@@ -234,8 +235,8 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
                           TextFieldWidget(
                             text: 'وصف التجربة / الحدث'.tr,
                             hint: '   وصف التجربة / الحدث...'.tr,
-                            sizeFontText: 12.sp,
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            sizeFontText: 12,
+                            hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             edit: 1,
                             maxLine: 4,
                             minLine: 4,
@@ -246,8 +247,8 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
                           TextFieldWidget(
                             text: 'وصف الأثر الحاصل على المشروع'.tr,
                             hint: '   وصف الأثر الحاصل على المشروع...'.tr,
-                            sizeFontText: 12.sp,
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            sizeFontText: 12,
+                            hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             edit: 1,
                             maxLine: 4,
                             minLine: 4,
@@ -257,8 +258,8 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
                           TextFieldWidget(
                             text: 'مسببات الأثر الحاصل'.tr,
                             hint: '   مسببات الأثر الحاصل...'.tr,
-                            sizeFontText: 12.sp,
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            sizeFontText: 12,
+                            hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             edit: 1,
                             maxLine: 4,
                             minLine: 4,
@@ -268,8 +269,8 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
                           TextFieldWidget(
                             text: 'المقترحات والحلول'.tr,
                             hint: '  المقترحات والحلول ..'.tr,
-                            sizeFontText: 12.sp,
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            sizeFontText: 12,
+                            hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             edit: 1,
                             maxLine: 4,
                             minLine: 4,
@@ -280,8 +281,8 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
                           TextFieldWidget(
                             text: 'الدروس المستفادة'.tr,
                             hint: '   الدروس المستفادة...'.tr,
-                            sizeFontText: 12.sp,
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            sizeFontText: 12,
+                            hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             edit: 1,
                             maxLine: 4,
                             minLine: 4,
@@ -292,8 +293,8 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
                           TextFieldWidget(
                             text: 'الملاحظات'.tr,
                             hint: ' الملاحظات ...'.tr,
-                            sizeFontText: 12.sp,
-                            hintStyle:TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
+                            sizeFontText: 12,
+                            hintStyle: TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
                             edit: 1,
                             maxLine: 4,
                             minLine: 4,
@@ -314,12 +315,12 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
                             text: 'إرسال الطلب'.tr,
                             isIconEnd: true,
                             IconEnd: SvgPicture.asset(
-                              "assets/Icons/left.svg",
+                              AssestData.left,
                               width: 24 ,
                               height: 24 ,
                               color: kColorsWhite,
                             ),
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 14,
                               fontFamily: 'GraphikArabic',
@@ -394,14 +395,14 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 SizedBox(width: 20),
                                 Text(
                                   'Choose'.tr,
-                                  style: TextStyle(
+                                  style:  TextStyle(
                                       color: kColorsPrimaryFont,
-                                      fontSize: 14.sp,
+                                      fontSize: 14,
                                       fontWeight: FontWeight.bold),
                                 ),
                                 Padding(
@@ -411,7 +412,7 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
                                       Get.back();
                                     },
                                     child: Image.asset(
-                                      "assets/Icons/clear.png",
+                                      AssestData.clear2,
                                       width: 25.r,
                                       height: 25.r,
                                       color: kColorsPrimaryFont,
@@ -433,16 +434,16 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
                                     flex: 9,
                                     child: TextField(
                                       controller: _c.searchCustomerController,
-                                      style: TextStyle(
+                                      style:  TextStyle(
                                           color: kColorsBlack,
-                                          fontSize: 12.sp,
+                                          fontSize: 12,
                                           fontWeight: FontWeight.bold),
                                       cursorColor: kColorsPrimaryFont,
                                       decoration: InputDecoration(
                                         hintText: 'search'.tr,
-                                        hintStyle: TextStyle(
+                                        hintStyle:  TextStyle(
                                             color: kColorsPrimaryFont,
-                                            fontSize: 12.sp,
+                                            fontSize: 12,
                                             fontWeight: FontWeight.bold),
                                         prefixIcon: Icon(Icons.search),
                                         border: OutlineInputBorder(
@@ -502,9 +503,9 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
                                               padding: const EdgeInsets.all(8.0),
                                               child: Text(
                                                 e.name.toString(),
-                                                style: TextStyle(
+                                                style:  TextStyle(
                                                     color: kColorsBlack,
-                                                    fontSize: 12.sp,
+                                                    fontSize: 12,
                                                     fontWeight: FontWeight.bold),
                                               ),
                                             ),

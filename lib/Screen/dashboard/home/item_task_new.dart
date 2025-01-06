@@ -40,16 +40,16 @@ class  ItemTaskNew  extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          CustomRowText(text: 'المشروع'.tr,textStyle: TextStyle(color: Color(0xFF0792AD),
+                          CustomRowText(text: 'المشروع'.tr,textStyle: const TextStyle(color: Color(0xFF0792AD),
                             fontSize: 12,
                             fontFamily: 'GraphikArabic',
                             fontWeight: FontWeight.w500,
-                            height: 1.37,),textValue: "تطوير نظام محاسبي جديد",textValueStyle: TextStyle( color: Color(0xFF242424),
+                            height: 1.37,),textValue: "تطوير نظام محاسبي جديد",textValueStyle: const TextStyle( color: Color(0xFF242424),
                             fontSize: 12,
                             fontFamily: 'Graphik Arabic',
                             fontWeight: FontWeight.w400,
                             height: 1.37,),backColor: kColorsLightBlackLow,),
-                          CustomRowText(text: 'المهمه'.tr,textStyle: TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "متابعة تقدم فريق التطوير في تنفيذ خاصية إدارة الضرائب",textValueStyle: TextStyle(
+                          CustomRowText(text: 'المهمه'.tr,textStyle: const TextStyle(fontFamily: 'GraphikArabic',fontSize: 12, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "متابعة تقدم فريق التطوير في تنفيذ خاصية إدارة الضرائب",textValueStyle: const TextStyle(
                             color: Color(0xFF242424),
                             fontSize: 12,
                             fontFamily: 'Graphik Arabic',
@@ -67,7 +67,7 @@ class  ItemTaskNew  extends StatelessWidget {
                                 child: Center(
                                   child: Padding(
                                     padding:  EdgeInsets.all(4.0),
-                                    child: Text('تنتهي في '.tr +'2024/12/12' +"   |   "+'متبقى :'.tr +'3 أيام ' ,  style: TextStyle( color: Color(0xFF178CAF),
+                                    child: Text('تنتهي في '.tr +'2024/12/12' +"   |   "+'متبقى :'.tr +'3 أيام ' ,  style: const TextStyle( color: Color(0xFF178CAF),
                                       fontSize: 12,
                                       fontFamily: 'GraphikArabic',
                                       fontWeight: FontWeight.w400,
@@ -123,9 +123,9 @@ class  ItemHomeShimmer extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      CustomRowText(text: " ",textStyle: TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "",textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                      CustomRowText(text: "",textStyle: TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "",textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                      CustomRowText(text: "",textStyle: TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: " ",textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                      CustomRowText(text: " ",textStyle: const TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "",textValueStyle: const TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                      CustomRowText(text: "",textStyle: const TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "",textValueStyle: const TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                      CustomRowText(text: "",textStyle: const TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: " ",textValueStyle: const TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
                  ],
                   ),
                 ),

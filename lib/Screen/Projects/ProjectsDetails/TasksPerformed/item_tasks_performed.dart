@@ -9,6 +9,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:projectmanagers/Constants/Constants.dart';
+import 'package:projectmanagers/Core/Utils/assets.dart';
 import 'package:projectmanagers/Screen/Projects/ProjectsDetails/TasksPerformed/tasks_performed_controller.dart';
 import 'package:projectmanagers/apiservice/checkInterNet.dart';
 import 'package:projectmanagers/widget/CustomSnackBar.dart';
@@ -60,14 +61,14 @@ class ItemTasksPerformed extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        CustomRowText(text: 'المهمه'.tr, textStyle: const TextStyle(fontSize: 12, color: kColorsPrimaryFont, fontWeight: FontWeight.w500,), textValue: " مصدر المستند", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite,),
+                        CustomRowText(text: 'المهمه'.tr, textStyle:  const TextStyle(fontSize: 12, color: kColorsPrimaryFont, fontWeight: FontWeight.w500,), textValue: " مصدر المستند", textValueStyle:    TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite,),
 
-                        CustomTowRowText(flex:4,text: 'المسؤؤل'.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "حذيفه المجيدي", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "الحاله".tr, textValue2: "لم يتم البدء",),
-                        CustomTowRowText(flex:4,text: 'رقم النشاط '.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "5555", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "إنجاز المخطط".tr, textValue2: "95%",),
-                        CustomTowRowText(flex:4,text: 'تاريخ البدايه الفعلي '.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "2023/5/8", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "تاريخ النهايه الفعلي ".tr, textValue2: " 2028/5/9",),
-                        CustomTowRowText(flex:4,text: 'نسبة المهمه من المشروع'.tr, textStyle:   TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "56%", textValueStyle:   TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "نسبة الإنجاز الفعلي".tr, textValue2: "23%",),
+                        CustomTowRowText(flex:4,text: 'المسؤؤل'.tr, textStyle:    TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "حذيفه المجيدي", textValueStyle:    TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "الحاله".tr, textValue2: "لم يتم البدء",),
+                        CustomTowRowText(flex:4,text: 'رقم النشاط '.tr, textStyle:    TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "5555", textValueStyle:    TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "إنجاز المخطط".tr, textValue2: "95%",),
+                        CustomTowRowText(flex:4,text: 'تاريخ البدايه الفعلي '.tr, textStyle:    TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "2023/5/8", textValueStyle:    TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "تاريخ النهايه الفعلي ".tr, textValue2: " 2028/5/9",),
+                        CustomTowRowText(flex:4,text: 'نسبة المهمه من المشروع'.tr, textStyle:    TextStyle(fontSize: 12, color:  kColorsBlack.withOpacity(0.7), fontWeight: FontWeight.w500,), textValue: "56%", textValueStyle:    TextStyle(fontSize: 12, color: kColorsBlackTow.withOpacity(0.4),), backColor: kColorsWhite, text2: "نسبة الإنجاز الفعلي".tr, textValue2: "23%",),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
                           children: [
                             CustomButton(
@@ -76,7 +77,9 @@ class ItemTasksPerformed extends StatelessWidget {
                               sizeHeight: 0.05.sh,
                               sizeWidth: 0.40.sw,
                               text: 'تغيير الحاله'.tr,
-                              style: TextStyle(
+                              style:
+
+                              TextStyle(
                                   fontSize: 14,
                                   fontFamily: 'GraphikArabic',
                                   fontWeight: FontWeight.w600,
@@ -97,11 +100,11 @@ class ItemTasksPerformed extends StatelessWidget {
                                       child: Column(
                                         children: [
                                           Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                             children: [
                                               Container(),
                                               Text('تغيير الملاحظه'.tr ,
-                                                style: const TextStyle(
+                                                style:  const TextStyle(
                                                     fontStyle: FontStyle.normal,
                                                     fontSize: 16,
                                                     color: kColorsPrimaryFont,
@@ -125,7 +128,7 @@ class ItemTasksPerformed extends StatelessWidget {
                                                         padding: const EdgeInsets.all(3.0 ),
                                                         child:
                                                         Image.asset(
-                                                          "assets/Icon/clear.png",
+                                                          AssestData.clear,
                                                           width: 20.r,
                                                           height: 20.r,
                                                           color: kColorsWhite,),
@@ -164,11 +167,11 @@ class ItemTasksPerformed extends StatelessWidget {
                                                               labelText: 'Choose'.tr,
                                                               exText: 'Choose'.tr,
                                                               textEditingController: controller.SideController,
-                                                              styleText:   TextStyle(
-                                                                fontSize: 13.sp,
+                                                              styleText:   const TextStyle(
+                                                                fontSize: 13,
                                                                 color: kColorsBlack,
                                                               ),
-                                                              hintstyle: const TextStyle(
+                                                              hintstyle:  const TextStyle(
                                                                 fontSize: 12,
                                                                 color: kColorsLightBlackLow,
                                                               ),
@@ -219,7 +222,7 @@ class ItemTasksPerformed extends StatelessWidget {
 
                                 borderColor: kColorsPrimaryFont,
                                 text: 'إضافة ملاحظه'.tr,
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: 14,
                                     fontFamily: 'GraphikArabic',
                                     fontWeight: FontWeight.w600,
@@ -240,11 +243,11 @@ class ItemTasksPerformed extends StatelessWidget {
                                         child: Column(
                                           children: [
                                             Row(
-                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                               children: [
                                                 Container(),
                                                 Text('إضافة ملاحظه'.tr ,
-                                                  style: const TextStyle(
+                                                  style:  const TextStyle(
                                                       fontStyle: FontStyle.normal,
                                                       fontSize: 16,
                                                       color: kColorsPrimaryFont,
@@ -268,7 +271,7 @@ class ItemTasksPerformed extends StatelessWidget {
                                                           padding: const EdgeInsets.all(3.0 ),
                                                           child:
                                                           Image.asset(
-                                                            "assets/Icon/clear.png",
+                                                            AssestData.clear,
                                                             width: 20.r,
                                                             height: 20.r,
                                                             color: kColorsWhite,),
@@ -385,14 +388,14 @@ class ItemTasksPerformed extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(width: 20),
                         Text(
                           'Choose'.tr,
-                          style:   TextStyle(
+                          style:   const TextStyle(
                               color: kColorsPrimaryFont,
-                              fontSize: 14.sp,
+                              fontSize: 14,
                               fontWeight: FontWeight.bold),
                         ),
                         Padding(
@@ -402,7 +405,7 @@ class ItemTasksPerformed extends StatelessWidget {
                                 Get.back();
                               },
                               child: Image.asset(
-                                "assets/Icons/clear.png",
+                                AssestData.clear2,
                                 width: 25.r,
                                 height: 25.r,
                                 color: kColorsPrimaryFont,
@@ -418,17 +421,17 @@ class ItemTasksPerformed extends StatelessWidget {
                       height: 45,
                       child: TextField(
                         controller: controller.searchController,
-                        style:   TextStyle(
+                        style:   const TextStyle(
                             color: kColorsBlack,
-                            fontSize: 12.sp,
+                            fontSize: 12,
                             fontWeight: FontWeight.bold),
                         strutStyle: StrutStyle(height: 1.5),
                         cursorColor: kColorsPrimaryFont,
                         decoration: InputDecoration(
                           hintText: 'search'.tr,
-                          hintStyle:   TextStyle(
+                          hintStyle:   const TextStyle(
                               color: kColorsPrimaryFont,
-                              fontSize: 12.sp,
+                              fontSize: 12,
                               fontWeight: FontWeight.bold),
                           prefixIcon: Icon(Icons.search),
                           border: OutlineInputBorder(
@@ -467,7 +470,7 @@ class ItemTasksPerformed extends StatelessWidget {
                                   padding: const EdgeInsets.all(8.0),
                                   child: Text(
                                     e.name.toString(),
-                                    style:   TextStyle(color: kColorsBlack, fontSize: 12.sp, fontWeight: FontWeight.bold),
+                                    style:   const TextStyle(color: kColorsBlack, fontSize: 12, fontWeight: FontWeight.bold),
                                   ),
                                 ),
                               ),
@@ -516,13 +519,13 @@ class ItemTasksPerformedShimmer extends StatelessWidget {
                   children: [
                     CustomRowText(
                       text: " ",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: "",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -530,13 +533,13 @@ class ItemTasksPerformedShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: "",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: "",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -544,13 +547,13 @@ class ItemTasksPerformedShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: "",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: " ",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -558,13 +561,13 @@ class ItemTasksPerformedShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: " ",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: "",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -572,13 +575,13 @@ class ItemTasksPerformedShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: " ",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: " ",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -586,13 +589,13 @@ class ItemTasksPerformedShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: "",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: "  ",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:   TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),

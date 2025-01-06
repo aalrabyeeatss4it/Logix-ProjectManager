@@ -53,7 +53,7 @@ class ItemKeeperCovenant extends StatelessWidget {
                     CustomTowRowText(
                       flex: 2,
                       text: 'الرقم '.tr,
-                      textStyle:   TextStyle(
+                      textStyle:    TextStyle(
                         color: kColorsBlack.withOpacity(0.7),
                         fontSize: 12,
                         fontFamily: 'GraphikArabic',
@@ -61,7 +61,7 @@ class ItemKeeperCovenant extends StatelessWidget {
                         height: 1.37,
                       ),
                       textValue: "14",
-                      textValueStyle:   TextStyle(
+                      textValueStyle:    TextStyle(
                         color: Color(0xFF242424).withOpacity(0.5),
                         fontSize: 12,
                         fontFamily: 'GraphikArabic',
@@ -71,7 +71,7 @@ class ItemKeeperCovenant extends StatelessWidget {
                       backColor: kColorsWhite,
                       text2: 'نوع المصروف'.tr,
                       textValue2: "بنزين",
-                      textValue2Style:   TextStyle(
+                      textValue2Style:    TextStyle(
                         color: kColorsBlack.withOpacity(0.7),
                         fontSize: 12,
 
@@ -80,7 +80,7 @@ class ItemKeeperCovenant extends StatelessWidget {
                     ),
                     CustomTowRowText(
                       text: 'اسم مركز التكلفه'.tr,
-                      textStyle:   TextStyle(
+                      textStyle:    TextStyle(
                         color: kColorsBlack.withOpacity(0.7),
                         fontSize: 12,
                         fontFamily: 'GraphikArabic',
@@ -88,7 +88,7 @@ class ItemKeeperCovenant extends StatelessWidget {
                         height: 1.37,
                       ),
                       textValue: "الإداره العامه",
-                      textValueStyle:   TextStyle(
+                      textValueStyle:    TextStyle(
                         color: Color(0xFF242424).withOpacity(0.5),
                         fontSize: 12,
                         fontFamily: 'GraphikArabic',
@@ -101,7 +101,7 @@ class ItemKeeperCovenant extends StatelessWidget {
                     ),
                     CustomTowRowText(
                       text: "اسم المورد".tr,
-                      textStyle:   TextStyle(
+                      textStyle:    TextStyle(
                         color: kColorsBlack.withOpacity(0.7),
                         fontSize: 12,
                         fontFamily: 'GraphikArabic',
@@ -109,7 +109,7 @@ class ItemKeeperCovenant extends StatelessWidget {
                         height: 1.37,
                       ),
                       textValue: "سلامه رضوان",
-                      textValueStyle:   TextStyle(
+                      textValueStyle:    TextStyle(
                         color: Color(0xFF242424).withOpacity(0.5),
                         fontSize: 12,
                         fontFamily: 'GraphikArabic',
@@ -122,7 +122,7 @@ class ItemKeeperCovenant extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: 'التاريخ'.tr,
-                      textStyle:   TextStyle(
+                      textStyle:    TextStyle(
                         color: kColorsBlack.withOpacity(0.7),
                         fontSize: 12,
                         fontFamily: 'GraphikArabic',
@@ -130,7 +130,7 @@ class ItemKeeperCovenant extends StatelessWidget {
                         height: 1.37,
                       ),
                       textValue: "2021/4/5",
-                      textValueStyle:   TextStyle(
+                      textValueStyle:    TextStyle(
                         color: Color(0xFF242424).withOpacity(0.5),
                         fontSize: 12,
                         fontFamily: 'GraphikArabic',
@@ -141,13 +141,13 @@ class ItemKeeperCovenant extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: 'البيان'.tr,
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         fontFamily: 'GraphikArabic',
                         fontWeight: FontWeight.w400,
                       ),
                       textValue: "مثال على بيان السطر",
-                      textValueStyle:   TextStyle(
+                      textValueStyle:    TextStyle(
                         color: Color(0xFF242424).withOpacity(0.5),
                         fontSize: 12,
                         fontFamily: 'GraphikArabic',
@@ -168,15 +168,14 @@ class ItemKeeperCovenant extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.only(left: isRtl == true ? 20.0 : 8, right: isRtl == true ? 8.0 : 20),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
-                        mainAxisAlignment:
-                        MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             "المبلغ :",
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Color(0xFF242424),
                               fontSize: 12,
                               fontFamily: 'GraphikArabic',
@@ -186,7 +185,7 @@ class ItemKeeperCovenant extends StatelessWidget {
                           ),
                           Text(
                             "70.0%",
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Color(0xFF0692AC),
                               fontSize: 12,
                               fontFamily: 'GraphikArabic',
@@ -197,12 +196,11 @@ class ItemKeeperCovenant extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        mainAxisAlignment:
-                        MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             "الضريبه :",
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Color(0xFF242424),
                               fontSize: 12,
                               fontFamily: 'GraphikArabic',
@@ -212,7 +210,7 @@ class ItemKeeperCovenant extends StatelessWidget {
                           ),
                           Text(
                             "70.0%",
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Color(0xFF0692AC),
                               fontSize: 12,
                               fontFamily: 'GraphikArabic',
@@ -223,12 +221,11 @@ class ItemKeeperCovenant extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        mainAxisAlignment:
-                        MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             "الإجمالي :",
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Color(0xFF242424),
                               fontSize: 12,
                               fontFamily: 'GraphikArabic',
@@ -238,7 +235,7 @@ class ItemKeeperCovenant extends StatelessWidget {
                           ),
                           Text(
                             "70.0%",
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Color(0xFF0692AC),
                               fontSize: 12,
                               fontFamily: 'GraphikArabic',
@@ -287,13 +284,13 @@ class ItemKeeperCovenantShimmer extends StatelessWidget {
                   children: [
                     CustomRowText(
                       text: " ",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: "",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -301,13 +298,13 @@ class ItemKeeperCovenantShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: "",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: "",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -315,13 +312,13 @@ class ItemKeeperCovenantShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: "",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: " ",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -329,13 +326,13 @@ class ItemKeeperCovenantShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: " ",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: "",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -343,13 +340,13 @@ class ItemKeeperCovenantShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: " ",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: " ",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),
@@ -357,13 +354,13 @@ class ItemKeeperCovenantShimmer extends StatelessWidget {
                     ),
                     CustomRowText(
                       text: "",
-                      textStyle: const TextStyle(
+                      textStyle:  const TextStyle(
                         fontSize: 12,
                         color: kColorsWhite,
                         fontWeight: FontWeight.w500,
                       ),
                       textValue: "  ",
-                      textValueStyle: const TextStyle(
+                      textValueStyle:  const TextStyle(
                         fontSize: 10,
                         color: kColorsBlack,
                       ),

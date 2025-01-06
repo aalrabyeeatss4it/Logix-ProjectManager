@@ -44,7 +44,7 @@ class _ChangPasswordScreenState extends State<ChangPasswordScreen> {
           drawer: Drawer(
             child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
           ),
-          backgroundColor: kColorsWhite,
+
           body: SafeArea(
             child: Container(
               margin: EdgeInsets.only(top: 10.r),
@@ -158,7 +158,7 @@ class _ChangPasswordScreenState extends State<ChangPasswordScreen> {
                                 sizeHeight: 0.05.sh,
                                 sizeWidth: 0.85.sw,
                                 text:  "change password".tr,
-                                style:  TextStyle(fontSize: 14, color: kColorsWhiteButtonTow,   fontFamily: 'GraphikArabic',),
+                                style:  const TextStyle(fontSize: 14, color: kColorsWhiteButtonTow,   fontFamily: 'GraphikArabic',),
                                 onPress: () async{
                                   print("userPassword="+stg.read(userPassword).toString());
                                   // if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {

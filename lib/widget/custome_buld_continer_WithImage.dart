@@ -65,7 +65,7 @@ class BuldContinerWithImage extends StatelessWidget {
                       padding:  EdgeInsets.only(left: 2.0.r,right: 10.0.r),
                       child: Text(
                           text.toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 14,
                             color: kColorsBlack,
                             fontWeight: FontWeight.bold,
@@ -94,8 +94,8 @@ class BuldContinerWithImage extends StatelessWidget {
                           child: Text(
                               TextMount.toString(),
                               textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 16.sp,
+                              style:  TextStyle(
+                                fontSize: 16,
                                 color: TextMountColore,
                                 fontWeight: FontWeight.bold,
                               )),
@@ -168,8 +168,8 @@ class BuldContinerWithImageShimere extends StatelessWidget {
                       padding:  EdgeInsets.only(left: 7.0.r,right: 7.0.r),
                       child: Text(
                          "",
-                          style: TextStyle(
-                            fontSize: 14.sp,
+                          style: const TextStyle(
+                            fontSize: 14,
                             color: kColorsBlack,
                             fontWeight: FontWeight.bold,
                           )),
@@ -196,8 +196,8 @@ class BuldContinerWithImageShimere extends StatelessWidget {
                           ),
                           Text(
                               "",
-                              style: TextStyle(
-                                fontSize: 14.sp,
+                              style: const TextStyle(
+                                fontSize: 14,
                                 color: kColorsWhite,
                                 fontWeight: FontWeight.bold,
                               )),

@@ -1,4 +1,5 @@
 import 'package:projectmanagers/Constants/my_text.dart';
+import 'package:projectmanagers/Core/Utils/assets.dart';
 import 'package:projectmanagers/Screen/Notifcation/item_notifcation.dart';
 import 'package:projectmanagers/Screen/Notifcation/item_notifcation_not_read.dart';
 import 'package:projectmanagers/Screen/Notifcation/notifcation_controller.dart';
@@ -63,7 +64,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
             appBar: MyAppBar(
         title: 'Notifications'.tr,
       ),
-        backgroundColor: kColorsWhite,
+
         body: SafeArea(
           child: Column(
             children: <Widget>[
@@ -82,9 +83,9 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                     controller: controllerTabBarClosedTransactions.controllerTabBar,
                     isScrollable: true,
                     labelColor: kColorsWhite,
-                    labelStyle: TextStyle(fontSize: 14, color: kColorsPrimaryFont, fontWeight: FontWeight.w500,fontFamily:  'Cairo'),
+                    labelStyle: const TextStyle(fontSize: 14, color: kColorsPrimaryFont, fontWeight: FontWeight.w500,fontFamily:  'Cairo'),
                     unselectedLabelColor: Color(0xff6F6F6F),
-                    unselectedLabelStyle:  TextStyle(fontSize: 14, color:  Color(0xff6F6F6F), fontWeight: FontWeight.w500,fontFamily:  'Cairo'),
+                    unselectedLabelStyle:  const TextStyle(fontSize: 14, color:  Color(0xff6F6F6F), fontWeight: FontWeight.w500,fontFamily:  'Cairo'),
                     indicatorSize: TabBarIndicatorSize.label,
                     indicator: BoxDecoration(borderRadius: BorderRadius.circular(5.r), color: kColorsPrimaryFont,),
 
@@ -125,12 +126,12 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                 Column(
                                   children: [
                                     Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Container(
                                             padding: EdgeInsets.only(left:8.r, right:8.r),
                                             child: Text('Notification box'.tr,
-                                              style:  TextStyle(color: kColorsPrimaryFont,fontSize: 14,fontWeight: FontWeight.w500),)
+                                              style:  const TextStyle(color: kColorsPrimaryFont,fontSize: 14,fontWeight: FontWeight.w500),)
                                         ),
                                         Padding(
                                           padding:  EdgeInsets.symmetric(horizontal:8.0.r),
@@ -152,13 +153,13 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                     child: Column(
                                                       children: [
                                                         Row(
-                                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                           children: [
                                                             Container(),
                                                             Padding(
                                                               padding: EdgeInsets.all(3.0.r),
                                                               child: Text('Filter'.tr ,
-                                                                style: TextStyle(
+                                                                style: const TextStyle(
                                                                     fontSize: 16,
                                                                     color: kColorsPrimaryFont),),
                                                             ),
@@ -180,7 +181,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                                     child: Padding(
                                                                       padding:  EdgeInsets.all(3.0.r),
                                                                       child:    Image.asset(
-                                                                        "assets/Icon/clear.png",
+                                                                        AssestData.wallet,
                                                                         width: 20.r,
                                                                         height: 20.r,
                                                                         color: kColorsWhite,),
@@ -220,11 +221,11 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                                             labelText:  'undefined'.tr,
                                                                             exText: 'undefined'.tr,
                                                                             textEditingController: controller.TypeFilterTextControll,
-                                                                            styleText: TextStyle(
-                                                                              fontSize: 13.sp,
+                                                                            styleText: const TextStyle(
+                                                                              fontSize: 13,
                                                                               color: kColorsBlack,
                                                                             ),
-                                                                            hintstyle: TextStyle(
+                                                                            hintstyle: const TextStyle(
                                                                               fontSize: 12,
                                                                               color: kColorsLightBlackLow,
                                                                             ),
@@ -249,7 +250,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                                   text: 'search'.tr,
                                                                   isIconEnd: true,
                                                                   IconEnd: SvgPicture.asset(
-                                                                    "assets/Icons/left.svg",
+                                                                    AssestData.left,
                                                                     width: 24.r ,
                                                                     height: 24.r ,
                                                                     color: kColorsWhite,
@@ -305,7 +306,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                         transClosed!.where((notification) => notification.statusName != 'مقرؤة').length>0?Container(
                                             padding: EdgeInsets.only(left:12.r, right:12.r),
                                             child: Text('Search results'.tr+" "+controller.count.toString()+" " +"results".tr,
-                                              style:  TextStyle(color: kColorsPrimaryFont,fontSize: 14,fontWeight: FontWeight.w500),)
+                                              style:  const TextStyle(color: kColorsPrimaryFont,fontSize: 14,fontWeight: FontWeight.w500),)
                                         ): SizedBox(),
                                       ],
                                     ),
@@ -346,8 +347,8 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                       Text(
                                         'There are no notifications'.tr + '!',
                                         textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontSize: 11.sp,
+                                        style: const TextStyle(
+                                          fontSize: 11,
                                           color: kColorsLightBlack,
                                           //fontWeight: FontWeight.bold,
                                         ),
@@ -375,13 +376,13 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Container(
                                         padding: EdgeInsets.only(left:8.r, right:8.r),
                                         child: Text(
                                           'Notification box'.tr,
-                                          style:  TextStyle(color: kColorsPrimaryFont,fontSize: 14,fontWeight: FontWeight.w500),)
+                                          style:  const TextStyle(color: kColorsPrimaryFont,fontSize: 14,fontWeight: FontWeight.w500),)
                                     ),
                                     Padding(
                                       padding:  EdgeInsets.symmetric(horizontal:8.0.r),
@@ -403,13 +404,13 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                 child: Column(
                                                   children: [
                                                     Row(
-                                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                       children: [
                                                         Container(),
                                                         Padding(
                                                           padding: EdgeInsets.all(3.0.r),
                                                           child: Text('Filter'.tr ,
-                                                            style: TextStyle(
+                                                            style: const TextStyle(
                                                                 fontSize: 16,
                                                                 color: kColorsPrimaryFont),),
                                                         ),
@@ -431,7 +432,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                                 child: Padding(
                                                                   padding:  EdgeInsets.all(3.0.r),
                                                                   child:    Image.asset(
-                                                                    "assets/Icon/clear.png",
+                                                                    AssestData.clear,
                                                                     width: 20.r,
                                                                     height: 20.r,
                                                                     color: kColorsWhite,),
@@ -472,11 +473,11 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                                         labelText:  'undefined'.tr,
                                                                         exText: 'undefined'.tr,
                                                                         textEditingController: controller.TypeFilterTextControll,
-                                                                        styleText: TextStyle(
-                                                                          fontSize: 13.sp,
+                                                                        styleText: const TextStyle(
+                                                                          fontSize: 13,
                                                                           color: kColorsBlack,
                                                                         ),
-                                                                        hintstyle: TextStyle(
+                                                                        hintstyle: const TextStyle(
                                                                           fontSize: 12,
                                                                           color: kColorsLightBlackLow,
                                                                         ),
@@ -504,7 +505,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                               text: 'search'.tr,
                                                               isIconEnd: true,
                                                               IconEnd: SvgPicture.asset(
-                                                                "assets/Icons/left.svg",
+                                                                AssestData.left,
                                                                 width: 24.r ,
                                                                 height: 24.r ,
                                                                 color: kColorsWhite,
@@ -572,7 +573,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                         padding: EdgeInsets.only(left:12.r, right:12.r),
                                         child: Text(
                                           'Search results'.tr+" "+controller.count.toString()+" " +"results".tr,
-                                          style:  TextStyle(color: kColorsPrimaryFont,fontSize: 14,fontWeight: FontWeight.w500),)
+                                          style:  const TextStyle(color: kColorsPrimaryFont,fontSize: 14,fontWeight: FontWeight.w500),)
                                     ),
                                   ],
                                 ),
@@ -615,8 +616,8 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                       Text(
                                         'There are no notifications'.tr + '!',
                                         textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontSize: 11.sp,
+                                        style: const TextStyle(
+                                          fontSize: 11,
                                           color: kColorsLightBlack,
                                           //fontWeight: FontWeight.bold,
                                         ),
@@ -669,16 +670,16 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                     Padding(
                       padding: EdgeInsets.all(8.0.r),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           SizedBox(
                             width: 20.w,
                           ),
                           Text(
                             'Choose'.tr,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: kColorsPrimaryFont,
-                                fontSize: 14.sp,
+                                fontSize: 14,
                                 fontWeight: FontWeight.bold),
                           ),
                           Padding(
@@ -688,7 +689,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                   Get.back();
                                 },
                                 child:    Image.asset(
-                                  "assets/Icon/clear.png",
+                                  AssestData.clear,
                                   width: 20.r,
                                   height: 20.r,
                                   color: kColorsWhite,),),
@@ -715,9 +716,9 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                             padding: EdgeInsets.all(8.0.r),
                             child: Text(
                               e.name.toString(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: kColorsBlack,
-                                  fontSize: 12.sp,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.bold),
                             ),
                           ),

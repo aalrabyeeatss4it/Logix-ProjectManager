@@ -1,3 +1,4 @@
+import 'package:projectmanagers/Core/Utils/assets.dart';
 import 'package:projectmanagers/widget/customHijriDatePicker.dart';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:flutter/material.dart';
@@ -54,7 +55,7 @@ class CustomDatePaker extends StatelessWidget {
       padding: EdgeInsets.only(left: 15.r, bottom: 6.r),
         child: Text(
           text!.tr ,
-          style: TextStyle(   fontFamily: 'GraphikArabic',
+          style: const TextStyle(   fontFamily: 'GraphikArabic',
               color: kColorsBlack,
               fontSize: 12,
               fontWeight: FontWeight.bold),
@@ -68,7 +69,7 @@ class CustomDatePaker extends StatelessWidget {
               child: DateTimeField(
                 onChanged: onchange,
                 controller: controller,
-                style:TextStyle(   fontFamily: 'GraphikArabic',color: kColorsLightBlack,fontSize: 12.sp),
+                style:const TextStyle(   fontFamily: 'GraphikArabic',color: kColorsLightBlack,fontSize: 12),
                 validator: (value) {
                   if (value == null) {
                     return _errorMessage(reqeurment!);
@@ -87,7 +88,7 @@ class CustomDatePaker extends StatelessWidget {
                       color: kColorsLightBlack,
                     )
                         : SvgPicture.asset(
-                      "assets/Icons/Exclude.svg",
+                     AssestData.time,
                       width: 20.r,
                       height: 20.r,
                       color: kColorsLightBlack,
@@ -96,7 +97,7 @@ class CustomDatePaker extends StatelessWidget {
                   hintText: hint,
                   fillColor: kColorsWhite,
                   errorMaxLines: 1,
-                  hintStyle: TextStyle(   fontFamily: 'GraphikArabic',color: Colors.black.withOpacity(0.5),fontSize: 9.sp),
+                  hintStyle:  TextStyle(   fontFamily: 'GraphikArabic',color: Colors.black.withOpacity(0.5),fontSize: 9),
                   contentPadding:
                   EdgeInsets.symmetric(vertical: 2.h, horizontal: 10.w),
                   border: OutlineInputBorder(
@@ -206,9 +207,9 @@ class _CustomDateHijryPakerState extends State<CustomDateHijryPaker> {
               EdgeInsets.only(left: 15.r, right: 2.r, bottom: 6.r),
               child: Text(
                 widget.text!.tr+":",
-                style: TextStyle(   fontFamily: 'GraphikArabic',
+                style: const TextStyle(   fontFamily: 'GraphikArabic',
                     color: kColorsLightBlack,
-                    fontSize: 13.sp,
+                    fontSize: 13,
                     fontWeight: FontWeight.bold),
               ))
               : SizedBox(),
@@ -247,7 +248,7 @@ class _CustomDateHijryPakerState extends State<CustomDateHijryPaker> {
                   hintText: widget.hint,
                   fillColor: kColorsWhite,
                   errorMaxLines: 1,
-                  hintStyle: TextStyle(   fontFamily: 'GraphikArabic',color: Colors.black,fontSize: 11.sp),
+                  hintStyle: const TextStyle(   fontFamily: 'GraphikArabic',color: Colors.black,fontSize: 11),
                   contentPadding: EdgeInsets.symmetric(vertical: 2.h,horizontal: 10.w),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5.r),

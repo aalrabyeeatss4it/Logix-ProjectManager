@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:projectmanagers/Constants/Constants.dart';
+import 'package:projectmanagers/Core/Utils/assets.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/menu_widget_dachbord.dart';
 import 'package:projectmanagers/Screen/Projects/ProjectsDetails/projects_details_controller.dart';
 import 'package:projectmanagers/apiservice/checkInterNet.dart';
@@ -56,7 +57,7 @@ class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
-        backgroundColor: kColorsWhite,
+
         body: SafeArea(
           child:  Padding(
             padding:  EdgeInsets.only(left: 0.01.sw,right:  0.01.sw),
@@ -106,7 +107,7 @@ class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
                                 children: [
                                   Expanded(
                                       flex:9,
-                                      child: Text('تركيب نظام لجهه خاصه'.tr,    style: TextStyle(
+                                      child: Text('تركيب نظام لجهه خاصه'.tr,    style: const TextStyle(
                                         color: Color(0xFF242424),
                                         fontSize: 14,
                                         fontFamily: 'GraphikArabic',
@@ -122,7 +123,7 @@ class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
                                       sizeHeight: 0.04.sh,
                                       sizeWidth: 0.30.sw,
                                       text:'متأخر بشكل بسيط'.tr,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         color: Color(0xFFFF744A),
                                         fontSize: 10,
                                         fontFamily: 'GraphikArabic',
@@ -145,21 +146,21 @@ class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
                                   flex:9,
                                   child: Column(
                                     children: [
-                                      CustomRowText(text: 'تاريخ البدايه'.tr,textStyle: TextStyle(     fontSize: 12,
+                                      CustomRowText(text: 'تاريخ البدايه'.tr,textStyle: const TextStyle(     fontSize: 12,
                                         fontFamily: 'GraphikArabic',
-                                        height: 1.37, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2022/2/2",textValueStyle: TextStyle( color: Color(0xFF242424).withOpacity(0.5),
+                                        height: 1.37, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2022/2/2",textValueStyle:   TextStyle( color: Color(0xFF242424).withOpacity(0.5),
                                         fontSize: 12,
                                         fontFamily: 'GraphikArabic',
                                         fontWeight: FontWeight.w400,),backColor: kColorsLightBlackLow,flex: 4,),
-                                      CustomRowText(text: ' تاريخ النهايه'.tr,textStyle: TextStyle( fontSize: 12,
+                                      CustomRowText(text: ' تاريخ النهايه'.tr,textStyle: const TextStyle( fontSize: 12,
                                         fontFamily: 'GraphikArabic',
-                                        height: 1.37, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2024/05/01",textValueStyle: TextStyle( color: Color(0xFF242424).withOpacity(0.5),
+                                        height: 1.37, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2024/05/01",textValueStyle:   TextStyle( color: Color(0xFF242424).withOpacity(0.5),
                                         fontSize: 12,
                                         fontFamily: 'GraphikArabic',
                                         fontWeight: FontWeight.w400,),backColor: kColorsLightBlackLow,flex: 4,),
-                                      CustomRowText(text: 'مرحلة المشروع'.tr,textStyle: TextStyle(fontSize: 12,
+                                      CustomRowText(text: 'مرحلة المشروع'.tr,textStyle: const TextStyle(fontSize: 12,
                                         fontFamily: 'GraphikArabic',
-                                        color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "جمع المتطلبات",textValueStyle: TextStyle( color: Color(0xFF242424).withOpacity(0.5),
+                                        color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "جمع المتطلبات",textValueStyle:   TextStyle( color: Color(0xFF242424).withOpacity(0.5),
                                         fontSize: 12,
                                         fontFamily: 'GraphikArabic',
                                         fontWeight: FontWeight.w400,),backColor: kColorsLightBlackLow,flex: 4,),
@@ -174,7 +175,7 @@ class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
                                     lineWidth: 13.0,
                                     animation: true,
                                     percent: percentage / 100,
-                                    center: Text("$percentage%",   style: TextStyle(
+                                    center: Text("$percentage%",   style: const TextStyle(
                                       color: Color(0xFF242424),
                                       fontSize: 10,
                                       fontFamily: 'GraphikArabic',
@@ -196,10 +197,10 @@ class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
                     SizedBox(
                       height: 0.02.sh,
                     ),
-                    BuldContinerHR("المعلومات الماليه".tr, "assets/Icon/wallet (1).svg",kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.financial_information_screen);}),
-                    BuldContinerHR("مكتبة المستندات".tr, "assets/Icon/folder-open.svg",kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.document_library_screen);}),
-                    BuldContinerHR("المعلومات الفنيه".tr, "assets/Icon/document.svg",kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.technical_information_screen);}),
-                    BuldContinerHR("المهام التي تنفيذها".tr, "assets/Icon/task-square.svg",kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.tasks_performed_screen);}),
+                    BuldContinerHR("المعلومات الماليه".tr, AssestData.wallet,kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.financial_information_screen);}),
+                    BuldContinerHR("مكتبة المستندات".tr, AssestData.folder_open,kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.document_library_screen);}),
+                    BuldContinerHR("المعلومات الفنيه".tr, AssestData.document,kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.technical_information_screen);}),
+                    BuldContinerHR("المهام التي تنفيذها".tr, AssestData.task_square,kColorsPrimaryFont,Color(0xffD4E8EF),(){Get.toNamed(RoutingApp.tasks_performed_screen);}),
 
                   ],
                 ),
@@ -207,6 +208,7 @@ class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
             ),
           ),
         ),
+        bottomNavigationBar:   CustomBottomNavBar(selectedMenu: MenuState.home),
 
       );
 
@@ -253,7 +255,7 @@ class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
                           flex: 6,
                           child: Text(
                               TextChart.toString(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 14,
                                 fontFamily: 'GraphikArabic',
                                 fontWeight: FontWeight.w500,
@@ -263,7 +265,7 @@ class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
                         Expanded(
                           flex: 1,
                           child: SvgPicture.asset(
-                            "assets/Icon/arrow-left.svg",
+                            AssestData.arrow_left,
                             width: 24.r ,
                             height: 24.r ,
                             color: kColorsBlack,

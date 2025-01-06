@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:projectmanagers/Constants/Constants.dart';
 import 'package:projectmanagers/Constants/my_text.dart';
+import 'package:projectmanagers/Core/Utils/assets.dart';
 import 'package:projectmanagers/router/route_constants.dart';
 import 'package:projectmanagers/widget/customButton.dart';
 import 'package:projectmanagers/widget/custom_row_text.dart';
@@ -51,7 +52,7 @@ class  ItemHome extends StatelessWidget {
                             children: [
                               Expanded(
                                   flex:9,
-                                  child: Text('تركيب نظام لجهه خاصه'.tr,    style: TextStyle(
+                                  child: Text('تركيب نظام لجهه خاصه'.tr,    style: const TextStyle(
                                     color: Color(0xFF242424),
                                     fontSize: 14,
                                     fontFamily: 'GraphikArabic',
@@ -67,7 +68,7 @@ class  ItemHome extends StatelessWidget {
                                   sizeHeight: 0.04.sh,
                                   sizeWidth: 0.30.sw,
                                   text:'متأخر بشكل بسيط'.tr,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     color: Color(0xFFFF744A),
                                     fontSize: 10,
                                     fontFamily: 'GraphikArabic',
@@ -90,21 +91,21 @@ class  ItemHome extends StatelessWidget {
                           flex:9,
                           child: Column(
                             children: [
-                              CustomRowText(text: 'تاريخ البدايه'.tr,textStyle: TextStyle(     fontSize: 12,
+                              CustomRowText(text: 'تاريخ البدايه'.tr,textStyle: const TextStyle(     fontSize: 12,
                                 fontFamily: 'GraphikArabic',
-                                height: 1.37, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2022/2/2",textValueStyle: TextStyle( color: Color(0xFF242424).withOpacity(0.5),
+                                height: 1.37, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2022/2/2",textValueStyle:   TextStyle( color: Color(0xFF242424).withOpacity(0.5),
               fontSize: 12,
               fontFamily: 'GraphikArabic',
               fontWeight: FontWeight.w400,),backColor: kColorsLightBlackLow,flex: 4,),
-                              CustomRowText(text: ' تاريخ النهايه'.tr,textStyle: TextStyle( fontSize: 12,
+                              CustomRowText(text: ' تاريخ النهايه'.tr,textStyle: const TextStyle( fontSize: 12,
                                 fontFamily: 'GraphikArabic',
-                                height: 1.37, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2024/05/01",textValueStyle: TextStyle( color: Color(0xFF242424).withOpacity(0.5),
+                                height: 1.37, color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "2024/05/01",textValueStyle:   TextStyle( color: Color(0xFF242424).withOpacity(0.5),
               fontSize: 12,
               fontFamily: 'GraphikArabic',
               fontWeight: FontWeight.w400,),backColor: kColorsLightBlackLow,flex: 4,),
-                              CustomRowText(text: 'مرحلة المشروع'.tr,textStyle: TextStyle(fontSize: 12,
+                              CustomRowText(text: 'مرحلة المشروع'.tr,textStyle: const TextStyle(fontSize: 12,
                                 fontFamily: 'GraphikArabic',
-                                 color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "جمع المتطلبات",textValueStyle: TextStyle( color: Color(0xFF242424).withOpacity(0.5),
+                                 color:Color(0xff242424) , fontWeight: FontWeight.w500,),textValue: "جمع المتطلبات",textValueStyle:   TextStyle( color: Color(0xFF242424).withOpacity(0.5),
               fontSize: 12,
               fontFamily: 'GraphikArabic',
               fontWeight: FontWeight.w400,),backColor: kColorsLightBlackLow,flex: 4,),
@@ -119,7 +120,7 @@ class  ItemHome extends StatelessWidget {
                             lineWidth: 13.0,
                             animation: true,
                             percent: percentage / 100,
-                            center: Text("$percentage%",   style: TextStyle(
+                            center: Text("$percentage%",   style: const TextStyle(
                               color: Color(0xFF242424),
                               fontSize: 10,
                               fontFamily: 'GraphikArabic',
@@ -138,10 +139,10 @@ class  ItemHome extends StatelessWidget {
                       children: [
                         Expanded(
                         flex:14,
-                        child: CustomRowText(text: 'مدير المشروع'.tr,textStyle: TextStyle(color: Color(0xFF242424),
+                        child: CustomRowText(text: 'مدير المشروع'.tr,textStyle: const TextStyle(color: Color(0xFF242424),
                           fontSize: 12,
                           fontFamily: 'GraphikArabic',
-                          fontWeight: FontWeight.w400,),textValue:"فارس سفيان الصلوي",textValueStyle: TextStyle(color: Color(0xFF242424).withOpacity(0.5),
+                          fontWeight: FontWeight.w400,),textValue:"فارس سفيان الصلوي",textValueStyle:   TextStyle(color: Color(0xFF242424).withOpacity(0.5),
                           fontSize: 12,
                           fontFamily: 'GraphikArabic',
                           fontWeight: FontWeight.w400,),backColor: kColorsLightBlackLow,flex: 3,)),
@@ -153,11 +154,11 @@ class  ItemHome extends StatelessWidget {
                             },
                             child:
                             Padding(
-                              padding:  EdgeInsets.all(3.0.r),
+                              padding:EdgeInsets.all(3.0.r),
                               child: SvgPicture.asset(
-                                "assets/Icon/arrow-square-left.svg",
-                                width: 24 ,
-                                height: 24 ,
+                                AssestData.arrow_square_left,
+                                width: 24,
+                                height: 24,
                                 color: kColorsBlack,
                               ),
                             ),
@@ -209,12 +210,12 @@ class  ItemHomeShimmer extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      CustomRowText(text: " ",textStyle: TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "",textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                      CustomRowText(text: "",textStyle: TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "",textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                      CustomRowText(text: "",textStyle: TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: " ",textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                      CustomRowText(text: " ",textStyle: TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "",textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                      CustomRowText(text: " ",textStyle: TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: " ",textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
-                      CustomRowText(text: "",textStyle: TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "  ",textValueStyle: TextStyle(fontSize: 10, color: kColorsBlack,),backColor: Color(0xffEBF1F8),),
+                      CustomRowText(text: " ",textStyle:const   TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "",textValueStyle: const TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                      CustomRowText(text: "",textStyle: const TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "",textValueStyle: const TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                      CustomRowText(text: "",textStyle: const TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: " ",textValueStyle: const TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                      CustomRowText(text: " ",textStyle: const TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "",textValueStyle: const TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                      CustomRowText(text: " ",textStyle: const TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: " ",textValueStyle: const TextStyle(fontSize: 10, color: kColorsBlack,),backColor: kColorsWhite,),
+                      CustomRowText(text: "",textStyle: const TextStyle(fontSize: 12, color:kColorsWhite , fontWeight: FontWeight.w500,),textValue: "  ",textValueStyle: const TextStyle(fontSize: 10, color: kColorsBlack,),backColor: Color(0xffEBF1F8),),
                     ],
                   ),
                 ),
