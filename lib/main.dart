@@ -59,7 +59,7 @@ class _MyAppState extends State<MyApp>{
               Locale('en', 'US'), // English, no country code
               Locale('ar', ''), // Arabic, no country code
             ],
-            theme:themeData,
+            theme:themeData.copyWith(scaffoldBackgroundColor: kColorsWhite),
             title:"EASY DOCS",
             getPages: Pages.pages(),
             defaultTransition: Transition.rightToLeftWithFade,
