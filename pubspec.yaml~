@@ -55,7 +55,6 @@ dependencies:
   loading_indicator: ^3.1.1
   url_launcher: ^6.2.6
   simple_connection_checker: ^0.2.1
-  flutter_zoom_drawer: ^3.2.0
   dio: ^5.4.3+1
   get_storage: ^2.1.1
   datetime_picker_formfield: ^2.0.1

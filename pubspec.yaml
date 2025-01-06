@@ -41,9 +41,9 @@ dependencies:
       path: cached_network_image
   flutter_statusbarcolor_ns: ^0.5.0
   flutter_svg: ^2.0.10+1
-  image_picker: ^0.8.4+2
+  image_picker:
   intl_phone_field: ^3.2.0
-  file_picker: ^8.0.3
+  file_picker:
   permission_handler: ^11.3.1
   flutter_html: ^3.0.0-beta.2
   dotted_decoration: ^2.0.0
