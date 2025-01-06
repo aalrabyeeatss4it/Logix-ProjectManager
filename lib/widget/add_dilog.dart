@@ -30,9 +30,9 @@ class AddSuccsessDialog extends StatelessWidget {
                         SizedBox(
                           width: 0.42.sw,
                         ),
-                        Padding(
-                          padding: EdgeInsets.all(3.0.r),
-                          child: Text(''.tr ,
+                        const  Padding(
+                          padding:const EdgeInsets.all(3.0),
+                          child: Text('' ,
                             style: const TextStyle(
                                 fontSize: 14,
                                 color: kColorsBlack
@@ -42,20 +42,20 @@ class AddSuccsessDialog extends StatelessWidget {
                     ),
 
                      Padding(
-                      padding: EdgeInsets.only(top: 12.0.r,right: 12.0.r,left: 12.0.r),
+                      padding:const EdgeInsets.only(top: 12.0,right: 12.0,left: 12.0),
                        child:
                       GestureDetector(
                           onTap: () {
                             Get.back();
                           },
-                          child: Container(
+                          child:  Container(
                             height: 20 ,
                             width: 20 ,
-                            decoration: BoxDecoration(
+                            decoration:  BoxDecoration(
                               borderRadius: BorderRadius.circular(25.r),
                               color: kColorsWhite,
                             ),
-                            child: SvgPicture.asset(
+                            child:  SvgPicture.asset(
                               "assets/Icon/exitread.svg",
                               height: 20 ,
                               width: 20 ,
@@ -70,7 +70,7 @@ class AddSuccsessDialog extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
 
-                  SvgPicture.asset(
+                    SvgPicture.asset(
                     "assets/Icon/addsuccess.svg",
                     width: 29,
                     height: 29,

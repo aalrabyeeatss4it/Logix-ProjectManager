@@ -31,12 +31,12 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
 
       width:double.infinity,
       height: 0.10.sh,
-      decoration: BoxDecoration(
+      decoration:const BoxDecoration(
           borderRadius: BorderRadius.only(
-            topLeft:Radius.circular(20.r),
-            topRight: Radius.circular(20.r),
-            bottomLeft: Radius.circular(10.r),
-            bottomRight: Radius.circular(10.r),
+            topLeft:Radius.circular(20),
+            topRight: Radius.circular(20),
+            bottomLeft: Radius.circular(10),
+            bottomRight: Radius.circular(10),
           ),
           color: Colors.white),
       child: Column(

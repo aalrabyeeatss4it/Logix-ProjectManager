@@ -6,7 +6,6 @@ import 'package:projectmanagers/apiservice/checkInterNet.dart';
 import 'package:projectmanagers/language/controller/app_language.dart';
 import 'package:projectmanagers/router/route_constants.dart';
 import 'package:projectmanagers/widget/CustomSnackBar.dart';
-import 'package:projectmanagers/widget/app_bar_esy_dox.dart';
 import 'package:projectmanagers/widget/custom_textfeild.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
       backgroundColor: kColorsPrimaryFont,
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(0),
-          child: Container(color: kColorsPrimaryFont)),
+          child:Container(color: kColorsPrimaryFont)),
       body: Obx(
         () => Container(
           color: kColorsPrimaryFont,
@@ -51,12 +50,12 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 0.03.sh,),
+                  SizedBox(height: 0.03.sh,),
                 Container(
                   width:0.90.sw,
                   height: 0.085.sh,
 
-                  decoration: BoxDecoration(
+                  decoration:const BoxDecoration(
                       color: kColorsPrimaryFont,
                       image:DecorationImage(image:
                       AssetImage(AssestData.Logo
@@ -73,9 +72,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       Container(
                         width: 0.90.sw,
                         height: 0.91.sh,
-                          decoration: ShapeDecoration(
+                          decoration:  ShapeDecoration(
                               color: kColorsWhite.withOpacity(0.1),
-                            shape: RoundedRectangleBorder(
+                            shape:const RoundedRectangleBorder(
                               borderRadius: BorderRadius.only(topLeft:Radius.circular(20),topRight: Radius.circular(20)),),),
 
                       ),
@@ -84,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Container(
                           width: 1.0.sw,
                           height: 0.88.sh,
-                          decoration: BoxDecoration(
+                          decoration:  BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: kColorsWhite,
                           ),
@@ -120,7 +119,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 SizedBox(
                                   height: 0.04.sh,
                                 ),
-                                TextFieldWidgetAuth(
+                                  TextFieldWidgetAuth(
                                   hint: 'mail0@gmail.com'.tr,
                                   text: 'Email'.tr,
                                   edit: 1,
@@ -174,11 +173,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                   ),
                                 ),
                                 SizedBox(
-                                  height: 0.05.sh,
+                                  height: 0.08.sh,
                                 ),
-                                SizedBox(
-                                  height: 0.03.sh,
-                                ),
+
                                 CustomButton(
                                   color: kColorsPrimaryFont,
                                   borderRadius: 8.r,
