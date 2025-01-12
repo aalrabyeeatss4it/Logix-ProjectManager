@@ -310,7 +310,7 @@ class _AddLessonsProjectScreenState extends State<AddLessonsProjectScreen> {
                           CustomButton(
                             color: kColorsPrimaryFont,
                             borderRadius: 8.r,
-                            sizeHeight: 0.05.sh,
+                            sizeHeight: 0.045.sh,
                             sizeWidth: 0.93.sw,
                             text: 'إرسال الطلب'.tr,
                             isIconEnd: true,

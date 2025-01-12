@@ -47,7 +47,6 @@ class MemberScreen extends StatelessWidget {
               Container(
                 width:0.90.sw,
                 height: 0.085.sh,
-
                 decoration: BoxDecoration(
                     color: kColorsPrimaryFont,
                     image:DecorationImage(image:
@@ -126,7 +125,7 @@ class MemberScreen extends StatelessWidget {
                               isIconEnd: false,
                               text: 'Next'.tr,
                               borderRadius: 10.r,
-                              sizeHeight: 0.05.sh,
+                              sizeHeight: 0.045.sh,
                               sizeWidth: 0.96.sw,
                               color: kColorsPrimaryFont,
                               style:const TextStyle(

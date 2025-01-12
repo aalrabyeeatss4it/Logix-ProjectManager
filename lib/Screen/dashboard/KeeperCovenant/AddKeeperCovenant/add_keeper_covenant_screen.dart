@@ -316,7 +316,7 @@ class _AddKeeperCovenantScreenState extends State<AddKeeperCovenantScreen> {
                           CustomButton(
                             color: kColorsPrimaryFont,
                             borderRadius: 8.r,
-                            sizeHeight: 0.05.sh,
+                            sizeHeight: 0.045.sh,
                             sizeWidth: 0.93.sw,
                             text: 'إضافه'.tr,
                             style: const TextStyle(

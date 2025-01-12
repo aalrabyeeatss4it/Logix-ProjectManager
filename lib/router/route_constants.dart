@@ -28,6 +28,14 @@ class RoutingApp {
   static const String add_resource_project_screen = "/add_resource_project_screen";
   static const String add_request_covenant_screen = "/add_request_covenant_screen";
   static const String add_request_exchang_screen = "/add_request_exchang_screen";
+  static const String add_request_purchase_screen = "/add_request_purchase_screen";
+  static const String item_add_request_purchase_screen = "/item_add_request_purchase_screen";
+  static const String item_add_request_exchang_screen = "/item_add_request_exchang_screen";
+  static const String add_update_plan_screen = "/add_update_plan_screen";
+  static const String  update_plan_project_screen = "/update_plan_project_screen";
+
+
+
 
 
   static const String keeper_covenant_screen = "/keeper_covenant_screen";

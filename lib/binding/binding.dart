@@ -15,8 +15,11 @@ import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ArchiveDocum
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/CloseProject/add_close_project_controller.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ExchangeRequest/add_request_exchange_controller.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/LessonsProject/add_lisince_project_controller.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/PurchaseRequest/add_request_purchase_controller.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/RequestCovenant/request_covenant_controller.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ResourceProject/add_resource_project_controller.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/UpdatePlan/UpdatePlaneProject/update_plane_project_controller.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/UpdatePlan/update_plan_controller.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/UplodeReportProject/add_uplode_report_project_controller.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/electronic_services_controller.dart';
 import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/add_keeper_covenant_controller.dart';
@@ -107,6 +110,21 @@ class AddKeeperCovenantBinding extends Bindings {
 
   }
 }
+class AddUpdatePlanBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut<UpdatePlanController>(() => UpdatePlanController(),);
+
+  }
+}
+class UpdatePlaneProjectBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut<UpdatePlaneProjectController>(() => UpdatePlaneProjectController(),);
+
+  }
+}
+
 
 
 
@@ -171,6 +189,14 @@ class AddRequestExchangeBinding extends Bindings {
 
   }
 }
+class AddRequestPurchaseBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut< AddPurchaseRequestController>(() =>  AddPurchaseRequestController(),);
+
+  }
+}
+
 
 class ProjectsBinding extends Bindings {
   @override

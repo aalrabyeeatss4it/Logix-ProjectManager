@@ -15,9 +15,14 @@ import 'package:projectmanagers/Screen/card_wizard_overlap.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ArchiveDocumentProject/add_archive_document_project_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/CloseProject/add_close_project_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ExchangeRequest/add_request_exchange_screen.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ExchangeRequest/item_request_exchang_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/LessonsProject/add_lisince_project_screen.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/PurchaseRequest/add_request_purchase_screen.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/PurchaseRequest/item_request_purchase_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/RequestCovenant/request_covenant_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ResourceProject/add_resource_project_screen.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/UpdatePlan/UpdatePlaneProject/update_plane_project_screen.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/UpdatePlan/update_plan_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/UplodeReportProject/add_uplode_report_project_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/electronic_services_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/add_keeper_covenant_screen.dart';
@@ -184,13 +189,55 @@ class Pages {
           bindings: [
             RequestCovenantBinding(),
           ]
-      ), GetPage(
+      ),
+      GetPage(
           transition: Transition.native,
           transitionDuration: Duration(milliseconds: 400),
           name: RoutingApp.add_request_exchang_screen,
           page: () => AddRequestExchangeScreen(),
           bindings: [
             AddRequestExchangeBinding(),
+          ]
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.add_request_purchase_screen,
+          page: () => AddPurchaseRequestScreen(),
+          bindings: [
+            AddRequestPurchaseBinding(),
+          ]
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.item_add_request_purchase_screen,
+          page: () => ItemsPurchaseRequestScreen(),
+
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.item_add_request_exchang_screen,
+          page: () => ItemsExchangRequestScreen(),
+
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.add_update_plan_screen,
+          page: () => UpdatePlanScreen(),
+          bindings: [
+            AddUpdatePlanBinding(),
+          ]
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.update_plan_project_screen,
+          page: () => UpdatePlaneProjectScreen(),
+          bindings: [
+            UpdatePlaneProjectBinding(),
           ]
       ),
 

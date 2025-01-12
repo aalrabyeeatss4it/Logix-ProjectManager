@@ -51,42 +51,7 @@ class CustomButton extends StatelessWidget {
                     color?? kColorsPrimaryFont,
                     color?? kColorsPrimaryFont
                   ])),
-          child:
-          // MaterialButton(
-          //   padding: EdgeInsets.zero,
-          //   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(borderRadius??  10.r),side: BorderSide( color:borderColor?? kColorsPrimaryFont,width: 1) ),
-          //   disabledColor: disabledColor,
-          //   onPressed:onPress,
-          //   child: Padding(
-          //     padding:  EdgeInsets.only(bottom:4.r),
-          //     child: Row(
-          //       mainAxisAlignment: MainAxisAlignment.center,
-          //       children: [
-          //         isIconStart==true? IconStart!
-          //             :SizedBox(width: 0.00.sh,),
-          //         isIconStart==true?  SizedBox(
-          //           width: 0.03.sw,
-          //         )
-          //             :SizedBox(width: 0.00.sh,),
-          //         Text( text!,
-          //
-          //           style:style!=null?
-          //           //style :Theme.of(context).textTheme.titleMedium!.copyWith(color: fontColor??kColorsWhite,)
-          //           style : const TextStyle(
-          //               fontSize: 16,
-          //               color:fontColor?? Colors.white
-          //           ),
-          //           textAlign: TextAlign.center,maxLines: 1,),
-          //         SizedBox(
-          //           width: 0.03.sw,
-          //         ),
-          //         isIconEnd==true? IconEnd!
-          //             :SizedBox(width: 0.00.sh,),
-          //       ],
-          //     ),
-          //   ),
-          // ),
-          GestureDetector(
+          child: GestureDetector(
             onTap: onPress,
             child: Container(
               padding: EdgeInsets.zero,

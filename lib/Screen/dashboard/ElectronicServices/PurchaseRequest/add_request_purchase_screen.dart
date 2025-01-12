@@ -8,7 +8,8 @@ import 'package:projectmanagers/Constants/Constants.dart';
 import 'package:projectmanagers/Core/Utils/assets.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/menu_widget_dachbord.dart';
 import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ExchangeRequest/add_request_exchange_controller.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ExchangeRequest/dilog_confirm_exhange.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/PurchaseRequest/add_request_purchase_controller.dart';
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/PurchaseRequest/dilog_confirm_purchase.dart';
 import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/filter_model.dart';
 import 'package:projectmanagers/apiservice/checkInterNet.dart';
 import 'package:projectmanagers/apiservice/file_piker.dart';
@@ -25,16 +26,16 @@ import 'package:projectmanagers/widget/fileupload_widget.dart';
 import 'package:projectmanagers/widget/input_text.dart';
 import 'package:projectmanagers/widget/progisser_bar.dart';
 
-class AddRequestExchangeScreen extends StatefulWidget {
+class AddPurchaseRequestScreen extends StatefulWidget {
 
   var show_tabBar;
-  AddRequestExchangeScreen({this.show_tabBar});
+  AddPurchaseRequestScreen({this.show_tabBar});
   @override
-  State<AddRequestExchangeScreen> createState() => _AddRequestExchangeScreenState();
+  State<AddPurchaseRequestScreen> createState() => _AddPurchaseRequestScreenState();
 }
 
-class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
-  final controller = Get.put(AddRequestExchangeController());
+class _AddPurchaseRequestScreenState extends State<AddPurchaseRequestScreen> {
+  final controller = Get.put(AddPurchaseRequestController());
   final _formKey = GlobalKey<FormState>();
   @override
   void initState() {
@@ -57,7 +58,7 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
     return
       Scaffold(
         appBar:  MyAppBar(
-            title: 'طلب صرف مواد لمشروع'.tr,
+            title: 'طلب شراء مواد لمشروع'.tr,
 
             colorfont: kColorsWhite),
         drawer: Drawer(
@@ -110,21 +111,9 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
                             colorborder: kColorsBlackporder,
                           ),
                           SizedBox(
-                            height: 0.01.sh,
+                            height: 0.02.sh,
                           ),
-                          TextFieldWidget(
-                            text:  '    المخزن '.tr,
-                            hint: 'أدخل المخزن '.tr,
-                            sizeFontText: 12,
-                            edit: 1,
-                            maxLine: 1,
-                            hintStyle:  TextStyle(fontFamily: 'GraphikArabic',color:Colors.black.withOpacity(0.4) ,fontSize: 12),
-                            keyboardType: TextInputType.text,
 
-                          ),
-                          SizedBox(
-                            height: 0.03.sh,
-                          ),
                           Row(
                             children: [
                               Container(
@@ -141,7 +130,7 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
                             ],
                           ),
                           SizedBox(height: 0.01.sh,),
-                          GetBuilder<AddRequestExchangeController>(
+                          GetBuilder<AddPurchaseRequestController>(
                               init: controller,
                               builder: (co) {
                                 return InkWell(
@@ -238,10 +227,10 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
                             onPress: () async {
                               showDialog(
                                 context: context,
-                                builder: (context) => DialogConfirmExchange(
+                                builder: (context) => DialogConfirmPurchase(
                                   onPress: (){
                                     Get.back();
-                                    Get.toNamed(RoutingApp.item_add_request_exchang_screen);
+                                    Get.toNamed(RoutingApp.item_add_request_purchase_screen);
                                   },
                                   text:   'هل أنت متأكد من إرسال الطلب؟'.tr,
                                   Colore: kColorsWhite,
@@ -276,7 +265,7 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
 
       );
   }
-  onClickTypeMasroff(AddRequestExchangeController controller, BuildContext context,       List<DataFilter> drop,) {
+  onClickTypeMasroff(AddPurchaseRequestController controller, BuildContext context,       List<DataFilter> drop,) {
     Get.bottomSheet(
       StatefulBuilder(
           builder: (context, setState) {
@@ -291,7 +280,7 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
                     topRight: Radius.circular(25),
                   ),
                 ),
-                child: GetBuilder<AddRequestExchangeController>(
+                child: GetBuilder<AddPurchaseRequestController>(
                   init: controller,
                   builder: (_c) {
                     return SizedBox(
@@ -439,3 +428,4 @@ class _AddRequestExchangeScreenState extends State<AddRequestExchangeScreen> {
 
   }
 }
+

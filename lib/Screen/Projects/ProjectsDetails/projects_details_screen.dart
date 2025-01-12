@@ -120,7 +120,7 @@ class _ProjectsDetailsScreenState extends State<ProjectsDetailsScreen> {
                                       color:Color(0xffFF744A).withOpacity(0.3),
                                       borderRadius: 8.r,
                                       borderColor:  kColorsPrimaryFont,
-                                      sizeHeight: 0.04.sh,
+                                      sizeHeight: 0.045.sh,
                                       sizeWidth: 0.30.sw,
                                       text:'متأخر بشكل بسيط'.tr,
                                       style: const TextStyle(

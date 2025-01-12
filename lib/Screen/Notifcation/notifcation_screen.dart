@@ -256,7 +256,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                                     color: kColorsWhite,
                                                                   ),
                                                                   borderRadius: 10.r,
-                                                                  sizeHeight: 0.05.sh,
+                                                                  sizeHeight: 0.045.sh,
                                                                   sizeWidth: 0.92.sw,
                                                                   onPress: () async {
                                                                     if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
@@ -511,7 +511,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
                                                                 color: kColorsWhite,
                                                               ),
                                                               borderRadius: 10.r,
-                                                              sizeHeight: 0.05.sh,
+                                                              sizeHeight: 0.045.sh,
                                                               sizeWidth: 0.92.sw,
                                                               onPress: () async {
                                                                 if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {

@@ -74,7 +74,7 @@ class ItemTasksPerformed extends StatelessWidget {
                             CustomButton(
                               color: kColorsPrimaryFont,
                               borderRadius: 6.r,
-                              sizeHeight: 0.05.sh,
+                              sizeHeight: 0.045.sh,
                               sizeWidth: 0.40.sw,
                               text: 'تغيير الحاله'.tr,
                               style:
@@ -184,7 +184,7 @@ class ItemTasksPerformed extends StatelessWidget {
                                                     color:kColorsPrimaryFont ,
                                                     text: 'تغيير'.tr,
                                                     borderRadius: 10.r,
-                                                    sizeHeight: 0.05.sh,
+                                                    sizeHeight: 0.045.sh,
                                                     sizeWidth: 0.90.sw,
                                                     onPress: () async {
                                                       if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
@@ -217,7 +217,7 @@ class ItemTasksPerformed extends StatelessWidget {
                               child: CustomButton(
                                 color: kColorsWhite,
                                 borderRadius: 6.r,
-                                sizeHeight: 0.05.sh,
+                                sizeHeight: 0.045.sh,
                                 sizeWidth: 0.40.sw,
 
                                 borderColor: kColorsPrimaryFont,
@@ -311,7 +311,7 @@ class ItemTasksPerformed extends StatelessWidget {
                                                       text: 'إضافه'.tr,
 
                                                       borderRadius: 10.r,
-                                                      sizeHeight: 0.05.sh,
+                                                      sizeHeight: 0.045.sh,
                                                       sizeWidth: 0.90.sw,
                                                       onPress: () async {
                                                         if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {

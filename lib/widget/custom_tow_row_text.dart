@@ -27,8 +27,8 @@ class CustomTowRowText extends StatelessWidget {
               color:backColor  ,
               borderRadius: BorderRadius.circular(10.r)
           ),
-          padding:  EdgeInsets.only(top:  5.0.r,bottom: 4.r),
-          width: 0.82.sw,
+          padding:  EdgeInsets.only(top:  8.0.r,bottom: 8.r,left: 6.0.r,right: 6.0.r),
+
           child: Row(
             children: [
               Expanded(
@@ -36,16 +36,16 @@ class CustomTowRowText extends StatelessWidget {
                   child: Text(text.toString()+":",  style: textStyle)),
 
               Expanded(
-                  flex: flex!=null ? flex!: 3,child: Text(textValue.toString(),  style:textValueStyle)),
+                  flex: flex!=null ? flex!: 3,child: Text(textValue.toString(),textAlign: TextAlign.start,  style:textValueStyle)),
 
 
 
 
               Expanded(
-                  flex:flex!=null ?4: 3,child: Text(text2.toString()+":",  style:textValue2Style!=null?textValue2Style: textStyle)),
+                  flex:flex!=null ?flex!: 3,child: Text(text2.toString()+":",  style:textValue2Style!=null?textValue2Style: textStyle)),
 
               Expanded(
-                  flex:flex!=null ?4: 3,child: Text(textValue2.toString(),  style:textValueStyle)),
+                  flex:flex!=null ?4: 3,child: Text(textValue2.toString(),textAlign: TextAlign.start,  style:textValueStyle)),
             ],
           ),
         ),

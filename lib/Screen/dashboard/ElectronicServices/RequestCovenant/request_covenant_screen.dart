@@ -85,7 +85,7 @@ class _RequestCovenantScreenState extends State<RequestCovenantScreen> {
                 Expanded(flex: 3, child: CustomButton(
                     color: kColorsPrimaryFont,
                     borderRadius: 8.r,
-                    sizeHeight: 0.05.sh,
+                  sizeHeight: 0.045.sh,
                     sizeWidth: 0.93.sw,
                     text: 'إرسال الطلب'.tr,
                     isIconEnd: true,

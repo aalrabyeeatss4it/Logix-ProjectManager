@@ -68,7 +68,7 @@ ItemNotifcationNotRead(this.data);
                                     color:data.statusName.toString()==null?kColorsWhite: kColorsPrimaryFont,
                                     borderRadius: 8.r,
                                     borderColor: data.statusName.toString()==null?kColorsWhite: kColorsPrimaryFont,
-                                    sizeHeight: 0.04.sh,
+                                    sizeHeight: 0.045.sh,
                                     sizeWidth: 0.15.sw,
                                     text:data.statusName.toString(),
                                     style: const TextStyle(fontFamily: 'GraphikArabic',

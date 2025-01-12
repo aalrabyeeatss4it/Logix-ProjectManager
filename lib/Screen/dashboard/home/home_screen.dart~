@@ -309,11 +309,15 @@ class GrideRow extends StatelessWidget {
     required this.Icone,
     required this.onpress,
      this.Count,
+
+
   });
+
   final bool isRtl;
   final String text;
   final String Icone;
   final int? Count;
+
   final Function() onpress;
 
   @override
