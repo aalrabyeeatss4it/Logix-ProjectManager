@@ -178,7 +178,6 @@ class _UpdatePlaneProjectScreenState extends State<UpdatePlaneProjectScreen> {
                       sizeHeight: 0.045.sh,
                       sizeWidth: 0.92.sw,
                       text: '    حفظ '.tr,
-
                       style: const TextStyle(
                         color: Colors.white,
                         fontSize: 14,
