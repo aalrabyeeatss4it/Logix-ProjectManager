@@ -61,31 +61,37 @@ class ProjectsDetailsController extends GetxController with StateMixin<ProjectsD
       await getPrfile();
     }
     Future<void> getPrfile({String? BranchName}) async{
-      String tokenn = stg.read(token).toString();
-      print('Bearer ${stg.read(token)}');
-      print("getPrfile");
-      await ApiService().getData(urlgetPrfile, {'Authorization': 'Bearer ${stg.read(token)}'}).timeout(
-          Duration(minutes: 1), onTimeout: () {
-        throw TimeoutException('The connection has timed out, Please try again!');
-      }).then((value) {
-        change(null, status: RxStatus.loading());
-        if (value.statusCode == 200) {
-          print("startgetProjectsDetails");
-          ProjectsDetailsModel? modelProjectsDetails = ProjectsDetailsModel.fromJson(value.data);
-          print(value.data);
-          change(modelProjectsDetails, status: RxStatus.success());
-          initControllarr(modelProjectsDetails);
+      try {
+        String tokenn = stg.read(token).toString();
+        print('Bearer ${stg.read(token)}');
+        print("getPrfile");
+        await ApiService().getData(urlgetPrfile, {'Authorization': 'Bearer ${stg.read(token)}'}).timeout(
+            Duration(minutes: 1), onTimeout: () {
+          throw TimeoutException('The connection has timed out, Please try again!');
+        }).then((value) {
+          change(null, status: RxStatus.loading());
+          if (value.statusCode == 200) {
+            print("startgetProjectsDetails");
+            ProjectsDetailsModel? modelProjectsDetails = ProjectsDetailsModel.fromJson(value.data);
+            print(value.data);
+            change(modelProjectsDetails, status: RxStatus.success());
+            initControllarr(modelProjectsDetails);
+          }
+          else if(value.statusCode == 401){
+            GetSnackMsg(msg: 'Unauthorized access'.tr,bgClr:kColorsRed ,txClr:kColorsWhite ).showTxt();
+            Get.put(LogOutController()).LogOut();
+          }
+          else {
+            print('لم يتم إرجاع بيانات في شاشة بيانات المستخدم');
+          }
         }
-        else if(value.statusCode == 401){
-          GetSnackMsg(msg: 'Unauthorized access'.tr,bgClr:kColorsRed ,txClr:kColorsWhite ).showTxt();
-          Get.put(LogOutController()).LogOut();
-        }
-        else {
-          print('لم يتم إرجاع بيانات في شاشة بيانات المستخدم');
-        }
+        );
+        print("EndgetProjectsDetails");
+      } catch (e) {
+        print(e.toString());
+        // يمكنك إضافة معالجة أخطاء أكثر تفصيلًا إذا لزم الأمر
       }
-      );
-      print("EndgetProjectsDetails");
+
 
     }
 
@@ -97,39 +103,45 @@ class ProjectsDetailsController extends GetxController with StateMixin<ProjectsD
   }
 
   ChangPassword() async{
-    Get.dialog(Center(
-      child: LoadingIndicatorWidget(),
-    ));
-    print({
-      "UserName":"",
-      "Password": NewPassowrdController.text.trim(),
-      "MemberId": "",
-    });
+    try {
+      Get.dialog(Center(
+        child: LoadingIndicatorWidget(),
+      ));
+      print({
+        "UserName":"",
+        "Password": NewPassowrdController.text.trim(),
+        "MemberId": "",
+      });
 
-    await ApiService().postDataLogin(
+      await ApiService().postDataLogin(
         url: urlEditPassword,
         body: {
           "Password": NewPassowrdController.text.trim(),
         },
-      header: {'Authorization': 'Bearer ${stg.read(token)}'},
-    ).then((value) {
-      print(' النتيجه: ${value.statusCode}');
-      if (value.statusCode == 200) {
-         Get.back();
-         RusultPasswordModel? rusultPasswordModel = RusultPasswordModel.fromJson(value.data);
-         print(value.data);
-         stg.write(userPassword, rusultPasswordModel.dataRusultPasswor!.userPassword);
-         GetSnackMsg(msg:rusultPasswordModel.message.toString(), bgClr: kColorsPrimaryFont, txClr: kColorsWhite).showTxt();
-         ClereControllar();
-        print(value.data);
-      }
-      else if(value.statusCode == 401){
-        GetSnackMsg(msg: 'Unauthorized access'.tr,bgClr:kColorsRed ,txClr:kColorsWhite ).showTxt();
-      }
-      else {
-        Get.back();
-      }
-    });
+        header: {'Authorization': 'Bearer ${stg.read(token)}'},
+      ).then((value) {
+        print(' النتيجه: ${value.statusCode}');
+        if (value.statusCode == 200) {
+          Get.back();
+          RusultPasswordModel? rusultPasswordModel = RusultPasswordModel.fromJson(value.data);
+          print(value.data);
+          stg.write(userPassword, rusultPasswordModel.dataRusultPasswor!.userPassword);
+          GetSnackMsg(msg:rusultPasswordModel.message.toString(), bgClr: kColorsPrimaryFont, txClr: kColorsWhite).showTxt();
+          ClereControllar();
+          print(value.data);
+        }
+        else if(value.statusCode == 401){
+          GetSnackMsg(msg: 'Unauthorized access'.tr,bgClr:kColorsRed ,txClr:kColorsWhite ).showTxt();
+        }
+        else {
+          Get.back();
+        }
+      });
+    } catch (e) {
+      print(e.toString());
+      // يمكنك إضافة معالجة أخطاء أكثر تفصيلًا إذا لزم الأمر
+    }
+
 
   }
   void ClereControllar() {

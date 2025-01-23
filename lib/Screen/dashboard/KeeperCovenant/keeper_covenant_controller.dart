@@ -42,31 +42,37 @@ class KeeperCovenantController extends GetxController with StateMixin<KeeperCove
       await getPrfile();
     }
     Future<void> getPrfile({String? BranchName}) async{
-      String tokenn = stg.read(token).toString();
-      print('Bearer ${stg.read(token)}');
-      print("getPrfile");
-      await ApiService().getData(urlgetPrfile, {'Authorization': 'Bearer ${stg.read(token)}'}).timeout(
-          Duration(minutes: 1), onTimeout: () {
-        throw TimeoutException('The connection has timed out, Please try again!');
-      }).then((value) {
-        change(null, status: RxStatus.loading());
-        if (value.statusCode == 200) {
-          print("startgetKeeperCovenant");
-          KeeperCovenantModel? modelKeeperCovenant = KeeperCovenantModel.fromJson(value.data);
-          print(value.data);
-          change(modelKeeperCovenant, status: RxStatus.success());
+      try {
+        String tokenn = stg.read(token).toString();
+        print('Bearer ${stg.read(token)}');
+        print("getPrfile");
+        await ApiService().getData(urlgetPrfile, {'Authorization': 'Bearer ${stg.read(token)}'}).timeout(
+            Duration(minutes: 1), onTimeout: () {
+          throw TimeoutException('The connection has timed out, Please try again!');
+        }).then((value) {
+          change(null, status: RxStatus.loading());
+          if (value.statusCode == 200) {
+            print("startgetKeeperCovenant");
+            KeeperCovenantModel? modelKeeperCovenant = KeeperCovenantModel.fromJson(value.data);
+            print(value.data);
+            change(modelKeeperCovenant, status: RxStatus.success());
 
+          }
+          else if(value.statusCode == 401){
+            GetSnackMsg(msg: 'Unauthorized access'.tr,bgClr:kColorsRed ,txClr:kColorsWhite ).showTxt();
+            Get.put(LogOutController()).LogOut();
+          }
+          else {
+            print('لم يتم إرجاع بيانات في شاشة بيانات المستخدم');
+          }
         }
-        else if(value.statusCode == 401){
-          GetSnackMsg(msg: 'Unauthorized access'.tr,bgClr:kColorsRed ,txClr:kColorsWhite ).showTxt();
-          Get.put(LogOutController()).LogOut();
-        }
-        else {
-          print('لم يتم إرجاع بيانات في شاشة بيانات المستخدم');
-        }
+        );
+        print("EndgetKeeperCovenant");
+      } catch (e) {
+        print(e.toString());
+        // يمكنك إضافة معالجة أخطاء أكثر تفصيلًا إذا لزم الأمر
       }
-      );
-      print("EndgetKeeperCovenant");
+
 
     }
 

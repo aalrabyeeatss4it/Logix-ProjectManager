@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
-import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/add_keeper_covenant_model.dart';
+
+import 'package:projectmanagers/Screen/dashboard/ElectronicServices/UplodeReportProject/add_uplode_report_project_model.dart';
 import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/filter_model.dart';
 import 'package:projectmanagers/apiservice/url.dart';
 import 'package:projectmanagers/widget/progisser_bar.dart';
@@ -11,7 +12,7 @@ import 'package:projectmanagers/apiservice/logout.dart';
 import 'package:projectmanagers/widget/CustomSnackBar.dart';
 import '/apiservice/api_service.dart';
 
-class AddKeeperCovenantController extends GetxController with StateMixin<AddKeeperCovenantModel> {
+class AddUplodeReportProjectController extends GetxController with StateMixin<AddUplodeReportProjectModel> {
 
   late TextEditingController FilterNameController;
   late TextEditingController searchCustomerController;
@@ -39,17 +40,17 @@ class AddKeeperCovenantController extends GetxController with StateMixin<AddKeep
   }
  getTypeFilter() {
     try {
-      var jsonOptions = jsonEncode(TypeOptions);
-      List<dynamic> jsonList = jsonDecode(jsonOptions);
-      List<Map<String, dynamic>> jsonMapList = jsonList.cast<Map<String, dynamic>>();
-      Map<String, dynamic> jsonDataMap = {'data': jsonMapList};
-      filterModel = FilterModel.fromJson(jsonDataMap);
-      FilterNameController.text=filterModel!.dataFilter.first.name;
+
     } catch (e) {
       print(e.toString());
       // يمكنك إضافة معالجة أخطاء أكثر تفصيلًا إذا لزم الأمر
     }
-
+    var jsonOptions = jsonEncode(TypeOptions);
+    List<dynamic> jsonList = jsonDecode(jsonOptions);
+    List<Map<String, dynamic>> jsonMapList = jsonList.cast<Map<String, dynamic>>();
+    Map<String, dynamic> jsonDataMap = {'data': jsonMapList};
+    filterModel = FilterModel.fromJson(jsonDataMap);
+    FilterNameController.text=filterModel!.dataFilter.first.name;
   }
 
 

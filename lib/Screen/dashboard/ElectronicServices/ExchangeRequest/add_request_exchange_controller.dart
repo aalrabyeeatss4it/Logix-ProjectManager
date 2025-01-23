@@ -39,13 +39,19 @@ class AddRequestExchangeController extends GetxController with StateMixin<AddReq
     this.FilterNameController.text = text!;
     this.FilterNameID.value = id!;
   }
-  getTypeFilter() {
-    var jsonOptions = jsonEncode(TypeOptions);
-    List<dynamic> jsonList = jsonDecode(jsonOptions);
-    List<Map<String, dynamic>> jsonMapList = jsonList.cast<Map<String, dynamic>>();
-    Map<String, dynamic> jsonDataMap = {'data': jsonMapList};
-    filterModel = FilterModel.fromJson(jsonDataMap);
-    FilterNameController.text=filterModel!.dataFilter.first.name;
+ getTypeFilter() {
+    try {
+      var jsonOptions = jsonEncode(TypeOptions);
+      List<dynamic> jsonList = jsonDecode(jsonOptions);
+      List<Map<String, dynamic>> jsonMapList = jsonList.cast<Map<String, dynamic>>();
+      Map<String, dynamic> jsonDataMap = {'data': jsonMapList};
+      filterModel = FilterModel.fromJson(jsonDataMap);
+      FilterNameController.text=filterModel!.dataFilter.first.name;
+    } catch (e) {
+      print(e.toString());
+      // يمكنك إضافة معالجة أخطاء أكثر تفصيلًا إذا لزم الأمر
+    }
+
   }
 
 

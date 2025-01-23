@@ -54,38 +54,44 @@ class NotifcationReadController extends GetxController with StateMixin<List<Data
 
 
   Future<void> getDataNotifcationApi({ int? nextPage}) async{
-    if(nextPage==null){
-      change(null, status: RxStatus.loading());
-    }
-    await ApiService().getData(GetNotifcationNotRead+'?page=${nextPage??'1'}&size=10&filterID=${TypeFilterId??'0'}&filterString=${ValuaFilterTextControll.text.trim().toString()??'//'}'
-        ,{'Authorization': 'Bearer ${stg.read(token)}'} ).timeout(Duration(minutes: 1),onTimeout : () {
-      throw TimeoutException('The connection has timed out, Please try again!');
-    }).then((value) {
-      isLoading=false;
-      if(value.statusCode==200) {
+    try {
+      if(nextPage==null){
+        change(null, status: RxStatus.loading());
+      }
+      await ApiService().getData(GetNotifcationNotRead+'?page=${nextPage??'1'}&size=10&filterID=${TypeFilterId??'0'}&filterString=${ValuaFilterTextControll.text.trim().toString()??'//'}'
+          ,{'Authorization': 'Bearer ${stg.read(token)}'} ).timeout(Duration(minutes: 1),onTimeout : () {
+        throw TimeoutException('The connection has timed out, Please try again!');
+      }).then((value) {
+        isLoading=false;
+        if(value.statusCode==200) {
 
-       // Output: 107
-        print(value.data);
-        notifcationNotReadModel = NotifcationNotReadModel.fromJson(value.data);
-         count=notifcationNotReadModel!.paginationNotRead!.count.toString();
-        print("count= "+count.toString());
-        if(nextPage==null){
-          dateList!.clear();
+          // Output: 107
+          print(value.data);
+          notifcationNotReadModel = NotifcationNotReadModel.fromJson(value.data);
+          count=notifcationNotReadModel!.paginationNotRead!.count.toString();
+          print("count= "+count.toString());
+          if(nextPage==null){
+            dateList!.clear();
+          }
+          dateList!.addAll(notifcationNotReadModel!.dataNotifcationNotRead!);
+          if(dateList!.isNotEmpty) {
+            change(dateList, status: RxStatus.success());
+          }
+          else{
+            change(null, status: RxStatus.empty());
+          }
         }
-        dateList!.addAll(notifcationNotReadModel!.dataNotifcationNotRead!);
-        if(dateList!.isNotEmpty) {
-          change(dateList, status: RxStatus.success());
-        }
-        else{
-          change(null, status: RxStatus.empty());
+        else if(value.statusCode == 401){
+          GetSnackMsg(msg: 'Unauthorized access'.tr,bgClr:kColorsRed ,txClr:kColorsWhite                         ).showTxt();
+          Get.put(LogOutController()).LogOut();
         }
       }
-      else if(value.statusCode == 401){
-        GetSnackMsg(msg: 'Unauthorized access'.tr,bgClr:kColorsRed ,txClr:kColorsWhite                         ).showTxt();
-        Get.put(LogOutController()).LogOut();
-      }
+      );
+    } catch (e) {
+      print(e.toString());
+      // يمكنك إضافة معالجة أخطاء أكثر تفصيلًا إذا لزم الأمر
     }
-    );
+
 
   }
 

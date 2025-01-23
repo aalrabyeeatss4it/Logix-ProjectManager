@@ -40,56 +40,55 @@ void onInit() {
     }
   }
   loginApi() async{
-    if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
-      Get.dialog(Center(
-        child: LoadingIndicatorWidget(),
-      ));
-      print({
-        "UserName": userTextController.text.trim(),
-        "Password": passwordTextController.text.trim(),
-        "MemberId": stg.read(memberId).toString(),
-      });
-      ApiService().postDataLogin(
-          url: urlLogin,
-          body: {
-            "UserName": userTextController.text.trim(),
-            "Password": passwordTextController.text.trim(),
-            "MemberId": stg.read(memberId).toString(),
-          },
-          header: {}
-      ).then((value) {
-        if (value.statusCode == 200) {
-          print('Request successful');
-          Get.back();
-          print(value.data);
-          LoginModel loginModel = LoginModel.fromJson(value.data);
-          if(loginModel.success==true){
-            stg.write(token, loginModel.dataUser!.token);
-            stg.write(userPassword, loginModel.dataUser!.sysUser!.userPassword.toString());
-            print("userPassword="+stg.read(userPassword).toString());
-            Get.offAllNamed(RoutingApp.dashboardRoute);
-            stg.write(OpenScreenlogen, true);
-            stg.write(OpenAppOne,true );
+    try {
+
+        Get.dialog(Center(
+          child: LoadingIndicatorWidget(),
+        ));
+        print({
+          "UserName": userTextController.text.trim(),
+          "Password": passwordTextController.text.trim(),
+          "MemberId": stg.read(memberId).toString(),
+        });
+        ApiService().postDataLogin(
+            url: urlLogin,
+            body: {
+              "UserName": userTextController.text.trim(),
+              "Password": passwordTextController.text.trim(),
+              "MemberId": stg.read(memberId).toString(),
+            },
+            header: {}
+        ).then((value) {
+          if (value.statusCode == 200) {
+            print('Request successful');
+            Get.back();
+            print(value.data);
+            LoginModel loginModel = LoginModel.fromJson(value.data);
+            if(loginModel.success==true){
+              stg.write(token, loginModel.dataUser!.token);
+              stg.write(userPassword, loginModel.dataUser!.sysUser!.userPassword.toString());
+              print("userPassword="+stg.read(userPassword).toString());
+              Get.offAllNamed(RoutingApp.dashboardRoute);
+              stg.write(OpenScreenlogen, true);
+              stg.write(OpenAppOne,true );
+            }
+            else{
+              GetSnackMsg(msg: loginModel.message.toString(), bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
+            }
+
+          } else {
+            Get.back();
+            GetSnackMsg(msg: 'Invalid login'.tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
           }
-          else{
-            GetSnackMsg(msg: loginModel.message.toString(), bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
-          }
+        });
+        print("Connection".tr);
 
-        } else {
-          Get.back();
-          GetSnackMsg(msg: 'Invalid login'.tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
-        }
-      });
-      print("Connection".tr);
+
+
+    } catch (e) {
+      print(e.toString());
+      // يمكنك إضافة معالجة أخطاء أكثر تفصيلًا إذا لزم الأمر
     }
-
-
-    else {
-      print('No internet connection '.tr);
-      // Get.toNamed(RoutingApp.cheack_intrinet_screen);
-      GetSnackMsg(msg: 'No internet connection '.tr,bgClr:kColorsRed ,txClr:kColorsWhite ).showTxt();
-    }
-
 
   }
 }

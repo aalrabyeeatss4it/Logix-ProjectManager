@@ -22,50 +22,48 @@ class MemberController extends GetxController with  StateMixin<MemberModel>{
     super.onInit();
   }
   memberApi() async{
+    try {
+        Get.dialog(Center(
+          child: LoadingIndicatorWidget(),
+        ));
+        ApiService().postDataLogin(
+            url: getFacility,
+            body: {
+              "MemberId": memberIdTextController.text.trim(),
+            },
+            header: {}
+        ).then((value) { Get.back();
+        if (value.statusCode == 200) {
+          print('Request successful');
 
+          print(value.data);
+          MemberModel member_model = MemberModel.fromJson(value.data);
+          if(member_model.success==true){
+            stg.write(facilityName, member_model.data!.facility!.facilityName);
+            stg.write(facilityName2, member_model.data!.facility!.facilityName2);
+            stg.write(logo, member_model.data!.facility!.facilityLogo);
+            stg.write(memberId,memberIdTextController.text.trim());
+            Get.toNamed(RoutingApp.login_route);
+            stg.write(OpenScreenMember, true);
+            stg.write(OpenAppOne,true );
+          }
+          else{
+            GetSnackMsg(msg: member_model.message.toString(),bgClr:kColorsRed, txClr: kColorsWhite).showTxt();
+          }
 
-    if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
-      Get.dialog(Center(
-        child: LoadingIndicatorWidget(),
-      ));
-      ApiService().postDataLogin(
-          url: getFacility,
-          body: {
-            "MemberId": memberIdTextController.text.trim(),
-          },
-          header: {}
-      ).then((value) { Get.back();
-      if (value.statusCode == 200) {
-        print('Request successful');
-
-        print(value.data);
-        MemberModel member_model = MemberModel.fromJson(value.data);
-        if(member_model.success==true){
-          stg.write(facilityName, member_model.data!.facility!.facilityName);
-          stg.write(facilityName2, member_model.data!.facility!.facilityName2);
-          stg.write(logo, member_model.data!.facility!.facilityLogo);
-          stg.write(memberId,memberIdTextController.text.trim());
-          Get.toNamed(RoutingApp.login_route);
-          stg.write(OpenScreenMember, true);
-          stg.write(OpenAppOne,true );
+        } else {
+          GetSnackMsg(msg: 'هناك خطأ'.tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
         }
-        else{
-          GetSnackMsg(msg: member_model.message.toString(),bgClr:kColorsRed, txClr: kColorsWhite).showTxt();
-        }
+        });
+        print("Connection".tr);
 
-      } else {
-        GetSnackMsg(msg: 'هناك خطأ'.tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
-      }
-      });
-      print("Connection".tr);
+
+
+    } catch (e) {
+      print(e.toString());
+      // يمكنك إضافة معالجة أخطاء أكثر تفصيلًا إذا لزم الأمر
     }
 
-
-    else {
-      print('No internet connection '.tr);
-      // Get.toNamed(RoutingApp.cheack_intrinet_screen);
-      GetSnackMsg(msg: 'No internet connection '.tr,bgClr:kColorsRed ,txClr:kColorsWhite ).showTxt();
-    }
 
   }
 }

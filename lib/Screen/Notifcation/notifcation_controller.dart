@@ -65,10 +65,7 @@ class NotifcationController extends GetxController with StateMixin<List<DataNoti
       }
     });
   }
-  Future<void> Re() async{
-    await getTypeFilter();
-    change(null, status: RxStatus.loading());
-  }
+
   onLoading(bool load) {
     isLoading = load;
     update();
@@ -77,46 +74,58 @@ class NotifcationController extends GetxController with StateMixin<List<DataNoti
 
 
   Future<void> getDataNotifcationApi({ int? nextPage}) async{
-    if(nextPage==null){
-      change(null, status: RxStatus.loading());
-    }
-    await ApiService().getData(GetNotifcation+'?page=${nextPage??'1'}&size=10&filterID=${TypeFilterId??'0'}&filterString=${ValuaFilterTextControll.text.trim().toString()??'//'}'
-        ,{'Authorization': 'Bearer ${stg.read(token)}'} ).timeout(Duration(minutes: 1),onTimeout : () {
-      throw TimeoutException('The connection has timed out, Please try again!');
-    }).then((value) {
-      isLoading=false;
-      if(value.statusCode==200) {
+    try {
+      if(nextPage==null){
+        change(null, status: RxStatus.loading());
+      }
+      await ApiService().getData(GetNotifcation+'?page=${nextPage??'1'}&size=10&filterID=${TypeFilterId??'0'}&filterString=${ValuaFilterTextControll.text.trim().toString()??'//'}'
+          ,{'Authorization': 'Bearer ${stg.read(token)}'} ).timeout(Duration(minutes: 1),onTimeout : () {
+        throw TimeoutException('The connection has timed out, Please try again!');
+      }).then((value) {
+        isLoading=false;
+        if(value.statusCode==200) {
 
-       // Output: 107
-        print(value.data);
-        inboxModel = NotifcationModel.fromJson(value.data);
-         count=inboxModel!.pagination!.count.toString();
-        print("count= "+count.toString());
-        if(nextPage==null){
-          dateList!.clear();
+          // Output: 107
+          print(value.data);
+          inboxModel = NotifcationModel.fromJson(value.data);
+          count=inboxModel!.pagination!.count.toString();
+          print("count= "+count.toString());
+          if(nextPage==null){
+            dateList!.clear();
+          }
+          dateList!.addAll(inboxModel!.dataNotifcation!);
+          if(dateList!.isNotEmpty) {
+            change(dateList, status: RxStatus.success());
+          }
+          else{
+            change(null, status: RxStatus.empty());
+          }
         }
-        dateList!.addAll(inboxModel!.dataNotifcation!);
-        if(dateList!.isNotEmpty) {
-          change(dateList, status: RxStatus.success());
-        }
-        else{
-          change(null, status: RxStatus.empty());
+        else if(value.statusCode == 401){
+          GetSnackMsg(msg: 'Unauthorized access'.tr,bgClr:kColorsRed ,txClr:kColorsWhite                         ).showTxt();
+          Get.put(LogOutController()).LogOut();
         }
       }
-      else if(value.statusCode == 401){
-        GetSnackMsg(msg: 'Unauthorized access'.tr,bgClr:kColorsRed ,txClr:kColorsWhite                         ).showTxt();
-        Get.put(LogOutController()).LogOut();
-      }
+      );
+    } catch (e) {
+      print(e.toString());
+      // يمكنك إضافة معالجة أخطاء أكثر تفصيلًا إذا لزم الأمر
     }
-    );
+
 
   }
-  getTypeFilter() {
-    var jsonOptions = jsonEncode(TypeOptions);
-    List<dynamic> jsonList = jsonDecode(jsonOptions);
-    List<Map<String, dynamic>> jsonMapList = jsonList.cast<Map<String, dynamic>>();
-    Map<String, dynamic> jsonDataMap = {'data': jsonMapList};
-    typeFilterModel = NotifcationFilterModel.fromJson(jsonDataMap);
+ getTypeFilter() {
+    try {
+      var jsonOptions = jsonEncode(TypeOptions);
+      List<dynamic> jsonList = jsonDecode(jsonOptions);
+      List<Map<String, dynamic>> jsonMapList = jsonList.cast<Map<String, dynamic>>();
+      Map<String, dynamic> jsonDataMap = {'data': jsonMapList};
+      typeFilterModel = NotifcationFilterModel.fromJson(jsonDataMap);
+    } catch (e) {
+      print(e.toString());
+      // يمكنك إضافة معالجة أخطاء أكثر تفصيلًا إذا لزم الأمر
+    }
+
   }
 
 }

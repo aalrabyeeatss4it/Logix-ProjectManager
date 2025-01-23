@@ -60,11 +60,17 @@ var TypeOptions = [
     TransactiID = stg.read(TransacID);
   }
 getTypeFilter() {
-  var jsonOptions = jsonEncode(TypeOptions);
-  List<dynamic> jsonList = jsonDecode(jsonOptions);
-  List<Map<String, dynamic>> jsonMapList = jsonList.cast<Map<String,dynamic>>();
-  Map<String, dynamic> jsonDataMap = {'data': jsonMapList};
-  typeFilterModel = TypeFilterModel.fromJson(jsonDataMap);
+  try {
+    var jsonOptions = jsonEncode(TypeOptions);
+    List<dynamic> jsonList = jsonDecode(jsonOptions);
+    List<Map<String, dynamic>> jsonMapList = jsonList.cast<Map<String,dynamic>>();
+    Map<String, dynamic> jsonDataMap = {'data': jsonMapList};
+    typeFilterModel = TypeFilterModel.fromJson(jsonDataMap);
+  } catch (e) {
+    print(e.toString());
+    // يمكنك إضافة معالجة أخطاء أكثر تفصيلًا إذا لزم الأمر
+  }
+
 }
 }
 

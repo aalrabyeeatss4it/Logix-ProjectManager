@@ -85,25 +85,31 @@ class ExamoleController extends GetxController {
   }
 
   Future<void> GetUserNameApi() async{
-    print("startgetSecretDegreeApi");
-    await ApiService().getData(GetUserName
-        ,{'Authorization': 'Bearer ${stg.read(token)}'} ).timeout(Duration(minutes:1),onTimeout : () {
-      throw TimeoutException('The connection has timed out, Please try again!');
-    }).then((value) {
-      if (value.statusCode == 200) {
-        print(value.data);
-        userNameModel= UserNameModel.fromJson(value.data);
+    try {
+      print("startgetSecretDegreeApi");
+      await ApiService().getData(GetUserName
+          ,{'Authorization': 'Bearer ${stg.read(token)}'} ).timeout(Duration(minutes:1),onTimeout : () {
+        throw TimeoutException('The connection has timed out, Please try again!');
+      }).then((value) {
+        if (value.statusCode == 200) {
+          print(value.data);
+          userNameModel= UserNameModel.fromJson(value.data);
+        }
+        else if(value.statusCode == 401){
+          GetSnackMsg(msg:'Unauthorized access'.tr,bgClr:kColorsRed,txClr:kColorsWhite).showTxt();
+          Get.put(LogOutController()).LogOut();
+        }
+        else {
+          print('لم يتم إرجاع بيانات  ');
+        }
       }
-      else if(value.statusCode == 401){
-        GetSnackMsg(msg:'Unauthorized access'.tr,bgClr:kColorsRed,txClr:kColorsWhite).showTxt();
-        Get.put(LogOutController()).LogOut();
-      }
-      else {
-        print('لم يتم إرجاع بيانات  ');
-      }
+      );
+      print("EndGetUserNameApi");
+    } catch (e) {
+      print(e.toString());
+      // يمكنك إضافة معالجة أخطاء أكثر تفصيلًا إذا لزم الأمر
     }
-    );
-    print("EndGetUserNameApi");
+
   }
 
 }
