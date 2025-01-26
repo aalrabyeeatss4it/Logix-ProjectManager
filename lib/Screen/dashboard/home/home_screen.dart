@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final isRtl = Localizations.localeOf(context).languageCode == 'ar';
     return
       Scaffold(
-        appBar:   MyAppBar(title:'مشاريعي'.tr, IsHome: true,),
+        appBar:   MyAppBar(title:'مشاريعي'.tr, IsHome: true,IconeEnd: false),
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
@@ -263,7 +263,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                     ),
-
+                    SizedBox(height: 0.30.sh),
                   ],
                 ),
               ),

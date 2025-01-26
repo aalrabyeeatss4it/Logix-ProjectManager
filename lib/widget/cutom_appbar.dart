@@ -12,9 +12,10 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Color? colorAll;
   final Color? colorfont;
   final bool? IsHome;
+  final bool? IconeEnd;
   @override
   final Size preferredSize;
-  MyAppBar({Key? key, this.title,this.IsHome,  this.colorAll, this.colorfont})
+  MyAppBar({Key? key, this.title,this.IsHome,  this.colorAll, this.colorfont, this.IconeEnd})
       : preferredSize = Size.fromHeight(0.07.sh),
         super(key: key);
   @override
@@ -40,23 +41,23 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
               children: [
                 Expanded(
                   flex: 1,
-                  child: IsHome!=true?InkWell(
-                      onTap: () {
-                       Get.back();
-                      },
+                  child: InkWell(
+                    onTap: () {
+                      Scaffold.of(context).openDrawer();
+                    },
                       child:
                     Padding(
                       padding:  EdgeInsets.only(right:  10.0.r),
                       child:
                       SvgPicture.asset(
-                        AssestData.back,
+                        AssestData.menu,
                         width: 24.r ,
                         height: 24.r ,
                         color: kColorsBlackTow,
                       ),
                     ),
 
-                  ):Container()
+                  ) ,
                 ),
                 Expanded(
                   flex: 8,
@@ -75,33 +76,21 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                 Expanded(
                   flex: 2,
                   child:
-                  IsHome==true? Container(
-                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(7.r),
-                      color:  Color(0xffF0F8FA),
-                    ),
+                  IconeEnd!=null? SizedBox():
+                  InkWell(
+                    onTap: () {
+                      Get.back();
+                    },
                     child: Padding(
-                      padding:  EdgeInsets.all(4.0.r),
-                      child: InkWell(
-                        onTap: (){
-
-                        },
-                        child: Row(
-                          children: [
-                            Text("العربيه ", style:
-                            const TextStyle(color:kColorsPrimaryFont,fontWeight: FontWeight.bold,fontSize: 12, )
-                            ),
-                            SvgPicture.asset(
-                             AssestData.languge,
-                              width: 24.r ,
-                              height: 24.r ,
-                              color: kColorsPrimaryFont,
-                            ),
-                          ],
-                        ),
+                      padding:   EdgeInsets. only(right: isRtl==true? 18.0 : 0.0, left: isRtl!=true?18.0 : 0.0),
+                      child: SvgPicture.asset(
+                        AssestData.arrow_left,
+                        width: 24  ,
+                        height: 24 ,
+                        color: kColorsBlackTow,
                       ),
                     ),
-                  ):  Container(),
+                  ),
                 ),
               ],
             ),

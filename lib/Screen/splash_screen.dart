@@ -53,7 +53,7 @@ class _SplashScreenState extends State<SplashScreen> {
                  decoration: BoxDecoration(
                      color: kColorsPrimaryFont,
                      image:DecorationImage(image:
-                     AssetImage(AssestData.Logo
+                     AssetImage(AssestData.logooLogix
 
                      ),fit: BoxFit.scaleDown,)
                  ),

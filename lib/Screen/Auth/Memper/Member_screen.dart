@@ -50,7 +50,7 @@ class MemberScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: kColorsPrimaryFont,
                     image:DecorationImage(image:
-                    AssetImage(AssestData.Logo
+                    AssetImage(AssestData.logooLogix
 
                     ),fit: BoxFit.scaleDown,)
                 ),
@@ -79,93 +79,96 @@ class MemberScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20),
                           color: kColorsWhite,
                         ),
-                        child:     Column(
-                          children: <Widget>[
-                            SizedBox(
-                              height: 0.03.sh,
-                            ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  'أهلا بعودتك!'.tr,
-                                  style: const TextStyle(
-                                      fontFamily: 'GraphikArabic',
-                                      fontSize: 24,
-                                      color: kColorsBlack,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                                Text(
-                                  'ادخل البيانات التالية لتتمكن من الوصول إلى حسابك!'
-                                      .tr,
-                                  style:   TextStyle(
-                                    fontFamily: 'GraphikArabic',
-                                    fontSize: 14,
-                                    color: kColorsBlack.withOpacity(0.4),
+                        child:     Form(
+                          key: _formKeyMember,
+                          child: Column(
+                            children: <Widget>[
+                              SizedBox(
+                                height: 0.03.sh,
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'أهلا بعودتك!'.tr,
+                                    style: const TextStyle(
+                                        fontFamily: 'GraphikArabic',
+                                        fontSize: 24,
+                                        color: kColorsBlack,
+                                        fontWeight: FontWeight.w500),
                                   ),
+                                  Text(
+                                    'ادخل البيانات التالية لتتمكن من الوصول إلى حسابك!'
+                                        .tr,
+                                    style:   TextStyle(
+                                      fontFamily: 'GraphikArabic',
+                                      fontSize: 14,
+                                      color: kColorsBlack.withOpacity(0.4),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 0.04.sh,
+                              ),
+                              TextFieldWidgetAuth(
+                                hint: 'L-5269877'.tr,
+                                text: 'رقم العضويه'.tr,
+                                edit: 1,
+                                controller: Get.find<MemberController>().memberIdTextController,
+                                requirement: true,
+                                color: kColorsPrimaryFont,
+                                keyboardType: TextInputType.text,
+                              ),
+                              SizedBox(
+                                height: 0.03.sh,
+                              ),
+                              CustomButton(
+                                isIconEnd: false,
+                                text: 'Next'.tr,
+                                borderRadius: 10.r,
+                                sizeHeight: 0.045.sh,
+                                sizeWidth: 0.96.sw,
+                                color: kColorsPrimaryFont,
+                                style:const TextStyle(
+                                    fontFamily: 'GraphikArabic',
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    color: kColorsWhite
                                 ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 0.04.sh,
-                            ),
-                            TextFieldWidgetAuth(
-                              hint: 'L-5269877'.tr,
-                              text: 'رقم العضويه'.tr,
-                              edit: 1,
-                              controller: Get.find<MemberController>().memberIdTextController,
-                              requirement: true,
-                              color: kColorsPrimaryFont,
-                              keyboardType: TextInputType.text,
-                            ),
-                            SizedBox(
-                              height: 0.03.sh,
-                            ),
-                            CustomButton(
-                              isIconEnd: false,
-                              text: 'Next'.tr,
-                              borderRadius: 10.r,
-                              sizeHeight: 0.045.sh,
-                              sizeWidth: 0.96.sw,
-                              color: kColorsPrimaryFont,
-                              style:const TextStyle(
-                                  fontFamily: 'GraphikArabic',
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                  color: kColorsWhite
-                              ),
-                              onPress: () {
-                                if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
-                                  // if (_formKeyMember.currentState!.validate()) {
-                                  if (Get.find<MemberController>().memberIdTextController.text == null || Get.find<MemberController>().memberIdTextController.text.isEmpty ||
-                                      Get.find<MemberController>().memberIdTextController.text.length <= 2) {
-                                    GetSnackMsg(msg: 'Enter Membership No'.tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
+                                onPress: () {
+                                  if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
+                                    if (_formKeyMember.currentState!.validate()) {
+                                    if (Get.find<MemberController>().memberIdTextController.text == null || Get.find<MemberController>().memberIdTextController.text.isEmpty ||
+                                        Get.find<MemberController>().memberIdTextController.text.length <= 2) {
+                                      GetSnackMsg(msg: 'Enter Membership No'.tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
+                                    } else {
+                                      Get.find<MemberController>().memberApi();
+                                    }
+                                    }
                                   } else {
-                                    Get.find<MemberController>().memberApi();
+                                    print("No Connection".tr);
+                                    GetSnackMsg(msg: "No Connection".tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
                                   }
-                                  // }
-                                } else {
-                                  print("No Connection".tr);
-                                  GetSnackMsg(msg: "No Connection".tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
-                                }
-                              },
-                            ),
-                            SizedBox(
-                              height: 0.495.sh,
-                            ),
-                            Padding(
-                              padding:  EdgeInsets.only(top:0.0.sh,),
-                              child: Container(
-                                  width:0.35.sw,
-                                  height:  .005.sh,
-                                  decoration: BoxDecoration(
-                                    color: kColorsBlack,
-                                    borderRadius: BorderRadius.circular(7.r),
-                                  )
-
+                                },
                               ),
-                            ),
-                          ],
+                              SizedBox(
+                                height: 0.495.sh,
+                              ),
+                              Padding(
+                                padding:  EdgeInsets.only(top:0.0.sh,),
+                                child: Container(
+                                    width:0.35.sw,
+                                    height:  .005.sh,
+                                    decoration: BoxDecoration(
+                                      color: kColorsBlack,
+                                      borderRadius: BorderRadius.circular(7.r),
+                                    )
+
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),

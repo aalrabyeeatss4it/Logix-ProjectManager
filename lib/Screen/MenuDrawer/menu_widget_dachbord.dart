@@ -1,5 +1,6 @@
 
 import 'package:projectmanagers/Constants/kaye.dart';
+import 'package:projectmanagers/Core/Utils/assets.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/AppInfo/Applcat_Info_Screen.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/AppInfo/contact_us_screen.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/profile/prpfile_screen.dart';
@@ -9,92 +10,78 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:projectmanagers/Constants/Constants.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/language_bottom_sheetwidget.dart';
+import 'package:projectmanagers/Screen/Reports/reports_screen.dart';
 import 'package:projectmanagers/apiservice/logout.dart';
 import 'package:projectmanagers/language/controller/app_language.dart';
 import 'package:projectmanagers/router/route_constants.dart';
 import 'package:projectmanagers/widget/CustomSubmitDialog.dart';
 
+import '../ElectronicServices/electronic_services_screen.dart';
+import '../KeeperCovenant/keeper_covenant_screen.dart';
 import '../dashboard/dashboard_screen.dart';
 
 
 class MenuWidgetDashboard extends StatelessWidget {
   late bool show_tabB=true;
-  final AppLanguage controller = Get.put(AppLanguage());
 
   final controlle = Get.put(LogOutController());
 
-  languageBottomSheetMenu(BuildContext context) {
-    return showModalBottomSheet(
-        context: context,
-        backgroundColor: kColorsWhite,
-        builder: (builder) {
-          return LanguageBottomSheet();
-        });
-  }
+
   @override
   Widget build(BuildContext context) {
     final isRtl = Localizations.localeOf(context).languageCode == 'ar';
     return Container(
       alignment: Alignment.topCenter,
-      decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [Color(0xff3570B7), Color(0xff9BB7DA)])),
+        color:  Color(0xff0692AC),
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
+              height: 0.15.sh,
+              width: 1.0.sw,
+
+              decoration: BoxDecoration(
+                color:kColorsWhite.withOpacity(0.2),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(15.r),
+                  bottomRight: Radius.circular(15.r),
+                ),
+              ),
+
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
-                    height: 0.06.sh,
+                    height: 0.05.sh,
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                        right: 0.17.sw, left: isRtl ? 0.0.w : 38.0.w),
-                    child: Row(
-                      children: [
-                        Container(
-                          width: 0.32.sw,
-                          height: 0.12.sh,
-                          color: Color(0xFF3570B7),
-                          child: Image.asset(
-                            'assets/LogoColor.png',
-                            width: 0.32.sw,
-                            height: 0.12.sh,
-                            color: kColorsWhite,
-                          ),
+                  Row(
+
+                    children: [
+                      SizedBox(
+                        width: 0.08.sw,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                            right: 0.17.sw, left: isRtl ? 0.0.w : 38.0.w),
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              AssestData.logooLogix,
+                              width: 82,
+                              height: 38,
+                              color: kColorsWhite,
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ],
               ),
             ),
-            SizedBox(
-              height: 0.01.sh,
-            ),
-            Padding(
-                padding: EdgeInsets.only(right: 0.05.sw),
-                child: Column(
-                  children: [
-                    Container(
-                      height: 1.h, // ارتفاع الـ Divider
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [kColorsWhite, kColorsWhite.withOpacity(0.1)], // الألوان المستخدمة
-                          begin: Alignment.centerLeft,
-                          end: Alignment.centerRight,
-                        ),
-                      ),
-                    ),
-                    // العناصر الأخرى
-                  ],
-                )
-            ),
+
+
             SizedBox(
               height: 0.04.sh,
             ),
@@ -102,7 +89,7 @@ class MenuWidgetDashboard extends StatelessWidget {
 
               Get.offAllNamed(RoutingApp.member_screen);
             }, kColorsWhite, kColorsWhite, false, true,false):Container(),
-            stg.read(OpenScreenMember)==true? sliderItem(stg.read(OpenScreenlogen) == true ? 'Home'.tr : 'Sign in'.tr, "assets/Icons/home-2.svg", context, () {
+            stg.read(OpenScreenMember)==true? sliderItem(stg.read(OpenScreenlogen) == true ? 'مشاريعي'.tr : 'Sign in'.tr, AssestData.my_project, context, () {
 
               stg.read(OpenScreenlogen) == true ? Get.offAll(() => DashboardScreen(pageIndex: 0,)) : Get.offAllNamed(RoutingApp.login_route);
             }, kColorsWhite, kColorsWhite, false, true,false):Container(),
@@ -112,39 +99,62 @@ class MenuWidgetDashboard extends StatelessWidget {
             // }, kColorsWhite, kColorsWhite, false, true):Container(),
 
 
+            stg.read(OpenScreenlogen)==true?sliderItem('الخدمات الإلكترونيه'.tr, AssestData.my_service, context,(){
 
+              Get.to(() => ElectronicServicesScreen(show_tabBar: false,IsHome: false));
+            }, kColorsWhite, kColorsWhite, false, true,false):Container(),
+            SizedBox(
+              height: 0.01.sh,
+            ),    stg.read(OpenScreenlogen)==true?sliderItem('حافظة العهد '.tr, AssestData.my_bookmark, context,(){
 
+              Get.to(() => KeeperCovenantScreen(show_tabBar: false,IsHome: false));
+            }, kColorsWhite, kColorsWhite, false, true,false):Container(),
+            SizedBox(
+              height: 0.01.sh,
+            ),    stg.read(OpenScreenlogen)==true?sliderItem('التقارير'.tr, AssestData.my_chart, context,(){
 
-
-            stg.read(OpenScreenlogen)==true?sliderItem('Profile personly'.tr, "assets/Icons/user.svg", context,(){
+              Get.to(() => ReportsScreen(show_tabBar: false,IsHome: false));
+            }, kColorsWhite, kColorsWhite, false, true,false):Container(),
+            SizedBox(
+              height: 0.01.sh,
+            ),    stg.read(OpenScreenlogen)==true?sliderItem('Profile personly'.tr, "assets/Icons/user.svg", context,(){
 
               Get.to(() => ProfileScreen());
             }, kColorsWhite, kColorsWhite, false, true,false):Container(),
             SizedBox(
-              height: 0.01.sh,
+              height: 0.04.sh,
             ),
-            stg.read(OpenScreenlogen)==true?Padding(
-              padding: EdgeInsets.only(right: 0.05.sw),
-              child: Column(
-                children: [
-                  Container(
-                    height: 1.h, // ارتفاع الـ Divider
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [kColorsWhite, kColorsWhite.withOpacity(0.1)], // الألوان المستخدمة
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
+            stg.read(OpenScreenlogen)==true?Row(
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      width: 0.04.sw,
+                    ),
+                    Container(
+                      height: 1.h, // ارتفاع الـ Divider
+                      width: 0.60.sw,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [kColorsWhite.withOpacity(0.3), kColorsWhite.withOpacity(0.3)], // الألوان المستخدمة
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                        ),
                       ),
                     ),
-                  ),
-                  // العناصر الأخرى
-                ],
-              ),
+                    Container(
+                      width: 0.05.sw,
+                    ),
+
+                  ],
+                ),
+                // العناصر الأخرى
+              ],
             ):Container(),
             SizedBox(
-              height: 0.01.sh,
+              height: 0.03.sh,
             ),
-            sliderItem( 'About the app'.tr, "assets/Icons/icon_about_app.svg", context, () {
+            sliderItem( 'عن التطبيق'.tr, "assets/Icons/icon_about_app.svg", context, () {
 
               Get.to(() => ApplcatInfoScreen());
             }, kColorsWhite, kColorsWhite, false, true,false),
@@ -155,7 +165,7 @@ class MenuWidgetDashboard extends StatelessWidget {
             stg.read(OpenScreenMember)==true?sliderItem('Change of establishment'.tr, "assets/Icons/chang_member.svg", context, () {
               showDialog(
                 context: context,
-                builder: (context) => CustomSubmitOptionDialog(
+                builder: (context) => CustomDialog(
                   onPress: () {
 
                     controlle.LogOutChangestablishment();
@@ -166,34 +176,48 @@ class MenuWidgetDashboard extends StatelessWidget {
                   backColor1:Color(0xFFB6000D),
                   backColor2: kColorsWhite,
                   fontColortext1: kColorsWhite,
-                  fontColortext2: Color(0xFFB6000D),
+                  fontColortext2: kColorsPrimaryFont,
                   text1: 'Yes'.tr,
                   text2: 'Back'.tr,
                 ),
               );
             }, kColorsWhite, kColorsWhite, false, true,false):Container(),
-            sliderItem('The Language'.tr,  "assets/Icons/translate.svg", context, () {
-
-              languageBottomSheetMenu(context);
-            }, kColorsWhite, kColorsWhite, false, true,false),
+            sliderItem('Change the language'.tr,  AssestData.Languages_Icon, context,
+                () async {
+                  showDialog(
+                    context: context,
+                    builder: (context) =>
+                    LanguageBottomSheet(),
+                  );
+                },
+                kColorsWhite, kColorsWhite, false, true,false),
             SizedBox(height: 0.01.sh,),
-            stg.read(OpenScreenlogen)==true?Padding(
-              padding: EdgeInsets.only(right: 0.05.sw),
-              child: Column(
-                children: [
-                  Container(
-                    height: 1.h, // ارتفاع الـ Divider
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [kColorsWhite, kColorsWhite.withOpacity(0.1)], // الألوان المستخدمة
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
+            stg.read(OpenScreenlogen)==true?Row(
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      width: 0.04.sw,
+                    ),
+                    Container(
+                      height: 1.h, // ارتفاع الـ Divider
+                      width: 0.60.sw,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [kColorsWhite.withOpacity(0.3), kColorsWhite.withOpacity(0.3)], // الألوان المستخدمة
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                        ),
                       ),
                     ),
-                  ),
-                  // العناصر الأخرى
-                ],
-              ),
+                    Container(
+                      width: 0.05.sw,
+                    ),
+
+                  ],
+                ),
+                // العناصر الأخرى
+              ],
             ):Container(),
             stg.read(OpenScreenlogen) == true ? Padding(
               padding: EdgeInsets.only(
@@ -202,13 +226,13 @@ class MenuWidgetDashboard extends StatelessWidget {
                   right: 12.0.r,
                   bottom: 20.0.r),
               child: Container(
-                width: 0.56.sw,
+
                 height: 0.06.sh,
                 decoration: BoxDecoration(
                     color: kColorsorangSignOut,
                     borderRadius: BorderRadius.circular(8.r)),
-                child: sliderItem(
-                    'Sign Out'.tr,  "assets/Icons/logout.svg", context,(){
+                child: sliderItemLogOUt(
+                    'Sign Out'.tr,  AssestData.logout, context,(){
                   showDialog(
                     context: context,
                     builder: (context) => CustomSubmitOptionDialog(
@@ -219,12 +243,12 @@ class MenuWidgetDashboard extends StatelessWidget {
                       text:   'Are you sure you want to log out?'.tr,
                       Colore: kColorsWhite,
                       ColoreCleare: kColorsLightBlack,
-                      backColor1:Color(0xFFB6000D),
+                      backColor1:Color(0xFFFF0606),
                       backColor2: kColorsWhite,
                       fontColortext1: kColorsWhite,
-                      fontColortext2: Color(0xFFB6000D),
-                      text1: 'Yes, log out'.tr,
-                      text2: 'Back'.tr,
+                      fontColortext2: kColorsPrimaryFont,
+                      text1: 'نعم متأكد'.tr,
+                      text2: 'لا رجوع'.tr,
                     ),
                   );
                 }, kColorsRed, kColorsRed, true, false,true),
@@ -266,6 +290,50 @@ Widget sliderItem(
                 width: 0.0.sw,
               ),
               Padding(
+                padding:   EdgeInsets.only(right:isRtl ? 10.0.r : 0.r, left: isRtl ? 0.0.r : 10.r, ),
+                child: SvgPicture.asset(
+                  icons,
+                  width: 17,
+                  height: 22,
+                  color: FontIcon,
+                  alignment: Alignment.center,
+                ),
+              ),
+              IsLOgOut==true?SizedBox(): SizedBox(
+                width: 0.04.sw,
+              ),
+              Text(title, style:     TextStyle(fontFamily: 'Cairo',fontSize:  14, color: FontColore, fontWeight: FontWeight.w700),),
+            ],
+          ),
+        ],
+      ),
+    ),
+  );
+}
+Widget sliderItemLogOUt(
+    String title,
+    String icons,
+    BuildContext context,
+    Function() onPress,
+    Color FontColore,
+    Color FontIcon,
+    bool? isCenter,
+    bool? isUnderFont,
+    bool? IsLOgOut,) {
+  final isRtl = Localizations.localeOf(context).languageCode == 'ar';
+  return InkWell(
+    onTap: onPress,
+    child: Container(
+      height: 0.06.sh,
+      child: Column(
+        children: [
+          isCenter == true ? SizedBox(height: 0.01.sh,) : SizedBox(height: 0.0.sh,),
+          Row(
+            children: [
+              SizedBox(
+                width: 0.15.sw,
+              ),
+              Padding(
                 padding: EdgeInsets.only(right: isRtl ? 12.0.r : 0.r, left: isRtl ? 0.0.r : 12.r),
                 child: Container(
                   alignment: Alignment.center,
@@ -283,14 +351,13 @@ Widget sliderItem(
                     width: 17,
                     height: 22,
                     color: FontIcon,
-                    alignment: Alignment.center,
                   ),
                 ),
               ),
               IsLOgOut==true?SizedBox(): SizedBox(
                 width: 0.04.sw,
               ),
-              Text(title, style:     TextStyle(fontFamily: 'Cairo',fontSize:  14, color: FontColore, fontWeight: FontWeight.w700),),
+              Text(title, style:TextStyle(fontFamily: 'Cairo',fontSize:  14, color: FontColore, fontWeight: FontWeight.w700),),
             ],
           ),
         ],

@@ -23,8 +23,7 @@ class CustomRowText extends StatelessWidget {
               color:kColorsWhite  ,
               borderRadius: BorderRadius.circular(10.r)
           ),
-          padding:  EdgeInsets.only(top:  5.0.r, bottom: 4.r),
-          width: 0.82.sw,
+          padding:  EdgeInsets.only(top:  8.0.r,bottom: 8.r,left: 1.0.r,right: 1.0.r),
 
           child: Row(
             children: [

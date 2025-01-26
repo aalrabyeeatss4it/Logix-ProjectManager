@@ -45,6 +45,9 @@ class RoutingApp {
 
 
   static const String reports_screen = "/reports_screen";
+  static const String archived_documents_report_screen = "/archived_documents_report_screen";
+  static const String report_completed_tasks_screen = "/report_completed_tasks_screen";
+  static const String completion_rate_report_screen = "/completion_rate_report_screen";
 
 
 

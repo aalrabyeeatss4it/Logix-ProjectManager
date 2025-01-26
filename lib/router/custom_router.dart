@@ -1,7 +1,22 @@
 
 import 'package:projectmanagers/Screen/Auth/Memper/Member_screen.dart';
 import 'package:projectmanagers/Screen/Auth/login/login_screen.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/ArchiveDocumentProject/add_archive_document_project_screen.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/CloseProject/add_close_project_screen.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/ExchangeRequest/add_request_exchange_screen.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/ExchangeRequest/item_request_exchang_screen.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/LessonsProject/add_lisince_project_screen.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/PurchaseRequest/add_request_purchase_screen.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/PurchaseRequest/item_request_purchase_screen.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/RequestCovenant/request_covenant_screen.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/ResourceProject/add_resource_project_screen.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/UpdatePlan/UpdatePlaneProject/update_plane_project_screen.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/UpdatePlan/update_plan_screen.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/UplodeReportProject/add_uplode_report_project_screen.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/electronic_services_screen.dart';
 import 'package:projectmanagers/Screen/Examploe/examole_screen.dart';
+import 'package:projectmanagers/Screen/KeeperCovenant/AddKeeperCovenant/add_keeper_covenant_screen.dart';
+import 'package:projectmanagers/Screen/KeeperCovenant/keeper_covenant_screen.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/profile/change_password_screen.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/profile/prpfile_screen.dart';
 import 'package:projectmanagers/Screen/Notifcation/notifcation_screen.dart';
@@ -11,23 +26,11 @@ import 'package:projectmanagers/Screen/Projects/ProjectsDetails/TasksPerformed/t
 import 'package:projectmanagers/Screen/Projects/ProjectsDetails/TechnicalInformation/technical_information_screen.dart';
 import 'package:projectmanagers/Screen/Projects/ProjectsDetails/projects_details_screen.dart';
 import 'package:projectmanagers/Screen/Projects/projects_screen.dart';
+import 'package:projectmanagers/Screen/Reports/ArchivedDocumentsReport/archived_documents_report_screen.dart';
+import 'package:projectmanagers/Screen/Reports/CompletionRateReport/completion_rate_report_screen.dart';
+import 'package:projectmanagers/Screen/Reports/ReportOnCompletedTasks/report_completed_tasks_screen.dart';
+import 'package:projectmanagers/Screen/Reports/reports_screen.dart';
 import 'package:projectmanagers/Screen/card_wizard_overlap.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ArchiveDocumentProject/add_archive_document_project_screen.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/CloseProject/add_close_project_screen.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ExchangeRequest/add_request_exchange_screen.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ExchangeRequest/item_request_exchang_screen.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/LessonsProject/add_lisince_project_screen.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/PurchaseRequest/add_request_purchase_screen.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/PurchaseRequest/item_request_purchase_screen.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/RequestCovenant/request_covenant_screen.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ResourceProject/add_resource_project_screen.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/UpdatePlan/UpdatePlaneProject/update_plane_project_screen.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/UpdatePlan/update_plan_screen.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/UplodeReportProject/add_uplode_report_project_screen.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/electronic_services_screen.dart';
-import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/add_keeper_covenant_screen.dart';
-import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/keeper_covenant_screen.dart';
-import 'package:projectmanagers/Screen/dashboard/Reports/reports_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/dashboard_screen.dart';
 import 'package:projectmanagers/Screen/splash_screen.dart';
 import 'package:projectmanagers/binding/binding.dart';
@@ -270,6 +273,32 @@ class Pages {
           page: () => ReportsScreen(),
           bindings: [
             ReportsBinding(),
+          ]
+      ),
+      GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.report_completed_tasks_screen,
+          page: () => ReportOnCompletedTasksScreen(),
+          bindings: [
+            ReportOnCompletedTasksBinding(),
+          ]
+      ),
+  GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.archived_documents_report_screen,
+          page: () => ArchivedDocumentsReportScreen(),
+          bindings: [
+            ArchivedDocumentsReportBinding(),
+          ]
+      ), GetPage(
+          transition: Transition.native,
+          transitionDuration: Duration(milliseconds: 400),
+          name: RoutingApp.completion_rate_report_screen,
+          page: () => CompletionRateReportScreen(),
+          bindings: [
+            CompletionRateReportBinding(),
           ]
       ),
 

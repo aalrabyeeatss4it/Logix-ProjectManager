@@ -19,7 +19,9 @@ void main() async {
   Get.put(CheckInterNet());
   Get.put(CheckInterNet());
   await GetStorage.init();
-
+  // stg.remove(OpenCardWizard);
+  // stg.remove(OpenScreenMember);
+  // stg.remove(OpenScreenlogen);
    HttpOverrides.global = MyHttpOverrides();
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(

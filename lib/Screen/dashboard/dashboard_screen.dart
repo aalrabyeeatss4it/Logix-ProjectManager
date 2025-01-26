@@ -1,11 +1,11 @@
 import 'dart:async';
 import 'package:projectmanagers/Constants/Constants.dart';
 import 'package:projectmanagers/Core/Utils/assets.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/electronic_services_screen.dart';
+import 'package:projectmanagers/Screen/KeeperCovenant/keeper_covenant_screen.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/profile/prpfile_screen.dart';
 import 'package:projectmanagers/Screen/Notifcation/notifcation_screen.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/electronic_services_screen.dart';
-import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/keeper_covenant_screen.dart';
-import 'package:projectmanagers/Screen/dashboard/Reports/reports_screen.dart';
+import 'package:projectmanagers/Screen/Reports/reports_screen.dart';
 import 'package:projectmanagers/Screen/dashboard/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -39,9 +39,9 @@ class DashboardScreenState extends State<DashboardScreen> {
     _pageController = PageController(initialPage: widget.pageIndex);
     _screens = [
       HomeScreen(),
-      ElectronicServicesScreen(),
-      KeeperCovenantScreen(),
-      ReportsScreen(),
+      ElectronicServicesScreen(show_tabBar: false,IsHome: true),
+      KeeperCovenantScreen(show_tabBar: false,IsHome: true),
+      ReportsScreen(show_tabBar: false,IsHome: true),
     ];
 
     Future.delayed(const Duration(seconds: 1), () {

@@ -3,6 +3,19 @@
 
 import 'package:projectmanagers/Screen/Auth/Memper/member_controller.dart';
 import 'package:projectmanagers/Screen/Auth/login/login_controller.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/ArchiveDocumentProject/add_archive_document_project_controller.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/CloseProject/add_close_project_controller.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/ExchangeRequest/add_request_exchange_controller.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/LessonsProject/add_lisince_project_controller.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/PurchaseRequest/add_request_purchase_controller.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/RequestCovenant/request_covenant_controller.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/ResourceProject/add_resource_project_controller.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/UpdatePlan/UpdatePlaneProject/update_plane_project_controller.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/UpdatePlan/update_plan_controller.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/UplodeReportProject/add_uplode_report_project_controller.dart';
+import 'package:projectmanagers/Screen/ElectronicServices/electronic_services_controller.dart';
+import 'package:projectmanagers/Screen/KeeperCovenant/AddKeeperCovenant/add_keeper_covenant_controller.dart';
+import 'package:projectmanagers/Screen/KeeperCovenant/keeper_covenant_controller.dart';
 import 'package:projectmanagers/Screen/MenuDrawer/profile/profile_controller.dart';
 import 'package:projectmanagers/Screen/Notifcation/notifcation_controller.dart';
 import 'package:projectmanagers/Screen/Projects/ProjectsDetails/DocumentLibrary/document_library_controller.dart';
@@ -11,20 +24,10 @@ import 'package:projectmanagers/Screen/Projects/ProjectsDetails/TasksPerformed/t
 import 'package:projectmanagers/Screen/Projects/ProjectsDetails/TechnicalInformation/technical_information_controller.dart';
 import 'package:projectmanagers/Screen/Projects/ProjectsDetails/projects_details_controller.dart';
 import 'package:projectmanagers/Screen/Projects/projects_controller.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ArchiveDocumentProject/add_archive_document_project_controller.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/CloseProject/add_close_project_controller.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ExchangeRequest/add_request_exchange_controller.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/LessonsProject/add_lisince_project_controller.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/PurchaseRequest/add_request_purchase_controller.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/RequestCovenant/request_covenant_controller.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/ResourceProject/add_resource_project_controller.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/UpdatePlan/UpdatePlaneProject/update_plane_project_controller.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/UpdatePlan/update_plan_controller.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/UplodeReportProject/add_uplode_report_project_controller.dart';
-import 'package:projectmanagers/Screen/dashboard/ElectronicServices/electronic_services_controller.dart';
-import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/AddKeeperCovenant/add_keeper_covenant_controller.dart';
-import 'package:projectmanagers/Screen/dashboard/KeeperCovenant/keeper_covenant_controller.dart';
-import 'package:projectmanagers/Screen/dashboard/Reports/reports_controller.dart';
+import 'package:projectmanagers/Screen/Reports/ArchivedDocumentsReport/archived_documents_report_controller.dart';
+import 'package:projectmanagers/Screen/Reports/CompletionRateReport/completion_rate_report_controller.dart';
+import 'package:projectmanagers/Screen/Reports/ReportOnCompletedTasks/report_completed_tasks_controller.dart';
+import 'package:projectmanagers/Screen/Reports/reports_controller.dart';
 
 import '/apiservice/checkInterNet.dart';
 import 'package:get/get.dart';
@@ -90,6 +93,30 @@ class ReportsBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<ReportsController>(() => ReportsController(),
+    );
+
+  }
+}
+class ArchivedDocumentsReportBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut<ArchivedDocumentsReportController>(() => ArchivedDocumentsReportController(),
+    );
+
+  }
+}
+class CompletionRateReportBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut<CompletionRateReportController>(() => CompletionRateReportController(),
+    );
+
+  }
+}
+class ReportOnCompletedTasksBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut<ReportOnCompletedTasksController>(() => ReportOnCompletedTasksController(),
     );
 
   }
