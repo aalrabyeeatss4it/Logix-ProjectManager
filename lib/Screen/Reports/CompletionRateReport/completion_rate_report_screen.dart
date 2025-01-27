@@ -66,182 +66,401 @@ class _CompletionRateReportScreenState extends State<CompletionRateReportScreen>
         drawer: Drawer(
           child: MenuWidgetDashboard(), // استخدام قائمة الـ Drawer المخصصة
         ),
-
         body: SafeArea(
           child: Container(
             color: kColorsWhite.withOpacity(0.1),
             margin:const EdgeInsets.only(top: 2),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(
-                    left:12.r, right:12.r,),
-                  child: Text("المشروع", style:  const TextStyle(fontSize: 14, color: kColorsBlackTow,  ),
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(
+                      left:12.r, right:12.r,),
+                    child: Text("المشروع", style:  const TextStyle(fontSize: 14, color: kColorsBlackTow,),
+                    ),
                   ),
-                ),
-                GetBuilder<CompletionRateReportController>(
-                    init: CompletionRateReportController(),
-                    builder: (co) {
-                      return InkWell(
-                          onTap: () async {
-                            Get.dialog(LoadingIndicatorWidget(),);
-                            Get.back();
-                            onClickSessionsType(co, context, controller.typeFilterModel!.filter);
-                          },
-                          child: CustomTextInput(
-                            iconEnd: Icon(Icons.keyboard_arrow_down, color: kColorsLightBlack,),
-                            textAlign: TextAlign.start,
-                            filled: true,
-                            isEnabled: false,
-                            isRequired: true,
-                            labelText:  'undefined'.tr,
-                            exText: 'تركيب نظام لجهة خاصة'.tr,
-                            textEditingController: controller.TypeFilterTextControll,
-                            styleText: const TextStyle(
-                              fontSize: 13,
-                              color: kColorsBlack,
-                            ),
-                            hintstyle: const TextStyle(fontSize: 12, color: kColorsLightBlackLow,),
-                          ));
-                    }),
-                SizedBox(
-                  height: 0.01.sh,
-                ),
-                InkWell(
-                  onTap: () {
-                    Get.toNamed(RoutingApp.add_keeper_covenant_screen);
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Row(
-                        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal:4.0 ),
-                            child: Container(
-                              height: 0.05.sh,
-                              width:  0.96.sw,
-                              decoration: BoxDecoration(
-                                  color: kColorsWhite,
-                                  border: Border.all(width: 0.1,color:kColorsBlackTow ),
-                                  borderRadius: BorderRadius.circular(5.r)
-
+                  GetBuilder<CompletionRateReportController>(
+                      init: CompletionRateReportController(),
+                      builder: (co) {
+                        return InkWell(
+                            onTap: () async {
+                              Get.dialog(LoadingIndicatorWidget(),);
+                              Get.back();
+                              onClickSessionsType(co, context, controller.typeFilterModel!.filter);
+                            },
+                            child: CustomTextInput(
+                              iconEnd: Icon(Icons.keyboard_arrow_down, color: kColorsLightBlack,),
+                              textAlign: TextAlign.start,
+                              filled: true,
+                              isEnabled: false,
+                              isRequired: true,
+                              labelText:  'undefined'.tr,
+                              exText: 'تركيب نظام لجهة خاصة'.tr,
+                              textEditingController: controller.TypeFilterTextControll,
+                              styleText: const TextStyle(
+                                fontSize: 13,
+                                color: kColorsBlack,
                               ),
-                              child: InkWell(
-                                onTap: () {
-                                  Get.toNamed(RoutingApp.add_keeper_covenant_screen);
-                                },
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    SizedBox(
-                                      width: 0.03.sw,
+                              hintstyle: const TextStyle(fontSize: 12, color: kColorsLightBlackLow,),
+                            ));
+                      }),
+                  SizedBox(height: 0.01.sh,),
+              
+                  Container(
+                    width: 0.97.sw,
+                    decoration: BoxDecoration(
+                      color: kColorsWhite,
+                      borderRadius: BorderRadius.circular(10.r),
+                      boxShadow: [
+                        BoxShadow(
+                          color: kColorsLightBlackLow.withOpacity(0.2),
+                          spreadRadius: 1,
+                          blurRadius: 5.r,
+                          offset:Offset(0, 7), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      children: [
+              
+                        Padding(
+                          padding:  EdgeInsets.only(left: 0.01.sw,right:  0.01.sw),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: kColorsWhite,
+                              borderRadius: BorderRadius.circular(7.r),
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.only(top: 5.0.r, bottom: 5.r,left: 5.0.r,right: 10.0.r),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    width: 0.95.sw,
+                                    height: 17,
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          'تاريخ البداية:',
+                                          style: TextStyle(
+                                            color: Color(0xFF242424),
+                                            fontSize: 12,
+                                            fontFamily: 'GraphikArabic',
+                                       
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 0.02.sw,
+                                        ),
+                                        Text(
+                                          '2024/05/01',
+                                          style: TextStyle(
+                                            color: Color(0xFF242424).withOpacity(0.6),
+                                            fontSize: 12,
+                                            fontFamily: 'GraphikArabic',
+                                            height: 1.37,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 0.04.sw,
+                                        ),
+                                        Container(
+                                          alignment: Alignment.center,
+                                          decoration: BoxDecoration(
+                                              color: kColorsBlackTow.withOpacity(0.5),
+                                              shape: BoxShape.circle
+                                          ),
+                                          width: 6.r,
+                                          height:6.r ,
+                                        ),
+                                        Container(
+                                          color: kColorsBlackTow.withOpacity(0.5),
+                                          alignment: Alignment.center,
+                                          width: 0.12.sw,
+                                          height:1.r ,
+                                        ), Container(
+                                          alignment: Alignment.center,
+                                          decoration: BoxDecoration(
+                                              color: kColorsBlackTow.withOpacity(0.5),
+                                              shape: BoxShape.circle
+                                          ),
+                                          width: 6.r,
+                                          height:6.r ,
+                                        ),
+                                        SizedBox(
+                                          width: 0.02.sw,
+                                        ),
+                                        Text(
+                                          'تاريخ النهاية:',
+                                          style: TextStyle(
+                                            color: Color(0xFF242424),
+                                            fontSize: 12,
+                                            fontFamily: 'GraphikArabic',
+                                          ),
+                                        ),
+              
+                                        SizedBox(
+                                          width: 0.02.sw,
+                                        ),
+                                        Text(
+                                          '2024/05/01',
+                                          textAlign: TextAlign.right,
+                                          style: TextStyle(
+                                            color: Color(0xFF242424).withOpacity(0.6),
+                                            fontSize: 12,
+                                            fontFamily: 'GraphikArabic',
+                                            height: 1.37,
+                                          ),
+                                        ),
+              
+                                      ],
                                     ),
-                                    SvgPicture.asset(
-                                      AssestData.search,
-                                      width: 14,
-                                      height: 14,
-                                      color: kColorsLightBlack,
+                                  ),
+                                  SizedBox(height: 0.035.sh,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 12.0, left:  12.0,),
+                                    child: Container(
+                                      height: 0.5.h, // ارتفاع الـ Divider
+                                      decoration: BoxDecoration(
+                                        color: kColorsBlackTow,
+                                      ),
                                     ),
-                                    SizedBox(
-                                      width: 0.03.sw,
-                                    ),
-                                    Text(
-                                      'ابحث عن مهمه..'.tr,
-                                      style:
-                                      const TextStyle(fontFamily: 'GraphikArabic',color: kColorsLightBlack, fontSize: 12,fontWeight: FontWeight.w500),
-                                    ),
-                                  ],
-                                ),
+                                  ),
+                                  SizedBox(height: 0.025.sh,),
+                                  Text("الأداء الفني", style: const TextStyle(
+                                    color: kColorsPrimaryFont,
+                                    fontSize: 14,
+                                    fontFamily: 'GraphikArabic',
+                                    fontWeight: FontWeight.w400,
+                                    height: 1.64,
+                                  ),),
+                                  SizedBox(
+                                    height: 0.025.sh,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      CircularPercentIndicator(
+                                        radius: 65.0,
+                                        lineWidth: 25.0,
+                                        animation: true,
+                                        percent: percentage / 100,
+                                        center: Text("$percentage%",   style: const TextStyle(
+                                          color: Color(0xFF242424),
+                                          fontSize: 10,
+                                          fontFamily: 'GraphikArabic',
+                                          fontWeight: FontWeight.w400,
+                                          height: 1.64,
+                                        ),),
+                                        circularStrokeCap: CircularStrokeCap.round,
+                                        progressColor: kColorsPrimaryFont,
+                                        backgroundColor: Color(0xFF0792AD).withOpacity(0.1),
+                                      ),
+              
+                                      Column(
+                                        children: [
+                                          CustomButton(
+                                            color:kColorsPrimaryFont.withOpacity(0.2),
+                                            borderRadius: 8.r,
+                                            borderColor: kColorsWhite,
+                                            sizeHeight: 0.045.sh,
+                                            sizeWidth: 0.50.sw,
+                                            text:'الإنجاز: 50.00 %'.tr,
+                                            style: const TextStyle(
+                                              color: kColorsPrimaryFont,
+                                              fontSize: 10,
+                                              fontFamily: 'GraphikArabic',
+                                              fontWeight: FontWeight.w500,
+                                              height: 1.64,
+                                            ),
+                                            onPress: () {
+                                            },
+                                          ),
+                                          SizedBox(
+                                            height: 0.005.sh,
+                                          ),
+                                          CustomButton(
+                                            color:Color(0xffFF4747).withOpacity(0.3),
+                                            borderRadius: 8.r,
+                                            borderColor: kColorsWhite,
+                                            sizeHeight: 0.045.sh,
+                                            sizeWidth: 0.50.sw,
+                                            text:'التأخير: 0.00 %'.tr,
+                                            style: const TextStyle(
+                                              color: Color(0xffFF4747),
+                                              fontSize: 10,
+                                              fontFamily: 'GraphikArabic',
+                                              fontWeight: FontWeight.w500,
+                                              height: 1.64,
+                                            ),
+                                            onPress: () {
+                                            },
+                                          ),
+                                          SizedBox(
+                                            height: 0.005.sh,
+                                          ),
+                                          CustomButton(
+                                            color:Color(0xff686868).withOpacity(0.2),
+                                            borderRadius: 8.r,
+                                            borderColor: kColorsWhite,
+                                            sizeHeight: 0.045.sh,
+                                            sizeWidth: 0.50.sw,
+                                            text:'المتبقي: 0.00 %'.tr,
+                                            style: const TextStyle(
+                                              color: Color(0xff686868),
+                                              fontSize: 10,
+                                              fontFamily: 'GraphikArabic',
+                                              fontWeight: FontWeight.w500,
+                                              height: 1.64,
+                                            ),
+                                            onPress: () {
+                                            },
+                                          ),
+                                        ],
+                                      ),
+              
+              
+              
+                                    ],
+                                  ),
+                                ],
                               ),
                             ),
                           ),
-
-                        ],
-                      ),
-                      SizedBox(
-                        height: 0.02.sh,
-                      ),
-
-                    ],
-                  ),
-                ),
-                Column(
-                  children: [
-                    Padding(
-                      padding:  EdgeInsets.only(left: 0.01.sw,right:  0.01.sw),
-                      child: Container(
-                        width: 343.w,
-                        decoration: BoxDecoration(
-                          color: kColorsWhite,
-                          borderRadius: BorderRadius.circular(7.r),
                         ),
-                        child: Padding(
-                          padding: EdgeInsets.only(top: 5.0.r, bottom: 5.r,left: 5.0.r,right: 10.0.r),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-
-                              Row(
+                        SizedBox(
+                          height: 0.02.sh,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal:  12.0),
+                          child: Container(
+                            height: 0.10.h, // ارتفاع الـ Divider
+                            decoration: BoxDecoration(
+                            color: kColorsBlackTow,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 0.02.sh,
+                        ),
+                        Padding(
+                          padding:  EdgeInsets.only(left: 0.01.sw,right:  0.01.sw),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: kColorsWhite,
+                              borderRadius: BorderRadius.circular(7.r),
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.only(top: 5.0.r, bottom: 5.r,left: 5.0.r,right: 10.0.r),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  CircularPercentIndicator(
-                                    radius: 85.0,
-                                    lineWidth: 30.0,
-                                    animation: true,
-                                    percent: percentage / 100,
-                                    center: Text("$percentage%",   style: const TextStyle(
-                                      color: Color(0xFF242424),
-                                      fontSize: 10,
-                                      fontFamily: 'GraphikArabic',
-                                      fontWeight: FontWeight.w400,
-                                      height: 1.64,
-                                    ),),
-                                    circularStrokeCap: CircularStrokeCap.round,
-                                    progressColor: kColorsPrimaryFont,
-                                    backgroundColor: kColorsPrimaryFont.withOpacity(0.2),
-                                  ),
+                                  Text("  الأداء المالي",   style: const TextStyle(
+                                    color: Color(0xFFF9A61A),
+                                    fontSize: 14,
+                                    fontFamily: 'GraphikArabic',
+                                    fontWeight: FontWeight.w500,
+                                    height: 1.64,
+                                  ),),
                                   SizedBox(
-                                    width: 0.15.sw,
+                                    height: 0.025.sh,
                                   ),
-                                  Column(
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      CustomButton(
-                                        color:Color(0xffFF744A).withOpacity(0.3),
-                                        borderRadius: 8.r,
-                                        borderColor:  kColorsPrimaryFont,
-                                        sizeHeight: 0.04.sh,
-                                        sizeWidth: 0.30.sw,
-                                        text:'متأخر بشكل بسيط'.tr,
-                                        style: const TextStyle(
-                                          color: Color(0xFFFF744A),
+                                      CircularPercentIndicator(
+                                        radius: 65.0,
+                                        lineWidth: 25.0,
+                                        animation: true,
+                                        percent: percentage / 100,
+                                        center: Text("$percentage%",   style: const TextStyle(
+                                          color: Color(0xFF242424),
                                           fontSize: 10,
                                           fontFamily: 'GraphikArabic',
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w400,
                                           height: 1.64,
-                                        ),
-                                        onPress: () {
-                                        },
+                                        ),),
+                                        circularStrokeCap: CircularStrokeCap.round,
+                                        progressColor: Color(0xFFF9A61A),
+                                        backgroundColor: Color(0xFFF9A61A).withOpacity(0.1),
+                                      ),
+                                      Column(
+                                        children: [
+                                          CustomButton(
+                                            color:Color(0xFFF9A61A).withOpacity(0.1),
+                                            borderRadius: 8.r,
+                                            borderColor: kColorsWhite,
+                                            sizeHeight: 0.045.sh,
+                                            sizeWidth: 0.50.sw,
+                                            text:'الإنجاز: 50.00 %'.tr,
+                                            style: const TextStyle(
+                                              color: Color(0xFFF9A61A),
+                                              fontSize: 10,
+                                              fontFamily: 'GraphikArabic',
+                                              fontWeight: FontWeight.w500,
+                                              height: 1.64,
+                                            ),
+                                            onPress: () {
+                                            },
+                                          ),
+                                          SizedBox(
+                                            height: 0.005.sh,
+                                          ),
+                                          CustomButton(
+                                            color:Color(0xffFF4747).withOpacity(0.3),
+                                            borderRadius: 8.r,
+                                            borderColor: kColorsWhite,
+                                            sizeHeight: 0.045.sh,
+                                            sizeWidth: 0.50.sw,
+                                            text:'التأخير: 0.00 %'.tr,
+                                            style: const TextStyle(
+                                              color: Color(0xffFF4747),
+                                              fontSize: 10,
+                                              fontFamily: 'GraphikArabic',
+                                              fontWeight: FontWeight.w500,
+                                              height: 1.64,
+                                            ),
+                                            onPress: () {
+                                            },
+                                          ),
+                                          SizedBox(
+                                            height: 0.005.sh,
+                                          ),
+                                          CustomButton(
+                                            color:Color(0xff686868).withOpacity(0.2),
+                                            borderRadius: 8.r,
+                                            borderColor: kColorsWhite,
+                                            sizeHeight: 0.045.sh,
+                                            sizeWidth: 0.50.sw,
+                                            text:'المتبقي: 0.00 %'.tr,
+                                            style: const TextStyle(
+                                              color: Color(0xff686868),
+                                              fontSize: 10,
+                                              fontFamily: 'GraphikArabic',
+                                              fontWeight: FontWeight.w500,
+                                              height: 1.64,
+                                            ),
+                                            onPress: () {
+                                            },
+                                          ),
+                                        ],
                                       ),
                                     ],
                                   ),
-
-
-
                                 ],
                               ),
-                            ],
+                            ),
                           ),
                         ),
-                      ),
+                        SizedBox(
+                          height: 0.015.sh,
+                        ),
+                      ],
                     ),
-                    SizedBox(
-                      height: 0.01.sh,
-                    ),
-                  ],
-                )
-              ],
+                  )
+                ],
+              ),
             ),
           ),
         ),
