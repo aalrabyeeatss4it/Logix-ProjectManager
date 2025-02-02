@@ -41,7 +41,6 @@ void onInit() {
   }
   loginApi() async{
     try {
-
         Get.dialog(Center(
           child: LoadingIndicatorWidget(),
         ));

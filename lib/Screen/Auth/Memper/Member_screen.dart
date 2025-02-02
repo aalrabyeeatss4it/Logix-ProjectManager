@@ -137,19 +137,23 @@ class MemberScreen extends StatelessWidget {
                                     color: kColorsWhite
                                 ),
                                 onPress: () {
-                                  if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
-                                    if (_formKeyMember.currentState!.validate()) {
-                                    if (Get.find<MemberController>().memberIdTextController.text == null || Get.find<MemberController>().memberIdTextController.text.isEmpty ||
-                                        Get.find<MemberController>().memberIdTextController.text.length <= 2) {
-                                      GetSnackMsg(msg: 'Enter Membership No'.tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
-                                    } else {
-                                      Get.find<MemberController>().memberApi();
-                                    }
-                                    }
-                                  } else {
-                                    print("No Connection".tr);
-                                    GetSnackMsg(msg: "No Connection".tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
-                                  }
+                                  Get.toNamed(RoutingApp.login_route);
+                                  stg.write(OpenScreenMember, true);
+                                  stg.write(OpenAppOne,true );
+
+                                  // if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
+                                  //   if (_formKeyMember.currentState!.validate()) {
+                                  //   if (Get.find<MemberController>().memberIdTextController.text == null || Get.find<MemberController>().memberIdTextController.text.isEmpty ||
+                                  //       Get.find<MemberController>().memberIdTextController.text.length <= 2) {
+                                  //     GetSnackMsg(msg: 'Enter Membership No'.tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
+                                  //   } else {
+                                  //     Get.find<MemberController>().memberApi();
+                                  //   }
+                                  //   }
+                                  // } else {
+                                  //   print("No Connection".tr);
+                                  //   GetSnackMsg(msg: "No Connection".tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
+                                  // }
                                 },
                               ),
                               SizedBox(

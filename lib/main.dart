@@ -66,7 +66,7 @@ class _MyAppState extends State<MyApp>{
             getPages: Pages.pages(),
             defaultTransition: Transition.rightToLeftWithFade,
             transitionDuration:const  Duration(milliseconds: 400),
-            initialRoute: RoutingApp.splashRoute
+            initialRoute: RoutingApp.member_screen
         )
     );
   }

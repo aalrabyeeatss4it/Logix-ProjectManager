@@ -122,7 +122,7 @@ class MenuWidgetDashboard extends StatelessWidget {
               Get.to(() => ProfileScreen());
             }, kColorsWhite, kColorsWhite, false, true,false):Container(),
             SizedBox(
-              height: 0.04.sh,
+              height: 0.02.sh,
             ),
             stg.read(OpenScreenlogen)==true?Row(
               children: [
@@ -226,7 +226,6 @@ class MenuWidgetDashboard extends StatelessWidget {
                   right: 12.0.r,
                   bottom: 20.0.r),
               child: Container(
-
                 height: 0.06.sh,
                 decoration: BoxDecoration(
                     color: kColorsorangSignOut,

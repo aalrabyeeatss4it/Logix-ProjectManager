@@ -188,27 +188,30 @@ class _LoginScreenState extends State<LoginScreen> {
                                       fontWeight: FontWeight.w500,
                                       color: kColorsWhite),
                                   onPress: () async {
+                                    Get.offAllNamed(RoutingApp.dashboardRoute);
                                     stg.write(OpenScreenlogen, true);
-                                    print("StartAuthntcit");
-                                    if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
-                                      if (_formLogin.currentState!.validate()) {
-                                        print("Connection".tr);
-                                        if (controller.userTextController.text == null || controller.userTextController.text.isEmpty || controller.userTextController.text.length <= 2) {
-                                          GetSnackMsg(msg: 'Enter Email'.tr, bgClr: kColorsPrimaryFontSalse, txClr: kColorsWhite).showTxt();
-                                        }
-                                        if (controller.passwordTextController.text == null || controller.passwordTextController.text.isEmpty || controller.passwordTextController.text.length <= 2) {
-                                          GetSnackMsg(msg: 'Enter Password'.tr, bgClr: kColorsPrimaryFontSalse, txClr: kColorsWhite).showTxt();
-                                        } else {
-                                          //stg.write(token,'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGdWxsTmFtZSI6Itin2K3ZhdivINio2YYg2KzYp9ixINin2YTZhNmHINin2YTYrdin2LHYq9mKIiwiRW1wX0NvZGUiOiIwIiwiRW1wX0lEIjoiMCIsIkdyb3VwX0lEIjoiMTAiLCJVU0VSX0lEIjoiMTgyNDEiLCJEZXB0X0lEIjoiMCIsIkJSQU5DSFNfSUQiOiIxIiwiQnJhbmNoX0lEIjoiMSIsIkxvY2F0aW9uIjoiMCIsIkZhY2lsaXR5X0lEIjoiMSIsIkZpbl9ZZWFyIjoiMSIsIkVycFVybCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMSIsIlVzZXJfVHlwZSI6ImN1c3RvbWVyIiwiVXNlcl9UeXBlX0lEIjoiMiIsIkN1c3RvbWVyX0lEIjoiMTIzIiwiTWVtYmVySWQiOiIxNDQ0IiwiQ29ubmVjdGlvblN0cmluZyI6InNlcnZlcj0uO2RhdGFiYXNlPUxvZ2l4X1hfMjAyMjtUcnVzdGVkX0Nvbm5lY3Rpb249dHJ1ZTsiLCJleHAiOjI2NTAzNzI4NzF9.8LJKokV8XPT7aJIUL6d6JJkPjmUUdLf6fs6Jkw2miLo');
-                                          //Get.toNamed(RoutingApp.dashboardRoute);
-                                          print("loginController.loginApi");
-                                          controller.loginApi();
-                                        }
-                                      }
-                                    } else {
-                                      print("No Connection".tr);
-                                      GetSnackMsg(msg: "No Connection".tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
-                                    }
+                                    stg.write(OpenAppOne,true);
+                                    // stg.write(OpenScreenlogen, true);
+                                    // print("StartAuthntcit");
+                                    // if (Get.find<CheckInterNet>().connectionInterNet.value != 0) {
+                                    //   if (_formLogin.currentState!.validate()) {
+                                    //     print("Connection".tr);
+                                    //     if (controller.userTextController.text == null || controller.userTextController.text.isEmpty || controller.userTextController.text.length <= 2) {
+                                    //       GetSnackMsg(msg: 'Enter Email'.tr, bgClr: kColorsPrimaryFontSalse, txClr: kColorsWhite).showTxt();
+                                    //     }
+                                    //     if (controller.passwordTextController.text == null || controller.passwordTextController.text.isEmpty || controller.passwordTextController.text.length <= 2) {
+                                    //       GetSnackMsg(msg: 'Enter Password'.tr, bgClr: kColorsPrimaryFontSalse, txClr: kColorsWhite).showTxt();
+                                    //     } else {
+                                    //       //stg.write(token,'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGdWxsTmFtZSI6Itin2K3ZhdivINio2YYg2KzYp9ixINin2YTZhNmHINin2YTYrdin2LHYq9mKIiwiRW1wX0NvZGUiOiIwIiwiRW1wX0lEIjoiMCIsIkdyb3VwX0lEIjoiMTAiLCJVU0VSX0lEIjoiMTgyNDEiLCJEZXB0X0lEIjoiMCIsIkJSQU5DSFNfSUQiOiIxIiwiQnJhbmNoX0lEIjoiMSIsIkxvY2F0aW9uIjoiMCIsIkZhY2lsaXR5X0lEIjoiMSIsIkZpbl9ZZWFyIjoiMSIsIkVycFVybCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMSIsIlVzZXJfVHlwZSI6ImN1c3RvbWVyIiwiVXNlcl9UeXBlX0lEIjoiMiIsIkN1c3RvbWVyX0lEIjoiMTIzIiwiTWVtYmVySWQiOiIxNDQ0IiwiQ29ubmVjdGlvblN0cmluZyI6InNlcnZlcj0uO2RhdGFiYXNlPUxvZ2l4X1hfMjAyMjtUcnVzdGVkX0Nvbm5lY3Rpb249dHJ1ZTsiLCJleHAiOjI2NTAzNzI4NzF9.8LJKokV8XPT7aJIUL6d6JJkPjmUUdLf6fs6Jkw2miLo');
+                                    //       //Get.toNamed(RoutingApp.dashboardRoute);
+                                    //       print("loginController.loginApi");
+                                    //       controller.loginApi();
+                                    //     }
+                                    //   }
+                                    // } else {
+                                    //   print("No Connection".tr);
+                                    //   GetSnackMsg(msg: "No Connection".tr, bgClr: kColorsRed, txClr: kColorsWhite).showTxt();
+                                    // }
                                   },
                                 ),
                                 SizedBox(
