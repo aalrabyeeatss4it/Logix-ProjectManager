@@ -1,4 +1,4 @@
-package com.example.projectmanagers
+package com.logix_erp.projectmanagers
 
 import io.flutter.embedding.android.FlutterActivity
 
